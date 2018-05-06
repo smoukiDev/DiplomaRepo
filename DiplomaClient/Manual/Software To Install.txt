@@ -1,0 +1,10 @@
+1. Setup up Microsoft Visual Studio 2017 v.15.5.7 ot higher and packages (.Net Framework, Data Tools)
+2. Setup Oracle Database 12c R1
+	*CDB(SID) ORTW  User: SYS Pass: any
+	*PDB   PDBORTW  User: SYS Pass: any
+		#Unlock User: SH  Pass: mining
+3. Setup SQL Developer v.18.1.0 or higher
+4. Setup Develop Tools For MVS 2017
+5. Setup Git & GitBash
+6. Setup Git Package For MVS
+7. Setup SmartGit 
