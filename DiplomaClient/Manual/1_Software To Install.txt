@@ -8,3 +8,4 @@
 5. Setup Git & GitBash
 6. Setup Git Package For MVS
 7. Setup SmartGit 
+8. Setup AllFusion ERwin DataModeler v.7.2.0 or higher
