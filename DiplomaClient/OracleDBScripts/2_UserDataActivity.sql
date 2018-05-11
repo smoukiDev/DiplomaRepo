@@ -1,0 +1,81 @@
+
+CREATE TABLE ClientAppUserActivity
+(
+	ActivityID	  NUMBER(10)  NOT NULL ,
+    UserID		  NUMBER(10)  NULL, 
+	Description	  VARCHAR2(200 CHAR)  NULL ,
+	ActivityTime  DATE  NULL 	
+);
+
+
+
+CREATE UNIQUE INDEX XPKClientAppUserActivity ON ClientAppUserActivity
+(ActivityID  ASC);
+
+
+
+ALTER TABLE ClientAppUserActivity
+	ADD CONSTRAINT  XPKClientAppUserActivity PRIMARY KEY (ActivityID);
+
+
+
+CREATE TABLE ClientAppUsers
+(
+	UserID		  NUMBER(10)  NOT NULL ,
+	Login		  VARCHAR2(40 CHAR)  NULL ,
+	Pass		  VARCHAR2(20 CHAR)  NULL ,
+	PassHash	  VARCHAR2(200 CHAR)  NULL ,
+	IsBlock		  CHAR(1 CHAR)  NULL ,
+	IsAdmin		  CHAR(1 CHAR)  NULL ,
+	FName		  VARCHAR2(60 CHAR)  NULL ,
+	LName		  VARCHAR2(60 CHAR)  NULL ,
+	MName		  VARCHAR2(60 CHAR)  NULL ,
+	Email		  VARCHAR2(150 CHAR)  NULL ,
+	Phone		  VARCHAR2(20 CHAR)   SORT ,
+	Adress		  VARCHAR2(150 CHAR)  NULL ,
+	Gender		  VARCHAR2(15 CHAR)  NULL ,
+	Avatar		  BLOB  NULL 
+);
+
+
+
+CREATE UNIQUE INDEX XPKClientAppUsers ON ClientAppUsers
+(UserID  ASC);
+
+
+
+ALTER TABLE ClientAppUsers
+	ADD CONSTRAINT  XPKClientAppUsers PRIMARY KEY (UserID);
+
+CREATE SEQUENCE ClientIDSeq
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 999999999
+MINVALUE 1
+NOCYCLE;
+
+CREATE SEQUENCE ActivityIDSeq
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 999999999
+MINVALUE 1
+NOCYCLE;
+
+CREATE OR REPLACE TRIGGER NewAppClientID
+BEFORE INSERT ON ClientAppUsers
+FOR EACH ROW
+DECLARE
+
+BEGIN
+:new.UserID := ClientIDSeq.NEXTVAL;
+END NewAppClientID;
+
+CREATE OR REPLACE TRIGGER NewUserActivityId
+BEFORE INSERT ON ClientAppUserActivity
+FOR EACH ROW
+DECLARE
+
+BEGIN
+:new.ActivityID := ActivityIDSeq.NEXTVAL;
+END NewUserActivityId;
+
