@@ -18,5 +18,21 @@ QUOTA UNLIMITED ON datamining;
 --DMUSER Priveleges
 GRANT CONNECT, RESOURCE to dmuser;
 
+/*
+It's required to create Data Mining Repository in order to use Data Mining Features
+It's exist 2 ways: 
+1 - automatic with SQL Developer Enviroment
+2 - using script stored in SQL Developer Directory
+
+Schema for Data Mining should have all necessary privileges
+To give privileges there are 3 ways: 
+1  - create ODM Repo with desirable schema at the start
+2  - use script stored in SQL Developer Directory
+3  - custom setting via SQL Developer Enviroment in User Properties
+
+SQL Developer Directory with scripts route:
+sqldeveloper\dataminer\scripts
+*/
+
 
 
