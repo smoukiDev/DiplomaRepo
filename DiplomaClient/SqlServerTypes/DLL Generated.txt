@@ -1,8 +1,0 @@
-//Importans isn't estimated
-
-[Directory x64]
-msvcr120.dll
-SqlServerSpatial140.dll
-[Directory x32]
-msvcr120.dll
-SqlServerSpatial140.dll
