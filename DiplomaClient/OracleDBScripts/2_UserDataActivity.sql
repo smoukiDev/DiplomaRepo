@@ -1,4 +1,6 @@
+-- Scripts have to be deployed at SH SHEMA ON PDBORTW
 
+-- Table for capture Users Activity in Application
 CREATE TABLE ClientAppUserActivity
 (
 	ActivityID	  NUMBER(10)  NOT NULL ,
@@ -18,7 +20,7 @@ ALTER TABLE ClientAppUserActivity
 	ADD CONSTRAINT  XPKClientAppUserActivity PRIMARY KEY (ActivityID);
 
 
-
+-- Table contains User Accounts Data
 CREATE TABLE ClientAppUsers
 (
 	UserID		  NUMBER(10)  NOT NULL ,
@@ -47,20 +49,21 @@ CREATE UNIQUE INDEX XPKClientAppUsers ON ClientAppUsers
 ALTER TABLE ClientAppUsers
 	ADD CONSTRAINT  XPKClientAppUsers PRIMARY KEY (UserID);
 
+-- Sequence for AutoID via Trigger for ClientAppUsers Table
 CREATE SEQUENCE ClientIDSeq
 INCREMENT BY 1
 START WITH 1
 MAXVALUE 999999999
 MINVALUE 1
 NOCYCLE;
-
+-- Sequence for AutoID via Trigger for ClientAppUserActivity Table
 CREATE SEQUENCE ActivityIDSeq
 INCREMENT BY 1
 START WITH 1
 MAXVALUE 999999999
 MINVALUE 1
 NOCYCLE;
-
+-- Trigger for AutoID for ClientAppUsers Table
 CREATE OR REPLACE TRIGGER NewAppClientID
 BEFORE INSERT ON ClientAppUsers
 FOR EACH ROW
@@ -69,7 +72,7 @@ DECLARE
 BEGIN
 :new.UserID := ClientIDSeq.NEXTVAL;
 END NewAppClientID;
-
+-- Trigger for AutoID for ClientAppUserActivity Table
 CREATE OR REPLACE TRIGGER NewUserActivityId
 BEFORE INSERT ON ClientAppUserActivity
 FOR EACH ROW
