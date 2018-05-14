@@ -28,6 +28,7 @@ namespace DiplomaClient
             butReg.ForeColor = white1;
             butLog.BackColor = red1;
             butLog.ForeColor = white1;
+
         }
 
         //Drag Form Feature
@@ -67,5 +68,6 @@ namespace DiplomaClient
             else
                 tbPass.PasswordChar = '⦁';
         }
+
     }
 }
