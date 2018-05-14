@@ -17,6 +17,7 @@ namespace DiplomaClient
         [STAThread]
         static void Main()
         {
+            LoginForm loginform;
             //Prevent running app twice or more
             bool isAppRun;
             string guid = Marshal.GetTypeLibGuidForAssembly(Assembly.GetExecutingAssembly()).ToString();
@@ -26,7 +27,7 @@ namespace DiplomaClient
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(loginform=new LoginForm());
         }
     }
 }
