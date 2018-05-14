@@ -29,6 +29,8 @@ namespace DiplomaClient
             butLog.BackColor = red1;
             butLog.ForeColor = white1;
 
+            pbLoading.Visible = false;
+
         }
 
         //Drag Form Feature
@@ -69,5 +71,15 @@ namespace DiplomaClient
                 tbPass.PasswordChar = '⦁';
         }
 
+        private void butLog_Click(object sender, EventArgs e)
+        {
+            
+            pbLoading.Visible = true;
+        }
+
+        private void butReg_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

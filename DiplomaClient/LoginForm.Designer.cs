@@ -43,7 +43,9 @@
             this.lblForget = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pbLoading = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).BeginInit();
             this.SuspendLayout();
             // 
             // tbLogin
@@ -75,12 +77,13 @@
             this.butLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butLog.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butLog.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.butLog.Location = new System.Drawing.Point(73, 558);
+            this.butLog.Location = new System.Drawing.Point(73, 591);
             this.butLog.Name = "butLog";
             this.butLog.Size = new System.Drawing.Size(333, 50);
             this.butLog.TabIndex = 2;
             this.butLog.Text = "Login";
             this.butLog.UseVisualStyleBackColor = true;
+            this.butLog.Click += new System.EventHandler(this.butLog_Click);
             // 
             // butCleanPass
             // 
@@ -98,12 +101,13 @@
             this.butReg.FlatAppearance.BorderSize = 0;
             this.butReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butReg.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.butReg.Location = new System.Drawing.Point(73, 625);
+            this.butReg.Location = new System.Drawing.Point(73, 647);
             this.butReg.Name = "butReg";
             this.butReg.Size = new System.Drawing.Size(333, 50);
             this.butReg.TabIndex = 4;
             this.butReg.Text = "Register";
             this.butReg.UseVisualStyleBackColor = true;
+            this.butReg.Click += new System.EventHandler(this.butReg_Click);
             // 
             // buttonMakeVisible
             // 
@@ -189,7 +193,7 @@
             this.lblForget.BackColor = System.Drawing.Color.Transparent;
             this.lblForget.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblForget.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblForget.Location = new System.Drawing.Point(161, 518);
+            this.lblForget.Location = new System.Drawing.Point(158, 563);
             this.lblForget.Name = "lblForget";
             this.lblForget.Size = new System.Drawing.Size(176, 25);
             this.lblForget.TabIndex = 11;
@@ -217,12 +221,26 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Password:";
             // 
+            // pbLoading
+            // 
+            this.pbLoading.BackColor = System.Drawing.Color.Transparent;
+            this.pbLoading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbLoading.ErrorImage = null;
+            this.pbLoading.Image = ((System.Drawing.Image)(resources.GetObject("pbLoading.Image")));
+            this.pbLoading.Location = new System.Drawing.Point(163, 464);
+            this.pbLoading.Name = "pbLoading";
+            this.pbLoading.Size = new System.Drawing.Size(156, 84);
+            this.pbLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLoading.TabIndex = 14;
+            this.pbLoading.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(480, 720);
+            this.Controls.Add(this.pbLoading);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblForget);
@@ -246,6 +264,7 @@
             this.Text = "LoginForm";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +286,6 @@
         private System.Windows.Forms.Label lblForget;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pbLoading;
     }
 }
