@@ -78,7 +78,7 @@ namespace DiplomaClient
 
         private void butReg_Click(object sender, EventArgs e)
         {
-            RegisterForm registerForm = new RegisterForm();
+            RegisterForm registerForm = new RegisterForm(); 
             this.Hide();
             
         }

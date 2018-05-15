@@ -55,7 +55,7 @@ namespace DiplomaClient
         {
             Thread.Sleep(delay1);
             this.Close();
-            Environment.Exit(0);
+            Program.loginform.Show();
             
         }
         //Mimimize Button with Delay

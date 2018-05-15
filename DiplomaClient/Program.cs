@@ -11,6 +11,7 @@ namespace DiplomaClient
 {
     static class Program
     {
+        internal static LoginForm loginform;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -24,10 +25,13 @@ namespace DiplomaClient
             Mutex muobj = new Mutex(true, guid, out isAppRun);
             if (!isAppRun)
                 return;
-
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(loginform = new LoginForm());
+            
+            
         }
     }
+    
 }
