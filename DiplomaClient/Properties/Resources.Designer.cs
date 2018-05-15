@@ -121,6 +121,15 @@ namespace DiplomaClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Sonar_FX {
+            get {
+                return ResourceManager.GetStream("Sonar_FX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         internal static string String1 {

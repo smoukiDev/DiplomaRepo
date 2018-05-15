@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace DiplomaClient
 {
@@ -14,7 +15,7 @@ namespace DiplomaClient
     {
         
         Action but_2_Action = null;
-        
+        SoundPlayer sp;
         public CustomMessageBox()
         {
             InitializeComponent();
@@ -23,6 +24,9 @@ namespace DiplomaClient
 
         public CustomMessageBox(Image icon, string message, string but2Title, Action but2Action, bool multiline, Color but2Color, Color but2txtColor)
         {
+            //Notification Sound
+            sp = new SoundPlayer(Properties.Resources.Sonar_FX);
+            sp.Play();         
             InitializeComponent();
             pbIcon.Image = icon;
             but1.Visible = false;
