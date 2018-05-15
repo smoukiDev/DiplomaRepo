@@ -43,6 +43,7 @@ namespace DiplomaClient
         {
             Thread.Sleep(delay1);
             this.Close();
+            Environment.Exit(0);
         }
         //Minimize Button with Delay
         private void butMin_Click(object sender, EventArgs e)
