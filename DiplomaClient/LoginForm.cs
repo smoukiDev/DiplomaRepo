@@ -9,25 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
+
 namespace DiplomaClient
 {
     public partial class LoginForm : Form
     {
         //actions delay constant
         const int delay1 = 300;
-        //Color Palette
-        Color red1 = Color.FromArgb(188, 41, 44);
-        Color white1 = Color.FromArgb(240, 232, 232);
-
+        
         public LoginForm()
         {
             InitializeComponent();
             //controls decoration       
-            lblForget.ForeColor = red1;
-            butReg.BackColor = red1;
-            butReg.ForeColor = white1;
-            butLog.BackColor = red1;
-            butLog.ForeColor = white1;
+            lblForget.ForeColor = ColorPalette.red1;
+            butReg.BackColor = ColorPalette.red1;
+            butReg.ForeColor = ColorPalette.white1;
+            butLog.BackColor = ColorPalette.red1;
+            butLog.ForeColor = ColorPalette.white1;
 
             pbLoading.Visible = false;
 
@@ -79,7 +77,9 @@ namespace DiplomaClient
 
         private void butReg_Click(object sender, EventArgs e)
         {
-
+            RegisterForm registerForm = new RegisterForm();
+            this.Hide();
+            
         }
     }
 }
