@@ -112,5 +112,13 @@ namespace DiplomaClient
         {
 
         }
+
+        private void mtbPhone_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (mtbPhone.Text == "+")
+                mtbPhone.SelectionStart = 1;
+            else
+                mtbPhone.SelectionStart = mtbPhone.Text.Length;
+        }
     }
 }

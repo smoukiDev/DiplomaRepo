@@ -459,6 +459,7 @@
             this.mtbPhone.Size = new System.Drawing.Size(421, 28);
             this.mtbPhone.TabIndex = 38;
             this.mtbPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtbPhone.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mtbPhone_MouseClick);
             // 
             // buttonMakeVisible1
             // 
