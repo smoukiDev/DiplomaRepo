@@ -16,6 +16,8 @@ namespace DiplomaClient
 {
     public partial class RegisterForm : Form
     {
+        //Reference To This Form in Other Forms
+        internal RegisterForm registerFormBuf;
         const int delay1 = 300;
         public RegisterForm()
         {
@@ -33,6 +35,7 @@ namespace DiplomaClient
             cbGender.SelectedIndex = 0;
             //displayform
             this.Show();
+            registerFormBuf = this;
 
         }
         //Drag Form Feature
@@ -119,7 +122,9 @@ namespace DiplomaClient
             }
             catch
             {
-                MessageBox.Show("Не удалось загрузить изображение", "@Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CustomMessageBox cmb = new CustomMessageBox(Properties.Resources.ImageNotFound, "Sorry:( Image wasn't been uploaded","OK", () => { registerFormBuf.Enabled = true;}, false,ColorPalette.red1,ColorPalette.white1);
+                this.Enabled = false;     
+                cmb.Show();
             }
         }
 
