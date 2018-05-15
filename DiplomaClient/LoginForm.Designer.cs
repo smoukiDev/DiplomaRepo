@@ -105,7 +105,7 @@
             this.butReg.Name = "butReg";
             this.butReg.Size = new System.Drawing.Size(333, 50);
             this.butReg.TabIndex = 4;
-            this.butReg.Text = "Register";
+            this.butReg.Text = "Сreate Account";
             this.butReg.UseVisualStyleBackColor = true;
             this.butReg.Click += new System.EventHandler(this.butReg_Click);
             // 

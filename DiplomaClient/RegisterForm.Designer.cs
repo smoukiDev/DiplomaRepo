@@ -412,7 +412,7 @@
             this.butRegister.Name = "butRegister";
             this.butRegister.Size = new System.Drawing.Size(350, 50);
             this.butRegister.TabIndex = 34;
-            this.butRegister.Text = "Register";
+            this.butRegister.Text = "Сreate Account";
             this.butRegister.UseVisualStyleBackColor = true;
             this.butRegister.Click += new System.EventHandler(this.butRegister_Click);
             // 
