@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Reflection;
+using System.IO;
+using System.Collections;
 
 namespace DiplomaClient
 {
@@ -102,15 +104,36 @@ namespace DiplomaClient
             rtbAdress.Clear();
 
         }
-
+        //Upload Avatar Button
         private void butAddAvatar_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                ofdProfilePic.ShowDialog();
+                FileStream fs = new FileStream(ofdProfilePic.FileName, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+                var newAvatarPicture = new byte[fs.Length];
+                fs.Read(newAvatarPicture, 0, Convert.ToInt32(fs.Length));
+                pbAvatar.Image = byteArrayToImage(newAvatarPicture);
+
+            }
+            catch
+            {
+                MessageBox.Show("Не удалось загрузить изображение", "@Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        //Сonvertation Method(Binary Array into Image)
+        public Image byteArrayToImage(byte[] byteArrayIn) 
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms, true, false);
+            return returnImage;
         }
 
         private void butRemoveAvatar_Click(object sender, EventArgs e)
         {
-
+            pbAvatar.Image = Properties.Resources.UserProfileDefault;
         }
 
         private void mtbPhone_MouseClick(object sender, MouseEventArgs e)

@@ -65,6 +65,7 @@
             this.buttonMakeVisible1 = new System.Windows.Forms.Button();
             this.buttonMakeVisible2 = new System.Windows.Forms.Button();
             this.butCleanPass = new System.Windows.Forms.Button();
+            this.ofdProfilePic = new System.Windows.Forms.OpenFileDialog();
             this.panHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -586,5 +587,6 @@
         private System.Windows.Forms.Button buttonMakeVisible1;
         private System.Windows.Forms.Button buttonMakeVisible2;
         private System.Windows.Forms.Button butCleanPass;
+        private System.Windows.Forms.OpenFileDialog ofdProfilePic;
     }
 }
