@@ -63,9 +63,29 @@ namespace DiplomaClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CustomMessageBoxBackground {
+            get {
+                object obj = ResourceManager.GetObject("CustomMessageBoxBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EraseButton {
             get {
                 object obj = ResourceManager.GetObject("EraseButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImageNotFound {
+            get {
+                object obj = ResourceManager.GetObject("ImageNotFound", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
