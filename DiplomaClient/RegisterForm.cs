@@ -112,12 +112,13 @@ namespace DiplomaClient
         {
             try
             {
-
+                ofdProfilePic = new OpenFileDialog();
                 ofdProfilePic.ShowDialog();
                 FileStream fs = new FileStream(ofdProfilePic.FileName, System.IO.FileMode.Open, System.IO.FileAccess.Read);
                 var newAvatarPicture = new byte[fs.Length];
                 fs.Read(newAvatarPicture, 0, Convert.ToInt32(fs.Length));
                 pbAvatar.Image = byteArrayToImage(newAvatarPicture);
+                fs.Dispose();
 
             }
             catch
