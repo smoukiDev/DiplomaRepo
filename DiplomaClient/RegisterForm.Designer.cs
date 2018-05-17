@@ -164,6 +164,7 @@
             this.tbPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPass.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbPass.Location = new System.Drawing.Point(12, 183);
+            this.tbPass.MaxLength = 20;
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '⦁';
             this.tbPass.Size = new System.Drawing.Size(421, 28);

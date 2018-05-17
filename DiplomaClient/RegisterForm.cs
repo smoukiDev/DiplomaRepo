@@ -23,7 +23,7 @@ namespace DiplomaClient
         public RegisterForm()
         {
 
-            InitializeComponent();            
+            InitializeComponent();
             //decoration
             pbLoading.Visible = false;
             lblErrorLog.Visible = false;
@@ -46,7 +46,7 @@ namespace DiplomaClient
             pLName.BackColor = ColorPalette.red1;
             pEmail.BackColor = ColorPalette.red1;
             pPhone.BackColor = ColorPalette.red1;
-            pAdress.BackColor =  ColorPalette.red1;
+            pAdress.BackColor = ColorPalette.red1;
             //erroe log empty
             lblErrorLog.Text = "";
 
@@ -54,9 +54,9 @@ namespace DiplomaClient
         //Drag Form Feature
         Point MouseHook;
         private void RegisterForm_MouseMove(object sender, MouseEventArgs e)
-        {          
-                if (e.Button != MouseButtons.Left) MouseHook = e.Location;
-                Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);            
+        {
+            if (e.Button != MouseButtons.Left) MouseHook = e.Location;
+            Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
         }
         private void panHeader_MouseMove(object sender, MouseEventArgs e)
         {
@@ -74,7 +74,7 @@ namespace DiplomaClient
             Thread.Sleep(delay1);
             this.Close();
             Program.loginform.Show();
-            
+
         }
         //Mimimize Button with Delay
         private void butMin_Click(object sender, EventArgs e)
@@ -100,110 +100,113 @@ namespace DiplomaClient
         //Register Button
         private void butRegister_Click(object sender, EventArgs e)
         {
-            
+
             //Loading is Visible
             pbLoading.Visible = true;
-            //Error is Log Visible
-            //lblErrorLog.Visible = true;
+
             ValidationIsMainFieldsFull();
-            
-                
+
+
+
 
         }
         //Checks Is Main Fields Fill in or not
         private void ValidationIsMainFieldsFull()
         {
-            //Is Main Fields Fill In
-            bool isMainFieldsFull = true;
+
             //Validation
             if (tbLogin.Text == "")
             {
                 pLogin.Visible = true;
-                isMainFieldsFull = false;
+
             }
             else
             {
                 pLogin.Visible = false;
-                isMainFieldsFull = true;
             }
 
             if (tbPass.Text == "")
             {
                 pPassword.Visible = true;
-                isMainFieldsFull = false;
+
             }
             else
             {
                 pPassword.Visible = false;
-                isMainFieldsFull = true;
+
             }
 
             if (tbPassConfirm.Text == "")
             {
                 pConfirmPassword.Visible = true;
-                isMainFieldsFull = false;
+
             }
             else
             {
                 pConfirmPassword.Visible = false;
-                isMainFieldsFull = true;
+
             }
 
             if (tbFName.Text == "")
             {
                 pFName.Visible = true;
-                isMainFieldsFull = false;
+
             }
             else
             {
                 pFName.Visible = false;
-                isMainFieldsFull = true;
+
             }
 
             if (tbLName.Text == "")
             {
                 pLName.Visible = true;
-                isMainFieldsFull = false;
+
             }
             else
             {
                 pLName.Visible = false;
-                isMainFieldsFull = true;
             }
 
             if (tbEmail.Text == "")
             {
                 pEmail.Visible = true;
-                isMainFieldsFull = false;
+
             }
             else
             {
                 pEmail.Visible = false;
-                isMainFieldsFull = true;
+
             }
 
-            if (mtbPhone.Text == "+" || mtbPhone.Text.Length<11)
+            if (mtbPhone.Text == "+" || mtbPhone.Text.Length < 11)
             {
                 pPhone.Visible = true;
-                isMainFieldsFull = false;
+
             }
             else
             {
                 pPhone.Visible = false;
-                isMainFieldsFull = true;
+
             }
 
             if (rtbAdress.Text == "")
             {
                 pAdress.Visible = true;
-                isMainFieldsFull = false;
+
             }
             else
             {
                 pAdress.Visible = false;
-                isMainFieldsFull = true;
+
             }
-            if (isMainFieldsFull == false)
+            if (pLogin.Visible == true || pPassword.Visible == true || pConfirmPassword.Visible == true || pFName.Visible == true || pLName.Visible == true)
+            {
+                lblErrorLog.Text = "Necessary fields weren't filled in:(";
+                lblErrorLog.Visible = true;
+            }
+            else
+            if (pEmail.Visible == true || pPhone.Visible == true || pAdress.Visible == true)
             {
                 lblErrorLog.Text = "Necessary fields weren't filled in:(";
                 lblErrorLog.Visible = true;
@@ -213,6 +216,7 @@ namespace DiplomaClient
                 lblErrorLog.Text = "";
                 lblErrorLog.Visible = false;
             }
+
         }
 
         //Clear fields button
