@@ -51,8 +51,14 @@
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -95,6 +101,11 @@
     </Compile>
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesHistoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesHistoryDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SecurityModule.cs" />
     <EmbeddedResource Include="CustomMessageBox.resx">
@@ -159,6 +170,17 @@
     <None Include="Image\ImageNotFound.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="SalesHistoryDataSet.xsc">
+      <DependentUpon>SalesHistoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SalesHistoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalesHistoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalesHistoryDataSet.xss">
+      <DependentUpon>SalesHistoryDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Sound\Sonar_FX.wav" />
   </ItemGroup>
   <ItemGroup>
