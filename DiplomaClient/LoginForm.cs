@@ -26,11 +26,8 @@ namespace DiplomaClient
             butReg.ForeColor = ColorPalette.white1;
             butLog.BackColor = ColorPalette.red1;
             butLog.ForeColor = ColorPalette.white1;
-
             pbLoading.Visible = false;
-
         }
-
         //Drag Form Feature
         Point MouseHook;
         private void LoginForm_MouseMove(object sender, MouseEventArgs e)
@@ -69,13 +66,10 @@ namespace DiplomaClient
             else
                 tbPass.PasswordChar = '⦁';
         }
-
         private void butLog_Click(object sender, EventArgs e)
-        {
-            
+        {           
             pbLoading.Visible = true;
         }
-
         private void butReg_Click(object sender, EventArgs e)
         {
             RegisterForm registerForm = new RegisterForm(); 

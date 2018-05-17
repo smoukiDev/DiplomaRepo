@@ -18,6 +18,7 @@ namespace DiplomaClient
     {
         //Reference To This Form in Other Forms
         internal RegisterForm registerFormBuf;
+        //actions delay constant
         const int delay1 = 300;
         public RegisterForm()
         {
@@ -35,6 +36,7 @@ namespace DiplomaClient
             cbGender.SelectedIndex = 0;
             //displayform
             this.Show();
+            //create variable link to this form
             registerFormBuf = this;
 
         }
@@ -77,7 +79,6 @@ namespace DiplomaClient
             else
                 tbPass.PasswordChar = '⦁';
         }
-
         private void buttonMakeVisible2_Click(object sender, EventArgs e)
         {
             if (tbPassConfirm.PasswordChar == '⦁')
@@ -85,7 +86,7 @@ namespace DiplomaClient
             else
                 tbPassConfirm.PasswordChar = '⦁';
         }
-
+        //Register Button
         private void butRegister_Click(object sender, EventArgs e)
         {
             pbLoading.Visible = true;
@@ -123,12 +124,12 @@ namespace DiplomaClient
             }
             catch
             {
+                //Custom Message Box
                 CustomMessageBox cmb = new CustomMessageBox(Properties.Resources.ImageNotFound, "Sorry:( Image wasn't been uploaded","OK", () => { registerFormBuf.Enabled = true;}, false,ColorPalette.red1,ColorPalette.white1);
                 this.Enabled = false;     
                 cmb.Show();
             }
         }
-
         //Сonvertation Method(Binary Array into Image)
         public Image byteArrayToImage(byte[] byteArrayIn) 
         {
@@ -136,12 +137,12 @@ namespace DiplomaClient
             Image returnImage = Image.FromStream(ms, true, false);
             return returnImage;
         }
-
+        //Discard avatar button
         private void butRemoveAvatar_Click(object sender, EventArgs e)
         {
             pbAvatar.Image = Properties.Resources.UserProfileDefault;
         }
-
+        //Phone Field Cursor Autoposition
         private void mtbPhone_MouseClick(object sender, MouseEventArgs e)
         {
             if (mtbPhone.Text == "+")

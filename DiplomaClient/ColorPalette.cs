@@ -7,8 +7,8 @@ using System.Drawing;
 
 namespace DiplomaClient
 {
-    //Class comprise maket design color palette
-    class ColorPalette
+    //Class comprise design color palette of application
+    class ColorPalette 
     {
       
         static internal readonly Color  white1 = Color.FromArgb(240, 232, 232);
