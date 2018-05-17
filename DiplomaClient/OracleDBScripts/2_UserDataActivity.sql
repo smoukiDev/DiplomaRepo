@@ -107,3 +107,9 @@ DECLARE
 BEGIN
 DELETE FROM ClientModuleAccess WHERE UserID = :old.UserID;
 END DeleteAppClientID;
+
+ALTER TABLE ClientAppUsers ADD EmailActivationCode VARCHAR2(10 CHAR);
+ALTER TABLE ClientAppUsers ADD EmailActivationHash VARCHAR2(200 CHAR);
+ALTER TABLE ClientAppUsers ADD EmailActivationSalt VARCHAR2(200 CHAR);
+ALTER TABLE ClientAppUsers ADD IsEmailConfirm CHAR(1 CHAR);
+
