@@ -294,6 +294,7 @@ namespace DiplomaClient
         //Upload Avatar Button
         private void butAddAvatar_Click(object sender, EventArgs e)
         {
+            pbAvatar.Image = Properties.Resources.UserProfileDefault;
             try
             {
                 ofdProfilePic = new OpenFileDialog();
