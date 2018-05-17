@@ -38,6 +38,9 @@
             this.butHash = new System.Windows.Forms.Button();
             this.butSI = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.butRegExp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbPass
@@ -163,11 +166,53 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "Pass Sing In";
             // 
+            // tbEmail
+            // 
+            this.tbEmail.BackColor = System.Drawing.Color.White;
+            this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbEmail.Location = new System.Drawing.Point(44, 471);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(333, 28);
+            this.tbEmail.TabIndex = 20;
+            this.tbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(39, 438);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(336, 30);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Email Validation By RegExp";
+            // 
+            // butRegExp
+            // 
+            this.butRegExp.BackColor = System.Drawing.Color.IndianRed;
+            this.butRegExp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.butRegExp.FlatAppearance.BorderSize = 0;
+            this.butRegExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butRegExp.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butRegExp.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.butRegExp.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.butRegExp.Location = new System.Drawing.Point(44, 517);
+            this.butRegExp.Name = "butRegExp";
+            this.butRegExp.Size = new System.Drawing.Size(333, 50);
+            this.butRegExp.TabIndex = 22;
+            this.butRegExp.Text = "Sing In";
+            this.butRegExp.UseVisualStyleBackColor = false;
+            this.butRegExp.Click += new System.EventHandler(this.butRegExp_Click);
+            // 
             // HashTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 447);
+            this.ClientSize = new System.Drawing.Size(812, 596);
+            this.Controls.Add(this.butRegExp);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.butSI);
             this.Controls.Add(this.butHash);
@@ -197,5 +242,8 @@
         private System.Windows.Forms.Button butHash;
         private System.Windows.Forms.Button butSI;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button butRegExp;
     }
 }

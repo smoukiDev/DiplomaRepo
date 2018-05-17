@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace DiplomaClient
 {
@@ -38,5 +39,15 @@ namespace DiplomaClient
             tbHash.Text = sm.GenerateSHA256Hash(tbPass.Text, salt);
         }
 
+        private void butRegExp_Click(object sender, EventArgs e)
+        {
+            Regex regex = new Regex(@"\w@gmail\.com$");
+            MatchCollection matches = regex.Matches(tbEmail.Text);
+            if (matches.Count == 1)
+                MessageBox.Show("Valid");
+            else
+                MessageBox.Show("Invalid");
+
+        }
     }
 }
