@@ -1,6 +1,6 @@
 ﻿namespace DiplomaClient
 {
-    partial class HashTest
+    partial class HashRegexTest
     {
         /// <summary>
         /// Required designer variable.

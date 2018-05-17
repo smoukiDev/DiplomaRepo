@@ -108,9 +108,8 @@ namespace DiplomaClient
 
             //Loading is Visible
             pbLoading.Visible = true;
-            
 
-
+            //Validation Method Connected One with each other
             ValidationIsMainFieldsFull();
             ValidationPasswordSecure();
             ValidationPasswordConfirm();

@@ -11,10 +11,10 @@ using System.Text.RegularExpressions;
 
 namespace DiplomaClient
 {
-    public partial class HashTest : Form
+    public partial class HashRegexTest : Form
     {
         //Form For Testing Hash Feature
-        public HashTest()
+        public HashRegexTest()
         {
             InitializeComponent();
         }

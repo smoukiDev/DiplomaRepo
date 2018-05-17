@@ -61,6 +61,7 @@
             this.pbLoading = new System.Windows.Forms.PictureBox();
             this.lblErrorLog = new System.Windows.Forms.Label();
             this.panFooter = new System.Windows.Forms.Panel();
+            this.lblPassSecure = new System.Windows.Forms.Label();
             this.mtbPhone = new System.Windows.Forms.MaskedTextBox();
             this.buttonMakeVisible1 = new System.Windows.Forms.Button();
             this.buttonMakeVisible2 = new System.Windows.Forms.Button();
@@ -74,7 +75,6 @@
             this.pEmail = new System.Windows.Forms.Panel();
             this.pPhone = new System.Windows.Forms.Panel();
             this.pAdress = new System.Windows.Forms.Panel();
-            this.lblPassSecure = new System.Windows.Forms.Label();
             this.panHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -422,7 +422,7 @@
             this.butRegister.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.butRegister.Location = new System.Drawing.Point(12, 520);
             this.butRegister.Name = "butRegister";
-            this.butRegister.Size = new System.Drawing.Size(325, 76);
+            this.butRegister.Size = new System.Drawing.Size(421, 76);
             this.butRegister.TabIndex = 34;
             this.butRegister.Text = "Сreate Account";
             this.butRegister.UseVisualStyleBackColor = true;
@@ -434,7 +434,7 @@
             this.pbLoading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbLoading.ErrorImage = null;
             this.pbLoading.Image = ((System.Drawing.Image)(resources.GetObject("pbLoading.Image")));
-            this.pbLoading.Location = new System.Drawing.Point(343, 520);
+            this.pbLoading.Location = new System.Drawing.Point(448, 520);
             this.pbLoading.Name = "pbLoading";
             this.pbLoading.Size = new System.Drawing.Size(90, 76);
             this.pbLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -462,6 +462,17 @@
             this.panFooter.Size = new System.Drawing.Size(1000, 36);
             this.panFooter.TabIndex = 37;
             this.panFooter.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panFooter_MouseMove);
+            // 
+            // lblPassSecure
+            // 
+            this.lblPassSecure.AutoSize = true;
+            this.lblPassSecure.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassSecure.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPassSecure.Location = new System.Drawing.Point(12, 5);
+            this.lblPassSecure.Name = "lblPassSecure";
+            this.lblPassSecure.Size = new System.Drawing.Size(116, 22);
+            this.lblPassSecure.TabIndex = 37;
+            this.lblPassSecure.Text = "PassSecure:";
             // 
             // mtbPhone
             // 
@@ -576,17 +587,6 @@
             this.pAdress.Size = new System.Drawing.Size(20, 105);
             this.pAdress.TabIndex = 47;
             this.pAdress.Visible = false;
-            // 
-            // lblPassSecure
-            // 
-            this.lblPassSecure.AutoSize = true;
-            this.lblPassSecure.BackColor = System.Drawing.Color.Transparent;
-            this.lblPassSecure.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblPassSecure.Location = new System.Drawing.Point(12, 5);
-            this.lblPassSecure.Name = "lblPassSecure";
-            this.lblPassSecure.Size = new System.Drawing.Size(116, 22);
-            this.lblPassSecure.TabIndex = 37;
-            this.lblPassSecure.Text = "PassSecure:";
             // 
             // RegisterForm
             // 

@@ -71,11 +71,11 @@
     <Compile Include="CustomMessageBox.Designer.cs">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="HashTest.cs">
+    <Compile Include="HashRegexTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HashTest.Designer.cs">
-      <DependentUpon>HashTest.cs</DependentUpon>
+    <Compile Include="HashRegexTest.Designer.cs">
+      <DependentUpon>HashRegexTest.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -100,8 +100,8 @@
     <EmbeddedResource Include="CustomMessageBox.resx">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HashTest.resx">
-      <DependentUpon>HashTest.cs</DependentUpon>
+    <EmbeddedResource Include="HashRegexTest.resx">
+      <DependentUpon>HashRegexTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
