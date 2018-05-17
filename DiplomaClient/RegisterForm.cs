@@ -47,6 +47,8 @@ namespace DiplomaClient
             pEmail.BackColor = ColorPalette.red1;
             pPhone.BackColor = ColorPalette.red1;
             pAdress.BackColor =  ColorPalette.red1;
+            //erroe log empty
+            lblErrorLog.Text = "";
 
         }
         //Drag Form Feature
@@ -104,9 +106,11 @@ namespace DiplomaClient
             //Error is Log Visible
             //lblErrorLog.Visible = true;
             ValidationIsMainFieldsFull();
+            
                 
 
         }
+        //Checks Is Main Fields Fill in or not
         private void ValidationIsMainFieldsFull()
         {
             //Is Main Fields Fill In
@@ -178,7 +182,7 @@ namespace DiplomaClient
                 isMainFieldsFull = true;
             }
 
-            if (mtbPhone.Text == "+")
+            if (mtbPhone.Text == "+" || mtbPhone.Text.Length<11)
             {
                 pPhone.Visible = true;
                 isMainFieldsFull = false;
@@ -210,6 +214,7 @@ namespace DiplomaClient
                 lblErrorLog.Visible = false;
             }
         }
+
         //Clear fields button
         private void butCleanPass_Click(object sender, EventArgs e)
         {
