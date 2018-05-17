@@ -71,6 +71,7 @@ DECLARE
 
 BEGIN
 :new.UserID := ClientIDSeq.NEXTVAL;
+INSERT INTO ClientModuleAccess(UserID) VALUES(ClientIDSeq.CURRVAL);
 END NewAppClientID;
 -- Trigger for AutoID for ClientAppUserActivity Table
 CREATE OR REPLACE TRIGGER NewUserActivityId
@@ -85,3 +86,24 @@ END NewUserActivityId;
 --Add Colum PassSalt in ClientAppUsers Table
 ALTER TABLE ClientAppUsers ADD PassSalt VARCHAR2(200 CHAR);
 
+--Table Contains Info About Access To Modules
+CREATE TABLE ClientModuleAccess
+(
+	UserID		  NUMBER(10)  NOT NULL 
+);
+
+CREATE UNIQUE INDEX XPKClientModuleAccess ON ClientModuleAccess
+(UserID  ASC);
+
+ALTER TABLE ClientModuleAccess
+	ADD CONSTRAINT  XPKClientModuleAccess PRIMARY KEY (UserID);
+
+-- Trigger AutoDelete ClientModuleAccess record before delete ClientAppUsers record
+CREATE OR REPLACE TRIGGER DeleteAppClientID
+BEFORE DELETE ON ClientAppUsers
+FOR EACH ROW
+DECLARE
+
+BEGIN
+DELETE FROM ClientModuleAccess WHERE UserID = :old.UserID;
+END DeleteAppClientID;
