@@ -23,7 +23,7 @@ namespace DiplomaClient
         public RegisterForm()
         {
 
-            InitializeComponent();
+            InitializeComponent();            
             //decoration
             pbLoading.Visible = false;
             lblErrorLog.Visible = false;
@@ -38,6 +38,15 @@ namespace DiplomaClient
             this.Show();
             //create variable link to this form
             registerFormBuf = this;
+            //error panels fill in color
+            pLogin.BackColor = ColorPalette.red1;
+            pPassword.BackColor = ColorPalette.red1;
+            pConfirmPassword.BackColor = ColorPalette.red1;
+            pFName.BackColor = ColorPalette.red1;
+            pLName.BackColor = ColorPalette.red1;
+            pEmail.BackColor = ColorPalette.red1;
+            pPhone.BackColor = ColorPalette.red1;
+            pAdress.BackColor =  ColorPalette.red1;
 
         }
         //Drag Form Feature
@@ -89,8 +98,117 @@ namespace DiplomaClient
         //Register Button
         private void butRegister_Click(object sender, EventArgs e)
         {
+            
+            //Loading is Visible
             pbLoading.Visible = true;
-            lblErrorLog.Visible = true;
+            //Error is Log Visible
+            //lblErrorLog.Visible = true;
+            ValidationIsMainFieldsFull();
+                
+
+        }
+        private void ValidationIsMainFieldsFull()
+        {
+            //Is Main Fields Fill In
+            bool isMainFieldsFull = true;
+            //Validation
+            if (tbLogin.Text == "")
+            {
+                pLogin.Visible = true;
+                isMainFieldsFull = false;
+            }
+            else
+            {
+                pLogin.Visible = false;
+                isMainFieldsFull = true;
+            }
+
+            if (tbPass.Text == "")
+            {
+                pPassword.Visible = true;
+                isMainFieldsFull = false;
+            }
+            else
+            {
+                pPassword.Visible = false;
+                isMainFieldsFull = true;
+            }
+
+            if (tbPassConfirm.Text == "")
+            {
+                pConfirmPassword.Visible = true;
+                isMainFieldsFull = false;
+            }
+            else
+            {
+                pConfirmPassword.Visible = false;
+                isMainFieldsFull = true;
+            }
+
+            if (tbFName.Text == "")
+            {
+                pFName.Visible = true;
+                isMainFieldsFull = false;
+            }
+            else
+            {
+                pFName.Visible = false;
+                isMainFieldsFull = true;
+            }
+
+            if (tbLName.Text == "")
+            {
+                pLName.Visible = true;
+                isMainFieldsFull = false;
+            }
+            else
+            {
+                pLName.Visible = false;
+                isMainFieldsFull = true;
+            }
+
+            if (tbEmail.Text == "")
+            {
+                pEmail.Visible = true;
+                isMainFieldsFull = false;
+            }
+            else
+            {
+                pEmail.Visible = false;
+                isMainFieldsFull = true;
+            }
+
+            if (mtbPhone.Text == "+")
+            {
+                pPhone.Visible = true;
+                isMainFieldsFull = false;
+            }
+            else
+            {
+                pPhone.Visible = false;
+                isMainFieldsFull = true;
+            }
+
+            if (rtbAdress.Text == "")
+            {
+                pAdress.Visible = true;
+                isMainFieldsFull = false;
+            }
+            else
+            {
+                pAdress.Visible = false;
+                isMainFieldsFull = true;
+            }
+            if (isMainFieldsFull == false)
+            {
+                lblErrorLog.Text = "Necessary fields weren't filled in:(";
+                lblErrorLog.Visible = true;
+            }
+            else
+            {
+                lblErrorLog.Text = "";
+                lblErrorLog.Visible = false;
+            }
         }
         //Clear fields button
         private void butCleanPass_Click(object sender, EventArgs e)

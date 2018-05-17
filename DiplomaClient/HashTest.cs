@@ -12,11 +12,12 @@ namespace DiplomaClient
 {
     public partial class HashTest : Form
     {
+        //Form For Testing Hash Feature
         public HashTest()
         {
             InitializeComponent();
         }
-
+        
         private void butSI_Click(object sender, EventArgs e)
         {
             string salt =  tbSalt.Text;

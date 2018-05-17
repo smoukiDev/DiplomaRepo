@@ -66,6 +66,14 @@
             this.buttonMakeVisible2 = new System.Windows.Forms.Button();
             this.butCleanPass = new System.Windows.Forms.Button();
             this.ofdProfilePic = new System.Windows.Forms.OpenFileDialog();
+            this.pLogin = new System.Windows.Forms.Panel();
+            this.pPassword = new System.Windows.Forms.Panel();
+            this.pConfirmPassword = new System.Windows.Forms.Panel();
+            this.pFName = new System.Windows.Forms.Panel();
+            this.pLName = new System.Windows.Forms.Panel();
+            this.pEmail = new System.Windows.Forms.Panel();
+            this.pPhone = new System.Windows.Forms.Panel();
+            this.pAdress = new System.Windows.Forms.Panel();
             this.panHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -423,9 +431,9 @@
             this.pbLoading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbLoading.ErrorImage = null;
             this.pbLoading.Image = ((System.Drawing.Image)(resources.GetObject("pbLoading.Image")));
-            this.pbLoading.Location = new System.Drawing.Point(867, 520);
+            this.pbLoading.Location = new System.Drawing.Point(898, 520);
             this.pbLoading.Name = "pbLoading";
-            this.pbLoading.Size = new System.Drawing.Size(133, 76);
+            this.pbLoading.Size = new System.Drawing.Size(90, 76);
             this.pbLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLoading.TabIndex = 35;
             this.pbLoading.TabStop = false;
@@ -434,10 +442,10 @@
             // 
             this.lblErrorLog.AutoSize = true;
             this.lblErrorLog.BackColor = System.Drawing.Color.Transparent;
-            this.lblErrorLog.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblErrorLog.Location = new System.Drawing.Point(551, 542);
+            this.lblErrorLog.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblErrorLog.Location = new System.Drawing.Point(532, 546);
             this.lblErrorLog.Name = "lblErrorLog";
-            this.lblErrorLog.Size = new System.Drawing.Size(113, 30);
+            this.lblErrorLog.Size = new System.Drawing.Size(89, 22);
             this.lblErrorLog.TabIndex = 36;
             this.lblErrorLog.Text = "ErrorLog:";
             // 
@@ -495,12 +503,84 @@
             this.butCleanPass.UseVisualStyleBackColor = true;
             this.butCleanPass.Click += new System.EventHandler(this.butCleanPass_Click);
             // 
+            // pLogin
+            // 
+            this.pLogin.Location = new System.Drawing.Point(433, 108);
+            this.pLogin.Name = "pLogin";
+            this.pLogin.Size = new System.Drawing.Size(20, 28);
+            this.pLogin.TabIndex = 42;
+            this.pLogin.Visible = false;
+            // 
+            // pPassword
+            // 
+            this.pPassword.Location = new System.Drawing.Point(433, 183);
+            this.pPassword.Name = "pPassword";
+            this.pPassword.Size = new System.Drawing.Size(20, 28);
+            this.pPassword.TabIndex = 43;
+            this.pPassword.Visible = false;
+            // 
+            // pConfirmPassword
+            // 
+            this.pConfirmPassword.Location = new System.Drawing.Point(433, 258);
+            this.pConfirmPassword.Name = "pConfirmPassword";
+            this.pConfirmPassword.Size = new System.Drawing.Size(20, 28);
+            this.pConfirmPassword.TabIndex = 44;
+            this.pConfirmPassword.Visible = false;
+            // 
+            // pFName
+            // 
+            this.pFName.Location = new System.Drawing.Point(433, 329);
+            this.pFName.Name = "pFName";
+            this.pFName.Size = new System.Drawing.Size(20, 28);
+            this.pFName.TabIndex = 45;
+            this.pFName.Visible = false;
+            // 
+            // pLName
+            // 
+            this.pLName.Location = new System.Drawing.Point(433, 479);
+            this.pLName.Name = "pLName";
+            this.pLName.Size = new System.Drawing.Size(20, 28);
+            this.pLName.TabIndex = 46;
+            this.pLName.Visible = false;
+            // 
+            // pEmail
+            // 
+            this.pEmail.Location = new System.Drawing.Point(536, 258);
+            this.pEmail.Name = "pEmail";
+            this.pEmail.Size = new System.Drawing.Size(20, 28);
+            this.pEmail.TabIndex = 45;
+            this.pEmail.Visible = false;
+            // 
+            // pPhone
+            // 
+            this.pPhone.Location = new System.Drawing.Point(536, 329);
+            this.pPhone.Name = "pPhone";
+            this.pPhone.Size = new System.Drawing.Size(20, 28);
+            this.pPhone.TabIndex = 46;
+            this.pPhone.Visible = false;
+            // 
+            // pAdress
+            // 
+            this.pAdress.Location = new System.Drawing.Point(536, 409);
+            this.pAdress.Name = "pAdress";
+            this.pAdress.Size = new System.Drawing.Size(20, 105);
+            this.pAdress.TabIndex = 47;
+            this.pAdress.Visible = false;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DiplomaClient.Properties.Resources.RegisterFormBackGround;
             this.ClientSize = new System.Drawing.Size(1000, 638);
+            this.Controls.Add(this.pAdress);
+            this.Controls.Add(this.pPhone);
+            this.Controls.Add(this.pEmail);
+            this.Controls.Add(this.pLName);
+            this.Controls.Add(this.pFName);
+            this.Controls.Add(this.pConfirmPassword);
+            this.Controls.Add(this.pPassword);
+            this.Controls.Add(this.pLogin);
             this.Controls.Add(this.butCleanPass);
             this.Controls.Add(this.buttonMakeVisible2);
             this.Controls.Add(this.buttonMakeVisible1);
@@ -588,5 +668,13 @@
         private System.Windows.Forms.Button buttonMakeVisible2;
         private System.Windows.Forms.Button butCleanPass;
         private System.Windows.Forms.OpenFileDialog ofdProfilePic;
+        private System.Windows.Forms.Panel pLogin;
+        private System.Windows.Forms.Panel pPassword;
+        private System.Windows.Forms.Panel pConfirmPassword;
+        private System.Windows.Forms.Panel pFName;
+        private System.Windows.Forms.Panel pLName;
+        private System.Windows.Forms.Panel pEmail;
+        private System.Windows.Forms.Panel pPhone;
+        private System.Windows.Forms.Panel pAdress;
     }
 }
