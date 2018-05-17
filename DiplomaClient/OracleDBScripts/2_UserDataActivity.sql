@@ -82,3 +82,6 @@ BEGIN
 :new.ActivityID := ActivityIDSeq.NEXTVAL;
 END NewUserActivityId;
 
+--Add Colum PassSalt in ClientAppUsers Table
+ALTER TABLE ClientAppUsers ADD PassSalt VARCHAR2(200 CHAR);
+
