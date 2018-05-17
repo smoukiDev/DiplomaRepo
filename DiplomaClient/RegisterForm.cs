@@ -333,5 +333,12 @@ namespace DiplomaClient
             else
                 mtbPhone.SelectionStart = mtbPhone.Text.Length;
         }
+        //BackToLogin
+        private void pbLogo_Click(object sender, EventArgs e)
+        {
+            Thread.Sleep(delay1);
+            this.Close();
+            Program.loginform.Show();
+        }
     }
 }
