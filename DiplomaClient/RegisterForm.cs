@@ -48,9 +48,12 @@ namespace DiplomaClient
             pEmail.BackColor = ColorPalette.red1;
             pPhone.BackColor = ColorPalette.red1;
             pAdress.BackColor = ColorPalette.red1;
-            //erroe log empty
+            //error log empty
             lblErrorLog.Text = "";
             lblErrorLog.ForeColor = ColorPalette.white1;
+
+            lblPassSecure.Text = "";
+            lblPassSecure.ForeColor = ColorPalette.white1;
 
         }
         //Drag Form Feature
@@ -105,10 +108,13 @@ namespace DiplomaClient
 
             //Loading is Visible
             pbLoading.Visible = true;
+            
+
 
             ValidationIsMainFieldsFull();
+            ValidationPasswordSecure();
             ValidationPasswordConfirm();
-
+            
 
 
         }
@@ -206,23 +212,27 @@ namespace DiplomaClient
             {
                 lblErrorLog.Text = "Necessary fields weren't filled in:(";
                 lblErrorLog.Visible = true;
+                lblPassSecure.Visible = false;
             }
             else
             if (pEmail.Visible == true || pPhone.Visible == true || pAdress.Visible == true)
             {
                 lblErrorLog.Text = "Necessary fields weren't filled in:(";
                 lblErrorLog.Visible = true;
+                lblPassSecure.Visible = false;
             }
             else
             {
                 lblErrorLog.Text = "";
                 lblErrorLog.Visible = false;
+                lblPassSecure.Visible = true;
             }
 
         }
+        //Compare Pass & Confirm Pass
         private void ValidationPasswordConfirm()
         {
-            if (lblErrorLog.Text == "" || lblErrorLog.Text == "")
+            if (lblErrorLog.Text == "" || lblErrorLog.Text == "ErrorLog:")
             {
                 if (tbPass.Text != tbPassConfirm.Text)
                 {
@@ -231,6 +241,37 @@ namespace DiplomaClient
                     incorectConfirm.Show();
                 }
 
+
+            }
+        }
+        //Check Is Password Contains UpperLetter, Digit, Symbol, Appropriate Lenth
+        private void ValidationPasswordSecure()
+        {
+            if (lblErrorLog.Text == "" || lblErrorLog.Text == "ErrorLog:")
+            {
+
+                bool isCaps = false, isDigit = false, isSymbol = false;
+                string pass = tbPass.Text;
+                for (int i = 0; i < pass.Length; i++)
+                {
+                    if (char.IsUpper(pass[i]))
+                        isCaps = true;
+                    if (char.IsDigit(pass[i]))
+                        isDigit = true;
+                    if (char.IsPunctuation(pass[i]))
+                        isSymbol = true;
+
+                }
+                if (isCaps == false || isDigit == false || isSymbol == false||pass.Length<12)
+                {
+                    lblPassSecure.Text = "Insecure pass";
+
+                }
+                else
+                {
+                    lblPassSecure.Text = "Secure pass";
+
+                }
 
             }
         }

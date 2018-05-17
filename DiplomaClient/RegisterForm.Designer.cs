@@ -74,6 +74,7 @@
             this.pEmail = new System.Windows.Forms.Panel();
             this.pPhone = new System.Windows.Forms.Panel();
             this.pAdress = new System.Windows.Forms.Panel();
+            this.lblPassSecure = new System.Windows.Forms.Label();
             this.panHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -453,6 +454,7 @@
             // 
             // panFooter
             // 
+            this.panFooter.Controls.Add(this.lblPassSecure);
             this.panFooter.Controls.Add(this.lblErrorLog);
             this.panFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panFooter.Location = new System.Drawing.Point(0, 602);
@@ -575,6 +577,17 @@
             this.pAdress.TabIndex = 47;
             this.pAdress.Visible = false;
             // 
+            // lblPassSecure
+            // 
+            this.lblPassSecure.AutoSize = true;
+            this.lblPassSecure.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassSecure.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPassSecure.Location = new System.Drawing.Point(12, 5);
+            this.lblPassSecure.Name = "lblPassSecure";
+            this.lblPassSecure.Size = new System.Drawing.Size(116, 22);
+            this.lblPassSecure.TabIndex = 37;
+            this.lblPassSecure.Text = "PassSecure:";
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -684,5 +697,6 @@
         private System.Windows.Forms.Panel pEmail;
         private System.Windows.Forms.Panel pPhone;
         private System.Windows.Forms.Panel pAdress;
+        private System.Windows.Forms.Label lblPassSecure;
     }
 }
