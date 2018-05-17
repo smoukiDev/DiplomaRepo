@@ -32,6 +32,7 @@ namespace DiplomaClient
             panFooter.BackColor = ColorPalette.grey3;
             butRegister.BackColor = ColorPalette.red1;
             butRegister.ForeColor = ColorPalette.white1;
+            butCleanPass.BackColor = ColorPalette.orange1;
             pbAvatar.BackColor = ColorPalette.white1;
             cbGender.SelectedIndex = 0;
             //displayform
@@ -49,6 +50,7 @@ namespace DiplomaClient
             pAdress.BackColor = ColorPalette.red1;
             //erroe log empty
             lblErrorLog.Text = "";
+            lblErrorLog.ForeColor = ColorPalette.white1;
 
         }
         //Drag Form Feature
@@ -105,7 +107,17 @@ namespace DiplomaClient
             pbLoading.Visible = true;
 
             ValidationIsMainFieldsFull();
-
+            if(lblErrorLog.Text == "" || lblErrorLog.Text == "")
+            {
+                if(tbPass.Text != tbPassConfirm.Text)
+                {
+                    CustomMessageBox incorectConfirm = new CustomMessageBox(Properties.Resources.Error, "Password & Confirm Password fields are different!", "ОК", () => { registerFormBuf.Enabled = true; }, false, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    incorectConfirm.Show();
+                }
+                
+                
+            }
 
 
 

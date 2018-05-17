@@ -78,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).BeginInit();
+            this.panFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbLogin
@@ -418,9 +419,9 @@
             this.butRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butRegister.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butRegister.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.butRegister.Location = new System.Drawing.Point(12, 534);
+            this.butRegister.Location = new System.Drawing.Point(12, 520);
             this.butRegister.Name = "butRegister";
-            this.butRegister.Size = new System.Drawing.Size(350, 50);
+            this.butRegister.Size = new System.Drawing.Size(325, 76);
             this.butRegister.TabIndex = 34;
             this.butRegister.Text = "Сreate Account";
             this.butRegister.UseVisualStyleBackColor = true;
@@ -432,7 +433,7 @@
             this.pbLoading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbLoading.ErrorImage = null;
             this.pbLoading.Image = ((System.Drawing.Image)(resources.GetObject("pbLoading.Image")));
-            this.pbLoading.Location = new System.Drawing.Point(898, 520);
+            this.pbLoading.Location = new System.Drawing.Point(343, 520);
             this.pbLoading.Name = "pbLoading";
             this.pbLoading.Size = new System.Drawing.Size(90, 76);
             this.pbLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -444,7 +445,7 @@
             this.lblErrorLog.AutoSize = true;
             this.lblErrorLog.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorLog.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblErrorLog.Location = new System.Drawing.Point(532, 546);
+            this.lblErrorLog.Location = new System.Drawing.Point(12, 5);
             this.lblErrorLog.Name = "lblErrorLog";
             this.lblErrorLog.Size = new System.Drawing.Size(89, 22);
             this.lblErrorLog.TabIndex = 36;
@@ -452,6 +453,7 @@
             // 
             // panFooter
             // 
+            this.panFooter.Controls.Add(this.lblErrorLog);
             this.panFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panFooter.Location = new System.Drawing.Point(0, 602);
             this.panFooter.Name = "panFooter";
@@ -495,12 +497,17 @@
             // 
             // butCleanPass
             // 
-            this.butCleanPass.BackgroundImage = global::DiplomaClient.Properties.Resources.EraseButton;
             this.butCleanPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butCleanPass.Location = new System.Drawing.Point(369, 534);
+            this.butCleanPass.FlatAppearance.BorderSize = 0;
+            this.butCleanPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butCleanPass.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butCleanPass.Image = ((System.Drawing.Image)(resources.GetObject("butCleanPass.Image")));
+            this.butCleanPass.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.butCleanPass.Location = new System.Drawing.Point(556, 520);
             this.butCleanPass.Name = "butCleanPass";
-            this.butCleanPass.Size = new System.Drawing.Size(64, 50);
+            this.butCleanPass.Size = new System.Drawing.Size(421, 76);
             this.butCleanPass.TabIndex = 41;
+            this.butCleanPass.Text = "Refresh";
             this.butCleanPass.UseVisualStyleBackColor = true;
             this.butCleanPass.Click += new System.EventHandler(this.butCleanPass_Click);
             // 
@@ -572,7 +579,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DiplomaClient.Properties.Resources.RegisterFormBackGround;
             this.ClientSize = new System.Drawing.Size(1000, 638);
             this.Controls.Add(this.pAdress);
             this.Controls.Add(this.pPhone);
@@ -587,7 +593,6 @@
             this.Controls.Add(this.buttonMakeVisible1);
             this.Controls.Add(this.mtbPhone);
             this.Controls.Add(this.panFooter);
-            this.Controls.Add(this.lblErrorLog);
             this.Controls.Add(this.pbLoading);
             this.Controls.Add(this.butRegister);
             this.Controls.Add(this.butRemoveAvatar);
@@ -625,6 +630,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).EndInit();
+            this.panFooter.ResumeLayout(false);
+            this.panFooter.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
