@@ -64,6 +64,7 @@ MAXVALUE 999999999
 MINVALUE 1
 NOCYCLE;
 -- Trigger for AutoID for ClientAppUsers Table
+-- Also AutoAdd ISBLOCK, ISADMIN, ISEMAILCONFIRM DEFAULT VALUES
 CREATE OR REPLACE TRIGGER NewAppClientID
 BEFORE INSERT ON ClientAppUsers
 FOR EACH ROW
@@ -72,6 +73,9 @@ DECLARE
 BEGIN
 :new.UserID := ClientIDSeq.NEXTVAL;
 INSERT INTO ClientModuleAccess(UserID) VALUES(ClientIDSeq.CURRVAL);
+:new.ISBLOCK := 'T';
+:new.ISADMIN :='F';
+:new.ISEMAILCONFIRM := 'F';
 END NewAppClientID;
 -- Trigger for AutoID for ClientAppUserActivity Table
 CREATE OR REPLACE TRIGGER NewUserActivityId
@@ -106,10 +110,49 @@ DECLARE
 
 BEGIN
 DELETE FROM ClientModuleAccess WHERE UserID = :old.UserID;
+DELETE FROM ClientAppUserActivity WHERE USERID = :old.UserID;
 END DeleteAppClientID;
-
+--Add Columns for Confirm Email Feature
 ALTER TABLE ClientAppUsers ADD EmailActivationCode VARCHAR2(10 CHAR);
 ALTER TABLE ClientAppUsers ADD EmailActivationHash VARCHAR2(200 CHAR);
 ALTER TABLE ClientAppUsers ADD EmailActivationSalt VARCHAR2(200 CHAR);
 ALTER TABLE ClientAppUsers ADD IsEmailConfirm CHAR(1 CHAR);
+--Create account procedure
+CREATE OR REPLACE PROCEDURE REGISTERCLIENT
+(
+v_login in ClientAppUsers.LOGIN%TYPE,
+v_pass in CLIENTAPPUSERS.PASS%TYPE,
+v_passhash in CLIENTAPPUSERS.PASSHASH%TYPE,
+v_passsalt in CLIENTAPPUSERS.PASSSALT%TYPE,
+v_fname in CLIENTAPPUSERS.FNAME%TYPE,
+v_lname in CLIENTAPPUSERS.LNAME%TYPE,
+v_mname in CLIENTAPPUSERS.MNAME%TYPE,
+v_email in CLIENTAPPUSERS.EMAIL%TYPE,
+v_phone in CLIENTAPPUSERS.PHONE%TYPE,
+v_adress in CLIENTAPPUSERS.ADRESS%TYPE,
+v_gender in CLIENTAPPUSERS.GENDER%TYPE,
+v_avatar in CLIENTAPPUSERS.AVATAR%TYPE,
+v_eccode in CLIENTAPPUSERS.EMAILACTIVATIONCODE%TYPE,
+v_echash in CLIENTAPPUSERS.EMAILACTIVATIONHASH%TYPE,
+v_ecsalt in CLIENTAPPUSERS.EMAILACTIVATIONSALT%TYPE
+)
+IS
+BEGIN
+INSERT INTO CLIENTAPPUSERS
+(
+LOGIN,PASS,PASSHASH,PASSSALT,FNAME,LNAME,MNAME,EMAIL,PHONE,ADRESS,GENDER,AVATAR,
+EMAILACTIVATIONCODE,EMAILACTIVATIONHASH,EMAILACTIVATIONSALT
+) 
+VALUES
+(
+v_login,v_pass,v_passhash,v_passsalt,v_fname,v_lname,v_mname,v_email,v_phone,v_adress,v_gender,v_avatar,
+v_eccode,v_echash,v_ecsalt
+);
+INSERT INTO CLIENTAPPUSERACTIVITY (USERID,DESCRIPTION,ACTIVITYTIME)
+VALUES (ClientIDSeq.CURRVAL,'User has registered', CURRENT_DATE);
+--Required to Add Script of locking access to modules which will be added soon
+END REGISTERCLIENT;
+
+--Session Date Format
+ALTER SESSION SET nls_date_format='yyyy-mm-dd hh24:mi:ss';
 
