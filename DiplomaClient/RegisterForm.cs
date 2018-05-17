@@ -107,17 +107,7 @@ namespace DiplomaClient
             pbLoading.Visible = true;
 
             ValidationIsMainFieldsFull();
-            if(lblErrorLog.Text == "" || lblErrorLog.Text == "")
-            {
-                if(tbPass.Text != tbPassConfirm.Text)
-                {
-                    CustomMessageBox incorectConfirm = new CustomMessageBox(Properties.Resources.Error, "Password & Confirm Password fields are different!", "ОК", () => { registerFormBuf.Enabled = true; }, false, ColorPalette.red1, ColorPalette.white1);
-                    this.Enabled = false;
-                    incorectConfirm.Show();
-                }
-                
-                
-            }
+            ValidationPasswordConfirm();
 
 
 
@@ -230,7 +220,20 @@ namespace DiplomaClient
             }
 
         }
+        private void ValidationPasswordConfirm()
+        {
+            if (lblErrorLog.Text == "" || lblErrorLog.Text == "")
+            {
+                if (tbPass.Text != tbPassConfirm.Text)
+                {
+                    CustomMessageBox incorectConfirm = new CustomMessageBox(Properties.Resources.Error, "Password & Confirm Password fields are different!", "ОК", () => { registerFormBuf.Enabled = true; }, false, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    incorectConfirm.Show();
+                }
 
+
+            }
+        }
         //Clear fields button
         private void butCleanPass_Click(object sender, EventArgs e)
         {
