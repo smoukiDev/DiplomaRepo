@@ -1,0 +1,2 @@
+[SalesHistoryConnectionString]
+DATA SOURCE=localhost:1521/pdbortw;PASSWORD=mining;PERSIST SECURITY INFO=True;USER ID=SH
