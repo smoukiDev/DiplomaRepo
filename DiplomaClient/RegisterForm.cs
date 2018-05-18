@@ -261,9 +261,9 @@ namespace DiplomaClient
                         isSymbol = true;
 
                 }
-                if (isCaps == false || isDigit == false || isSymbol == false||pass.Length<12)
+                if (isCaps == false || isDigit == false || isSymbol == false||pass.Length<8)
                 {
-                    lblPassSecure.Text = "Insecure pass";
+                    lblPassSecure.Text = "Insecure Pass. It has to be at least 8 symbols with digit, uppercase letter and symbol.";
 
                 }
                 else
