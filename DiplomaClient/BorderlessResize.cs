@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace DiplomaClient
 {
     public partial class BorderlessResize : Form
     {
+        const int DISTANCE = 10;
         public BorderlessResize()
         {
             InitializeComponent();
@@ -23,10 +25,48 @@ namespace DiplomaClient
         {
             if (e.Button != MouseButtons.Left) MouseHook = e.Location;
             Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
+            
+            
         }
-        
 
-        
+
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == 0x0046 /* WM_WINDOWPOSCHANGING */)
+            {
+                Rectangle workArea = SystemInformation.WorkingArea;
+                Rectangle rect = (Rectangle)Marshal.PtrToStructure((IntPtr)(IntPtr.Size * 2 + m.LParam.ToInt64()), typeof(Rectangle));
+
+                if (rect.X <= workArea.Left + DISTANCE)
+                {
+                    Marshal.WriteInt32(m.LParam, IntPtr.Size * 2, workArea.Left);
+                    
+                }
+                    
+
+                if (rect.X + rect.Width >= workArea.Width - DISTANCE)
+                {
+                    Marshal.WriteInt32(m.LParam, IntPtr.Size * 2, workArea.Right - rect.Width);
+                }
+                    
+
+                if (rect.Y <= workArea.Top + DISTANCE)
+                {
+                    Marshal.WriteInt32(m.LParam, IntPtr.Size * 2 + 4, workArea.Top);
+                }
+                   
+
+                if (rect.Y + rect.Height >= workArea.Height - DISTANCE)
+                {
+                    Marshal.WriteInt32(m.LParam, IntPtr.Size * 2 + 4, workArea.Bottom - rect.Height);
+                }
+
+                
+
+            }
+
+            base.WndProc(ref m);
+        }
 
         int Mx;
         int My;
@@ -73,6 +113,7 @@ namespace DiplomaClient
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
+            
             if (e.Button != MouseButtons.Left) MouseHook = e.Location;
                 Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
         }
