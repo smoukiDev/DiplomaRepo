@@ -28,8 +28,10 @@ namespace DiplomaClient
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(loginform = new LoginForm());
-            //Application.Run(new HashTest());
+            //Application.Run(loginform = new LoginForm());
+
+            //Application.Run(new BorderAvailable());
+            Application.Run(new BorderlessResize());
         }
     }
     

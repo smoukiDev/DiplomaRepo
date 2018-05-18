@@ -70,6 +70,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BorderAvailable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorderAvailable.Designer.cs">
+      <DependentUpon>BorderAvailable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorderlessResize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorderlessResize.Designer.cs">
+      <DependentUpon>BorderlessResize.cs</DependentUpon>
+    </Compile>
     <Compile Include="ColorPalette.cs" />
     <Compile Include="CustomMessageBox.cs">
       <SubType>Form</SubType>
@@ -108,6 +120,12 @@
       <DependentUpon>SalesHistoryDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SecurityModule.cs" />
+    <EmbeddedResource Include="BorderAvailable.resx">
+      <DependentUpon>BorderAvailable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorderlessResize.resx">
+      <DependentUpon>BorderlessResize.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomMessageBox.resx">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
