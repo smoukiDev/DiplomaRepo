@@ -89,6 +89,11 @@
     <Compile Include="CustomMessageBox.Designer.cs">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="dsSalesHistory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSalesHistory.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HashRegexTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +143,17 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsSalesHistory.xsc">
+      <DependentUpon>dsSalesHistory.xsd</DependentUpon>
+    </None>
+    <None Include="dsSalesHistory.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSalesHistory.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsSalesHistory.xss">
+      <DependentUpon>dsSalesHistory.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

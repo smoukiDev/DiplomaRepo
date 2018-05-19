@@ -1,0 +1,16 @@
+1.Open tnsnames.ora in Oracle Developer Toopls Directory
+Example Path: C:\Program Files (x86)\Oracle Developer Tools for VS2017\network\admin\tnsnames.ora
+
+2.Add Service Name of server, which is used
+Example:
+  PDBORTW =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = PDBORTW)
+    )
+  )
+
+3.Additional note - this service name should be written in tnsnames.ora in Oracle Home Directory
+Example Path: C:\ORACUL12\app\ORUVGE\product\12.1.0\dbhome_1\NETWORK\ADMIN\tnsnames.ora

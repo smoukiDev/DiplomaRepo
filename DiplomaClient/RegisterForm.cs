@@ -113,7 +113,9 @@ namespace DiplomaClient
             ValidationIsMainFieldsFull();
             ValidationPasswordSecure();
             ValidationPasswordConfirm();
-            
+            dsSalesHistoryTableAdapters.QueriesTableAdapter obj = new dsSalesHistoryTableAdapters.QueriesTableAdapter();
+            obj.REGTEST("Серега");
+            obj.Dispose();
 
 
         }
