@@ -22,16 +22,5 @@ namespace DiplomaClient.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("DATA SOURCE=localhost:1521/pdbortw;PASSWORD=mining;PERSIST SECURITY INFO=True;USE" +
-            "R ID=SH")]
-        public string SalesHistoryConnectionString {
-            get {
-                return ((string)(this["SalesHistoryConnectionString"]));
-            }
-        }
     }
 }

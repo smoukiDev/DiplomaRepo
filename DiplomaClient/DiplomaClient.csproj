@@ -114,11 +114,6 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SalesHistoryDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SalesHistoryDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="SecurityModule.cs" />
     <EmbeddedResource Include="BorderAvailable.resx">
       <DependentUpon>BorderAvailable.cs</DependentUpon>
@@ -188,17 +183,6 @@
     <None Include="Image\ImageNotFound.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SalesHistoryDataSet.xsc">
-      <DependentUpon>SalesHistoryDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SalesHistoryDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SalesHistoryDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SalesHistoryDataSet.xss">
-      <DependentUpon>SalesHistoryDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Sound\Sonar_FX.wav" />
   </ItemGroup>
   <ItemGroup>
