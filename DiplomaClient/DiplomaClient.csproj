@@ -88,7 +88,7 @@
     <Compile Include="TestTemplates\BorderlessResize.Designer.cs">
       <DependentUpon>BorderlessResize.cs</DependentUpon>
     </Compile>
-    <Compile Include="ColorPalette.cs" />
+    <Compile Include="Design\ColorPalette.cs" />
     <Compile Include="AppForms\CustomMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
