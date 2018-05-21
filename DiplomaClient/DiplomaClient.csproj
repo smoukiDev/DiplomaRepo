@@ -70,35 +70,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BorderAvailable.cs">
+    <Compile Include="AppForms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BorderAvailable.Designer.cs">
+    <Compile Include="AppForms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestTemplates\BorderAvailable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestTemplates\BorderAvailable.Designer.cs">
       <DependentUpon>BorderAvailable.cs</DependentUpon>
     </Compile>
-    <Compile Include="BorderlessResize.cs">
+    <Compile Include="TestTemplates\BorderlessResize.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BorderlessResize.Designer.cs">
+    <Compile Include="TestTemplates\BorderlessResize.Designer.cs">
       <DependentUpon>BorderlessResize.cs</DependentUpon>
     </Compile>
     <Compile Include="ColorPalette.cs" />
-    <Compile Include="CustomMessageBox.cs">
+    <Compile Include="AppForms\CustomMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomMessageBox.Designer.cs">
+    <Compile Include="AppForms\CustomMessageBox.Designer.cs">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="HashRegexTest.cs">
+    <Compile Include="TestTemplates\HashRegexTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HashRegexTest.Designer.cs">
+    <Compile Include="TestTemplates\HashRegexTest.Designer.cs">
       <DependentUpon>HashRegexTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="AppForms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="AppForms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -108,26 +114,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="RegisterForm.cs">
+    <Compile Include="AppForms\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterForm.Designer.cs">
+    <Compile Include="AppForms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SecurityModule.cs" />
-    <EmbeddedResource Include="BorderAvailable.resx">
+    <EmbeddedResource Include="AppForms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestTemplates\BorderAvailable.resx">
       <DependentUpon>BorderAvailable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BorderlessResize.resx">
+    <EmbeddedResource Include="TestTemplates\BorderlessResize.resx">
       <DependentUpon>BorderlessResize.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomMessageBox.resx">
+    <EmbeddedResource Include="AppForms\CustomMessageBox.resx">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HashRegexTest.resx">
+    <EmbeddedResource Include="TestTemplates\HashRegexTest.resx">
       <DependentUpon>HashRegexTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="AppForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,7 +144,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegisterForm.resx">
+    <EmbeddedResource Include="AppForms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -193,6 +202,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Image\EraseButtonMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MinimizeButton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MaximizeButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MaximizeButton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MinimizeButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MainWindowBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MenuByttonGif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MenuButonPNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MenuButtonEnable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MenuButtonDisable.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

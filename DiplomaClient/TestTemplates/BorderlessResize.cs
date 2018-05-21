@@ -14,7 +14,7 @@ namespace DiplomaClient
 {
     public partial class BorderlessResize : Form
     {
-        
+        //CTRL+M //CTRL+L Minimir code
         public BorderlessResize()
         {
             InitializeComponent();

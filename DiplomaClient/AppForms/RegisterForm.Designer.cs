@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.butClose = new System.Windows.Forms.Button();
@@ -75,6 +76,7 @@
             this.pEmail = new System.Windows.Forms.Panel();
             this.pPhone = new System.Windows.Forms.Panel();
             this.pAdress = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -590,6 +592,11 @@
             this.pAdress.TabIndex = 47;
             this.pAdress.Visible = false;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -700,5 +707,6 @@
         private System.Windows.Forms.Panel pPhone;
         private System.Windows.Forms.Panel pAdress;
         private System.Windows.Forms.Label lblPassSecure;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

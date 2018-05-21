@@ -130,8 +130,29 @@
   <data name="ImageNotFound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\ImageNotFound.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MainWindowBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\MainWindowBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MakeVisibleButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\MakeVisibleButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MaximizeButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\MaximizeButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MaximizeButton2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\MaximizeButton2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuButtonDisable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\MenuButtonDisable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuButtonEnable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\MenuButtonEnable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MinimizeButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\MinimizeButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MinimizeButton2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\MinimizeButton2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RegisterFormBackGround" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\RegisterFormBackGround.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
