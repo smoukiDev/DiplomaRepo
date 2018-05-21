@@ -33,7 +33,7 @@ namespace DiplomaClient
             panMenu.BackColor = ColorPalette.orange1;
             panBackArea.BackColor = ColorPalette.grey3;
             panSlider.BackColor = ColorPalette.red2;
-            panProfile.BackColor = ColorPalette.white1;
+            panAdminPanel.BackColor = ColorPalette.white1;
             //
             buts9.BackColor = ColorPalette.blue1;
             buts9.ForeColor = ColorPalette.white1;
@@ -245,10 +245,15 @@ namespace DiplomaClient
                 {
                     Thread.Sleep(1);
                     panSlider.Width++;
+                    
 
                 }
+                panAdminPanel.Width -= panSliserMAX;
+                panAdminPanel.Location = new Point(panSliserMAX + panContentMargin, panAdminPanel.Location.Y);
                 panProfile.Width -= panSliserMAX;
                 panProfile.Location = new Point(panSliserMAX + panContentMargin, panProfile.Location.Y);
+                panReport.Width -= panSliserMAX;
+                panReport.Location = new Point(panSliserMAX + panContentMargin, panReport.Location.Y);
                 Thread.Sleep(250);
                 buts1.Visible = true;
                 buts2.Visible = true;
@@ -277,16 +282,22 @@ namespace DiplomaClient
                     Thread.Sleep(1);
                     panSlider.Width--;
                 }
-                int x = panSliserMAX;
+                int x1 = panSliserMAX;
+                int x2 = panSliserMAX;
+                int x3 = panSliserMAX;
                 for (int i = 0; i < panSliserMAX; i++)
                 {
-                    panProfile.Location = new Point(--x + panContentMargin, panProfile.Location.Y);
+                    panAdminPanel.Location = new Point(--x1 + panContentMargin, panAdminPanel.Location.Y);
+                    panProfile.Location = new Point(--x2 + panContentMargin, panProfile.Location.Y);
+                    panReport.Location = new Point(--x3 + panContentMargin, panReport.Location.Y);
                 }
 
                 for (int i = 0; i < panSliserMAX; i += 10)
                 {
 
+                    panAdminPanel.Width += 10;
                     panProfile.Width += 10;
+                    panReport.Width += 10;
                 }
                 pbMenuOne.Image = Properties.Resources.MenuButtonDisable;
                 
@@ -374,47 +385,136 @@ namespace DiplomaClient
         //Menu Button switch
         private void buts1_Click(object sender, EventArgs e)
         {
+            panAdminPanel.Visible = false;
+            panReport.Visible = false;
+            panProfile.Visible = true;
+            buts1.BackColor = ColorPalette.orange1;            
+            buts2.BackColor = ColorPalette.white1;
+            buts3.BackColor = ColorPalette.white1;
+            buts4.BackColor = ColorPalette.white1;
+            buts5.BackColor = ColorPalette.white1;
+            buts6.BackColor = ColorPalette.white1;
+            buts7.BackColor = ColorPalette.white1;
+            buts8.BackColor = ColorPalette.white1;
+            
 
         }
 
         private void buts2_Click(object sender, EventArgs e)
-        {
-
+        {            
+            panReport.Visible = false;
+            panProfile.Visible = false;
+            panAdminPanel.Visible = true;
+            buts1.BackColor = ColorPalette.white1;
+            buts2.BackColor = ColorPalette.orange1;
+            buts3.BackColor = ColorPalette.white1;
+            buts4.BackColor = ColorPalette.white1;
+            buts5.BackColor = ColorPalette.white1;
+            buts6.BackColor = ColorPalette.white1;
+            buts7.BackColor = ColorPalette.white1;
+            buts8.BackColor = ColorPalette.white1;
         }
 
         private void buts3_Click(object sender, EventArgs e)
         {
-
+            
+            panProfile.Visible = false;
+            panAdminPanel.Visible = false;
+            panReport.Visible = true;
+            buts1.BackColor = ColorPalette.white1;
+            buts2.BackColor = ColorPalette.white1;
+            buts3.BackColor = ColorPalette.orange1;
+            buts4.BackColor = ColorPalette.white1;
+            buts5.BackColor = ColorPalette.white1;
+            buts6.BackColor = ColorPalette.white1;
+            buts7.BackColor = ColorPalette.white1;
+            buts8.BackColor = ColorPalette.white1;
         }
 
         private void buts4_Click(object sender, EventArgs e)
         {
-
+            panProfile.Visible = false;
+            panAdminPanel.Visible = false;
+            panReport.Visible = true;
+            buts1.BackColor = ColorPalette.white1;
+            buts2.BackColor = ColorPalette.white1;
+            buts3.BackColor = ColorPalette.white1;
+            buts4.BackColor = ColorPalette.orange1;
+            buts5.BackColor = ColorPalette.white1;
+            buts6.BackColor = ColorPalette.white1;
+            buts7.BackColor = ColorPalette.white1;
+            buts8.BackColor = ColorPalette.white1;
         }
 
         private void buts5_Click(object sender, EventArgs e)
         {
-
+            panProfile.Visible = false;
+            panAdminPanel.Visible = false;
+            panReport.Visible = true;
+            buts1.BackColor = ColorPalette.white1;
+            buts2.BackColor = ColorPalette.white1;
+            buts3.BackColor = ColorPalette.white1;
+            buts4.BackColor = ColorPalette.white1;
+            buts5.BackColor = ColorPalette.orange1;
+            buts6.BackColor = ColorPalette.white1;
+            buts7.BackColor = ColorPalette.white1;
+            buts8.BackColor = ColorPalette.white1;
         }
 
         private void buts6_Click(object sender, EventArgs e)
         {
-
+            panProfile.Visible = false;
+            panAdminPanel.Visible = false;
+            panReport.Visible = true;
+            buts1.BackColor = ColorPalette.white1;
+            buts2.BackColor = ColorPalette.white1;
+            buts3.BackColor = ColorPalette.white1;
+            buts4.BackColor = ColorPalette.white1;
+            buts5.BackColor = ColorPalette.white1;
+            buts6.BackColor = ColorPalette.orange1;
+            buts7.BackColor = ColorPalette.white1;
+            buts8.BackColor = ColorPalette.white1;
         }
 
         private void buts7_Click(object sender, EventArgs e)
         {
-
+            panProfile.Visible = false;
+            panAdminPanel.Visible = false;
+            panReport.Visible = true;
+            buts1.BackColor = ColorPalette.white1;
+            buts2.BackColor = ColorPalette.white1;
+            buts3.BackColor = ColorPalette.white1;
+            buts4.BackColor = ColorPalette.white1;
+            buts5.BackColor = ColorPalette.white1;
+            buts6.BackColor = ColorPalette.white1;
+            buts7.BackColor = ColorPalette.orange1;
+            buts8.BackColor = ColorPalette.white1;
         }
 
         private void buts8_Click(object sender, EventArgs e)
         {
-
+            panProfile.Visible = false;
+            panAdminPanel.Visible = false;
+            panReport.Visible = true;
+            buts1.BackColor = ColorPalette.white1;
+            buts2.BackColor = ColorPalette.white1;
+            buts3.BackColor = ColorPalette.white1;
+            buts4.BackColor = ColorPalette.white1;
+            buts5.BackColor = ColorPalette.white1;
+            buts6.BackColor = ColorPalette.white1;
+            buts7.BackColor = ColorPalette.white1;
+            buts8.BackColor = ColorPalette.orange1;
         }
 
         private void buts9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }

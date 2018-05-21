@@ -38,33 +38,43 @@
             this.butClose = new System.Windows.Forms.Button();
             this.butMin = new System.Windows.Forms.Button();
             this.panBackArea = new System.Windows.Forms.Panel();
+            this.panSlider = new System.Windows.Forms.Panel();
+            this.buts8 = new System.Windows.Forms.Button();
+            this.buts9 = new System.Windows.Forms.Button();
+            this.buts7 = new System.Windows.Forms.Button();
+            this.buts6 = new System.Windows.Forms.Button();
+            this.buts5 = new System.Windows.Forms.Button();
+            this.buts4 = new System.Windows.Forms.Button();
+            this.buts3 = new System.Windows.Forms.Button();
+            this.buts2 = new System.Windows.Forms.Button();
+            this.buts1 = new System.Windows.Forms.Button();
+            this.panAdminPanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panReport = new System.Windows.Forms.Panel();
             this.panProfile = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panMenu = new System.Windows.Forms.Panel();
-            this.lblMenu = new System.Windows.Forms.Label();
-            this.pbMenuOne = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panAccount = new System.Windows.Forms.Panel();
             this.tbLogin = new System.Windows.Forms.TextBox();
-            this.buts1 = new System.Windows.Forms.Button();
-            this.buts2 = new System.Windows.Forms.Button();
-            this.buts3 = new System.Windows.Forms.Button();
-            this.buts4 = new System.Windows.Forms.Button();
-            this.buts5 = new System.Windows.Forms.Button();
-            this.buts6 = new System.Windows.Forms.Button();
-            this.buts7 = new System.Windows.Forms.Button();
-            this.buts9 = new System.Windows.Forms.Button();
-            this.buts8 = new System.Windows.Forms.Button();
-            this.panSlider = new System.Windows.Forms.Panel();
+            this.pbAvatar = new System.Windows.Forms.PictureBox();
+            this.lblMenu = new System.Windows.Forms.Label();
+            this.pbMenuOne = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panFooter.SuspendLayout();
             this.panWindowTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
             this.panWinStateButtons.SuspendLayout();
             this.panBackArea.SuspendLayout();
-            this.panMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMenuOne)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panAccount.SuspendLayout();
             this.panSlider.SuspendLayout();
+            this.panAdminPanel.SuspendLayout();
+            this.panReport.SuspendLayout();
+            this.panProfile.SuspendLayout();
+            this.panMenu.SuspendLayout();
+            this.panAccount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMenuOne)).BeginInit();
             this.SuspendLayout();
             // 
             // panFooter
@@ -180,7 +190,9 @@
             // 
             this.panBackArea.BackColor = System.Drawing.Color.Crimson;
             this.panBackArea.Controls.Add(this.panSlider);
+            this.panBackArea.Controls.Add(this.panReport);
             this.panBackArea.Controls.Add(this.panProfile);
+            this.panBackArea.Controls.Add(this.panAdminPanel);
             this.panBackArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panBackArea.Location = new System.Drawing.Point(0, 120);
             this.panBackArea.Name = "panBackArea";
@@ -190,16 +202,238 @@
             this.panBackArea.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panBackArea_MouseMove);
             this.panBackArea.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panBackArea_MouseUp);
             // 
+            // panSlider
+            // 
+            this.panSlider.BackColor = System.Drawing.Color.LightSalmon;
+            this.panSlider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panSlider.Controls.Add(this.buts8);
+            this.panSlider.Controls.Add(this.buts9);
+            this.panSlider.Controls.Add(this.buts7);
+            this.panSlider.Controls.Add(this.buts6);
+            this.panSlider.Controls.Add(this.buts5);
+            this.panSlider.Controls.Add(this.buts4);
+            this.panSlider.Controls.Add(this.buts3);
+            this.panSlider.Controls.Add(this.buts2);
+            this.panSlider.Controls.Add(this.buts1);
+            this.panSlider.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panSlider.Location = new System.Drawing.Point(0, 0);
+            this.panSlider.Name = "panSlider";
+            this.panSlider.Size = new System.Drawing.Size(10, 648);
+            this.panSlider.TabIndex = 0;
+            // 
+            // buts8
+            // 
+            this.buts8.BackColor = System.Drawing.Color.Coral;
+            this.buts8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buts8.FlatAppearance.BorderSize = 0;
+            this.buts8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buts8.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buts8.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.buts8.Location = new System.Drawing.Point(9, 471);
+            this.buts8.Name = "buts8";
+            this.buts8.Size = new System.Drawing.Size(350, 60);
+            this.buts8.TabIndex = 43;
+            this.buts8.Text = "Anomaly Detect";
+            this.buts8.UseVisualStyleBackColor = false;
+            this.buts8.Visible = false;
+            this.buts8.Click += new System.EventHandler(this.buts8_Click);
+            // 
+            // buts9
+            // 
+            this.buts9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buts9.BackColor = System.Drawing.Color.Coral;
+            this.buts9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buts9.FlatAppearance.BorderSize = 0;
+            this.buts9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buts9.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buts9.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.buts9.Location = new System.Drawing.Point(9, 574);
+            this.buts9.Name = "buts9";
+            this.buts9.Size = new System.Drawing.Size(350, 60);
+            this.buts9.TabIndex = 42;
+            this.buts9.Text = "Logout";
+            this.buts9.UseVisualStyleBackColor = false;
+            this.buts9.Visible = false;
+            this.buts9.Click += new System.EventHandler(this.buts9_Click);
+            // 
+            // buts7
+            // 
+            this.buts7.BackColor = System.Drawing.Color.Coral;
+            this.buts7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buts7.FlatAppearance.BorderSize = 0;
+            this.buts7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buts7.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buts7.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.buts7.Location = new System.Drawing.Point(9, 405);
+            this.buts7.Name = "buts7";
+            this.buts7.Size = new System.Drawing.Size(350, 60);
+            this.buts7.TabIndex = 41;
+            this.buts7.Text = "Regression";
+            this.buts7.UseVisualStyleBackColor = false;
+            this.buts7.Visible = false;
+            this.buts7.Click += new System.EventHandler(this.buts7_Click);
+            // 
+            // buts6
+            // 
+            this.buts6.BackColor = System.Drawing.Color.Coral;
+            this.buts6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buts6.FlatAppearance.BorderSize = 0;
+            this.buts6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buts6.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buts6.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.buts6.Location = new System.Drawing.Point(9, 339);
+            this.buts6.Name = "buts6";
+            this.buts6.Size = new System.Drawing.Size(350, 60);
+            this.buts6.TabIndex = 40;
+            this.buts6.Text = "Clustering";
+            this.buts6.UseVisualStyleBackColor = false;
+            this.buts6.Visible = false;
+            this.buts6.Click += new System.EventHandler(this.buts6_Click);
+            // 
+            // buts5
+            // 
+            this.buts5.BackColor = System.Drawing.Color.Coral;
+            this.buts5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buts5.FlatAppearance.BorderSize = 0;
+            this.buts5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buts5.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buts5.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.buts5.Location = new System.Drawing.Point(9, 273);
+            this.buts5.Name = "buts5";
+            this.buts5.Size = new System.Drawing.Size(350, 60);
+            this.buts5.TabIndex = 39;
+            this.buts5.Text = "Classification";
+            this.buts5.UseVisualStyleBackColor = false;
+            this.buts5.Visible = false;
+            this.buts5.Click += new System.EventHandler(this.buts5_Click);
+            // 
+            // buts4
+            // 
+            this.buts4.BackColor = System.Drawing.Color.Coral;
+            this.buts4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buts4.FlatAppearance.BorderSize = 0;
+            this.buts4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buts4.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buts4.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.buts4.Location = new System.Drawing.Point(9, 207);
+            this.buts4.Name = "buts4";
+            this.buts4.Size = new System.Drawing.Size(350, 60);
+            this.buts4.TabIndex = 38;
+            this.buts4.Text = "Association Rules";
+            this.buts4.UseVisualStyleBackColor = false;
+            this.buts4.Visible = false;
+            this.buts4.Click += new System.EventHandler(this.buts4_Click);
+            // 
+            // buts3
+            // 
+            this.buts3.BackColor = System.Drawing.Color.Coral;
+            this.buts3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buts3.FlatAppearance.BorderSize = 0;
+            this.buts3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buts3.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buts3.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.buts3.Location = new System.Drawing.Point(9, 141);
+            this.buts3.Name = "buts3";
+            this.buts3.Size = new System.Drawing.Size(350, 60);
+            this.buts3.TabIndex = 37;
+            this.buts3.Text = "Explore";
+            this.buts3.UseVisualStyleBackColor = false;
+            this.buts3.Visible = false;
+            this.buts3.Click += new System.EventHandler(this.buts3_Click);
+            // 
+            // buts2
+            // 
+            this.buts2.BackColor = System.Drawing.Color.Coral;
+            this.buts2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buts2.FlatAppearance.BorderSize = 0;
+            this.buts2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buts2.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buts2.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.buts2.Location = new System.Drawing.Point(9, 75);
+            this.buts2.Name = "buts2";
+            this.buts2.Size = new System.Drawing.Size(350, 60);
+            this.buts2.TabIndex = 36;
+            this.buts2.Text = "Admin Panel";
+            this.buts2.UseVisualStyleBackColor = false;
+            this.buts2.Visible = false;
+            this.buts2.Click += new System.EventHandler(this.buts2_Click);
+            // 
+            // buts1
+            // 
+            this.buts1.BackColor = System.Drawing.Color.Coral;
+            this.buts1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buts1.FlatAppearance.BorderSize = 0;
+            this.buts1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buts1.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buts1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.buts1.Location = new System.Drawing.Point(9, 9);
+            this.buts1.Name = "buts1";
+            this.buts1.Size = new System.Drawing.Size(350, 60);
+            this.buts1.TabIndex = 35;
+            this.buts1.Text = "Profile";
+            this.buts1.UseVisualStyleBackColor = false;
+            this.buts1.Visible = false;
+            this.buts1.Click += new System.EventHandler(this.buts1_Click);
+            // 
+            // panAdminPanel
+            // 
+            this.panAdminPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panAdminPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panAdminPanel.Controls.Add(this.label4);
+            this.panAdminPanel.Location = new System.Drawing.Point(12, 9);
+            this.panAdminPanel.Name = "panAdminPanel";
+            this.panAdminPanel.Size = new System.Drawing.Size(1000, 628);
+            this.panAdminPanel.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(637, 198);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "admin";
+            // 
+            // panReport
+            // 
+            this.panReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panReport.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panReport.Controls.Add(this.reportViewer1);
+            this.panReport.Controls.Add(this.panel2);
+            this.panReport.Controls.Add(this.panel1);
+            this.panReport.Location = new System.Drawing.Point(12, 9);
+            this.panReport.Name = "panReport";
+            this.panReport.Size = new System.Drawing.Size(1000, 628);
+            this.panReport.TabIndex = 1;
+            this.panReport.Visible = false;
+            // 
             // panProfile
             // 
             this.panProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panProfile.BackColor = System.Drawing.Color.Teal;
+            this.panProfile.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.panProfile.Controls.Add(this.label3);
             this.panProfile.Location = new System.Drawing.Point(12, 9);
             this.panProfile.Name = "panProfile";
             this.panProfile.Size = new System.Drawing.Size(1000, 628);
-            this.panProfile.TabIndex = 1;
+            this.panProfile.TabIndex = 0;
+            this.panProfile.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(628, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "profile";
             // 
             // panMenu
             // 
@@ -212,6 +446,41 @@
             this.panMenu.Name = "panMenu";
             this.panMenu.Size = new System.Drawing.Size(1024, 60);
             this.panMenu.TabIndex = 2;
+            // 
+            // panAccount
+            // 
+            this.panAccount.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.panAccount.Controls.Add(this.tbLogin);
+            this.panAccount.Controls.Add(this.pbAvatar);
+            this.panAccount.Location = new System.Drawing.Point(558, 3);
+            this.panAccount.Name = "panAccount";
+            this.panAccount.Size = new System.Drawing.Size(463, 54);
+            this.panAccount.TabIndex = 21;
+            // 
+            // tbLogin
+            // 
+            this.tbLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLogin.Enabled = false;
+            this.tbLogin.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbLogin.Location = new System.Drawing.Point(9, 13);
+            this.tbLogin.Name = "tbLogin";
+            this.tbLogin.Size = new System.Drawing.Size(401, 26);
+            this.tbLogin.TabIndex = 22;
+            this.tbLogin.Text = "User(Admin)";
+            this.tbLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pbAvatar
+            // 
+            this.pbAvatar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pbAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.pbAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAvatar.Image = global::DiplomaClient.Properties.Resources.UserProfileDefault;
+            this.pbAvatar.Location = new System.Drawing.Point(416, 5);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.Size = new System.Drawing.Size(44, 43);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAvatar.TabIndex = 20;
+            this.pbAvatar.TabStop = false;
             // 
             // lblMenu
             // 
@@ -238,213 +507,32 @@
             this.pbMenuOne.TabStop = false;
             this.pbMenuOne.Click += new System.EventHandler(this.pbMenuOne_Click);
             // 
-            // pictureBox1
+            // panel1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::DiplomaClient.Properties.Resources.UserProfileDefault;
-            this.pictureBox1.Location = new System.Drawing.Point(416, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 565);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1000, 63);
+            this.panel1.TabIndex = 0;
             // 
-            // panAccount
+            // panel2
             // 
-            this.panAccount.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panAccount.Controls.Add(this.tbLogin);
-            this.panAccount.Controls.Add(this.pictureBox1);
-            this.panAccount.Location = new System.Drawing.Point(558, 3);
-            this.panAccount.Name = "panAccount";
-            this.panAccount.Size = new System.Drawing.Size(463, 54);
-            this.panAccount.TabIndex = 21;
+            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1000, 60);
+            this.panel2.TabIndex = 1;
             // 
-            // tbLogin
+            // reportViewer1
             // 
-            this.tbLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbLogin.Enabled = false;
-            this.tbLogin.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbLogin.Location = new System.Drawing.Point(9, 13);
-            this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(401, 26);
-            this.tbLogin.TabIndex = 22;
-            this.tbLogin.Text = "User(Admin)";
-            this.tbLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // buts1
-            // 
-            this.buts1.BackColor = System.Drawing.Color.Coral;
-            this.buts1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buts1.FlatAppearance.BorderSize = 0;
-            this.buts1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buts1.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buts1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.buts1.Location = new System.Drawing.Point(9, 9);
-            this.buts1.Name = "buts1";
-            this.buts1.Size = new System.Drawing.Size(350, 60);
-            this.buts1.TabIndex = 35;
-            this.buts1.Text = "Profile";
-            this.buts1.UseVisualStyleBackColor = false;
-            this.buts1.Visible = false;
-            this.buts1.Click += new System.EventHandler(this.buts1_Click);
-            // 
-            // buts2
-            // 
-            this.buts2.BackColor = System.Drawing.Color.Coral;
-            this.buts2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buts2.FlatAppearance.BorderSize = 0;
-            this.buts2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buts2.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buts2.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.buts2.Location = new System.Drawing.Point(9, 75);
-            this.buts2.Name = "buts2";
-            this.buts2.Size = new System.Drawing.Size(350, 60);
-            this.buts2.TabIndex = 36;
-            this.buts2.Text = "Admin Panel";
-            this.buts2.UseVisualStyleBackColor = false;
-            this.buts2.Visible = false;
-            this.buts2.Click += new System.EventHandler(this.buts2_Click);
-            // 
-            // buts3
-            // 
-            this.buts3.BackColor = System.Drawing.Color.Coral;
-            this.buts3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buts3.FlatAppearance.BorderSize = 0;
-            this.buts3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buts3.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buts3.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.buts3.Location = new System.Drawing.Point(9, 141);
-            this.buts3.Name = "buts3";
-            this.buts3.Size = new System.Drawing.Size(350, 60);
-            this.buts3.TabIndex = 37;
-            this.buts3.Text = "Explore";
-            this.buts3.UseVisualStyleBackColor = false;
-            this.buts3.Visible = false;
-            this.buts3.Click += new System.EventHandler(this.buts3_Click);
-            // 
-            // buts4
-            // 
-            this.buts4.BackColor = System.Drawing.Color.Coral;
-            this.buts4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buts4.FlatAppearance.BorderSize = 0;
-            this.buts4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buts4.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buts4.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.buts4.Location = new System.Drawing.Point(9, 207);
-            this.buts4.Name = "buts4";
-            this.buts4.Size = new System.Drawing.Size(350, 60);
-            this.buts4.TabIndex = 38;
-            this.buts4.Text = "Association Rules";
-            this.buts4.UseVisualStyleBackColor = false;
-            this.buts4.Visible = false;
-            this.buts4.Click += new System.EventHandler(this.buts4_Click);
-            // 
-            // buts5
-            // 
-            this.buts5.BackColor = System.Drawing.Color.Coral;
-            this.buts5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buts5.FlatAppearance.BorderSize = 0;
-            this.buts5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buts5.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buts5.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.buts5.Location = new System.Drawing.Point(9, 273);
-            this.buts5.Name = "buts5";
-            this.buts5.Size = new System.Drawing.Size(350, 60);
-            this.buts5.TabIndex = 39;
-            this.buts5.Text = "Classification";
-            this.buts5.UseVisualStyleBackColor = false;
-            this.buts5.Visible = false;
-            this.buts5.Click += new System.EventHandler(this.buts5_Click);
-            // 
-            // buts6
-            // 
-            this.buts6.BackColor = System.Drawing.Color.Coral;
-            this.buts6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buts6.FlatAppearance.BorderSize = 0;
-            this.buts6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buts6.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buts6.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.buts6.Location = new System.Drawing.Point(9, 339);
-            this.buts6.Name = "buts6";
-            this.buts6.Size = new System.Drawing.Size(350, 60);
-            this.buts6.TabIndex = 40;
-            this.buts6.Text = "Clustering";
-            this.buts6.UseVisualStyleBackColor = false;
-            this.buts6.Visible = false;
-            this.buts6.Click += new System.EventHandler(this.buts6_Click);
-            // 
-            // buts7
-            // 
-            this.buts7.BackColor = System.Drawing.Color.Coral;
-            this.buts7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buts7.FlatAppearance.BorderSize = 0;
-            this.buts7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buts7.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buts7.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.buts7.Location = new System.Drawing.Point(9, 405);
-            this.buts7.Name = "buts7";
-            this.buts7.Size = new System.Drawing.Size(350, 60);
-            this.buts7.TabIndex = 41;
-            this.buts7.Text = "Regression";
-            this.buts7.UseVisualStyleBackColor = false;
-            this.buts7.Visible = false;
-            this.buts7.Click += new System.EventHandler(this.buts7_Click);
-            // 
-            // buts9
-            // 
-            this.buts9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buts9.BackColor = System.Drawing.Color.Coral;
-            this.buts9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buts9.FlatAppearance.BorderSize = 0;
-            this.buts9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buts9.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buts9.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.buts9.Location = new System.Drawing.Point(9, 574);
-            this.buts9.Name = "buts9";
-            this.buts9.Size = new System.Drawing.Size(350, 60);
-            this.buts9.TabIndex = 42;
-            this.buts9.Text = "Logout";
-            this.buts9.UseVisualStyleBackColor = false;
-            this.buts9.Visible = false;
-            this.buts9.Click += new System.EventHandler(this.buts9_Click);
-            // 
-            // buts8
-            // 
-            this.buts8.BackColor = System.Drawing.Color.Coral;
-            this.buts8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buts8.FlatAppearance.BorderSize = 0;
-            this.buts8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buts8.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buts8.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.buts8.Location = new System.Drawing.Point(9, 471);
-            this.buts8.Name = "buts8";
-            this.buts8.Size = new System.Drawing.Size(350, 60);
-            this.buts8.TabIndex = 43;
-            this.buts8.Text = "Anomaly Detect";
-            this.buts8.UseVisualStyleBackColor = false;
-            this.buts8.Visible = false;
-            this.buts8.Click += new System.EventHandler(this.buts8_Click);
-            // 
-            // panSlider
-            // 
-            this.panSlider.BackColor = System.Drawing.Color.LightSalmon;
-            this.panSlider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panSlider.Controls.Add(this.buts8);
-            this.panSlider.Controls.Add(this.buts9);
-            this.panSlider.Controls.Add(this.buts7);
-            this.panSlider.Controls.Add(this.buts6);
-            this.panSlider.Controls.Add(this.buts5);
-            this.panSlider.Controls.Add(this.buts4);
-            this.panSlider.Controls.Add(this.buts3);
-            this.panSlider.Controls.Add(this.buts2);
-            this.panSlider.Controls.Add(this.buts1);
-            this.panSlider.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panSlider.Location = new System.Drawing.Point(0, 0);
-            this.panSlider.Name = "panSlider";
-            this.panSlider.Size = new System.Drawing.Size(10, 648);
-            this.panSlider.TabIndex = 0;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 60);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1000, 505);
+            this.reportViewer1.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -459,19 +547,25 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panFooter.ResumeLayout(false);
             this.panWindowTitle.ResumeLayout(false);
             this.panWindowTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).EndInit();
             this.panWinStateButtons.ResumeLayout(false);
             this.panBackArea.ResumeLayout(false);
+            this.panSlider.ResumeLayout(false);
+            this.panAdminPanel.ResumeLayout(false);
+            this.panAdminPanel.PerformLayout();
+            this.panReport.ResumeLayout(false);
+            this.panProfile.ResumeLayout(false);
+            this.panProfile.PerformLayout();
             this.panMenu.ResumeLayout(false);
             this.panMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMenuOne)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panAccount.ResumeLayout(false);
             this.panAccount.PerformLayout();
-            this.panSlider.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMenuOne)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -488,11 +582,11 @@
         private System.Windows.Forms.Button butMax;
         private System.Windows.Forms.Panel panBackArea;
         private System.Windows.Forms.Panel panMenu;
-        private System.Windows.Forms.Panel panProfile;
+        private System.Windows.Forms.Panel panAdminPanel;
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.PictureBox pbMenuOne;
         private System.Windows.Forms.Panel panAccount;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbAvatar;
         private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.Panel panSlider;
         private System.Windows.Forms.Button buts8;
@@ -504,5 +598,12 @@
         private System.Windows.Forms.Button buts3;
         private System.Windows.Forms.Button buts2;
         private System.Windows.Forms.Button buts1;
+        private System.Windows.Forms.Panel panProfile;
+        private System.Windows.Forms.Panel panReport;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
