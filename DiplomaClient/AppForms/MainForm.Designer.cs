@@ -48,29 +48,31 @@
             this.buts3 = new System.Windows.Forms.Button();
             this.buts2 = new System.Windows.Forms.Button();
             this.buts1 = new System.Windows.Forms.Button();
-            this.panAdminPanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.panReport = new System.Windows.Forms.Panel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.panReportHeader = new System.Windows.Forms.Panel();
             this.panProfile = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.panAdminPanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panMenu = new System.Windows.Forms.Panel();
             this.panAccount = new System.Windows.Forms.Panel();
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.lblMenu = new System.Windows.Forms.Label();
             this.pbMenuOne = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.butAnalysis = new System.Windows.Forms.Button();
+            this.lblDMAlgoritm = new System.Windows.Forms.Label();
             this.panFooter.SuspendLayout();
             this.panWindowTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
             this.panWinStateButtons.SuspendLayout();
             this.panBackArea.SuspendLayout();
             this.panSlider.SuspendLayout();
-            this.panAdminPanel.SuspendLayout();
             this.panReport.SuspendLayout();
+            this.panReportHeader.SuspendLayout();
             this.panProfile.SuspendLayout();
+            this.panAdminPanel.SuspendLayout();
             this.panMenu.SuspendLayout();
             this.panAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -375,28 +377,6 @@
             this.buts1.Visible = false;
             this.buts1.Click += new System.EventHandler(this.buts1_Click);
             // 
-            // panAdminPanel
-            // 
-            this.panAdminPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panAdminPanel.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panAdminPanel.Controls.Add(this.label4);
-            this.panAdminPanel.Location = new System.Drawing.Point(12, 9);
-            this.panAdminPanel.Name = "panAdminPanel";
-            this.panAdminPanel.Size = new System.Drawing.Size(1000, 628);
-            this.panAdminPanel.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(637, 198);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 24);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "admin";
-            // 
             // panReport
             // 
             this.panReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -404,13 +384,33 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panReport.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.panReport.Controls.Add(this.reportViewer1);
-            this.panReport.Controls.Add(this.panel2);
-            this.panReport.Controls.Add(this.panel1);
+            this.panReport.Controls.Add(this.panReportHeader);
             this.panReport.Location = new System.Drawing.Point(12, 9);
             this.panReport.Name = "panReport";
             this.panReport.Size = new System.Drawing.Size(1000, 628);
             this.panReport.TabIndex = 1;
             this.panReport.Visible = false;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 60);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1000, 568);
+            this.reportViewer1.TabIndex = 2;
+            // 
+            // panReportHeader
+            // 
+            this.panReportHeader.BackColor = System.Drawing.Color.DarkGreen;
+            this.panReportHeader.Controls.Add(this.lblDMAlgoritm);
+            this.panReportHeader.Controls.Add(this.butAnalysis);
+            this.panReportHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panReportHeader.Location = new System.Drawing.Point(0, 0);
+            this.panReportHeader.Name = "panReportHeader";
+            this.panReportHeader.Size = new System.Drawing.Size(1000, 60);
+            this.panReportHeader.TabIndex = 1;
             // 
             // panProfile
             // 
@@ -434,6 +434,28 @@
             this.label3.Size = new System.Drawing.Size(71, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "profile";
+            // 
+            // panAdminPanel
+            // 
+            this.panAdminPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panAdminPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panAdminPanel.Controls.Add(this.label4);
+            this.panAdminPanel.Location = new System.Drawing.Point(12, 9);
+            this.panAdminPanel.Name = "panAdminPanel";
+            this.panAdminPanel.Size = new System.Drawing.Size(1000, 628);
+            this.panAdminPanel.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(637, 198);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "admin";
             // 
             // panMenu
             // 
@@ -507,32 +529,32 @@
             this.pbMenuOne.TabStop = false;
             this.pbMenuOne.Click += new System.EventHandler(this.pbMenuOne_Click);
             // 
-            // panel1
+            // butAnalysis
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 565);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 63);
-            this.panel1.TabIndex = 0;
+            this.butAnalysis.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butAnalysis.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.butAnalysis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.butAnalysis.FlatAppearance.BorderSize = 0;
+            this.butAnalysis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butAnalysis.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAnalysis.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.butAnalysis.Location = new System.Drawing.Point(767, 5);
+            this.butAnalysis.Name = "butAnalysis";
+            this.butAnalysis.Size = new System.Drawing.Size(226, 49);
+            this.butAnalysis.TabIndex = 35;
+            this.butAnalysis.Text = "Run Analysis";
+            this.butAnalysis.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // lblDMAlgoritm
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 60);
-            this.panel2.TabIndex = 1;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 60);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1000, 505);
-            this.reportViewer1.TabIndex = 2;
+            this.lblDMAlgoritm.AutoSize = true;
+            this.lblDMAlgoritm.BackColor = System.Drawing.Color.Transparent;
+            this.lblDMAlgoritm.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDMAlgoritm.Location = new System.Drawing.Point(13, 13);
+            this.lblDMAlgoritm.Name = "lblDMAlgoritm";
+            this.lblDMAlgoritm.Size = new System.Drawing.Size(169, 30);
+            this.lblDMAlgoritm.TabIndex = 18;
+            this.lblDMAlgoritm.Text = "Analysis Type";
             // 
             // MainForm
             // 
@@ -555,11 +577,13 @@
             this.panWinStateButtons.ResumeLayout(false);
             this.panBackArea.ResumeLayout(false);
             this.panSlider.ResumeLayout(false);
-            this.panAdminPanel.ResumeLayout(false);
-            this.panAdminPanel.PerformLayout();
             this.panReport.ResumeLayout(false);
+            this.panReportHeader.ResumeLayout(false);
+            this.panReportHeader.PerformLayout();
             this.panProfile.ResumeLayout(false);
             this.panProfile.PerformLayout();
+            this.panAdminPanel.ResumeLayout(false);
+            this.panAdminPanel.PerformLayout();
             this.panMenu.ResumeLayout(false);
             this.panMenu.PerformLayout();
             this.panAccount.ResumeLayout(false);
@@ -603,7 +627,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panReportHeader;
+        private System.Windows.Forms.Label lblDMAlgoritm;
+        private System.Windows.Forms.Button butAnalysis;
     }
 }

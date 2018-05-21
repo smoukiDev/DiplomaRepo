@@ -33,7 +33,7 @@ namespace DiplomaClient
             panMenu.BackColor = ColorPalette.orange1;
             panBackArea.BackColor = ColorPalette.grey3;
             panSlider.BackColor = ColorPalette.red2;
-            panAdminPanel.BackColor = ColorPalette.white1;
+            
             //
             buts9.BackColor = ColorPalette.blue1;
             buts9.ForeColor = ColorPalette.white1;
@@ -46,7 +46,11 @@ namespace DiplomaClient
             buts1.BackColor = ColorPalette.white1;
             buts2.BackColor = ColorPalette.white1;
             //
-
+            panReportHeader.BackColor = ColorPalette.white1;
+            butAnalysis.BackColor = ColorPalette.red2;
+            butAnalysis.ForeColor = ColorPalette.white1;
+            
+            panAdminPanel.BackColor = ColorPalette.white1;
 
             //slider start width
             panSlider.Width = panSliderMIN;
