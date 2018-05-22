@@ -161,89 +161,13 @@ namespace DiplomaClient
 
             base.WndProc(ref m);
         }
-        //private void lblMenu_Click(object sender, EventArgs e)
-        //{
-        //    if (panSlider.Width == panSliderMIN)
-        //    {
-        //        pbMenuOne.Image = Properties.Resources.MenuButtonEnable;
-        //        for (int i = 0; i < panSliserMAX; i++)
-        //        {
-        //            Thread.Sleep(1);
-        //            panSlider.Width++;
-
-        //        }
-        //        panContent1.Width -= panSliserMAX;
-        //        panContent1.Location = new Point(panSliserMAX + panContentMargin, panContent1.Location.Y);
-        //    }
-        //    else
-        //    {
-
-        //        for (int i = 0; i < panSliserMAX; i++)
-        //        {
-        //            Thread.Sleep(1);
-        //            panSlider.Width--;
-        //        }
-        //        int x = panSliserMAX;
-        //        for (int i = 0; i < panSliserMAX; i++)
-        //        {
-        //            panContent1.Location = new Point(--x + panContentMargin, panContent1.Location.Y);
-        //        }
-
-        //        for (int i = 0; i < panSliserMAX; i += 10)
-        //        {
-
-        //            panContent1.Width += 10;
-        //        }
-        //        pbMenuOne.Image = Properties.Resources.MenuButtonDisable;
-
-        //    }
-        //}
-
-        //private void pbMenu_Click(object sender, EventArgs e)
-        //{
-
-        //    if (panSlider.Width == panSliderMIN)
-        //    {
-        //        pbMenuOne.Image = Properties.Resources.MenuButtonEnable;
-        //        for (int i = 0; i < panSliserMAX; i++)
-        //        {
-        //            Thread.Sleep(1);
-        //            panSlider.Width++;
-
-        //        }
-        //        panContent1.Width -= panSliserMAX;
-        //        panContent1.Location = new Point(panSliserMAX + panContentMargin, panContent1.Location.Y);
-        //    }
-        //    else
-        //    {
-
-        //        for (int i = 0; i < panSliserMAX; i++)
-        //        {
-        //            Thread.Sleep(1);
-        //            panSlider.Width--;
-        //        }
-        //        int x = panSliserMAX;
-        //        for (int i = 0; i < panSliserMAX; i++)
-        //        {
-        //            panContent1.Location = new Point(--x + panContentMargin, panContent1.Location.Y);
-        //        }
-
-        //        for (int i = 0; i < panSliserMAX; i += 10)
-        //        {
-
-        //            panContent1.Width += 10;
-        //        }
-        //        pbMenuOne.Image = Properties.Resources.MenuButtonDisable;
-
-        //    }
-
-        //}
-        bool separate = false;
         //Slider Menu Logo Button 
         private void pbMenuOne_Click(object sender, EventArgs e)
         {
+            
             if (panSlider.Width == panSliderMIN)
             {
+                butAnalysis.Visible = false;
                 pbMenuOne.Image = Properties.Resources.MenuButtonEnable;
                 for (int i = 0; i < panSliserMAX; i++)
                 {
@@ -268,9 +192,12 @@ namespace DiplomaClient
                 buts7.Visible = true;
                 buts8.Visible = true;
                 buts9.Visible = true;
+                butAnalysis.Visible = true;
+
             }
             else
             {
+                butAnalysis.Visible = false;
                 buts1.Visible = false;
                 buts2.Visible = false;
                 buts3.Visible = false;
@@ -304,20 +231,16 @@ namespace DiplomaClient
                     panReport.Width += 10;
                 }
                 pbMenuOne.Image = Properties.Resources.MenuButtonDisable;
-                
+                butAnalysis.Visible = true;
 
             }
         }
-        
-
-        
-
+        //Resize Feature Varuables & 3 Handlers
         int Mx;
         int My;
         int Sw;
         int Sh;
-        bool mov;
-        //Resize Feature
+        bool mov;        
         private void panBackArea_MouseDown(object sender, MouseEventArgs e)
         {
             mov = true;
@@ -327,8 +250,7 @@ namespace DiplomaClient
             Mx = MousePosition.X;
             Sw = Width;
             Sh = Height;
-        }
-        
+        }        
         private void panBackArea_MouseMove(object sender, MouseEventArgs e)
         {
             if (mov == true)
@@ -348,22 +270,24 @@ namespace DiplomaClient
 
             }
         }
-
         private void panBackArea_MouseUp(object sender, MouseEventArgs e)
         {
             mov = false;
             //cursor restore to default when resize finish
             this.panBackArea.Cursor = System.Windows.Forms.Cursors.Default;
         }
+        //Stick To Desktop Corner
+        //!!!Right Corner Fix Bag
+        //Flag Enable Disattach from Desctop Corner
         bool disAttach = false;
         private void panFooter_MouseUp(object sender, MouseEventArgs e)
         {
-            //Stick To Desktop Corner
+            
             if (!disAttach && this.Width != Screen.PrimaryScreen.Bounds.Width && this.Height != Screen.PrimaryScreen.WorkingArea.Height)
             {
                 if (this.Location.X == 0 || this.Location.Y == 0)
                 {
-                    //Border visible
+                    //!!!Add Delay and Hightlight Border
                     this.Location = new Point(0, 0);
                     this.Width = Screen.PrimaryScreen.Bounds.Width / 2;
                     this.Height = Screen.PrimaryScreen.WorkingArea.Height;
@@ -383,9 +307,6 @@ namespace DiplomaClient
 
             }
         }
-
-
-
         //Menu Button switch
         private void buts1_Click(object sender, EventArgs e)
         {
@@ -403,7 +324,6 @@ namespace DiplomaClient
             
 
         }
-
         private void buts2_Click(object sender, EventArgs e)
         {            
             panReport.Visible = false;
@@ -418,7 +338,6 @@ namespace DiplomaClient
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.white1;
         }
-
         private void buts3_Click(object sender, EventArgs e)
         {
             
@@ -434,7 +353,6 @@ namespace DiplomaClient
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.white1;
         }
-
         private void buts4_Click(object sender, EventArgs e)
         {
             panProfile.Visible = false;
@@ -449,7 +367,6 @@ namespace DiplomaClient
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.white1;
         }
-
         private void buts5_Click(object sender, EventArgs e)
         {
             panProfile.Visible = false;
@@ -464,7 +381,6 @@ namespace DiplomaClient
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.white1;
         }
-
         private void buts6_Click(object sender, EventArgs e)
         {
             panProfile.Visible = false;
@@ -479,7 +395,6 @@ namespace DiplomaClient
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.white1;
         }
-
         private void buts7_Click(object sender, EventArgs e)
         {
             panProfile.Visible = false;
@@ -494,7 +409,6 @@ namespace DiplomaClient
             buts7.BackColor = ColorPalette.orange1;
             buts8.BackColor = ColorPalette.white1;
         }
-
         private void buts8_Click(object sender, EventArgs e)
         {
             panProfile.Visible = false;
@@ -509,12 +423,10 @@ namespace DiplomaClient
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.orange1;
         }
-
         private void buts9_Click(object sender, EventArgs e)
         {
 
         }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
 
