@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panFooter = new System.Windows.Forms.Panel();
             this.panWindowTitle = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pbMenu = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.pbLogoMenu = new System.Windows.Forms.PictureBox();
             this.panWinStateButtons = new System.Windows.Forms.Panel();
             this.butMax = new System.Windows.Forms.Button();
             this.butClose = new System.Windows.Forms.Button();
@@ -51,6 +51,8 @@
             this.panReport = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panReportHeader = new System.Windows.Forms.Panel();
+            this.lblDMAlgoritm = new System.Windows.Forms.Label();
+            this.butAnalysis = new System.Windows.Forms.Button();
             this.panProfile = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panAdminPanel = new System.Windows.Forms.Panel();
@@ -61,11 +63,9 @@
             this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.lblMenu = new System.Windows.Forms.Label();
             this.pbMenuOne = new System.Windows.Forms.PictureBox();
-            this.butAnalysis = new System.Windows.Forms.Button();
-            this.lblDMAlgoritm = new System.Windows.Forms.Label();
             this.panFooter.SuspendLayout();
             this.panWindowTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoMenu)).BeginInit();
             this.panWinStateButtons.SuspendLayout();
             this.panBackArea.SuspendLayout();
             this.panSlider.SuspendLayout();
@@ -96,35 +96,35 @@
             // panWindowTitle
             // 
             this.panWindowTitle.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panWindowTitle.Controls.Add(this.label1);
-            this.panWindowTitle.Controls.Add(this.pbMenu);
+            this.panWindowTitle.Controls.Add(this.lblTitle);
+            this.panWindowTitle.Controls.Add(this.pbLogoMenu);
             this.panWindowTitle.Location = new System.Drawing.Point(3, 0);
             this.panWindowTitle.Name = "panWindowTitle";
             this.panWindowTitle.Size = new System.Drawing.Size(367, 57);
             this.panWindowTitle.TabIndex = 19;
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(47, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(313, 30);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "DM Analytics Application";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblTitle.Location = new System.Drawing.Point(47, 17);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(313, 30);
+            this.lblTitle.TabIndex = 17;
+            this.lblTitle.Text = "DM Analytics Application";
             // 
-            // pbMenu
+            // pbLogoMenu
             // 
-            this.pbMenu.BackColor = System.Drawing.Color.Transparent;
-            this.pbMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMenu.Image = ((System.Drawing.Image)(resources.GetObject("pbMenu.Image")));
-            this.pbMenu.Location = new System.Drawing.Point(-6, 4);
-            this.pbMenu.Name = "pbMenu";
-            this.pbMenu.Size = new System.Drawing.Size(62, 50);
-            this.pbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMenu.TabIndex = 16;
-            this.pbMenu.TabStop = false;
+            this.pbLogoMenu.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogoMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbLogoMenu.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoMenu.Image")));
+            this.pbLogoMenu.Location = new System.Drawing.Point(-6, 4);
+            this.pbLogoMenu.Name = "pbLogoMenu";
+            this.pbLogoMenu.Size = new System.Drawing.Size(62, 50);
+            this.pbLogoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoMenu.TabIndex = 16;
+            this.pbLogoMenu.TabStop = false;
             // 
             // panWinStateButtons
             // 
@@ -412,6 +412,33 @@
             this.panReportHeader.Size = new System.Drawing.Size(1000, 60);
             this.panReportHeader.TabIndex = 1;
             // 
+            // lblDMAlgoritm
+            // 
+            this.lblDMAlgoritm.AutoSize = true;
+            this.lblDMAlgoritm.BackColor = System.Drawing.Color.Transparent;
+            this.lblDMAlgoritm.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDMAlgoritm.Location = new System.Drawing.Point(13, 13);
+            this.lblDMAlgoritm.Name = "lblDMAlgoritm";
+            this.lblDMAlgoritm.Size = new System.Drawing.Size(169, 30);
+            this.lblDMAlgoritm.TabIndex = 18;
+            this.lblDMAlgoritm.Text = "Analysis Type";
+            // 
+            // butAnalysis
+            // 
+            this.butAnalysis.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butAnalysis.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.butAnalysis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.butAnalysis.FlatAppearance.BorderSize = 0;
+            this.butAnalysis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butAnalysis.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAnalysis.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.butAnalysis.Location = new System.Drawing.Point(767, 5);
+            this.butAnalysis.Name = "butAnalysis";
+            this.butAnalysis.Size = new System.Drawing.Size(226, 49);
+            this.butAnalysis.TabIndex = 35;
+            this.butAnalysis.Text = "Run Analysis";
+            this.butAnalysis.UseVisualStyleBackColor = false;
+            // 
             // panProfile
             // 
             this.panProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -529,33 +556,6 @@
             this.pbMenuOne.TabStop = false;
             this.pbMenuOne.Click += new System.EventHandler(this.pbMenuOne_Click);
             // 
-            // butAnalysis
-            // 
-            this.butAnalysis.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butAnalysis.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.butAnalysis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.butAnalysis.FlatAppearance.BorderSize = 0;
-            this.butAnalysis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butAnalysis.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAnalysis.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.butAnalysis.Location = new System.Drawing.Point(767, 5);
-            this.butAnalysis.Name = "butAnalysis";
-            this.butAnalysis.Size = new System.Drawing.Size(226, 49);
-            this.butAnalysis.TabIndex = 35;
-            this.butAnalysis.Text = "Run Analysis";
-            this.butAnalysis.UseVisualStyleBackColor = false;
-            // 
-            // lblDMAlgoritm
-            // 
-            this.lblDMAlgoritm.AutoSize = true;
-            this.lblDMAlgoritm.BackColor = System.Drawing.Color.Transparent;
-            this.lblDMAlgoritm.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblDMAlgoritm.Location = new System.Drawing.Point(13, 13);
-            this.lblDMAlgoritm.Name = "lblDMAlgoritm";
-            this.lblDMAlgoritm.Size = new System.Drawing.Size(169, 30);
-            this.lblDMAlgoritm.TabIndex = 18;
-            this.lblDMAlgoritm.Text = "Analysis Type";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,7 +573,7 @@
             this.panFooter.ResumeLayout(false);
             this.panWindowTitle.ResumeLayout(false);
             this.panWindowTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoMenu)).EndInit();
             this.panWinStateButtons.ResumeLayout(false);
             this.panBackArea.ResumeLayout(false);
             this.panSlider.ResumeLayout(false);
@@ -600,9 +600,9 @@
         private System.Windows.Forms.Panel panWinStateButtons;
         private System.Windows.Forms.Button butClose;
         private System.Windows.Forms.Button butMin;
-        private System.Windows.Forms.PictureBox pbMenu;
+        private System.Windows.Forms.PictureBox pbLogoMenu;
         private System.Windows.Forms.Panel panWindowTitle;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button butMax;
         private System.Windows.Forms.Panel panBackArea;
         private System.Windows.Forms.Panel panMenu;

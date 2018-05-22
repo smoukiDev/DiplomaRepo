@@ -25,16 +25,16 @@ namespace DiplomaClient
             InitializeComponent();
             //events
             this.lblMenu.Click += new System.EventHandler(this.pbMenuOne_Click);
-            this.pbMenu.Click += new System.EventHandler(this.pbMenuOne_Click);
-            //decoration
-            label1.ForeColor = ColorPalette.white1;
-            //
+            this.pbLogoMenu.Click += new System.EventHandler(this.pbMenuOne_Click);
+            this.lblTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panFooter_MouseMove);        
+            //DECORATION
+            lblTitle.ForeColor = ColorPalette.white1;
+            //general window panels design
             panFooter.BackColor = ColorPalette.grey3;
             panMenu.BackColor = ColorPalette.orange1;
             panBackArea.BackColor = ColorPalette.grey3;
             panSlider.BackColor = ColorPalette.red2;
-            
-            //
+            //slider menu buttons design
             buts9.BackColor = ColorPalette.blue1;
             buts9.ForeColor = ColorPalette.white1;
             buts3.BackColor = ColorPalette.white1;
@@ -45,18 +45,18 @@ namespace DiplomaClient
             buts8.BackColor = ColorPalette.white1;
             buts1.BackColor = ColorPalette.white1;
             buts2.BackColor = ColorPalette.white1;
-            //
+            //models panel design
             panReportHeader.BackColor = ColorPalette.white1;
             butAnalysis.BackColor = ColorPalette.red2;
             butAnalysis.ForeColor = ColorPalette.white1;
-            
+            //admin panel design
             panAdminPanel.BackColor = ColorPalette.white1;
 
             //slider start width
             panSlider.Width = panSliderMIN;
             
         }
-        //Drag Form Method
+        //Drag Form Handler
         Point MouseHook;
         private void panFooter_MouseMove(object sender, MouseEventArgs e)
         {
@@ -72,7 +72,7 @@ namespace DiplomaClient
         {
             this.Close();
         }
-        //Minimize Window
+        //Minimize Window condition
         private void butMin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -123,6 +123,7 @@ namespace DiplomaClient
         }
         //Stick To Desctop Bounds
         //WndProc override
+        //stick distance from bounds
         const int DISTANCE = 2;
         protected override void WndProc(ref Message m)
         {
@@ -161,7 +162,7 @@ namespace DiplomaClient
 
             base.WndProc(ref m);
         }
-        //Slider Menu Logo Button 
+        //Slider Menu Handler for 2 picture box buttons & label of Menu
         private void pbMenuOne_Click(object sender, EventArgs e)
         {
             
