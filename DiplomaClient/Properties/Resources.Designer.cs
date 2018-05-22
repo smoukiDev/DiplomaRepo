@@ -63,9 +63,29 @@ namespace DiplomaClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AddUserButton {
+            get {
+                object obj = ResourceManager.GetObject("AddUserButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CustomMessageBoxBackground {
             get {
                 object obj = ResourceManager.GetObject("CustomMessageBoxBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EditButton {
+            get {
+                object obj = ResourceManager.GetObject("EditButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +116,16 @@ namespace DiplomaClient.Properties {
         internal static System.Drawing.Bitmap ImageNotFound {
             get {
                 object obj = ResourceManager.GetObject("ImageNotFound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LockButton {
+            get {
+                object obj = ResourceManager.GetObject("LockButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +226,16 @@ namespace DiplomaClient.Properties {
         internal static System.Drawing.Bitmap RemoveImageButton {
             get {
                 object obj = ResourceManager.GetObject("RemoveImageButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RemoveUserButton {
+            get {
+                object obj = ResourceManager.GetObject("RemoveUserButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

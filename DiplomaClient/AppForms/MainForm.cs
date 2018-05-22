@@ -25,7 +25,7 @@ namespace DiplomaClient
             InitializeComponent();
             //events
             this.lblMenu.Click += new System.EventHandler(this.pbMenuOne_Click);
-            this.pbLogoMenu.Click += new System.EventHandler(this.pbMenuOne_Click);
+            this.pbMenu.Click += new System.EventHandler(this.pbMenuOne_Click);
             this.lblTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panFooter_MouseMove);        
             //DECORATION
             lblTitle.ForeColor = ColorPalette.white1;
@@ -50,8 +50,15 @@ namespace DiplomaClient
             butAnalysis.BackColor = ColorPalette.red2;
             butAnalysis.ForeColor = ColorPalette.white1;
             //admin panel design
-            panAdminPanel.BackColor = ColorPalette.white1;
-
+            //panAdminPanel.BackColor = ColorPalette.white1;
+            panelAdminPanelHeader.BackColor = ColorPalette.white1;
+            panAdminPanelFooter.BackColor = ColorPalette.white1;
+            butUserData.BackColor = ColorPalette.red2;
+            butUserActivity.BackColor = ColorPalette.red2;
+            butUserModules.BackColor = ColorPalette.red2;
+            butUserData.ForeColor = ColorPalette.white1;
+            butUserActivity.ForeColor = ColorPalette.white1;
+            butUserModules.ForeColor = ColorPalette.white1;
             //slider start width
             panSlider.Width = panSliderMIN;
             
@@ -168,7 +175,14 @@ namespace DiplomaClient
             
             if (panSlider.Width == panSliderMIN)
             {
+
+                dgvAdmin.Visible = false;
+                // buttons soft animation
                 butAnalysis.Visible = false;
+                butUserData.Visible = false;
+                butUserActivity.Visible = false;
+                butUserModules.Visible = false;
+                //Switch picture box menu image
                 pbMenuOne.Image = Properties.Resources.MenuButtonEnable;
                 for (int i = 0; i < panSliserMAX; i++)
                 {
@@ -184,6 +198,7 @@ namespace DiplomaClient
                 panReport.Width -= panSliserMAX;
                 panReport.Location = new Point(panSliserMAX + panContentMargin, panReport.Location.Y);
                 Thread.Sleep(250);
+                //slider buttons soft animation
                 buts1.Visible = true;
                 buts2.Visible = true;
                 buts3.Visible = true;
@@ -193,12 +208,24 @@ namespace DiplomaClient
                 buts7.Visible = true;
                 buts8.Visible = true;
                 buts9.Visible = true;
+
+                dgvAdmin.Visible = true;
+                // buttons soft animation
                 butAnalysis.Visible = true;
+                butUserData.Visible = true;
+                butUserActivity.Visible = true;
+                butUserModules.Visible = true;
 
             }
             else
             {
+                dgvAdmin.Visible = false;
+                // buttons soft animation
                 butAnalysis.Visible = false;
+                butUserData.Visible = false;
+                butUserActivity.Visible = false;
+                butUserModules.Visible = false;
+                //slider buttons soft animation
                 buts1.Visible = false;
                 buts2.Visible = false;
                 buts3.Visible = false;
@@ -231,8 +258,15 @@ namespace DiplomaClient
                     panProfile.Width += 10;
                     panReport.Width += 10;
                 }
+                //Switch picture box menu image
                 pbMenuOne.Image = Properties.Resources.MenuButtonDisable;
+
+                dgvAdmin.Visible = true;
+                // buttons soft animation
                 butAnalysis.Visible = true;
+                butUserData.Visible = true;
+                butUserActivity.Visible = true;
+                butUserModules.Visible = true;
 
             }
         }
@@ -432,6 +466,17 @@ namespace DiplomaClient
         {
 
             this.reportViewer1.RefreshReport();
+            //dataGridView1.BorderStyle = BorderStyle.None;
+            //dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            //dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            //dataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            //dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            //dataGridView1.BackgroundColor = Color.White;
+
+            //dataGridView1.EnableHeadersVisualStyles = false;
+            //dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            //dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            //dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
     }
 }

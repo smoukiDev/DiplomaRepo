@@ -230,5 +230,17 @@
   <ItemGroup>
     <None Include="Image\MenuButtonDisable.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\EditButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\LockButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\AddUserButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\RemoveUserButton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

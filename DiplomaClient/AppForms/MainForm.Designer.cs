@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panFooter = new System.Windows.Forms.Panel();
             this.panWindowTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.pbLogoMenu = new System.Windows.Forms.PictureBox();
+            this.pbMenu = new System.Windows.Forms.PictureBox();
             this.panWinStateButtons = new System.Windows.Forms.Panel();
             this.butMax = new System.Windows.Forms.Button();
             this.butClose = new System.Windows.Forms.Button();
@@ -48,6 +50,22 @@
             this.buts3 = new System.Windows.Forms.Button();
             this.buts2 = new System.Windows.Forms.Button();
             this.buts1 = new System.Windows.Forms.Button();
+            this.panAdminPanel = new System.Windows.Forms.Panel();
+            this.panAdminPanelSearch = new System.Windows.Forms.Panel();
+            this.panAdminPanelFooter = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.butRemoveAvatar = new System.Windows.Forms.Button();
+            this.dgvAdmin = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelAdminPanelHeader = new System.Windows.Forms.Panel();
+            this.butUserModules = new System.Windows.Forms.Button();
+            this.butUserActivity = new System.Windows.Forms.Button();
+            this.butUserData = new System.Windows.Forms.Button();
+            this.lblAdminPanel = new System.Windows.Forms.Label();
             this.panReport = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panReportHeader = new System.Windows.Forms.Panel();
@@ -55,24 +73,26 @@
             this.butAnalysis = new System.Windows.Forms.Button();
             this.panProfile = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.panAdminPanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.panMenu = new System.Windows.Forms.Panel();
             this.panAccount = new System.Windows.Forms.Panel();
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.lblMenu = new System.Windows.Forms.Label();
             this.pbMenuOne = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.panFooter.SuspendLayout();
             this.panWindowTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
             this.panWinStateButtons.SuspendLayout();
             this.panBackArea.SuspendLayout();
             this.panSlider.SuspendLayout();
+            this.panAdminPanel.SuspendLayout();
+            this.panAdminPanelFooter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
+            this.panelAdminPanelHeader.SuspendLayout();
             this.panReport.SuspendLayout();
             this.panReportHeader.SuspendLayout();
             this.panProfile.SuspendLayout();
-            this.panAdminPanel.SuspendLayout();
             this.panMenu.SuspendLayout();
             this.panAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -97,7 +117,7 @@
             // 
             this.panWindowTitle.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panWindowTitle.Controls.Add(this.lblTitle);
-            this.panWindowTitle.Controls.Add(this.pbLogoMenu);
+            this.panWindowTitle.Controls.Add(this.pbMenu);
             this.panWindowTitle.Location = new System.Drawing.Point(3, 0);
             this.panWindowTitle.Name = "panWindowTitle";
             this.panWindowTitle.Size = new System.Drawing.Size(367, 57);
@@ -114,17 +134,17 @@
             this.lblTitle.TabIndex = 17;
             this.lblTitle.Text = "DM Analytics Application";
             // 
-            // pbLogoMenu
+            // pbMenu
             // 
-            this.pbLogoMenu.BackColor = System.Drawing.Color.Transparent;
-            this.pbLogoMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbLogoMenu.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoMenu.Image")));
-            this.pbLogoMenu.Location = new System.Drawing.Point(-6, 4);
-            this.pbLogoMenu.Name = "pbLogoMenu";
-            this.pbLogoMenu.Size = new System.Drawing.Size(62, 50);
-            this.pbLogoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogoMenu.TabIndex = 16;
-            this.pbLogoMenu.TabStop = false;
+            this.pbMenu.BackColor = System.Drawing.Color.Transparent;
+            this.pbMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMenu.Image = ((System.Drawing.Image)(resources.GetObject("pbMenu.Image")));
+            this.pbMenu.Location = new System.Drawing.Point(-6, 4);
+            this.pbMenu.Name = "pbMenu";
+            this.pbMenu.Size = new System.Drawing.Size(62, 50);
+            this.pbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMenu.TabIndex = 16;
+            this.pbMenu.TabStop = false;
             // 
             // panWinStateButtons
             // 
@@ -192,9 +212,9 @@
             // 
             this.panBackArea.BackColor = System.Drawing.Color.Crimson;
             this.panBackArea.Controls.Add(this.panSlider);
+            this.panBackArea.Controls.Add(this.panAdminPanel);
             this.panBackArea.Controls.Add(this.panReport);
             this.panBackArea.Controls.Add(this.panProfile);
-            this.panBackArea.Controls.Add(this.panAdminPanel);
             this.panBackArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panBackArea.Location = new System.Drawing.Point(0, 120);
             this.panBackArea.Name = "panBackArea";
@@ -377,6 +397,229 @@
             this.buts1.Visible = false;
             this.buts1.Click += new System.EventHandler(this.buts1_Click);
             // 
+            // panAdminPanel
+            // 
+            this.panAdminPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panAdminPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panAdminPanel.Controls.Add(this.panAdminPanelSearch);
+            this.panAdminPanel.Controls.Add(this.panAdminPanelFooter);
+            this.panAdminPanel.Controls.Add(this.dgvAdmin);
+            this.panAdminPanel.Controls.Add(this.panelAdminPanelHeader);
+            this.panAdminPanel.Location = new System.Drawing.Point(12, 9);
+            this.panAdminPanel.Name = "panAdminPanel";
+            this.panAdminPanel.Size = new System.Drawing.Size(1000, 628);
+            this.panAdminPanel.TabIndex = 1;
+            // 
+            // panAdminPanelSearch
+            // 
+            this.panAdminPanelSearch.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panAdminPanelSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panAdminPanelSearch.Location = new System.Drawing.Point(0, 60);
+            this.panAdminPanelSearch.Name = "panAdminPanelSearch";
+            this.panAdminPanelSearch.Size = new System.Drawing.Size(1000, 40);
+            this.panAdminPanelSearch.TabIndex = 4;
+            // 
+            // panAdminPanelFooter
+            // 
+            this.panAdminPanelFooter.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panAdminPanelFooter.Controls.Add(this.button3);
+            this.panAdminPanelFooter.Controls.Add(this.button2);
+            this.panAdminPanelFooter.Controls.Add(this.button1);
+            this.panAdminPanelFooter.Controls.Add(this.butRemoveAvatar);
+            this.panAdminPanelFooter.Controls.Add(this.button4);
+            this.panAdminPanelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panAdminPanelFooter.Location = new System.Drawing.Point(0, 568);
+            this.panAdminPanelFooter.Name = "panAdminPanelFooter";
+            this.panAdminPanelFooter.Size = new System.Drawing.Size(1000, 60);
+            this.panAdminPanelFooter.TabIndex = 3;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(887, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(50, 50);
+            this.button3.TabIndex = 18;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::DiplomaClient.Properties.Resources.LockButton;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(775, 7);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 17;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::DiplomaClient.Properties.Resources.RemoveImageButton;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(943, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // butRemoveAvatar
+            // 
+            this.butRemoveAvatar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butRemoveAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.butRemoveAvatar.BackgroundImage = global::DiplomaClient.Properties.Resources.AddUserButton;
+            this.butRemoveAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butRemoveAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butRemoveAvatar.FlatAppearance.BorderSize = 0;
+            this.butRemoveAvatar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butRemoveAvatar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butRemoveAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butRemoveAvatar.Location = new System.Drawing.Point(831, 7);
+            this.butRemoveAvatar.Name = "butRemoveAvatar";
+            this.butRemoveAvatar.Size = new System.Drawing.Size(50, 50);
+            this.butRemoveAvatar.TabIndex = 15;
+            this.butRemoveAvatar.UseVisualStyleBackColor = false;
+            // 
+            // dgvAdmin
+            // 
+            this.dgvAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgvAdmin.Location = new System.Drawing.Point(0, 122);
+            this.dgvAdmin.Name = "dgvAdmin";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvAdmin.RowTemplate.Height = 30;
+            this.dgvAdmin.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAdmin.Size = new System.Drawing.Size(1000, 450);
+            this.dgvAdmin.TabIndex = 2;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            // 
+            // panelAdminPanelHeader
+            // 
+            this.panelAdminPanelHeader.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panelAdminPanelHeader.Controls.Add(this.butUserModules);
+            this.panelAdminPanelHeader.Controls.Add(this.butUserActivity);
+            this.panelAdminPanelHeader.Controls.Add(this.butUserData);
+            this.panelAdminPanelHeader.Controls.Add(this.lblAdminPanel);
+            this.panelAdminPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAdminPanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelAdminPanelHeader.Name = "panelAdminPanelHeader";
+            this.panelAdminPanelHeader.Size = new System.Drawing.Size(1000, 60);
+            this.panelAdminPanelHeader.TabIndex = 1;
+            // 
+            // butUserModules
+            // 
+            this.butUserModules.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butUserModules.BackColor = System.Drawing.Color.Tomato;
+            this.butUserModules.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.butUserModules.FlatAppearance.BorderSize = 0;
+            this.butUserModules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butUserModules.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butUserModules.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.butUserModules.Location = new System.Drawing.Point(873, 5);
+            this.butUserModules.Name = "butUserModules";
+            this.butUserModules.Size = new System.Drawing.Size(120, 49);
+            this.butUserModules.TabIndex = 37;
+            this.butUserModules.Text = "Modules";
+            this.butUserModules.UseVisualStyleBackColor = false;
+            // 
+            // butUserActivity
+            // 
+            this.butUserActivity.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butUserActivity.BackColor = System.Drawing.Color.Tomato;
+            this.butUserActivity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.butUserActivity.FlatAppearance.BorderSize = 0;
+            this.butUserActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butUserActivity.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butUserActivity.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.butUserActivity.Location = new System.Drawing.Point(747, 5);
+            this.butUserActivity.Name = "butUserActivity";
+            this.butUserActivity.Size = new System.Drawing.Size(120, 49);
+            this.butUserActivity.TabIndex = 36;
+            this.butUserActivity.Text = "Activity";
+            this.butUserActivity.UseVisualStyleBackColor = false;
+            // 
+            // butUserData
+            // 
+            this.butUserData.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butUserData.BackColor = System.Drawing.Color.Tomato;
+            this.butUserData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.butUserData.FlatAppearance.BorderSize = 0;
+            this.butUserData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butUserData.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butUserData.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.butUserData.Location = new System.Drawing.Point(621, 5);
+            this.butUserData.Name = "butUserData";
+            this.butUserData.Size = new System.Drawing.Size(120, 49);
+            this.butUserData.TabIndex = 35;
+            this.butUserData.Text = "Accounts";
+            this.butUserData.UseVisualStyleBackColor = false;
+            // 
+            // lblAdminPanel
+            // 
+            this.lblAdminPanel.AutoSize = true;
+            this.lblAdminPanel.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdminPanel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAdminPanel.Location = new System.Drawing.Point(13, 12);
+            this.lblAdminPanel.Name = "lblAdminPanel";
+            this.lblAdminPanel.Size = new System.Drawing.Size(165, 30);
+            this.lblAdminPanel.TabIndex = 19;
+            this.lblAdminPanel.Text = "Admin Panel";
+            // 
             // panReport
             // 
             this.panReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -393,12 +636,14 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 60);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 97);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1000, 568);
+            this.reportViewer1.Size = new System.Drawing.Size(1000, 531);
             this.reportViewer1.TabIndex = 2;
             // 
             // panReportHeader
@@ -462,28 +707,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "profile";
             // 
-            // panAdminPanel
-            // 
-            this.panAdminPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panAdminPanel.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panAdminPanel.Controls.Add(this.label4);
-            this.panAdminPanel.Location = new System.Drawing.Point(12, 9);
-            this.panAdminPanel.Name = "panAdminPanel";
-            this.panAdminPanel.Size = new System.Drawing.Size(1000, 628);
-            this.panAdminPanel.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(637, 198);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 24);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "admin";
-            // 
             // panMenu
             // 
             this.panMenu.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -501,9 +724,9 @@
             this.panAccount.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panAccount.Controls.Add(this.tbLogin);
             this.panAccount.Controls.Add(this.pbAvatar);
-            this.panAccount.Location = new System.Drawing.Point(558, 3);
+            this.panAccount.Location = new System.Drawing.Point(440, 3);
             this.panAccount.Name = "panAccount";
-            this.panAccount.Size = new System.Drawing.Size(463, 54);
+            this.panAccount.Size = new System.Drawing.Size(581, 54);
             this.panAccount.TabIndex = 21;
             // 
             // tbLogin
@@ -511,9 +734,9 @@
             this.tbLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLogin.Enabled = false;
             this.tbLogin.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbLogin.Location = new System.Drawing.Point(9, 13);
+            this.tbLogin.Location = new System.Drawing.Point(193, 11);
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(401, 26);
+            this.tbLogin.Size = new System.Drawing.Size(329, 26);
             this.tbLogin.TabIndex = 22;
             this.tbLogin.Text = "User(Admin)";
             this.tbLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -524,7 +747,7 @@
             this.pbAvatar.BackColor = System.Drawing.Color.Transparent;
             this.pbAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAvatar.Image = global::DiplomaClient.Properties.Resources.UserProfileDefault;
-            this.pbAvatar.Location = new System.Drawing.Point(416, 5);
+            this.pbAvatar.Location = new System.Drawing.Point(534, 5);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.Size = new System.Drawing.Size(44, 43);
             this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -556,6 +779,23 @@
             this.pbMenuOne.TabStop = false;
             this.pbMenuOne.Click += new System.EventHandler(this.pbMenuOne_Click);
             // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(943, 7);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(50, 50);
+            this.button4.TabIndex = 19;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,17 +813,20 @@
             this.panFooter.ResumeLayout(false);
             this.panWindowTitle.ResumeLayout(false);
             this.panWindowTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).EndInit();
             this.panWinStateButtons.ResumeLayout(false);
             this.panBackArea.ResumeLayout(false);
             this.panSlider.ResumeLayout(false);
+            this.panAdminPanel.ResumeLayout(false);
+            this.panAdminPanelFooter.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).EndInit();
+            this.panelAdminPanelHeader.ResumeLayout(false);
+            this.panelAdminPanelHeader.PerformLayout();
             this.panReport.ResumeLayout(false);
             this.panReportHeader.ResumeLayout(false);
             this.panReportHeader.PerformLayout();
             this.panProfile.ResumeLayout(false);
             this.panProfile.PerformLayout();
-            this.panAdminPanel.ResumeLayout(false);
-            this.panAdminPanel.PerformLayout();
             this.panMenu.ResumeLayout(false);
             this.panMenu.PerformLayout();
             this.panAccount.ResumeLayout(false);
@@ -600,7 +843,7 @@
         private System.Windows.Forms.Panel panWinStateButtons;
         private System.Windows.Forms.Button butClose;
         private System.Windows.Forms.Button butMin;
-        private System.Windows.Forms.PictureBox pbLogoMenu;
+        private System.Windows.Forms.PictureBox pbMenu;
         private System.Windows.Forms.Panel panWindowTitle;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button butMax;
@@ -624,11 +867,26 @@
         private System.Windows.Forms.Button buts1;
         private System.Windows.Forms.Panel panProfile;
         private System.Windows.Forms.Panel panReport;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Panel panReportHeader;
         private System.Windows.Forms.Label lblDMAlgoritm;
         private System.Windows.Forms.Button butAnalysis;
+        private System.Windows.Forms.Panel panAdminPanelSearch;
+        private System.Windows.Forms.Panel panAdminPanelFooter;
+        private System.Windows.Forms.DataGridView dgvAdmin;
+        private System.Windows.Forms.Panel panelAdminPanelHeader;
+        private System.Windows.Forms.Label lblAdminPanel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button butUserModules;
+        private System.Windows.Forms.Button butUserActivity;
+        private System.Windows.Forms.Button butUserData;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butRemoveAvatar;
+        private System.Windows.Forms.Button button4;
     }
 }
