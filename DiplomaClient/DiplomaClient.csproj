@@ -242,5 +242,11 @@
   <ItemGroup>
     <None Include="Image\RemoveUserButton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\RefreshGridButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\SearchButtonMinimal.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

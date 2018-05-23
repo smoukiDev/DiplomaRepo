@@ -163,6 +163,9 @@
   <data name="MinimizeButton2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\MinimizeButton2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RefreshGridButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\RefreshGridButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="RegisterFormBackGround" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\RegisterFormBackGround.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -171,6 +174,9 @@
   </data>
   <data name="RemoveUserButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\RemoveUserButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SearchButtonMinimal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\SearchButtonMinimal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sonar_FX" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Sound\Sonar_FX.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

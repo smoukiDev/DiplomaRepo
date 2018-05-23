@@ -26,7 +26,7 @@ namespace DiplomaClient
             //events
             this.lblMenu.Click += new System.EventHandler(this.pbMenuOne_Click);
             this.pbMenu.Click += new System.EventHandler(this.pbMenuOne_Click);
-            this.lblTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panFooter_MouseMove);        
+            this.lblTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panFooter_MouseMove);
             //DECORATION
             lblTitle.ForeColor = ColorPalette.white1;
             //general window panels design
@@ -46,6 +46,7 @@ namespace DiplomaClient
             buts1.BackColor = ColorPalette.white1;
             buts2.BackColor = ColorPalette.white1;
             //models panel design
+            panReport.BackColor = ColorPalette.white2;
             panReportHeader.BackColor = ColorPalette.white1;
             butAnalysis.BackColor = ColorPalette.red2;
             butAnalysis.ForeColor = ColorPalette.white1;
@@ -59,6 +60,7 @@ namespace DiplomaClient
             butUserData.ForeColor = ColorPalette.white1;
             butUserActivity.ForeColor = ColorPalette.white1;
             butUserModules.ForeColor = ColorPalette.white1;
+            panAdminPanelSearch.BackColor = ColorPalette.white2;
             //slider start width
             panSlider.Width = panSliderMIN;
             
@@ -176,12 +178,22 @@ namespace DiplomaClient
             if (panSlider.Width == panSliderMIN)
             {
 
-                dgvAdmin.Visible = false;
-                // buttons soft animation
+               
+                // soft animation Models Panel
                 butAnalysis.Visible = false;
+                // soft animation admin panel
+                dgvAdmin.Visible = false;
                 butUserData.Visible = false;
                 butUserActivity.Visible = false;
                 butUserModules.Visible = false;
+                butBlokUser.Visible = false;
+                butAddUser.Visible = false;
+                butEditUser.Visible = false;
+                butDeleteUser.Visible = false;
+                butEditModules.Visible = false;
+                tbSearch.Visible = false;
+                butSearch.Visible = false;
+                butRefreshGrid.Visible = false;
                 //Switch picture box menu image
                 pbMenuOne.Image = Properties.Resources.MenuButtonEnable;
                 for (int i = 0; i < panSliserMAX; i++)
@@ -209,22 +221,41 @@ namespace DiplomaClient
                 buts8.Visible = true;
                 buts9.Visible = true;
 
-                dgvAdmin.Visible = true;
-                // buttons soft animation
+                
+                // soft animation Models Panel
                 butAnalysis.Visible = true;
+                // soft animation admin panel
+                dgvAdmin.Visible = true;
                 butUserData.Visible = true;
                 butUserActivity.Visible = true;
                 butUserModules.Visible = true;
-
+                butBlokUser.Visible = true;
+                butAddUser.Visible = true;
+                butEditUser.Visible = true;
+                butDeleteUser.Visible = true;
+                butEditModules.Visible = true;
+                tbSearch.Visible = true;
+                butSearch.Visible = true;
+                butRefreshGrid.Visible = true;
             }
             else
             {
-                dgvAdmin.Visible = false;
-                // buttons soft animation
+                
+                // soft animation Models Panel
                 butAnalysis.Visible = false;
+                // soft animation admin panel
+                dgvAdmin.Visible = false;
                 butUserData.Visible = false;
                 butUserActivity.Visible = false;
                 butUserModules.Visible = false;
+                butBlokUser.Visible = false;
+                butAddUser.Visible = false;
+                butEditUser.Visible = false;
+                butDeleteUser.Visible = false;
+                butEditModules.Visible = false;
+                tbSearch.Visible = false;
+                butSearch.Visible = false;
+                butRefreshGrid.Visible = false;
                 //slider buttons soft animation
                 buts1.Visible = false;
                 buts2.Visible = false;
@@ -261,12 +292,22 @@ namespace DiplomaClient
                 //Switch picture box menu image
                 pbMenuOne.Image = Properties.Resources.MenuButtonDisable;
 
-                dgvAdmin.Visible = true;
-                // buttons soft animation
+                
+                // soft animation Models Panel
                 butAnalysis.Visible = true;
+                // soft animation admin panel
+                dgvAdmin.Visible = true;
                 butUserData.Visible = true;
                 butUserActivity.Visible = true;
                 butUserModules.Visible = true;
+                butBlokUser.Visible = true;
+                butAddUser.Visible = true;
+                butEditUser.Visible = true;
+                butDeleteUser.Visible = true;
+                butEditModules.Visible = true;
+                tbSearch.Visible = true;
+                butSearch.Visible = true;
+                butRefreshGrid.Visible = true;
 
             }
         }
@@ -466,17 +507,111 @@ namespace DiplomaClient
         {
 
             this.reportViewer1.RefreshReport();
-            //dataGridView1.BorderStyle = BorderStyle.None;
-            //dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-            //dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            //dataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-            //dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            //dataGridView1.BackgroundColor = Color.White;
+            //Defaulth value for lblAdminOption
+            lblAdminOption.Text = "User Data";
+            //Data Grid Material Design
+            dgvAdmin.BorderStyle = BorderStyle.None;
+            dgvAdmin.AlternatingRowsDefaultCellStyle.BackColor = ColorPalette.white2;
+            dgvAdmin.RowsDefaultCellStyle.BackColor = Color.White;
+            dgvAdmin.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            dgvAdmin.DefaultCellStyle.SelectionBackColor = ColorPalette.orange1;
+            dgvAdmin.DefaultCellStyle.SelectionForeColor = Color.Black ;
+            dgvAdmin.BackgroundColor = Color.White;
 
-            //dataGridView1.EnableHeadersVisualStyles = false;
-            //dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            //dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-            //dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvAdmin.EnableHeadersVisualStyles = false;
+            dgvAdmin.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = ColorPalette.red2;
+            dgvAdmin.ColumnHeadersDefaultCellStyle.ForeColor = ColorPalette.white1;
+
+            dgvAdmin.RowHeadersDefaultCellStyle.BackColor = ColorPalette.red2;
+            dgvAdmin.RowHeadersDefaultCellStyle.SelectionBackColor = ColorPalette.orange1;
+            //Search Field Changable Search Tips
+            ttSearchAdvice.Dispose();
+            ttSearchAdvice = new ToolTip();
+            ttSearchAdvice.SetToolTip(tbSearch, "Search by Last Name");
+            ttSearchAdvice.ToolTipIcon = ToolTipIcon.Info;
+            ////Set ToolTips for Admin Panel Buttons
+            SetButtonsTips();
+        }
+        //Search Field Changable Search Tips
+        ToolTip ttSearchAdvice = new ToolTip();
+        private void butUserData_Click(object sender, EventArgs e)
+        {
+            lblAdminOption.Text = "User Data";
+            butBlokUser.Visible = true;
+            butAddUser.Visible = true;
+            butEditUser.Visible = true;
+            butDeleteUser.Visible = true;
+            butEditModules.Visible = false;
+            //Search Field Changable Search Tips
+            ttSearchAdvice.Dispose();
+            ttSearchAdvice = new ToolTip();
+            ttSearchAdvice.SetToolTip(tbSearch, "Search by Last Name");
+            ttSearchAdvice.ToolTipIcon = ToolTipIcon.Info;
+
+        }
+
+        private void butUserActivity_Click(object sender, EventArgs e)
+        {
+            lblAdminOption.Text = "User Activity";
+            butBlokUser.Visible = false;
+            butAddUser.Visible = false;
+            butEditUser.Visible = false;
+            butDeleteUser.Visible = false;
+            butEditModules.Visible = false;
+            //Search Field Changable Search Tips
+            ttSearchAdvice.Dispose() ;
+            ttSearchAdvice = new ToolTip();
+            ttSearchAdvice.SetToolTip(tbSearch, "Search by UserID");
+            ttSearchAdvice.ToolTipIcon = ToolTipIcon.Info;
+        }
+
+        private void butUserModules_Click(object sender, EventArgs e)
+        {
+            lblAdminOption.Text = "User's Models";
+            butBlokUser.Visible = false;
+            butAddUser.Visible = false;
+            butEditUser.Visible = false;
+            butDeleteUser.Visible = false;
+            butEditModules.Visible = true;
+            //Search Field Changable Search Tips
+            ttSearchAdvice.Dispose();
+            ttSearchAdvice = new ToolTip();
+            ttSearchAdvice.SetToolTip(tbSearch, "Search by UserID");
+            ttSearchAdvice.ToolTipIcon = ToolTipIcon.Info;
+        }
+
+
+        private void tbSearch_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        //Set ToolTips for Admin Panel Buttons
+        ToolTip ttAddUser;
+        ToolTip ttEditUser;
+        ToolTip ttDeleteUser;
+        ToolTip ttBlockUser;
+        ToolTip ttEditModules;
+        private void SetButtonsTips()
+        {
+            ttAddUser = new ToolTip();
+            ttAddUser.SetToolTip(butAddUser, "Create User with UserData, which are entered in selected string");
+            ttAddUser.ToolTipIcon = ToolTipIcon.Info;
+            ttEditUser = new ToolTip();
+            ttEditUser.SetToolTip(butEditUser, "Edit UserData of selected User");
+            ttEditUser.ToolTipIcon = ToolTipIcon.Info;
+            ttDeleteUser = new ToolTip();
+            ttDeleteUser.SetToolTip(butDeleteUser, "Delete Account and All User Data of selected User");
+            ttDeleteUser.ToolTipIcon = ToolTipIcon.Info;
+            ttBlockUser = new ToolTip();
+            ttBlockUser.SetToolTip(butBlokUser, "Block/Unblock Access of User to his UserAccount");
+            ttBlockUser.ToolTipIcon = ToolTipIcon.Info;
+            ttEditModules = new ToolTip();
+            ttEditModules.SetToolTip(butEditModules, "Save Permissions for selected User");
+            ttEditModules.ToolTipIcon = ToolTipIcon.Info;
+
+
         }
     }
 }

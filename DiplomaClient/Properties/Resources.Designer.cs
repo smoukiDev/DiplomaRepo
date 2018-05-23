@@ -213,6 +213,16 @@ namespace DiplomaClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RefreshGridButton {
+            get {
+                object obj = ResourceManager.GetObject("RefreshGridButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RegisterFormBackGround {
             get {
                 object obj = ResourceManager.GetObject("RegisterFormBackGround", resourceCulture);
@@ -236,6 +246,16 @@ namespace DiplomaClient.Properties {
         internal static System.Drawing.Bitmap RemoveUserButton {
             get {
                 object obj = ResourceManager.GetObject("RemoveUserButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SearchButtonMinimal {
+            get {
+                object obj = ResourceManager.GetObject("SearchButtonMinimal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

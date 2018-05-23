@@ -18,5 +18,9 @@ namespace DiplomaClient
         static internal readonly Color orange1 = Color.FromArgb(253, 198, 6);
         static internal readonly Color blue1 = Color.FromArgb(19, 128, 182);
         static internal readonly Color red2 = Color.FromArgb(220, 20, 60);
+        static internal readonly Color white2 = Color.FromArgb(208,203,203);
+        //useless
+        static internal readonly Color green1 = Color.FromArgb(143, 188, 139);
+        static internal readonly Color red3 = Color.FromArgb(238, 161, 161);
     }
 }

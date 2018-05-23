@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panFooter = new System.Windows.Forms.Panel();
             this.panWindowTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -52,11 +52,15 @@
             this.buts1 = new System.Windows.Forms.Button();
             this.panAdminPanel = new System.Windows.Forms.Panel();
             this.panAdminPanelSearch = new System.Windows.Forms.Panel();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.butSearch = new System.Windows.Forms.Button();
+            this.butRefreshGrid = new System.Windows.Forms.Button();
             this.panAdminPanelFooter = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.butRemoveAvatar = new System.Windows.Forms.Button();
+            this.butEditUser = new System.Windows.Forms.Button();
+            this.butBlokUser = new System.Windows.Forms.Button();
+            this.butAddUser = new System.Windows.Forms.Button();
+            this.butDeleteUser = new System.Windows.Forms.Button();
+            this.butEditModules = new System.Windows.Forms.Button();
             this.dgvAdmin = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,7 +83,7 @@
             this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.lblMenu = new System.Windows.Forms.Label();
             this.pbMenuOne = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.lblAdminOption = new System.Windows.Forms.Label();
             this.panFooter.SuspendLayout();
             this.panWindowTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
@@ -87,6 +91,7 @@
             this.panBackArea.SuspendLayout();
             this.panSlider.SuspendLayout();
             this.panAdminPanel.SuspendLayout();
+            this.panAdminPanelSearch.SuspendLayout();
             this.panAdminPanelFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             this.panelAdminPanelHeader.SuspendLayout();
@@ -415,93 +420,160 @@
             // panAdminPanelSearch
             // 
             this.panAdminPanelSearch.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panAdminPanelSearch.Controls.Add(this.tbSearch);
+            this.panAdminPanelSearch.Controls.Add(this.butSearch);
+            this.panAdminPanelSearch.Controls.Add(this.butRefreshGrid);
             this.panAdminPanelSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.panAdminPanelSearch.Location = new System.Drawing.Point(0, 60);
             this.panAdminPanelSearch.Name = "panAdminPanelSearch";
             this.panAdminPanelSearch.Size = new System.Drawing.Size(1000, 40);
             this.panAdminPanelSearch.TabIndex = 4;
             // 
+            // tbSearch
+            // 
+            this.tbSearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tbSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbSearch.Location = new System.Drawing.Point(381, 7);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(529, 26);
+            this.tbSearch.TabIndex = 23;
+            this.tbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbSearch.MouseHover += new System.EventHandler(this.tbSearch_MouseHover);
+            // 
+            // butSearch
+            // 
+            this.butSearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butSearch.BackColor = System.Drawing.Color.Transparent;
+            this.butSearch.BackgroundImage = global::DiplomaClient.Properties.Resources.SearchButtonMinimal;
+            this.butSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butSearch.FlatAppearance.BorderSize = 0;
+            this.butSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butSearch.Location = new System.Drawing.Point(919, 3);
+            this.butSearch.Name = "butSearch";
+            this.butSearch.Size = new System.Drawing.Size(34, 34);
+            this.butSearch.TabIndex = 21;
+            this.butSearch.UseVisualStyleBackColor = false;
+            // 
+            // butRefreshGrid
+            // 
+            this.butRefreshGrid.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butRefreshGrid.BackColor = System.Drawing.Color.Transparent;
+            this.butRefreshGrid.BackgroundImage = global::DiplomaClient.Properties.Resources.RefreshGridButton;
+            this.butRefreshGrid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butRefreshGrid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butRefreshGrid.FlatAppearance.BorderSize = 0;
+            this.butRefreshGrid.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butRefreshGrid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butRefreshGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butRefreshGrid.Location = new System.Drawing.Point(959, 3);
+            this.butRefreshGrid.Name = "butRefreshGrid";
+            this.butRefreshGrid.Size = new System.Drawing.Size(34, 34);
+            this.butRefreshGrid.TabIndex = 20;
+            this.butRefreshGrid.UseVisualStyleBackColor = false;
+            // 
             // panAdminPanelFooter
             // 
             this.panAdminPanelFooter.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panAdminPanelFooter.Controls.Add(this.button3);
-            this.panAdminPanelFooter.Controls.Add(this.button2);
-            this.panAdminPanelFooter.Controls.Add(this.button1);
-            this.panAdminPanelFooter.Controls.Add(this.butRemoveAvatar);
-            this.panAdminPanelFooter.Controls.Add(this.button4);
+            this.panAdminPanelFooter.Controls.Add(this.lblAdminOption);
+            this.panAdminPanelFooter.Controls.Add(this.butEditUser);
+            this.panAdminPanelFooter.Controls.Add(this.butBlokUser);
+            this.panAdminPanelFooter.Controls.Add(this.butAddUser);
+            this.panAdminPanelFooter.Controls.Add(this.butDeleteUser);
+            this.panAdminPanelFooter.Controls.Add(this.butEditModules);
             this.panAdminPanelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panAdminPanelFooter.Location = new System.Drawing.Point(0, 568);
             this.panAdminPanelFooter.Name = "panAdminPanelFooter";
             this.panAdminPanelFooter.Size = new System.Drawing.Size(1000, 60);
             this.panAdminPanelFooter.TabIndex = 3;
             // 
-            // button3
+            // butEditUser
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(887, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 50);
-            this.button3.TabIndex = 18;
-            this.button3.UseVisualStyleBackColor = false;
+            this.butEditUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butEditUser.BackColor = System.Drawing.Color.Transparent;
+            this.butEditUser.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
+            this.butEditUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butEditUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butEditUser.FlatAppearance.BorderSize = 0;
+            this.butEditUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butEditUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butEditUser.Location = new System.Drawing.Point(887, 7);
+            this.butEditUser.Name = "butEditUser";
+            this.butEditUser.Size = new System.Drawing.Size(50, 50);
+            this.butEditUser.TabIndex = 18;
+            this.butEditUser.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // butBlokUser
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::DiplomaClient.Properties.Resources.LockButton;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(775, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 17;
-            this.button2.UseVisualStyleBackColor = false;
+            this.butBlokUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butBlokUser.BackColor = System.Drawing.Color.Transparent;
+            this.butBlokUser.BackgroundImage = global::DiplomaClient.Properties.Resources.LockButton;
+            this.butBlokUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butBlokUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butBlokUser.FlatAppearance.BorderSize = 0;
+            this.butBlokUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butBlokUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butBlokUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butBlokUser.Location = new System.Drawing.Point(775, 7);
+            this.butBlokUser.Name = "butBlokUser";
+            this.butBlokUser.Size = new System.Drawing.Size(50, 50);
+            this.butBlokUser.TabIndex = 17;
+            this.butBlokUser.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // butAddUser
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::DiplomaClient.Properties.Resources.RemoveImageButton;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(943, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = false;
+            this.butAddUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butAddUser.BackColor = System.Drawing.Color.Transparent;
+            this.butAddUser.BackgroundImage = global::DiplomaClient.Properties.Resources.AddUserButton;
+            this.butAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butAddUser.FlatAppearance.BorderSize = 0;
+            this.butAddUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butAddUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butAddUser.Location = new System.Drawing.Point(831, 7);
+            this.butAddUser.Name = "butAddUser";
+            this.butAddUser.Size = new System.Drawing.Size(50, 50);
+            this.butAddUser.TabIndex = 15;
+            this.butAddUser.UseVisualStyleBackColor = false;
             // 
-            // butRemoveAvatar
+            // butDeleteUser
             // 
-            this.butRemoveAvatar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butRemoveAvatar.BackColor = System.Drawing.Color.Transparent;
-            this.butRemoveAvatar.BackgroundImage = global::DiplomaClient.Properties.Resources.AddUserButton;
-            this.butRemoveAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butRemoveAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butRemoveAvatar.FlatAppearance.BorderSize = 0;
-            this.butRemoveAvatar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butRemoveAvatar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butRemoveAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butRemoveAvatar.Location = new System.Drawing.Point(831, 7);
-            this.butRemoveAvatar.Name = "butRemoveAvatar";
-            this.butRemoveAvatar.Size = new System.Drawing.Size(50, 50);
-            this.butRemoveAvatar.TabIndex = 15;
-            this.butRemoveAvatar.UseVisualStyleBackColor = false;
+            this.butDeleteUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butDeleteUser.BackColor = System.Drawing.Color.Transparent;
+            this.butDeleteUser.BackgroundImage = global::DiplomaClient.Properties.Resources.RemoveImageButton;
+            this.butDeleteUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butDeleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butDeleteUser.FlatAppearance.BorderSize = 0;
+            this.butDeleteUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butDeleteUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butDeleteUser.Location = new System.Drawing.Point(943, 7);
+            this.butDeleteUser.Name = "butDeleteUser";
+            this.butDeleteUser.Size = new System.Drawing.Size(50, 50);
+            this.butDeleteUser.TabIndex = 16;
+            this.butDeleteUser.UseVisualStyleBackColor = false;
+            // 
+            // butEditModules
+            // 
+            this.butEditModules.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butEditModules.BackColor = System.Drawing.Color.Transparent;
+            this.butEditModules.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
+            this.butEditModules.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butEditModules.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butEditModules.FlatAppearance.BorderSize = 0;
+            this.butEditModules.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butEditModules.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butEditModules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butEditModules.Location = new System.Drawing.Point(943, 7);
+            this.butEditModules.Name = "butEditModules";
+            this.butEditModules.Size = new System.Drawing.Size(50, 50);
+            this.butEditModules.TabIndex = 19;
+            this.butEditModules.UseVisualStyleBackColor = false;
             // 
             // dgvAdmin
             // 
@@ -510,14 +582,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -525,9 +597,9 @@
             this.Column3});
             this.dgvAdmin.Location = new System.Drawing.Point(0, 122);
             this.dgvAdmin.Name = "dgvAdmin";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAdmin.RowTemplate.Height = 30;
             this.dgvAdmin.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAdmin.Size = new System.Drawing.Size(1000, 450);
@@ -570,12 +642,13 @@
             this.butUserModules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butUserModules.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butUserModules.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.butUserModules.Location = new System.Drawing.Point(873, 5);
+            this.butUserModules.Location = new System.Drawing.Point(853, 5);
             this.butUserModules.Name = "butUserModules";
-            this.butUserModules.Size = new System.Drawing.Size(120, 49);
+            this.butUserModules.Size = new System.Drawing.Size(140, 49);
             this.butUserModules.TabIndex = 37;
             this.butUserModules.Text = "Modules";
             this.butUserModules.UseVisualStyleBackColor = false;
+            this.butUserModules.Click += new System.EventHandler(this.butUserModules_Click);
             // 
             // butUserActivity
             // 
@@ -586,12 +659,13 @@
             this.butUserActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butUserActivity.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butUserActivity.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.butUserActivity.Location = new System.Drawing.Point(747, 5);
+            this.butUserActivity.Location = new System.Drawing.Point(707, 5);
             this.butUserActivity.Name = "butUserActivity";
-            this.butUserActivity.Size = new System.Drawing.Size(120, 49);
+            this.butUserActivity.Size = new System.Drawing.Size(140, 49);
             this.butUserActivity.TabIndex = 36;
             this.butUserActivity.Text = "Activity";
             this.butUserActivity.UseVisualStyleBackColor = false;
+            this.butUserActivity.Click += new System.EventHandler(this.butUserActivity_Click);
             // 
             // butUserData
             // 
@@ -602,12 +676,13 @@
             this.butUserData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butUserData.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butUserData.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.butUserData.Location = new System.Drawing.Point(621, 5);
+            this.butUserData.Location = new System.Drawing.Point(561, 5);
             this.butUserData.Name = "butUserData";
-            this.butUserData.Size = new System.Drawing.Size(120, 49);
+            this.butUserData.Size = new System.Drawing.Size(140, 49);
             this.butUserData.TabIndex = 35;
             this.butUserData.Text = "Accounts";
             this.butUserData.UseVisualStyleBackColor = false;
+            this.butUserData.Click += new System.EventHandler(this.butUserData_Click);
             // 
             // lblAdminPanel
             // 
@@ -640,10 +715,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 97);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 86);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1000, 531);
+            this.reportViewer1.Size = new System.Drawing.Size(1000, 542);
             this.reportViewer1.TabIndex = 2;
             // 
             // panReportHeader
@@ -724,9 +799,9 @@
             this.panAccount.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panAccount.Controls.Add(this.tbLogin);
             this.panAccount.Controls.Add(this.pbAvatar);
-            this.panAccount.Location = new System.Drawing.Point(440, 3);
+            this.panAccount.Location = new System.Drawing.Point(371, 3);
             this.panAccount.Name = "panAccount";
-            this.panAccount.Size = new System.Drawing.Size(581, 54);
+            this.panAccount.Size = new System.Drawing.Size(650, 54);
             this.panAccount.TabIndex = 21;
             // 
             // tbLogin
@@ -734,9 +809,9 @@
             this.tbLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLogin.Enabled = false;
             this.tbLogin.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbLogin.Location = new System.Drawing.Point(193, 11);
+            this.tbLogin.Location = new System.Drawing.Point(22, 11);
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(329, 26);
+            this.tbLogin.Size = new System.Drawing.Size(529, 26);
             this.tbLogin.TabIndex = 22;
             this.tbLogin.Text = "User(Admin)";
             this.tbLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -747,7 +822,7 @@
             this.pbAvatar.BackColor = System.Drawing.Color.Transparent;
             this.pbAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAvatar.Image = global::DiplomaClient.Properties.Resources.UserProfileDefault;
-            this.pbAvatar.Location = new System.Drawing.Point(534, 5);
+            this.pbAvatar.Location = new System.Drawing.Point(574, 5);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.Size = new System.Drawing.Size(44, 43);
             this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -779,22 +854,17 @@
             this.pbMenuOne.TabStop = false;
             this.pbMenuOne.Click += new System.EventHandler(this.pbMenuOne_Click);
             // 
-            // button4
+            // lblAdminOption
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(943, 7);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 50);
-            this.button4.TabIndex = 19;
-            this.button4.UseVisualStyleBackColor = false;
+            this.lblAdminOption.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblAdminOption.AutoSize = true;
+            this.lblAdminOption.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdminOption.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAdminOption.Location = new System.Drawing.Point(13, 16);
+            this.lblAdminOption.Name = "lblAdminOption";
+            this.lblAdminOption.Size = new System.Drawing.Size(165, 30);
+            this.lblAdminOption.TabIndex = 38;
+            this.lblAdminOption.Text = "Admin Panel";
             // 
             // MainForm
             // 
@@ -818,7 +888,10 @@
             this.panBackArea.ResumeLayout(false);
             this.panSlider.ResumeLayout(false);
             this.panAdminPanel.ResumeLayout(false);
+            this.panAdminPanelSearch.ResumeLayout(false);
+            this.panAdminPanelSearch.PerformLayout();
             this.panAdminPanelFooter.ResumeLayout(false);
+            this.panAdminPanelFooter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).EndInit();
             this.panelAdminPanelHeader.ResumeLayout(false);
             this.panelAdminPanelHeader.PerformLayout();
@@ -883,10 +956,14 @@
         private System.Windows.Forms.Button butUserModules;
         private System.Windows.Forms.Button butUserActivity;
         private System.Windows.Forms.Button butUserData;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button butRemoveAvatar;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button butEditUser;
+        private System.Windows.Forms.Button butBlokUser;
+        private System.Windows.Forms.Button butDeleteUser;
+        private System.Windows.Forms.Button butAddUser;
+        private System.Windows.Forms.Button butEditModules;
+        private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.Button butSearch;
+        private System.Windows.Forms.Button butRefreshGrid;
+        private System.Windows.Forms.Label lblAdminOption;
     }
 }
