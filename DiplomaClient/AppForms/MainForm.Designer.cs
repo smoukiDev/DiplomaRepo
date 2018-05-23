@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panFooter = new System.Windows.Forms.Panel();
             this.panWindowTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -50,12 +50,14 @@
             this.buts3 = new System.Windows.Forms.Button();
             this.buts2 = new System.Windows.Forms.Button();
             this.buts1 = new System.Windows.Forms.Button();
+            this.panProfile = new System.Windows.Forms.Panel();
             this.panAdminPanel = new System.Windows.Forms.Panel();
             this.panAdminPanelSearch = new System.Windows.Forms.Panel();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.butSearch = new System.Windows.Forms.Button();
             this.butRefreshGrid = new System.Windows.Forms.Button();
             this.panAdminPanelFooter = new System.Windows.Forms.Panel();
+            this.lblAdminOption = new System.Windows.Forms.Label();
             this.butEditUser = new System.Windows.Forms.Button();
             this.butBlokUser = new System.Windows.Forms.Button();
             this.butAddUser = new System.Windows.Forms.Button();
@@ -75,15 +77,12 @@
             this.panReportHeader = new System.Windows.Forms.Panel();
             this.lblDMAlgoritm = new System.Windows.Forms.Label();
             this.butAnalysis = new System.Windows.Forms.Button();
-            this.panProfile = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panMenu = new System.Windows.Forms.Panel();
             this.panAccount = new System.Windows.Forms.Panel();
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.lblMenu = new System.Windows.Forms.Label();
             this.pbMenuOne = new System.Windows.Forms.PictureBox();
-            this.lblAdminOption = new System.Windows.Forms.Label();
             this.panFooter.SuspendLayout();
             this.panWindowTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
@@ -97,7 +96,6 @@
             this.panelAdminPanelHeader.SuspendLayout();
             this.panReport.SuspendLayout();
             this.panReportHeader.SuspendLayout();
-            this.panProfile.SuspendLayout();
             this.panMenu.SuspendLayout();
             this.panAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -217,9 +215,9 @@
             // 
             this.panBackArea.BackColor = System.Drawing.Color.Crimson;
             this.panBackArea.Controls.Add(this.panSlider);
+            this.panBackArea.Controls.Add(this.panProfile);
             this.panBackArea.Controls.Add(this.panAdminPanel);
             this.panBackArea.Controls.Add(this.panReport);
-            this.panBackArea.Controls.Add(this.panProfile);
             this.panBackArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panBackArea.Location = new System.Drawing.Point(0, 120);
             this.panBackArea.Name = "panBackArea";
@@ -402,6 +400,18 @@
             this.buts1.Visible = false;
             this.buts1.Click += new System.EventHandler(this.buts1_Click);
             // 
+            // panProfile
+            // 
+            this.panProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panProfile.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.panProfile.Location = new System.Drawing.Point(12, 9);
+            this.panProfile.Name = "panProfile";
+            this.panProfile.Size = new System.Drawing.Size(1000, 628);
+            this.panProfile.TabIndex = 0;
+            this.panProfile.Visible = false;
+            // 
             // panAdminPanel
             // 
             this.panAdminPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -439,7 +449,6 @@
             this.tbSearch.Size = new System.Drawing.Size(529, 26);
             this.tbSearch.TabIndex = 23;
             this.tbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbSearch.MouseHover += new System.EventHandler(this.tbSearch_MouseHover);
             // 
             // butSearch
             // 
@@ -489,6 +498,18 @@
             this.panAdminPanelFooter.Name = "panAdminPanelFooter";
             this.panAdminPanelFooter.Size = new System.Drawing.Size(1000, 60);
             this.panAdminPanelFooter.TabIndex = 3;
+            // 
+            // lblAdminOption
+            // 
+            this.lblAdminOption.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblAdminOption.AutoSize = true;
+            this.lblAdminOption.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdminOption.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAdminOption.Location = new System.Drawing.Point(13, 16);
+            this.lblAdminOption.Name = "lblAdminOption";
+            this.lblAdminOption.Size = new System.Drawing.Size(165, 30);
+            this.lblAdminOption.TabIndex = 38;
+            this.lblAdminOption.Text = "Admin Panel";
             // 
             // butEditUser
             // 
@@ -582,14 +603,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -597,9 +618,9 @@
             this.Column3});
             this.dgvAdmin.Location = new System.Drawing.Point(0, 122);
             this.dgvAdmin.Name = "dgvAdmin";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvAdmin.RowTemplate.Height = 30;
             this.dgvAdmin.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAdmin.Size = new System.Drawing.Size(1000, 450);
@@ -759,29 +780,6 @@
             this.butAnalysis.Text = "Run Analysis";
             this.butAnalysis.UseVisualStyleBackColor = false;
             // 
-            // panProfile
-            // 
-            this.panProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panProfile.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.panProfile.Controls.Add(this.label3);
-            this.panProfile.Location = new System.Drawing.Point(12, 9);
-            this.panProfile.Name = "panProfile";
-            this.panProfile.Size = new System.Drawing.Size(1000, 628);
-            this.panProfile.TabIndex = 0;
-            this.panProfile.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(628, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "profile";
-            // 
             // panMenu
             // 
             this.panMenu.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -854,18 +852,6 @@
             this.pbMenuOne.TabStop = false;
             this.pbMenuOne.Click += new System.EventHandler(this.pbMenuOne_Click);
             // 
-            // lblAdminOption
-            // 
-            this.lblAdminOption.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblAdminOption.AutoSize = true;
-            this.lblAdminOption.BackColor = System.Drawing.Color.Transparent;
-            this.lblAdminOption.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAdminOption.Location = new System.Drawing.Point(13, 16);
-            this.lblAdminOption.Name = "lblAdminOption";
-            this.lblAdminOption.Size = new System.Drawing.Size(165, 30);
-            this.lblAdminOption.TabIndex = 38;
-            this.lblAdminOption.Text = "Admin Panel";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -898,8 +884,6 @@
             this.panReport.ResumeLayout(false);
             this.panReportHeader.ResumeLayout(false);
             this.panReportHeader.PerformLayout();
-            this.panProfile.ResumeLayout(false);
-            this.panProfile.PerformLayout();
             this.panMenu.ResumeLayout(false);
             this.panMenu.PerformLayout();
             this.panAccount.ResumeLayout(false);
@@ -940,7 +924,6 @@
         private System.Windows.Forms.Button buts1;
         private System.Windows.Forms.Panel panProfile;
         private System.Windows.Forms.Panel panReport;
-        private System.Windows.Forms.Label label3;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Panel panReportHeader;
         private System.Windows.Forms.Label lblDMAlgoritm;

@@ -248,5 +248,23 @@
   <ItemGroup>
     <None Include="Image\SearchButtonMinimal.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MarkerIsAdmin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MarkerIsNotAdmin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\GenderExchangeButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\SaveButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\ChangePasswordButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\SaveButtonV2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -73,6 +73,16 @@ namespace DiplomaClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChangePasswordButton {
+            get {
+                object obj = ResourceManager.GetObject("ChangePasswordButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CustomMessageBoxBackground {
             get {
                 object obj = ResourceManager.GetObject("CustomMessageBoxBackground", resourceCulture);
@@ -113,6 +123,16 @@ namespace DiplomaClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenderExchangeButton {
+            get {
+                object obj = ResourceManager.GetObject("GenderExchangeButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImageNotFound {
             get {
                 object obj = ResourceManager.GetObject("ImageNotFound", resourceCulture);
@@ -146,6 +166,26 @@ namespace DiplomaClient.Properties {
         internal static System.Drawing.Bitmap MakeVisibleButton {
             get {
                 object obj = ResourceManager.GetObject("MakeVisibleButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MarkerIsAdmin {
+            get {
+                object obj = ResourceManager.GetObject("MarkerIsAdmin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MarkerIsNotAdmin {
+            get {
+                object obj = ResourceManager.GetObject("MarkerIsNotAdmin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +286,16 @@ namespace DiplomaClient.Properties {
         internal static System.Drawing.Bitmap RemoveUserButton {
             get {
                 object obj = ResourceManager.GetObject("RemoveUserButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SaveButtonV2 {
+            get {
+                object obj = ResourceManager.GetObject("SaveButtonV2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

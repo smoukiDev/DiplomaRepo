@@ -121,6 +121,9 @@
   <data name="AddUserButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\AddUserButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ChangePasswordButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\ChangePasswordButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CustomMessageBoxBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\CustomMessageBoxBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,6 +136,9 @@
   <data name="Error" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\Error.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GenderExchangeButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\GenderExchangeButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ImageNotFound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\ImageNotFound.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,6 +150,12 @@
   </data>
   <data name="MakeVisibleButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\MakeVisibleButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MarkerIsAdmin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\MarkerIsAdmin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MarkerIsNotAdmin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\MarkerIsNotAdmin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MaximizeButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\MaximizeButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -174,6 +186,9 @@
   </data>
   <data name="RemoveUserButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\RemoveUserButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveButtonV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\SaveButtonV2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SearchButtonMinimal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\SearchButtonMinimal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
