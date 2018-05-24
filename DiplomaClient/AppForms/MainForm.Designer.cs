@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panFooter = new System.Windows.Forms.Panel();
             this.panWindowTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -83,12 +83,42 @@
             this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.lblMenu = new System.Windows.Forms.Label();
             this.pbMenuOne = new System.Windows.Forms.PictureBox();
+            this.panProfileHeader = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panProfileFooter = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panProfileAvatar = new System.Windows.Forms.Panel();
+            this.mtbPhone = new System.Windows.Forms.MaskedTextBox();
+            this.lbl8 = new System.Windows.Forms.Label();
+            this.lbl7 = new System.Windows.Forms.Label();
+            this.lbl6 = new System.Windows.Forms.Label();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.lbl4 = new System.Windows.Forms.Label();
+            this.tbLName = new System.Windows.Forms.TextBox();
+            this.lbl3 = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.tbMName = new System.Windows.Forms.TextBox();
+            this.tbFName = new System.Windows.Forms.TextBox();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.tbLoginOne = new System.Windows.Forms.TextBox();
+            this.tbAdress = new System.Windows.Forms.TextBox();
+            this.tbGender = new System.Windows.Forms.TextBox();
+            this.lbl5 = new System.Windows.Forms.Label();
+            this.lbl11 = new System.Windows.Forms.Label();
+            this.tbPassConfirm = new System.Windows.Forms.TextBox();
+            this.lbl10 = new System.Windows.Forms.Label();
+            this.tbPass = new System.Windows.Forms.TextBox();
+            this.lbl9 = new System.Windows.Forms.Label();
+            this.tbOldPass = new System.Windows.Forms.TextBox();
             this.panFooter.SuspendLayout();
             this.panWindowTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
             this.panWinStateButtons.SuspendLayout();
             this.panBackArea.SuspendLayout();
             this.panSlider.SuspendLayout();
+            this.panProfile.SuspendLayout();
             this.panAdminPanel.SuspendLayout();
             this.panAdminPanelSearch.SuspendLayout();
             this.panAdminPanelFooter.SuspendLayout();
@@ -100,6 +130,8 @@
             this.panAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenuOne)).BeginInit();
+            this.panProfileHeader.SuspendLayout();
+            this.panProfileFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // panFooter
@@ -405,7 +437,32 @@
             this.panProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panProfile.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.panProfile.BackColor = System.Drawing.Color.Gainsboro;
+            this.panProfile.Controls.Add(this.tbOldPass);
+            this.panProfile.Controls.Add(this.lbl9);
+            this.panProfile.Controls.Add(this.lbl11);
+            this.panProfile.Controls.Add(this.tbPassConfirm);
+            this.panProfile.Controls.Add(this.lbl10);
+            this.panProfile.Controls.Add(this.tbPass);
+            this.panProfile.Controls.Add(this.lbl5);
+            this.panProfile.Controls.Add(this.tbGender);
+            this.panProfile.Controls.Add(this.tbAdress);
+            this.panProfile.Controls.Add(this.mtbPhone);
+            this.panProfile.Controls.Add(this.lbl8);
+            this.panProfile.Controls.Add(this.lbl7);
+            this.panProfile.Controls.Add(this.lbl6);
+            this.panProfile.Controls.Add(this.tbEmail);
+            this.panProfile.Controls.Add(this.lbl4);
+            this.panProfile.Controls.Add(this.tbLName);
+            this.panProfile.Controls.Add(this.lbl3);
+            this.panProfile.Controls.Add(this.lbl2);
+            this.panProfile.Controls.Add(this.tbMName);
+            this.panProfile.Controls.Add(this.tbFName);
+            this.panProfile.Controls.Add(this.lbl1);
+            this.panProfile.Controls.Add(this.tbLoginOne);
+            this.panProfile.Controls.Add(this.panProfileAvatar);
+            this.panProfile.Controls.Add(this.panProfileFooter);
+            this.panProfile.Controls.Add(this.panProfileHeader);
             this.panProfile.Location = new System.Drawing.Point(12, 9);
             this.panProfile.Name = "panProfile";
             this.panProfile.Size = new System.Drawing.Size(1000, 628);
@@ -603,14 +660,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -618,9 +675,9 @@
             this.Column3});
             this.dgvAdmin.Location = new System.Drawing.Point(0, 122);
             this.dgvAdmin.Name = "dgvAdmin";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAdmin.RowTemplate.Height = 30;
             this.dgvAdmin.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAdmin.Size = new System.Drawing.Size(1000, 450);
@@ -852,6 +909,326 @@
             this.pbMenuOne.TabStop = false;
             this.pbMenuOne.Click += new System.EventHandler(this.pbMenuOne_Click);
             // 
+            // panProfileHeader
+            // 
+            this.panProfileHeader.BackColor = System.Drawing.Color.DarkGray;
+            this.panProfileHeader.Controls.Add(this.label1);
+            this.panProfileHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panProfileHeader.Location = new System.Drawing.Point(0, 0);
+            this.panProfileHeader.Name = "panProfileHeader";
+            this.panProfileHeader.Size = new System.Drawing.Size(1000, 60);
+            this.panProfileHeader.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(15, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 30);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Profile";
+            // 
+            // panProfileFooter
+            // 
+            this.panProfileFooter.BackColor = System.Drawing.Color.DarkGray;
+            this.panProfileFooter.Controls.Add(this.button3);
+            this.panProfileFooter.Controls.Add(this.button2);
+            this.panProfileFooter.Controls.Add(this.button1);
+            this.panProfileFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panProfileFooter.Location = new System.Drawing.Point(0, 568);
+            this.panProfileFooter.Name = "panProfileFooter";
+            this.panProfileFooter.Size = new System.Drawing.Size(1000, 60);
+            this.panProfileFooter.TabIndex = 36;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(393, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 19;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::DiplomaClient.Properties.Resources.SaveButtonV2;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(459, 7);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 20;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::DiplomaClient.Properties.Resources.ChangePasswordButton;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(526, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(50, 50);
+            this.button3.TabIndex = 21;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // panProfileAvatar
+            // 
+            this.panProfileAvatar.BackColor = System.Drawing.Color.DimGray;
+            this.panProfileAvatar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panProfileAvatar.Location = new System.Drawing.Point(0, 60);
+            this.panProfileAvatar.Name = "panProfileAvatar";
+            this.panProfileAvatar.Size = new System.Drawing.Size(1000, 100);
+            this.panProfileAvatar.TabIndex = 37;
+            // 
+            // mtbPhone
+            // 
+            this.mtbPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbPhone.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mtbPhone.Location = new System.Drawing.Point(290, 388);
+            this.mtbPhone.Mask = "+990009990099";
+            this.mtbPhone.Name = "mtbPhone";
+            this.mtbPhone.Size = new System.Drawing.Size(687, 28);
+            this.mtbPhone.TabIndex = 54;
+            // 
+            // lbl8
+            // 
+            this.lbl8.AutoSize = true;
+            this.lbl8.BackColor = System.Drawing.Color.Transparent;
+            this.lbl8.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl8.Location = new System.Drawing.Point(16, 419);
+            this.lbl8.Name = "lbl8";
+            this.lbl8.Size = new System.Drawing.Size(96, 30);
+            this.lbl8.TabIndex = 50;
+            this.lbl8.Text = "Adress:";
+            // 
+            // lbl7
+            // 
+            this.lbl7.AutoSize = true;
+            this.lbl7.BackColor = System.Drawing.Color.Transparent;
+            this.lbl7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl7.Location = new System.Drawing.Point(16, 385);
+            this.lbl7.Name = "lbl7";
+            this.lbl7.Size = new System.Drawing.Size(96, 30);
+            this.lbl7.TabIndex = 49;
+            this.lbl7.Text = "Phone:";
+            // 
+            // lbl6
+            // 
+            this.lbl6.AutoSize = true;
+            this.lbl6.BackColor = System.Drawing.Color.Transparent;
+            this.lbl6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl6.Location = new System.Drawing.Point(16, 352);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.Size = new System.Drawing.Size(85, 30);
+            this.lbl6.TabIndex = 48;
+            this.lbl6.Text = "Email:";
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbEmail.Location = new System.Drawing.Point(290, 354);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(687, 28);
+            this.tbEmail.TabIndex = 47;
+            // 
+            // lbl4
+            // 
+            this.lbl4.AutoSize = true;
+            this.lbl4.BackColor = System.Drawing.Color.Transparent;
+            this.lbl4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl4.Location = new System.Drawing.Point(15, 284);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(146, 30);
+            this.lbl4.TabIndex = 46;
+            this.lbl4.Text = "Last Name:";
+            // 
+            // tbLName
+            // 
+            this.tbLName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbLName.Location = new System.Drawing.Point(290, 286);
+            this.tbLName.Name = "tbLName";
+            this.tbLName.Size = new System.Drawing.Size(687, 28);
+            this.tbLName.TabIndex = 45;
+            // 
+            // lbl3
+            // 
+            this.lbl3.AutoSize = true;
+            this.lbl3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl3.Location = new System.Drawing.Point(15, 250);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(184, 30);
+            this.lbl3.TabIndex = 44;
+            this.lbl3.Text = "Middle Name:";
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl2.Location = new System.Drawing.Point(15, 216);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(144, 30);
+            this.lbl2.TabIndex = 43;
+            this.lbl2.Text = "First Name:";
+            // 
+            // tbMName
+            // 
+            this.tbMName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbMName.Location = new System.Drawing.Point(290, 252);
+            this.tbMName.Name = "tbMName";
+            this.tbMName.Size = new System.Drawing.Size(687, 28);
+            this.tbMName.TabIndex = 42;
+            // 
+            // tbFName
+            // 
+            this.tbFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbFName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbFName.Location = new System.Drawing.Point(290, 218);
+            this.tbFName.Name = "tbFName";
+            this.tbFName.Size = new System.Drawing.Size(687, 28);
+            this.tbFName.TabIndex = 41;
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl1.Location = new System.Drawing.Point(15, 182);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(84, 30);
+            this.lbl1.TabIndex = 40;
+            this.lbl1.Text = "Login:";
+            // 
+            // tbLoginOne
+            // 
+            this.tbLoginOne.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLoginOne.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbLoginOne.Location = new System.Drawing.Point(290, 184);
+            this.tbLoginOne.Name = "tbLoginOne";
+            this.tbLoginOne.Size = new System.Drawing.Size(687, 28);
+            this.tbLoginOne.TabIndex = 39;
+            // 
+            // tbAdress
+            // 
+            this.tbAdress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbAdress.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbAdress.Location = new System.Drawing.Point(290, 422);
+            this.tbAdress.Name = "tbAdress";
+            this.tbAdress.Size = new System.Drawing.Size(687, 28);
+            this.tbAdress.TabIndex = 55;
+            // 
+            // tbGender
+            // 
+            this.tbGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbGender.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbGender.Location = new System.Drawing.Point(290, 320);
+            this.tbGender.Name = "tbGender";
+            this.tbGender.Size = new System.Drawing.Size(687, 28);
+            this.tbGender.TabIndex = 56;
+            // 
+            // lbl5
+            // 
+            this.lbl5.AutoSize = true;
+            this.lbl5.BackColor = System.Drawing.Color.Transparent;
+            this.lbl5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl5.Location = new System.Drawing.Point(13, 318);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(111, 30);
+            this.lbl5.TabIndex = 57;
+            this.lbl5.Text = "Gender:";
+            // 
+            // lbl11
+            // 
+            this.lbl11.AutoSize = true;
+            this.lbl11.BackColor = System.Drawing.Color.Transparent;
+            this.lbl11.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl11.Location = new System.Drawing.Point(16, 522);
+            this.lbl11.Name = "lbl11";
+            this.lbl11.Size = new System.Drawing.Size(232, 30);
+            this.lbl11.TabIndex = 61;
+            this.lbl11.Text = "Confirm Password:";
+            // 
+            // tbPassConfirm
+            // 
+            this.tbPassConfirm.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPassConfirm.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbPassConfirm.Location = new System.Drawing.Point(290, 524);
+            this.tbPassConfirm.Name = "tbPassConfirm";
+            this.tbPassConfirm.PasswordChar = '⦁';
+            this.tbPassConfirm.Size = new System.Drawing.Size(687, 28);
+            this.tbPassConfirm.TabIndex = 60;
+            // 
+            // lbl10
+            // 
+            this.lbl10.AutoSize = true;
+            this.lbl10.BackColor = System.Drawing.Color.Transparent;
+            this.lbl10.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl10.Location = new System.Drawing.Point(16, 488);
+            this.lbl10.Name = "lbl10";
+            this.lbl10.Size = new System.Drawing.Size(129, 30);
+            this.lbl10.TabIndex = 59;
+            this.lbl10.Text = "Password:";
+            // 
+            // tbPass
+            // 
+            this.tbPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPass.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbPass.Location = new System.Drawing.Point(290, 490);
+            this.tbPass.MaxLength = 20;
+            this.tbPass.Name = "tbPass";
+            this.tbPass.PasswordChar = '⦁';
+            this.tbPass.Size = new System.Drawing.Size(687, 28);
+            this.tbPass.TabIndex = 58;
+            // 
+            // lbl9
+            // 
+            this.lbl9.AutoSize = true;
+            this.lbl9.BackColor = System.Drawing.Color.Transparent;
+            this.lbl9.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl9.Location = new System.Drawing.Point(16, 455);
+            this.lbl9.Name = "lbl9";
+            this.lbl9.Size = new System.Drawing.Size(179, 30);
+            this.lbl9.TabIndex = 63;
+            this.lbl9.Text = "Old Password:";
+            // 
+            // tbOldPass
+            // 
+            this.tbOldPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbOldPass.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbOldPass.Location = new System.Drawing.Point(290, 457);
+            this.tbOldPass.MaxLength = 20;
+            this.tbOldPass.Name = "tbOldPass";
+            this.tbOldPass.PasswordChar = '⦁';
+            this.tbOldPass.Size = new System.Drawing.Size(687, 28);
+            this.tbOldPass.TabIndex = 64;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -873,6 +1250,8 @@
             this.panWinStateButtons.ResumeLayout(false);
             this.panBackArea.ResumeLayout(false);
             this.panSlider.ResumeLayout(false);
+            this.panProfile.ResumeLayout(false);
+            this.panProfile.PerformLayout();
             this.panAdminPanel.ResumeLayout(false);
             this.panAdminPanelSearch.ResumeLayout(false);
             this.panAdminPanelSearch.PerformLayout();
@@ -890,6 +1269,9 @@
             this.panAccount.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenuOne)).EndInit();
+            this.panProfileHeader.ResumeLayout(false);
+            this.panProfileHeader.PerformLayout();
+            this.panProfileFooter.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -948,5 +1330,34 @@
         private System.Windows.Forms.Button butSearch;
         private System.Windows.Forms.Button butRefreshGrid;
         private System.Windows.Forms.Label lblAdminOption;
+        private System.Windows.Forms.Panel panProfileFooter;
+        private System.Windows.Forms.Panel panProfileHeader;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panProfileAvatar;
+        private System.Windows.Forms.Label lbl5;
+        private System.Windows.Forms.TextBox tbGender;
+        private System.Windows.Forms.TextBox tbAdress;
+        private System.Windows.Forms.MaskedTextBox mtbPhone;
+        private System.Windows.Forms.Label lbl8;
+        private System.Windows.Forms.Label lbl7;
+        private System.Windows.Forms.Label lbl6;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.Label lbl4;
+        private System.Windows.Forms.TextBox tbLName;
+        private System.Windows.Forms.Label lbl3;
+        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.TextBox tbMName;
+        private System.Windows.Forms.TextBox tbFName;
+        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.TextBox tbLoginOne;
+        private System.Windows.Forms.Label lbl9;
+        private System.Windows.Forms.Label lbl11;
+        private System.Windows.Forms.TextBox tbPassConfirm;
+        private System.Windows.Forms.Label lbl10;
+        private System.Windows.Forms.TextBox tbPass;
+        private System.Windows.Forms.TextBox tbOldPass;
     }
 }

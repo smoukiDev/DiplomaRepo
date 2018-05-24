@@ -68,6 +68,11 @@ namespace DiplomaClient
             ////profile panel design
             //panProfileHeader.BackColor = ColorPalette.white1;            
             panProfile.BackColor = ColorPalette.white2;
+            panProfileHeader.BackColor = ColorPalette.white1;
+            panProfileAvatar.BackColor = ColorPalette.white2;
+            panProfileFooter.BackColor = ColorPalette.white1;
+            
+
             //panProfileFooter.BackColor = ColorPalette.white1;
             //slider start width
             panSlider.Width = panSliderMIN;
