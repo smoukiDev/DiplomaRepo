@@ -191,7 +191,7 @@ namespace DiplomaClient
             if (panSlider.Width == panSliderMIN)
             {
 
-               //soft animation Profile Panel
+                //soft animation Profile Panel
                 //butIsAdmin.Visible = false;
                 //butIsNotAdmin.Visible = false;
                 //butAvatarDisplay.Visible = false;
@@ -208,13 +208,13 @@ namespace DiplomaClient
                 //tbOldPassword.Visible = false;
                 //tbPass.Visible = false;
                 //tbPassConfirm.Visible = false;
-                //butEditProfile.Visible = false;
-                //butSaveProfileChanges.Visible = false;
-                //butChangePassword.Visible = false;
-                //buttonMakeVisible1.Visible = false;
-                //buttonMakeVisible2.Visible = false;
-                //buttonMakeVisible3.Visible = false;
-                //butGenderExchange.Visible = false;
+                butEditProfile.Visible = false;
+                butSaveProfileChanges.Visible = false;
+                butChangePassword.Visible = false;
+                buttonMakeVisible1.Visible = false;
+                buttonMakeVisible2.Visible = false;
+                buttonMakeVisible3.Visible = false;
+                butGenderExchange.Visible = false;
                 //lbl1.Visible = false;
                 //lbl2.Visible = false;
                 //lbl3.Visible = false;
@@ -285,13 +285,13 @@ namespace DiplomaClient
                 //tbOldPassword.Visible = true;
                 //tbPass.Visible = true;
                 //tbPassConfirm.Visible = true;
-                //butEditProfile.Visible = true;
-                //butSaveProfileChanges.Visible = true;
-                //butChangePassword.Visible = true;
-                //buttonMakeVisible1.Visible = true;
-                //buttonMakeVisible2.Visible = true;
-                //buttonMakeVisible3.Visible = true;
-                //butGenderExchange.Visible = true;
+                butEditProfile.Visible = true;
+                butSaveProfileChanges.Visible = true;
+                butChangePassword.Visible = true;
+                buttonMakeVisible1.Visible = true;
+                buttonMakeVisible2.Visible = true;
+                buttonMakeVisible3.Visible = true;
+                butGenderExchange.Visible = true;
                 //lbl1.Visible = true;
                 //lbl2.Visible = true;
                 //lbl3.Visible = true;
@@ -339,13 +339,13 @@ namespace DiplomaClient
                 //tbOldPassword.Visible = false;
                 //tbPass.Visible = false;
                 //tbPassConfirm.Visible = false;
-                //butEditProfile.Visible = false;
-                //butSaveProfileChanges.Visible = false;
-                //butChangePassword.Visible = false;
-                //buttonMakeVisible1.Visible = false;
-                //buttonMakeVisible2.Visible = false;
-                //buttonMakeVisible3.Visible = false;
-                //butGenderExchange.Visible = false;
+                butEditProfile.Visible = false;
+                butSaveProfileChanges.Visible = false;
+                butChangePassword.Visible = false;
+                buttonMakeVisible1.Visible = false;
+                buttonMakeVisible2.Visible = false;
+                buttonMakeVisible3.Visible = false;
+                butGenderExchange.Visible = false;
                 //lbl1.Visible = false;
                 //lbl2.Visible = false;
                 //lbl3.Visible = false;
@@ -427,13 +427,13 @@ namespace DiplomaClient
                 //tbOldPassword.Visible = true;
                 //tbPass.Visible = true;
                 //tbPassConfirm.Visible = true;
-                //butEditProfile.Visible = true;
-                //butSaveProfileChanges.Visible = true;
-                //butChangePassword.Visible = true;
-                //buttonMakeVisible1.Visible = true;
-                //buttonMakeVisible2.Visible = true;
-                //buttonMakeVisible3.Visible = true;
-                //butGenderExchange.Visible = true;
+                butEditProfile.Visible = true;
+                butSaveProfileChanges.Visible = true;
+                butChangePassword.Visible = true;
+                buttonMakeVisible1.Visible = true;
+                buttonMakeVisible2.Visible = true;
+                buttonMakeVisible3.Visible = true;
+                butGenderExchange.Visible = true;
                 //lbl1.Visible = true;
                 //lbl2.Visible = true;
                 //lbl3.Visible = true;

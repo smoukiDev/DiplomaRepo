@@ -86,9 +86,9 @@
             this.panProfileHeader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panProfileFooter = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.butEditProfile = new System.Windows.Forms.Button();
+            this.butSaveProfileChanges = new System.Windows.Forms.Button();
+            this.butChangePassword = new System.Windows.Forms.Button();
             this.panProfileAvatar = new System.Windows.Forms.Panel();
             this.mtbPhone = new System.Windows.Forms.MaskedTextBox();
             this.lbl8 = new System.Windows.Forms.Label();
@@ -102,7 +102,7 @@
             this.tbMName = new System.Windows.Forms.TextBox();
             this.tbFName = new System.Windows.Forms.TextBox();
             this.lbl1 = new System.Windows.Forms.Label();
-            this.tbLoginOne = new System.Windows.Forms.TextBox();
+            this.tbLogin1 = new System.Windows.Forms.TextBox();
             this.tbAdress = new System.Windows.Forms.TextBox();
             this.tbGender = new System.Windows.Forms.TextBox();
             this.lbl5 = new System.Windows.Forms.Label();
@@ -111,7 +111,11 @@
             this.lbl10 = new System.Windows.Forms.Label();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.lbl9 = new System.Windows.Forms.Label();
-            this.tbOldPass = new System.Windows.Forms.TextBox();
+            this.tbOldPassword = new System.Windows.Forms.TextBox();
+            this.buttonMakeVisible1 = new System.Windows.Forms.Button();
+            this.buttonMakeVisible2 = new System.Windows.Forms.Button();
+            this.buttonMakeVisible3 = new System.Windows.Forms.Button();
+            this.butGenderExchange = new System.Windows.Forms.Button();
             this.panFooter.SuspendLayout();
             this.panWindowTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
@@ -438,7 +442,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panProfile.BackColor = System.Drawing.Color.Gainsboro;
-            this.panProfile.Controls.Add(this.tbOldPass);
+            this.panProfile.Controls.Add(this.butGenderExchange);
+            this.panProfile.Controls.Add(this.buttonMakeVisible3);
+            this.panProfile.Controls.Add(this.buttonMakeVisible2);
+            this.panProfile.Controls.Add(this.buttonMakeVisible1);
+            this.panProfile.Controls.Add(this.tbOldPassword);
             this.panProfile.Controls.Add(this.lbl9);
             this.panProfile.Controls.Add(this.lbl11);
             this.panProfile.Controls.Add(this.tbPassConfirm);
@@ -459,7 +467,7 @@
             this.panProfile.Controls.Add(this.tbMName);
             this.panProfile.Controls.Add(this.tbFName);
             this.panProfile.Controls.Add(this.lbl1);
-            this.panProfile.Controls.Add(this.tbLoginOne);
+            this.panProfile.Controls.Add(this.tbLogin1);
             this.panProfile.Controls.Add(this.panProfileAvatar);
             this.panProfile.Controls.Add(this.panProfileFooter);
             this.panProfile.Controls.Add(this.panProfileHeader);
@@ -934,65 +942,65 @@
             // panProfileFooter
             // 
             this.panProfileFooter.BackColor = System.Drawing.Color.DarkGray;
-            this.panProfileFooter.Controls.Add(this.button3);
-            this.panProfileFooter.Controls.Add(this.button2);
-            this.panProfileFooter.Controls.Add(this.button1);
+            this.panProfileFooter.Controls.Add(this.butChangePassword);
+            this.panProfileFooter.Controls.Add(this.butSaveProfileChanges);
+            this.panProfileFooter.Controls.Add(this.butEditProfile);
             this.panProfileFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panProfileFooter.Location = new System.Drawing.Point(0, 568);
             this.panProfileFooter.Name = "panProfileFooter";
             this.panProfileFooter.Size = new System.Drawing.Size(1000, 60);
             this.panProfileFooter.TabIndex = 36;
             // 
-            // button1
+            // butEditProfile
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(393, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 19;
-            this.button1.UseVisualStyleBackColor = false;
+            this.butEditProfile.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.butEditProfile.BackColor = System.Drawing.Color.Transparent;
+            this.butEditProfile.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
+            this.butEditProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butEditProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butEditProfile.FlatAppearance.BorderSize = 0;
+            this.butEditProfile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butEditProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butEditProfile.Location = new System.Drawing.Point(393, 7);
+            this.butEditProfile.Name = "butEditProfile";
+            this.butEditProfile.Size = new System.Drawing.Size(50, 50);
+            this.butEditProfile.TabIndex = 19;
+            this.butEditProfile.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // butSaveProfileChanges
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::DiplomaClient.Properties.Resources.SaveButtonV2;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(459, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 20;
-            this.button2.UseVisualStyleBackColor = false;
+            this.butSaveProfileChanges.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.butSaveProfileChanges.BackColor = System.Drawing.Color.Transparent;
+            this.butSaveProfileChanges.BackgroundImage = global::DiplomaClient.Properties.Resources.SaveButtonV2;
+            this.butSaveProfileChanges.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butSaveProfileChanges.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butSaveProfileChanges.FlatAppearance.BorderSize = 0;
+            this.butSaveProfileChanges.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butSaveProfileChanges.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butSaveProfileChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butSaveProfileChanges.Location = new System.Drawing.Point(459, 7);
+            this.butSaveProfileChanges.Name = "butSaveProfileChanges";
+            this.butSaveProfileChanges.Size = new System.Drawing.Size(50, 50);
+            this.butSaveProfileChanges.TabIndex = 20;
+            this.butSaveProfileChanges.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // butChangePassword
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::DiplomaClient.Properties.Resources.ChangePasswordButton;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(526, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 50);
-            this.button3.TabIndex = 21;
-            this.button3.UseVisualStyleBackColor = false;
+            this.butChangePassword.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.butChangePassword.BackColor = System.Drawing.Color.Transparent;
+            this.butChangePassword.BackgroundImage = global::DiplomaClient.Properties.Resources.ChangePasswordButton;
+            this.butChangePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butChangePassword.FlatAppearance.BorderSize = 0;
+            this.butChangePassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butChangePassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butChangePassword.Location = new System.Drawing.Point(526, 7);
+            this.butChangePassword.Name = "butChangePassword";
+            this.butChangePassword.Size = new System.Drawing.Size(50, 50);
+            this.butChangePassword.TabIndex = 21;
+            this.butChangePassword.UseVisualStyleBackColor = false;
             // 
             // panProfileAvatar
             // 
@@ -1005,6 +1013,8 @@
             // 
             // mtbPhone
             // 
+            this.mtbPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mtbPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mtbPhone.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mtbPhone.Location = new System.Drawing.Point(290, 388);
@@ -1048,6 +1058,8 @@
             // 
             // tbEmail
             // 
+            this.tbEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbEmail.Location = new System.Drawing.Point(290, 354);
@@ -1068,6 +1080,8 @@
             // 
             // tbLName
             // 
+            this.tbLName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbLName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbLName.Location = new System.Drawing.Point(290, 286);
@@ -1099,6 +1113,8 @@
             // 
             // tbMName
             // 
+            this.tbMName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbMName.Location = new System.Drawing.Point(290, 252);
@@ -1108,6 +1124,8 @@
             // 
             // tbFName
             // 
+            this.tbFName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbFName.Location = new System.Drawing.Point(290, 218);
@@ -1126,17 +1144,21 @@
             this.lbl1.TabIndex = 40;
             this.lbl1.Text = "Login:";
             // 
-            // tbLoginOne
+            // tbLogin1
             // 
-            this.tbLoginOne.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbLoginOne.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbLoginOne.Location = new System.Drawing.Point(290, 184);
-            this.tbLoginOne.Name = "tbLoginOne";
-            this.tbLoginOne.Size = new System.Drawing.Size(687, 28);
-            this.tbLoginOne.TabIndex = 39;
+            this.tbLogin1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbLogin1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLogin1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbLogin1.Location = new System.Drawing.Point(290, 184);
+            this.tbLogin1.Name = "tbLogin1";
+            this.tbLogin1.Size = new System.Drawing.Size(687, 28);
+            this.tbLogin1.TabIndex = 39;
             // 
             // tbAdress
             // 
+            this.tbAdress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbAdress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbAdress.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbAdress.Location = new System.Drawing.Point(290, 422);
@@ -1146,11 +1168,13 @@
             // 
             // tbGender
             // 
+            this.tbGender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbGender.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbGender.Location = new System.Drawing.Point(290, 320);
             this.tbGender.Name = "tbGender";
-            this.tbGender.Size = new System.Drawing.Size(687, 28);
+            this.tbGender.Size = new System.Drawing.Size(647, 28);
             this.tbGender.TabIndex = 56;
             // 
             // lbl5
@@ -1177,12 +1201,14 @@
             // 
             // tbPassConfirm
             // 
+            this.tbPassConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPassConfirm.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPassConfirm.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbPassConfirm.Location = new System.Drawing.Point(290, 524);
             this.tbPassConfirm.Name = "tbPassConfirm";
             this.tbPassConfirm.PasswordChar = '⦁';
-            this.tbPassConfirm.Size = new System.Drawing.Size(687, 28);
+            this.tbPassConfirm.Size = new System.Drawing.Size(647, 28);
             this.tbPassConfirm.TabIndex = 60;
             // 
             // lbl10
@@ -1198,13 +1224,15 @@
             // 
             // tbPass
             // 
+            this.tbPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPass.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbPass.Location = new System.Drawing.Point(290, 490);
             this.tbPass.MaxLength = 20;
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '⦁';
-            this.tbPass.Size = new System.Drawing.Size(687, 28);
+            this.tbPass.Size = new System.Drawing.Size(647, 28);
             this.tbPass.TabIndex = 58;
             // 
             // lbl9
@@ -1218,16 +1246,62 @@
             this.lbl9.TabIndex = 63;
             this.lbl9.Text = "Old Password:";
             // 
-            // tbOldPass
+            // tbOldPassword
             // 
-            this.tbOldPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbOldPass.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbOldPass.Location = new System.Drawing.Point(290, 457);
-            this.tbOldPass.MaxLength = 20;
-            this.tbOldPass.Name = "tbOldPass";
-            this.tbOldPass.PasswordChar = '⦁';
-            this.tbOldPass.Size = new System.Drawing.Size(687, 28);
-            this.tbOldPass.TabIndex = 64;
+            this.tbOldPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbOldPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbOldPassword.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbOldPassword.Location = new System.Drawing.Point(290, 457);
+            this.tbOldPassword.MaxLength = 20;
+            this.tbOldPassword.Name = "tbOldPassword";
+            this.tbOldPassword.PasswordChar = '⦁';
+            this.tbOldPassword.Size = new System.Drawing.Size(647, 28);
+            this.tbOldPassword.TabIndex = 64;
+            // 
+            // buttonMakeVisible1
+            // 
+            this.buttonMakeVisible1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMakeVisible1.BackgroundImage = global::DiplomaClient.Properties.Resources.MakeVisibleButton;
+            this.buttonMakeVisible1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMakeVisible1.Location = new System.Drawing.Point(943, 456);
+            this.buttonMakeVisible1.Name = "buttonMakeVisible1";
+            this.buttonMakeVisible1.Size = new System.Drawing.Size(37, 31);
+            this.buttonMakeVisible1.TabIndex = 40;
+            this.buttonMakeVisible1.UseVisualStyleBackColor = true;
+            // 
+            // buttonMakeVisible2
+            // 
+            this.buttonMakeVisible2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMakeVisible2.BackgroundImage = global::DiplomaClient.Properties.Resources.MakeVisibleButton;
+            this.buttonMakeVisible2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMakeVisible2.Location = new System.Drawing.Point(943, 489);
+            this.buttonMakeVisible2.Name = "buttonMakeVisible2";
+            this.buttonMakeVisible2.Size = new System.Drawing.Size(37, 31);
+            this.buttonMakeVisible2.TabIndex = 65;
+            this.buttonMakeVisible2.UseVisualStyleBackColor = true;
+            // 
+            // buttonMakeVisible3
+            // 
+            this.buttonMakeVisible3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMakeVisible3.BackgroundImage = global::DiplomaClient.Properties.Resources.MakeVisibleButton;
+            this.buttonMakeVisible3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMakeVisible3.Location = new System.Drawing.Point(943, 523);
+            this.buttonMakeVisible3.Name = "buttonMakeVisible3";
+            this.buttonMakeVisible3.Size = new System.Drawing.Size(37, 31);
+            this.buttonMakeVisible3.TabIndex = 66;
+            this.buttonMakeVisible3.UseVisualStyleBackColor = true;
+            // 
+            // butGenderExchange
+            // 
+            this.butGenderExchange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.butGenderExchange.BackgroundImage = global::DiplomaClient.Properties.Resources.GenderExchangeButton;
+            this.butGenderExchange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butGenderExchange.Location = new System.Drawing.Point(943, 319);
+            this.butGenderExchange.Name = "butGenderExchange";
+            this.butGenderExchange.Size = new System.Drawing.Size(37, 31);
+            this.butGenderExchange.TabIndex = 67;
+            this.butGenderExchange.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -1333,9 +1407,9 @@
         private System.Windows.Forms.Panel panProfileFooter;
         private System.Windows.Forms.Panel panProfileHeader;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butChangePassword;
+        private System.Windows.Forms.Button butSaveProfileChanges;
+        private System.Windows.Forms.Button butEditProfile;
         private System.Windows.Forms.Panel panProfileAvatar;
         private System.Windows.Forms.Label lbl5;
         private System.Windows.Forms.TextBox tbGender;
@@ -1352,12 +1426,16 @@
         private System.Windows.Forms.TextBox tbMName;
         private System.Windows.Forms.TextBox tbFName;
         private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.TextBox tbLoginOne;
+        private System.Windows.Forms.TextBox tbLogin1;
         private System.Windows.Forms.Label lbl9;
         private System.Windows.Forms.Label lbl11;
         private System.Windows.Forms.TextBox tbPassConfirm;
         private System.Windows.Forms.Label lbl10;
         private System.Windows.Forms.TextBox tbPass;
-        private System.Windows.Forms.TextBox tbOldPass;
+        private System.Windows.Forms.TextBox tbOldPassword;
+        private System.Windows.Forms.Button butGenderExchange;
+        private System.Windows.Forms.Button buttonMakeVisible3;
+        private System.Windows.Forms.Button buttonMakeVisible2;
+        private System.Windows.Forms.Button buttonMakeVisible1;
     }
 }
