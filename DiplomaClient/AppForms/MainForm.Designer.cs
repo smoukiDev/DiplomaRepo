@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panFooter = new System.Windows.Forms.Panel();
             this.panWindowTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -488,6 +488,7 @@
             this.butGenderExchange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.butGenderExchange.BackgroundImage = global::DiplomaClient.Properties.Resources.GenderExchangeButton;
             this.butGenderExchange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butGenderExchange.Enabled = false;
             this.butGenderExchange.Location = new System.Drawing.Point(943, 319);
             this.butGenderExchange.Name = "butGenderExchange";
             this.butGenderExchange.Size = new System.Drawing.Size(37, 31);
@@ -499,39 +500,46 @@
             this.buttonMakeVisible3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonMakeVisible3.BackgroundImage = global::DiplomaClient.Properties.Resources.MakeVisibleButton;
             this.buttonMakeVisible3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMakeVisible3.Enabled = false;
             this.buttonMakeVisible3.Location = new System.Drawing.Point(943, 523);
             this.buttonMakeVisible3.Name = "buttonMakeVisible3";
             this.buttonMakeVisible3.Size = new System.Drawing.Size(37, 31);
             this.buttonMakeVisible3.TabIndex = 66;
             this.buttonMakeVisible3.UseVisualStyleBackColor = true;
+            this.buttonMakeVisible3.Click += new System.EventHandler(this.buttonMakeVisible3_Click);
             // 
             // buttonMakeVisible2
             // 
             this.buttonMakeVisible2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonMakeVisible2.BackgroundImage = global::DiplomaClient.Properties.Resources.MakeVisibleButton;
             this.buttonMakeVisible2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMakeVisible2.Enabled = false;
             this.buttonMakeVisible2.Location = new System.Drawing.Point(943, 489);
             this.buttonMakeVisible2.Name = "buttonMakeVisible2";
             this.buttonMakeVisible2.Size = new System.Drawing.Size(37, 31);
             this.buttonMakeVisible2.TabIndex = 65;
             this.buttonMakeVisible2.UseVisualStyleBackColor = true;
+            this.buttonMakeVisible2.Click += new System.EventHandler(this.buttonMakeVisible2_Click);
             // 
             // buttonMakeVisible1
             // 
             this.buttonMakeVisible1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonMakeVisible1.BackgroundImage = global::DiplomaClient.Properties.Resources.MakeVisibleButton;
             this.buttonMakeVisible1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMakeVisible1.Enabled = false;
             this.buttonMakeVisible1.Location = new System.Drawing.Point(943, 456);
             this.buttonMakeVisible1.Name = "buttonMakeVisible1";
             this.buttonMakeVisible1.Size = new System.Drawing.Size(37, 31);
             this.buttonMakeVisible1.TabIndex = 40;
             this.buttonMakeVisible1.UseVisualStyleBackColor = true;
+            this.buttonMakeVisible1.Click += new System.EventHandler(this.buttonMakeVisible1_Click);
             // 
             // tbOldPassword
             // 
             this.tbOldPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbOldPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbOldPassword.Enabled = false;
             this.tbOldPassword.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbOldPassword.Location = new System.Drawing.Point(290, 457);
             this.tbOldPassword.MaxLength = 20;
@@ -567,6 +575,7 @@
             this.tbPassConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPassConfirm.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPassConfirm.Enabled = false;
             this.tbPassConfirm.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbPassConfirm.Location = new System.Drawing.Point(290, 524);
             this.tbPassConfirm.Name = "tbPassConfirm";
@@ -590,6 +599,7 @@
             this.tbPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPass.Enabled = false;
             this.tbPass.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbPass.Location = new System.Drawing.Point(290, 490);
             this.tbPass.MaxLength = 20;
@@ -614,6 +624,7 @@
             this.tbGender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbGender.Enabled = false;
             this.tbGender.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbGender.Location = new System.Drawing.Point(290, 320);
             this.tbGender.Name = "tbGender";
@@ -625,6 +636,7 @@
             this.tbAdress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbAdress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbAdress.Enabled = false;
             this.tbAdress.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbAdress.Location = new System.Drawing.Point(290, 422);
             this.tbAdress.Name = "tbAdress";
@@ -636,6 +648,7 @@
             this.mtbPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mtbPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbPhone.Enabled = false;
             this.mtbPhone.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mtbPhone.Location = new System.Drawing.Point(290, 388);
             this.mtbPhone.Mask = "+990009990099";
@@ -681,6 +694,7 @@
             this.tbEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbEmail.Enabled = false;
             this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbEmail.Location = new System.Drawing.Point(290, 354);
             this.tbEmail.Name = "tbEmail";
@@ -703,6 +717,7 @@
             this.tbLName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbLName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLName.Enabled = false;
             this.tbLName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbLName.Location = new System.Drawing.Point(290, 286);
             this.tbLName.Name = "tbLName";
@@ -736,6 +751,7 @@
             this.tbMName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMName.Enabled = false;
             this.tbMName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbMName.Location = new System.Drawing.Point(290, 252);
             this.tbMName.Name = "tbMName";
@@ -747,6 +763,7 @@
             this.tbFName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbFName.Enabled = false;
             this.tbFName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbFName.Location = new System.Drawing.Point(290, 218);
             this.tbFName.Name = "tbFName";
@@ -769,6 +786,7 @@
             this.tbLogin1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbLogin1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLogin1.Enabled = false;
             this.tbLogin1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbLogin1.Location = new System.Drawing.Point(290, 184);
             this.tbLogin1.Name = "tbLogin1";
@@ -817,6 +835,7 @@
             this.butChangePassword.Size = new System.Drawing.Size(50, 50);
             this.butChangePassword.TabIndex = 21;
             this.butChangePassword.UseVisualStyleBackColor = false;
+            this.butChangePassword.Click += new System.EventHandler(this.butChangePassword_Click);
             // 
             // butSaveProfileChanges
             // 
@@ -834,6 +853,7 @@
             this.butSaveProfileChanges.Size = new System.Drawing.Size(50, 50);
             this.butSaveProfileChanges.TabIndex = 20;
             this.butSaveProfileChanges.UseVisualStyleBackColor = false;
+            this.butSaveProfileChanges.Click += new System.EventHandler(this.butSaveProfileChanges_Click);
             // 
             // butEditProfile
             // 
@@ -851,6 +871,7 @@
             this.butEditProfile.Size = new System.Drawing.Size(50, 50);
             this.butEditProfile.TabIndex = 19;
             this.butEditProfile.UseVisualStyleBackColor = false;
+            this.butEditProfile.Click += new System.EventHandler(this.butEditProfile_Click);
             // 
             // panProfileHeader
             // 
@@ -1065,14 +1086,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -1080,9 +1101,9 @@
             this.Column3});
             this.dgvAdmin.Location = new System.Drawing.Point(0, 122);
             this.dgvAdmin.Name = "dgvAdmin";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAdmin.RowTemplate.Height = 30;
             this.dgvAdmin.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAdmin.Size = new System.Drawing.Size(1000, 450);

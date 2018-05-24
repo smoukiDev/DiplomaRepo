@@ -686,7 +686,9 @@ namespace DiplomaClient
             ttSearchAdvice.SetToolTip(tbSearch, "Search by Last Name");
             ttSearchAdvice.ToolTipIcon = ToolTipIcon.Info;
             ////Set ToolTips for Admin Panel Buttons
-            SetButtonsTips();
+            SetAdminPanelTips();
+            //Set ToolTips for Profile Panel Buttons
+            SetProfilePanelTips();
 
            
         }
@@ -747,7 +749,7 @@ namespace DiplomaClient
         ToolTip ttDeleteUser;
         ToolTip ttBlockUser;
         ToolTip ttEditModules;
-        private void SetButtonsTips()
+        private void SetAdminPanelTips()
         {
             ttAddUser = new ToolTip();
             ttAddUser.SetToolTip(butAddUser, "Create User with UserData, which are entered in selected string");
@@ -765,6 +767,137 @@ namespace DiplomaClient
             ttEditModules.SetToolTip(butEditModules, "Save Permissions for selected User");
             ttEditModules.ToolTipIcon = ToolTipIcon.Info;
 
+
+        }
+
+        private void buttonMakeVisible1_Click(object sender, EventArgs e)
+        {
+            if (tbOldPassword.PasswordChar == '⦁')
+                tbOldPassword.PasswordChar = '\0';
+            else
+                tbOldPassword.PasswordChar = '⦁';
+        }
+
+        private void buttonMakeVisible2_Click(object sender, EventArgs e)
+        {
+            if (tbPass.PasswordChar == '⦁')
+                tbPass.PasswordChar = '\0';
+            else
+                tbPass.PasswordChar = '⦁';
+        }
+
+        private void buttonMakeVisible3_Click(object sender, EventArgs e)
+        {
+            if (tbPassConfirm.PasswordChar == '⦁')
+                tbPassConfirm.PasswordChar = '\0';
+            else
+                tbPassConfirm.PasswordChar = '⦁';
+        }
+        bool isEdit = false;
+        private void butEditProfile_Click(object sender, EventArgs e)
+        {
+            if(!isEdit)
+            {
+                tbLogin1.Enabled = true;
+                tbFName.Enabled = true;
+                tbMName.Enabled = true;
+                tbLName.Enabled = true;
+                butGenderExchange.Enabled = true;
+                tbEmail.Enabled = true;
+                mtbPhone.Enabled = true;
+                tbAdress.Enabled = true;
+                isEdit = true;
+            }
+            else
+            {
+                tbLogin1.Enabled = false;
+                tbFName.Enabled = false;
+                tbMName.Enabled = false;
+                tbLName.Enabled = false;
+                butGenderExchange.Enabled = false;
+                tbEmail.Enabled = false;
+                mtbPhone.Enabled = false;
+                tbAdress.Enabled = false;
+                isEdit = false;
+            }
+            
+
+        }
+        bool isEditPass = false;
+        private void butChangePassword_Click(object sender, EventArgs e)
+        {
+            if(!isEditPass)
+            {
+                tbOldPassword.Enabled = true;
+                tbPass.Enabled = true;
+                tbPassConfirm.Enabled = true;
+                buttonMakeVisible1.Enabled = true;
+                buttonMakeVisible2.Enabled = true;
+                buttonMakeVisible3.Enabled = true;
+                isEditPass = true;
+            }
+            else
+            {
+                tbOldPassword.Enabled = false;
+                tbPass.Enabled = false;
+                tbPassConfirm.Enabled = false;
+                buttonMakeVisible1.Enabled = false;
+                buttonMakeVisible2.Enabled = false;
+                buttonMakeVisible3.Enabled = false;
+                isEditPass = false;
+            }
+        }
+
+        private void butSaveProfileChanges_Click(object sender, EventArgs e)
+        {
+            if(isEdit)
+            {
+                tbLogin1.Enabled = false;
+                tbFName.Enabled = false;
+                tbMName.Enabled = false;
+                tbLName.Enabled = false;
+                butGenderExchange.Enabled = false;
+                tbEmail.Enabled = false;
+                mtbPhone.Enabled = false;
+                tbAdress.Enabled = false;
+                isEdit = false;
+            }
+        
+            if(isEditPass)
+            {
+                tbOldPassword.Enabled = false;
+                tbPass.Enabled = false;
+                tbPassConfirm.Enabled = false;
+                buttonMakeVisible1.Enabled = false;
+                buttonMakeVisible2.Enabled = false;
+                buttonMakeVisible3.Enabled = false;
+                isEditPass = false;
+            }
+        }
+
+
+        ToolTip ttEditProfile;
+        ToolTip ttChangePass;
+        ToolTip ttSaveChanges;
+        ToolTip ttAddAvatar;
+        ToolTip ttRemoveAvatar;
+        private void SetProfilePanelTips()
+        {
+            ttEditProfile = new ToolTip();
+            ttEditProfile.SetToolTip(butEditProfile, "Unlock profile fields to edit");
+            ttEditProfile.ToolTipIcon = ToolTipIcon.Info;
+            ttChangePass = new ToolTip();
+            ttChangePass.SetToolTip(butChangePassword, "Unlock profile fields to change password");
+            ttChangePass.ToolTipIcon = ToolTipIcon.Info;
+            ttSaveChanges = new ToolTip();
+            ttSaveChanges.SetToolTip(butSaveProfileChanges, "Save profile changes from fields");
+            ttSaveChanges.ToolTipIcon = ToolTipIcon.Info;
+            ttAddAvatar = new ToolTip();
+            ttAddAvatar.SetToolTip(butAddAvatar, "Change Avatar picture & save in profile");
+            ttAddAvatar.ToolTipIcon = ToolTipIcon.Info;
+            ttRemoveAvatar = new ToolTip();
+            ttRemoveAvatar.SetToolTip(butRemoveAvatar, "Remove Avatar & delete it from profile");
+            ttRemoveAvatar.ToolTipIcon = ToolTipIcon.Info;
 
         }
     }
