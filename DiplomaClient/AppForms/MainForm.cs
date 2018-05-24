@@ -192,22 +192,22 @@ namespace DiplomaClient
             {
 
                 //soft animation Profile Panel
-                //butIsAdmin.Visible = false;
-                //butIsNotAdmin.Visible = false;
-                //butAvatarDisplay.Visible = false;
-                //butAddAvatar.Visible = false;
-                //butRemoveAvatar.Visible = false;
-                //tbLogin1.Visible = false;
-                //tbFName.Visible = false;
-                //tbMName.Visible = false;
-                //tbLName.Visible = false;
-                //tbGender.Visible = false;
-                //tbEmail.Visible = false;
-                //mtbPhone.Visible = false;
-                //tbAdress.Visible = false;
-                //tbOldPassword.Visible = false;
-                //tbPass.Visible = false;
-                //tbPassConfirm.Visible = false;
+                butIsAdmin.Visible = false;
+                butIsNotAdmin.Visible = false;
+                butAvatarDisplay.Visible = false;
+                butAddAvatar.Visible = false;
+                butRemoveAvatar.Visible = false;
+                tbLogin1.Visible = false;
+                tbFName.Visible = false;
+                tbMName.Visible = false;
+                tbLName.Visible = false;
+                tbGender.Visible = false;
+                tbEmail.Visible = false;
+                mtbPhone.Visible = false;
+                tbAdress.Visible = false;
+                tbOldPassword.Visible = false;
+                tbPass.Visible = false;
+                tbPassConfirm.Visible = false;
                 butEditProfile.Visible = false;
                 butSaveProfileChanges.Visible = false;
                 butChangePassword.Visible = false;
@@ -215,17 +215,17 @@ namespace DiplomaClient
                 buttonMakeVisible2.Visible = false;
                 buttonMakeVisible3.Visible = false;
                 butGenderExchange.Visible = false;
-                //lbl1.Visible = false;
-                //lbl2.Visible = false;
-                //lbl3.Visible = false;
-                //lbl4.Visible = false;
-                //lbl5.Visible = false;
-                //lbl6.Visible = false;
-                //lbl7.Visible = false;
-                //lbl8.Visible = false;
-                //lbl9.Visible = false;
-                //lbl10.Visible = false;
-                //lbl11.Visible = false;
+                lbl1.Visible = false;
+                lbl2.Visible = false;
+                lbl3.Visible = false;
+                lbl4.Visible = false;
+                lbl5.Visible = false;
+                lbl6.Visible = false;
+                lbl7.Visible = false;
+                lbl8.Visible = false;
+                lbl9.Visible = false;
+                lbl10.Visible = false;
+                lbl11.Visible = false;
                 // soft animation Models Panel
                 butAnalysis.Visible = false;
                 reportViewer1.Visible = false;
@@ -269,22 +269,22 @@ namespace DiplomaClient
                 buts8.Visible = true;
                 buts9.Visible = true;
                 //soft animation Profile Panel
-                //butIsAdmin.Visible = true;
-                //butIsNotAdmin.Visible = true;
-                //butAvatarDisplay.Visible = true;
-                //butAddAvatar.Visible = true;
-                //butRemoveAvatar.Visible = true;
-                //tbLogin1.Visible = true;
-                //tbFName.Visible = true;
-                //tbMName.Visible = true;
-                //tbLName.Visible = true;
-                //tbGender.Visible = true;
-                //tbEmail.Visible = true;
-                //mtbPhone.Visible = true;
-                //tbAdress.Visible = true;
-                //tbOldPassword.Visible = true;
-                //tbPass.Visible = true;
-                //tbPassConfirm.Visible = true;
+                butIsAdmin.Visible = true;
+                butIsNotAdmin.Visible = true;
+                butAvatarDisplay.Visible = true;
+                butAddAvatar.Visible = true;
+                butRemoveAvatar.Visible = true;
+                tbLogin1.Visible = true;
+                tbFName.Visible = true;
+                tbMName.Visible = true;
+                tbLName.Visible = true;
+                tbGender.Visible = true;
+                tbEmail.Visible = true;
+                mtbPhone.Visible = true;
+                tbAdress.Visible = true;
+                tbOldPassword.Visible = true;
+                tbPass.Visible = true;
+                tbPassConfirm.Visible = true;
                 butEditProfile.Visible = true;
                 butSaveProfileChanges.Visible = true;
                 butChangePassword.Visible = true;
@@ -292,17 +292,17 @@ namespace DiplomaClient
                 buttonMakeVisible2.Visible = true;
                 buttonMakeVisible3.Visible = true;
                 butGenderExchange.Visible = true;
-                //lbl1.Visible = true;
-                //lbl2.Visible = true;
-                //lbl3.Visible = true;
-                //lbl4.Visible = true;
-                //lbl5.Visible = true;
-                //lbl6.Visible = true;
-                //lbl7.Visible = true;
-                //lbl8.Visible = true;
-                //lbl9.Visible = true;
-                //lbl10.Visible = true;
-                //lbl11.Visible = true;
+                lbl1.Visible = true;
+                lbl2.Visible = true;
+                lbl3.Visible = true;
+                lbl4.Visible = true;
+                lbl5.Visible = true;
+                lbl6.Visible = true;
+                lbl7.Visible = true;
+                lbl8.Visible = true;
+                lbl9.Visible = true;
+                lbl10.Visible = true;
+                lbl11.Visible = true;
                 // soft animation Models Panel
                 butAnalysis.Visible = true;
                 reportViewer1.Visible = true;
@@ -323,22 +323,22 @@ namespace DiplomaClient
             else
             {
                 //soft animation Profile Panel
-                //butIsAdmin.Visible = false;
-                //butIsNotAdmin.Visible = false;
-                //butAvatarDisplay.Visible = false;
-                //butAddAvatar.Visible = false;
-                //butRemoveAvatar.Visible = false;
-                //tbLogin1.Visible = false;
-                //tbFName.Visible = false;
-                //tbMName.Visible = false;
-                //tbLName.Visible = false;
-                //tbGender.Visible = false;
-                //tbEmail.Visible = false;
-                //mtbPhone.Visible = false;
-                //tbAdress.Visible = false;
-                //tbOldPassword.Visible = false;
-                //tbPass.Visible = false;
-                //tbPassConfirm.Visible = false;
+                butIsAdmin.Visible = false;
+                butIsNotAdmin.Visible = false;
+                butAvatarDisplay.Visible = false;
+                butAddAvatar.Visible = false;
+                butRemoveAvatar.Visible = false;
+                tbLogin1.Visible = false;
+                tbFName.Visible = false;
+                tbMName.Visible = false;
+                tbLName.Visible = false;
+                tbGender.Visible = false;
+                tbEmail.Visible = false;
+                mtbPhone.Visible = false;
+                tbAdress.Visible = false;
+                tbOldPassword.Visible = false;
+                tbPass.Visible = false;
+                tbPassConfirm.Visible = false;
                 butEditProfile.Visible = false;
                 butSaveProfileChanges.Visible = false;
                 butChangePassword.Visible = false;
@@ -346,17 +346,17 @@ namespace DiplomaClient
                 buttonMakeVisible2.Visible = false;
                 buttonMakeVisible3.Visible = false;
                 butGenderExchange.Visible = false;
-                //lbl1.Visible = false;
-                //lbl2.Visible = false;
-                //lbl3.Visible = false;
-                //lbl4.Visible = false;
-                //lbl5.Visible = false;
-                //lbl6.Visible = false;
-                //lbl7.Visible = false;
-                //lbl8.Visible = false;
-                //lbl9.Visible = false;
-                //lbl10.Visible = false;
-                //lbl11.Visible = false;
+                lbl1.Visible = false;
+                lbl2.Visible = false;
+                lbl3.Visible = false;
+                lbl4.Visible = false;
+                lbl5.Visible = false;
+                lbl6.Visible = false;
+                lbl7.Visible = false;
+                lbl8.Visible = false;
+                lbl9.Visible = false;
+                lbl10.Visible = false;
+                lbl11.Visible = false;
                 // soft animation Models Panel
                 butAnalysis.Visible = false;
                 reportViewer1.Visible = false;
@@ -391,42 +391,44 @@ namespace DiplomaClient
                     panSlider.Width--;
                 }
                 int x1 = panSliserMAX;
-                int x2 = panSliserMAX;
+                //int x2 = panSliserMAX;//profile pan animation bag
                 int x3 = panSliserMAX;
                 for (int i = 0; i < panSliserMAX; i++)
-                {                 
-                    panProfile.Location = new Point(--x2 + panContentMargin, panProfile.Location.Y);//have to
+                {
+                    //panProfile.Location = new Point(--x2 + panContentMargin, panProfile.Location.Y);//profile pan animation bag
                     panAdminPanel.Location = new Point(--x1 + panContentMargin, panAdminPanel.Location.Y);                    
                     panReport.Location = new Point(--x3 + panContentMargin, panReport.Location.Y);
                 }
-                //panProfile.Location = new Point(0 + panContentMargin, panProfile.Location.Y); //have to
-                //Thread.Sleep(250); //have to
+                
+                Thread.Sleep(250); //profile pan animation bag
+                panProfile.Location = new Point(0 + panContentMargin, panProfile.Location.Y); //profile pan animation bag
+                panProfile.Width += panSliserMAX;
                 for (int i = 0; i < panSliserMAX; i += 10)
                 {
-                    //Thread.Sleep(1);//have to
+                    //Thread.Sleep(1);//profile pan animation bag
                     panAdminPanel.Width += 10;
-                    panProfile.Width += 10;                   
+                    //panProfile.Width += 10;//profile pan animation bag                  
                     panReport.Width += 10;
                 }
                 //Switch picture box menu image
                 pbMenuOne.Image = Properties.Resources.MenuButtonDisable;
                 //soft animation Profile Panel
-                //butIsAdmin.Visible = true;
-                //butIsNotAdmin.Visible = true;
-                //butAvatarDisplay.Visible = true;
-                //butAddAvatar.Visible = true;
-                //butRemoveAvatar.Visible = true;
-                //tbLogin1.Visible = true;
-                //tbFName.Visible = true;
-                //tbMName.Visible = true;
-                //tbLName.Visible = true;
-                //tbGender.Visible = true;
-                //tbEmail.Visible = true;
-                //mtbPhone.Visible = true;
-                //tbAdress.Visible = true;
-                //tbOldPassword.Visible = true;
-                //tbPass.Visible = true;
-                //tbPassConfirm.Visible = true;
+                butIsAdmin.Visible = true;
+                butIsNotAdmin.Visible = true;
+                butAvatarDisplay.Visible = true;
+                butAddAvatar.Visible = true;
+                butRemoveAvatar.Visible = true;
+                tbLogin1.Visible = true;
+                tbFName.Visible = true;
+                tbMName.Visible = true;
+                tbLName.Visible = true;
+                tbGender.Visible = true;
+                tbEmail.Visible = true;
+                mtbPhone.Visible = true;
+                tbAdress.Visible = true;
+                tbOldPassword.Visible = true;
+                tbPass.Visible = true;
+                tbPassConfirm.Visible = true;
                 butEditProfile.Visible = true;
                 butSaveProfileChanges.Visible = true;
                 butChangePassword.Visible = true;
@@ -434,17 +436,17 @@ namespace DiplomaClient
                 buttonMakeVisible2.Visible = true;
                 buttonMakeVisible3.Visible = true;
                 butGenderExchange.Visible = true;
-                //lbl1.Visible = true;
-                //lbl2.Visible = true;
-                //lbl3.Visible = true;
-                //lbl4.Visible = true;
-                //lbl5.Visible = true;
-                //lbl6.Visible = true;
-                //lbl7.Visible = true;
-                //lbl8.Visible = true;
-                //lbl9.Visible = true;
-                //lbl10.Visible = true;
-                //lbl11.Visible = true;
+                lbl1.Visible = true;
+                lbl2.Visible = true;
+                lbl3.Visible = true;
+                lbl4.Visible = true;
+                lbl5.Visible = true;
+                lbl6.Visible = true;
+                lbl7.Visible = true;
+                lbl8.Visible = true;
+                lbl9.Visible = true;
+                lbl10.Visible = true;
+                lbl11.Visible = true;
                 // soft animation Models Panel
                 butAnalysis.Visible = true;
                 reportViewer1.Visible = true;
