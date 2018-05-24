@@ -23,15 +23,15 @@ namespace DiplomaClient
         public MainForm()
         {
             InitializeComponent();
-            //start up panel display            
+            //Start up Profile Panel Display          
             panReport.Visible = false;
             panAdminPanel.Visible = false;
             panProfile.Visible = true;
-            //events
+            //Events Handheld
             this.lblMenu.Click += new System.EventHandler(this.pbMenuOne_Click);
             this.pbMenu.Click += new System.EventHandler(this.pbMenuOne_Click);
             this.lblTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panFooter_MouseMove);
-            //DECORATION
+            //DECORATION//
             lblTitle.ForeColor = ColorPalette.white1;
             //general window panels design
             panFooter.BackColor = ColorPalette.grey3;
@@ -49,7 +49,7 @@ namespace DiplomaClient
             buts8.BackColor = ColorPalette.white1;
             buts1.BackColor = ColorPalette.white1;
             buts2.BackColor = ColorPalette.white1;
-            //models panel design
+            //report panel design
             panReport.BackColor = ColorPalette.white2;
             panReportHeader.BackColor = ColorPalette.white1;
             butAnalysis.BackColor = ColorPalette.red2;
@@ -71,10 +71,7 @@ namespace DiplomaClient
             panProfileHeader.BackColor = ColorPalette.white1;
             panProfileAvatar.BackColor = ColorPalette.white2;
             panProfileFooter.BackColor = ColorPalette.white1;
-            
-
-            //panProfileFooter.BackColor = ColorPalette.white1;
-            //slider start width
+            //Start Up Slider Panel Width
             panSlider.Width = panSliderMIN;
             
         }
@@ -82,17 +79,17 @@ namespace DiplomaClient
         Point MouseHook;
         private void panFooter_MouseMove(object sender, MouseEventArgs e)
         {
-            //Drag Form
             if (e.Button != MouseButtons.Left) MouseHook = e.Location;
             {
                 Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
+                //Stick To Desktop Corners Flag Drop
                 disAttach = false;
             }
         }
         //Close Form
         private void butClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
         //Minimize Window condition
         private void butMin_Click(object sender, EventArgs e)
@@ -184,7 +181,7 @@ namespace DiplomaClient
 
             base.WndProc(ref m);
         }
-        //Slider Menu Handler for 2 picture box buttons & label of Menu
+        //Slider Menu Handler
         private void pbMenuOne_Click(object sender, EventArgs e)
         {
             
@@ -226,10 +223,10 @@ namespace DiplomaClient
                 lbl9.Visible = false;
                 lbl10.Visible = false;
                 lbl11.Visible = false;
-                // soft animation Models Panel
+                // soft animation Report Panel
                 butAnalysis.Visible = false;
                 reportViewer1.Visible = false;
-                // soft animation admin panel
+                // soft animation Admin Panel
                 dgvAdmin.Visible = false;
                 butUserData.Visible = false;
                 butUserActivity.Visible = false;
@@ -244,6 +241,7 @@ namespace DiplomaClient
                 butRefreshGrid.Visible = false;
                 //Switch picture box menu image
                 pbMenuOne.Image = Properties.Resources.MenuButtonEnable;
+                //Slider Appearance Animation
                 for (int i = 0; i < panSliserMAX; i++)
                 {
                     Thread.Sleep(1);
@@ -251,12 +249,14 @@ namespace DiplomaClient
                     
 
                 }
+                //Profile/Admin/Report Panels Resize/Relocation
                 panAdminPanel.Width -= panSliserMAX;
                 panAdminPanel.Location = new Point(panSliserMAX + panContentMargin, panAdminPanel.Location.Y);
                 panProfile.Width -= panSliserMAX;
                 panProfile.Location = new Point(panSliserMAX + panContentMargin, panProfile.Location.Y);
                 panReport.Width -= panSliserMAX;
                 panReport.Location = new Point(panSliserMAX + panContentMargin, panReport.Location.Y);
+                //Delay for components reapperance
                 Thread.Sleep(250);
                 //slider buttons soft animation
                 buts1.Visible = true;
@@ -357,10 +357,10 @@ namespace DiplomaClient
                 lbl9.Visible = false;
                 lbl10.Visible = false;
                 lbl11.Visible = false;
-                // soft animation Models Panel
+                // soft animation Report Panel
                 butAnalysis.Visible = false;
                 reportViewer1.Visible = false;
-                // soft animation admin panel
+                // soft animation Admin Panel
                 dgvAdmin.Visible = false;
                 butUserData.Visible = false;
                 butUserActivity.Visible = false;
@@ -383,16 +383,19 @@ namespace DiplomaClient
                 buts7.Visible = false;
                 buts8.Visible = false;
                 buts9.Visible = false;
+                //Delay for Soft
                 Thread.Sleep(250);
-                
+                //Slider Disapperance Animation
                 for (int i = 0; i < panSliserMAX; i++)
                 {
                     Thread.Sleep(1);
                     panSlider.Width--;
                 }
+                //Admin/Profile/Report Width Gap Separated Variables
                 int x1 = panSliserMAX;
                 //int x2 = panSliserMAX;//profile pan animation bag
                 int x3 = panSliserMAX;
+                //Admin/Profile/Report Relocation Animation
                 for (int i = 0; i < panSliserMAX; i++)
                 {
                     //panProfile.Location = new Point(--x2 + panContentMargin, panProfile.Location.Y);//profile pan animation bag
@@ -402,10 +405,11 @@ namespace DiplomaClient
                 
                 Thread.Sleep(250); //profile pan animation bag
                 panProfile.Location = new Point(0 + panContentMargin, panProfile.Location.Y); //profile pan animation bag
-                panProfile.Width += panSliserMAX;
+                panProfile.Width += panSliserMAX; //profile pan animation bag
+                //Admin/Profile/Report Resize Animation
                 for (int i = 0; i < panSliserMAX; i += 10)
                 {
-                    //Thread.Sleep(1);//profile pan animation bag
+                    
                     panAdminPanel.Width += 10;
                     //panProfile.Width += 10;//profile pan animation bag                  
                     panReport.Width += 10;
@@ -538,7 +542,7 @@ namespace DiplomaClient
 
             }
         }
-        //Menu Button switch
+        //Menu Button switch Handlers
         private void buts1_Click(object sender, EventArgs e)
         {
             panAdminPanel.Visible = false;
@@ -709,7 +713,6 @@ namespace DiplomaClient
             ttSearchAdvice.ToolTipIcon = ToolTipIcon.Info;
 
         }
-
         private void butUserActivity_Click(object sender, EventArgs e)
         {
             lblAdminOption.Text = "User Activity";
@@ -724,7 +727,6 @@ namespace DiplomaClient
             ttSearchAdvice.SetToolTip(tbSearch, "Search by UserID");
             ttSearchAdvice.ToolTipIcon = ToolTipIcon.Info;
         }
-
         private void butUserModules_Click(object sender, EventArgs e)
         {
             lblAdminOption.Text = "User's Models";
@@ -739,10 +741,6 @@ namespace DiplomaClient
             ttSearchAdvice.SetToolTip(tbSearch, "Search by UserID");
             ttSearchAdvice.ToolTipIcon = ToolTipIcon.Info;
         }
-
-
-
-
         //Set ToolTips for Admin Panel Buttons
         ToolTip ttAddUser;
         ToolTip ttEditUser;
@@ -769,7 +767,7 @@ namespace DiplomaClient
 
 
         }
-
+        //Password Fields Text Visibility Handlers
         private void buttonMakeVisible1_Click(object sender, EventArgs e)
         {
             if (tbOldPassword.PasswordChar == '⦁')
@@ -777,7 +775,6 @@ namespace DiplomaClient
             else
                 tbOldPassword.PasswordChar = '⦁';
         }
-
         private void buttonMakeVisible2_Click(object sender, EventArgs e)
         {
             if (tbPass.PasswordChar == '⦁')
@@ -785,7 +782,6 @@ namespace DiplomaClient
             else
                 tbPass.PasswordChar = '⦁';
         }
-
         private void buttonMakeVisible3_Click(object sender, EventArgs e)
         {
             if (tbPassConfirm.PasswordChar == '⦁')
@@ -793,7 +789,9 @@ namespace DiplomaClient
             else
                 tbPassConfirm.PasswordChar = '⦁';
         }
+        //Edit Profile Flag
         bool isEdit = false;
+        //Edit Profile Button
         private void butEditProfile_Click(object sender, EventArgs e)
         {
             if(!isEdit)
@@ -823,7 +821,9 @@ namespace DiplomaClient
             
 
         }
+        //Edit Password Flag
         bool isEditPass = false;
+        //Edit Password Button
         private void butChangePassword_Click(object sender, EventArgs e)
         {
             if(!isEditPass)
@@ -847,7 +847,7 @@ namespace DiplomaClient
                 isEditPass = false;
             }
         }
-
+        //Button Save changes
         private void butSaveProfileChanges_Click(object sender, EventArgs e)
         {
             if(isEdit)
@@ -874,8 +874,7 @@ namespace DiplomaClient
                 isEditPass = false;
             }
         }
-
-
+        //Set ToolTips for Profile Pannel Buttons
         ToolTip ttEditProfile;
         ToolTip ttChangePass;
         ToolTip ttSaveChanges;
