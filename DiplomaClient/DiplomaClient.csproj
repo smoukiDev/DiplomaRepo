@@ -275,5 +275,8 @@
   <ItemGroup>
     <None Include="Image\SaveButtonV2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\EmailSupport.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
