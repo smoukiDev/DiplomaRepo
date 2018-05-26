@@ -46,6 +46,7 @@ namespace DiplomaClient
 
        const string supportName = "DM Analytics Service";
        const string supportEmail = "smakdealcase@gmail.com";
+       //Properties.Resources.EmailSupport Link in Google Pictures
        const string supportImageLink = @"https://www.techfunnel.com/wp-content/uploads/2018/04/Top-Business-Intelligence-Tools-List-for-Comparison.jpg";
        const string supportImageTitle = "supportImage";
        const string supportSmtpServer = "smtp.gmail.com";
