@@ -34,5 +34,7 @@ SQL Developer Directory with scripts route:
 sqldeveloper\dataminer\scripts
 */
 
+--Data Mining Repository Account: ODMRSYS
+
 
 

@@ -29,6 +29,8 @@ namespace DiplomaClient
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(loginform = new LoginForm());
+            int id = 10;
+            MessageBox.Show($@""{id}"");
             Application.Run(new MainForm());
         }
     }
