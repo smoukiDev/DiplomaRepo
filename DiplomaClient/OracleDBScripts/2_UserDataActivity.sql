@@ -1,4 +1,5 @@
 -- Scripts have to be deployed at SH SHEMA ON PDBORTW
+-- Acceptable erros because some columns created later - be careful
 
 -- Table for capture Users Activity in Application
 CREATE TABLE ClientAppUserActivity
