@@ -75,6 +75,17 @@ namespace DiplomaClient
             smtp_server.Send(m);
             return  GenerateSHA256Hash(code);
        }
+        const int codeLenth = 6;
+       public string GenerateForgotPasswordConfirmCode()
+        {
+            Random random = new Random();
+            string res = null;
+            for (int i = 0; i < codeLenth; i++)
+            {
+                res += random.Next(0, 9);
+            }
+            return res;
+        }
 
        
     }
