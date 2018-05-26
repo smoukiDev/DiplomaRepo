@@ -121,6 +121,12 @@
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SecurityModule.cs" />
+    <Compile Include="TestTemplates\ResetPassTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestTemplates\ResetPassTest.Designer.cs">
+      <DependentUpon>ResetPassTest.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AppForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestTemplates\ResetPassTest.resx">
+      <DependentUpon>ResetPassTest.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
