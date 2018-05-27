@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Threading;
+using Oracle.ManagedDataAccess.Client;
+using DiplomaClient.dsSalesHistoryTableAdapters;
 
 namespace DiplomaClient
 {
@@ -750,8 +752,10 @@ namespace DiplomaClient
             SetAdminPanelTips();
             //Set ToolTips for Profile Panel Buttons
             SetProfilePanelTips();
+            //UserAccountData OnLoad Form Filling
+            UserDataFormFill();
 
-           
+
         }
         //Search Field Changable Search Tips
         ToolTip ttSearchAdvice = new ToolTip();
@@ -955,6 +959,54 @@ namespace DiplomaClient
             ttRemoveAvatar.SetToolTip(butRemoveAvatar, "Remove Avatar & delete it from profile");
             ttRemoveAvatar.ToolTipIcon = ToolTipIcon.Info;
 
+        }
+        //UserAccountData OnLoad Form Filling       
+        private void UserDataFormFill()
+        {
+            //Menu Buttons Activation
+            UDFFMenuButs();
+
+        }
+        //Menu Buttons Activation
+        private void UDFFMenuButs()
+        {
+            
+            SecurityModule sm = new SecurityModule();
+            OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+            string menuButsAccessQuery = $"SELECT M1, M2, M3, M4, M5, M6 FROM CLIENTMODULEACCESS WHERE USERID={userId}";
+            OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
+            //menuButTable
+            DataTable mBT = new DataTable();
+            adp.Fill(mBT);
+            menuButsAccessQuery = null;
+            adp.Dispose();
+            con.Dispose();
+            DataRow dr = mBT.Rows[0];
+            mBT = null;
+            if (dr[0].ToString() == "T")
+                buts3.Enabled = true;
+            else
+                buts3.Enabled = false;
+            if (dr[1].ToString() == "T")
+                buts4.Enabled = true;
+            else
+                buts4.Enabled = false;
+            if (dr[2].ToString() == "T")
+                buts5.Enabled = true;
+            else
+                buts5.Enabled = false;
+            if (dr[3].ToString() == "T")
+                buts6.Enabled = true;
+            else
+                buts6.Enabled = false;
+            if (dr[4].ToString() == "T")
+                buts7.Enabled = true;
+            else
+                buts7.Enabled = false;
+            if (dr[5].ToString() == "T")
+                buts8.Enabled = true;
+            else
+                buts8.Enabled = false;
         }
     }
 }

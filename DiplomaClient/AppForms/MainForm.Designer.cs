@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panFooter = new System.Windows.Forms.Panel();
             this.panWindowTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -78,6 +78,11 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.tbLogin1 = new System.Windows.Forms.TextBox();
             this.panProfileAvatar = new System.Windows.Forms.Panel();
+            this.butIsNotAdmin = new System.Windows.Forms.Button();
+            this.butIsAdmin = new System.Windows.Forms.Button();
+            this.butRemoveAvatar = new System.Windows.Forms.Button();
+            this.butAddAvatar = new System.Windows.Forms.Button();
+            this.butAvatarDisplay = new System.Windows.Forms.Button();
             this.panProfileFooter = new System.Windows.Forms.Panel();
             this.butChangePassword = new System.Windows.Forms.Button();
             this.butSaveProfileChanges = new System.Windows.Forms.Button();
@@ -116,11 +121,6 @@
             this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.lblMenu = new System.Windows.Forms.Label();
             this.pbMenuOne = new System.Windows.Forms.PictureBox();
-            this.butAvatarDisplay = new System.Windows.Forms.Button();
-            this.butAddAvatar = new System.Windows.Forms.Button();
-            this.butRemoveAvatar = new System.Windows.Forms.Button();
-            this.butIsAdmin = new System.Windows.Forms.Button();
-            this.butIsNotAdmin = new System.Windows.Forms.Button();
             this.panFooter.SuspendLayout();
             this.panWindowTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
@@ -807,6 +807,91 @@
             this.panProfileAvatar.Size = new System.Drawing.Size(1000, 100);
             this.panProfileAvatar.TabIndex = 37;
             // 
+            // butIsNotAdmin
+            // 
+            this.butIsNotAdmin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.butIsNotAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.butIsNotAdmin.BackgroundImage = global::DiplomaClient.Properties.Resources.MarkerIsNotAdmin;
+            this.butIsNotAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butIsNotAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butIsNotAdmin.FlatAppearance.BorderSize = 0;
+            this.butIsNotAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butIsNotAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butIsNotAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butIsNotAdmin.Location = new System.Drawing.Point(413, 57);
+            this.butIsNotAdmin.Name = "butIsNotAdmin";
+            this.butIsNotAdmin.Size = new System.Drawing.Size(40, 40);
+            this.butIsNotAdmin.TabIndex = 25;
+            this.butIsNotAdmin.UseVisualStyleBackColor = false;
+            // 
+            // butIsAdmin
+            // 
+            this.butIsAdmin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.butIsAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.butIsAdmin.BackgroundImage = global::DiplomaClient.Properties.Resources.MarkerIsAdmin;
+            this.butIsAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butIsAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butIsAdmin.FlatAppearance.BorderSize = 0;
+            this.butIsAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butIsAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butIsAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butIsAdmin.Location = new System.Drawing.Point(413, 3);
+            this.butIsAdmin.Name = "butIsAdmin";
+            this.butIsAdmin.Size = new System.Drawing.Size(40, 40);
+            this.butIsAdmin.TabIndex = 24;
+            this.butIsAdmin.UseVisualStyleBackColor = false;
+            // 
+            // butRemoveAvatar
+            // 
+            this.butRemoveAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.butRemoveAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.butRemoveAvatar.BackgroundImage = global::DiplomaClient.Properties.Resources.RemoveUserButton;
+            this.butRemoveAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butRemoveAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butRemoveAvatar.FlatAppearance.BorderSize = 0;
+            this.butRemoveAvatar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butRemoveAvatar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butRemoveAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butRemoveAvatar.Location = new System.Drawing.Point(560, 58);
+            this.butRemoveAvatar.Name = "butRemoveAvatar";
+            this.butRemoveAvatar.Size = new System.Drawing.Size(40, 40);
+            this.butRemoveAvatar.TabIndex = 23;
+            this.butRemoveAvatar.UseVisualStyleBackColor = false;
+            // 
+            // butAddAvatar
+            // 
+            this.butAddAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.butAddAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.butAddAvatar.BackgroundImage = global::DiplomaClient.Properties.Resources.UploadImageButton;
+            this.butAddAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butAddAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butAddAvatar.FlatAppearance.BorderSize = 0;
+            this.butAddAvatar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butAddAvatar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butAddAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butAddAvatar.Location = new System.Drawing.Point(561, 3);
+            this.butAddAvatar.Name = "butAddAvatar";
+            this.butAddAvatar.Size = new System.Drawing.Size(40, 40);
+            this.butAddAvatar.TabIndex = 22;
+            this.butAddAvatar.UseVisualStyleBackColor = false;
+            // 
+            // butAvatarDisplay
+            // 
+            this.butAvatarDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.butAvatarDisplay.BackColor = System.Drawing.Color.Transparent;
+            this.butAvatarDisplay.BackgroundImage = global::DiplomaClient.Properties.Resources.UserProfileDefault;
+            this.butAvatarDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butAvatarDisplay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butAvatarDisplay.FlatAppearance.BorderSize = 0;
+            this.butAvatarDisplay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butAvatarDisplay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butAvatarDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butAvatarDisplay.Location = new System.Drawing.Point(459, 3);
+            this.butAvatarDisplay.Name = "butAvatarDisplay";
+            this.butAvatarDisplay.Size = new System.Drawing.Size(95, 95);
+            this.butAvatarDisplay.TabIndex = 22;
+            this.butAvatarDisplay.UseVisualStyleBackColor = false;
+            // 
             // panProfileFooter
             // 
             this.panProfileFooter.BackColor = System.Drawing.Color.DarkGray;
@@ -1086,14 +1171,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -1101,9 +1186,9 @@
             this.Column3});
             this.dgvAdmin.Location = new System.Drawing.Point(0, 122);
             this.dgvAdmin.Name = "dgvAdmin";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAdmin.RowTemplate.Height = 30;
             this.dgvAdmin.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAdmin.Size = new System.Drawing.Size(1000, 450);
@@ -1334,91 +1419,6 @@
             this.pbMenuOne.TabIndex = 18;
             this.pbMenuOne.TabStop = false;
             this.pbMenuOne.Click += new System.EventHandler(this.pbMenuOne_Click);
-            // 
-            // butAvatarDisplay
-            // 
-            this.butAvatarDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butAvatarDisplay.BackColor = System.Drawing.Color.Transparent;
-            this.butAvatarDisplay.BackgroundImage = global::DiplomaClient.Properties.Resources.UserProfileDefault;
-            this.butAvatarDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butAvatarDisplay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butAvatarDisplay.FlatAppearance.BorderSize = 0;
-            this.butAvatarDisplay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butAvatarDisplay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butAvatarDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butAvatarDisplay.Location = new System.Drawing.Point(459, 3);
-            this.butAvatarDisplay.Name = "butAvatarDisplay";
-            this.butAvatarDisplay.Size = new System.Drawing.Size(95, 95);
-            this.butAvatarDisplay.TabIndex = 22;
-            this.butAvatarDisplay.UseVisualStyleBackColor = false;
-            // 
-            // butAddAvatar
-            // 
-            this.butAddAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butAddAvatar.BackColor = System.Drawing.Color.Transparent;
-            this.butAddAvatar.BackgroundImage = global::DiplomaClient.Properties.Resources.UploadImageButton;
-            this.butAddAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butAddAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butAddAvatar.FlatAppearance.BorderSize = 0;
-            this.butAddAvatar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butAddAvatar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butAddAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butAddAvatar.Location = new System.Drawing.Point(561, 3);
-            this.butAddAvatar.Name = "butAddAvatar";
-            this.butAddAvatar.Size = new System.Drawing.Size(40, 40);
-            this.butAddAvatar.TabIndex = 22;
-            this.butAddAvatar.UseVisualStyleBackColor = false;
-            // 
-            // butRemoveAvatar
-            // 
-            this.butRemoveAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butRemoveAvatar.BackColor = System.Drawing.Color.Transparent;
-            this.butRemoveAvatar.BackgroundImage = global::DiplomaClient.Properties.Resources.RemoveUserButton;
-            this.butRemoveAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butRemoveAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butRemoveAvatar.FlatAppearance.BorderSize = 0;
-            this.butRemoveAvatar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butRemoveAvatar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butRemoveAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butRemoveAvatar.Location = new System.Drawing.Point(560, 58);
-            this.butRemoveAvatar.Name = "butRemoveAvatar";
-            this.butRemoveAvatar.Size = new System.Drawing.Size(40, 40);
-            this.butRemoveAvatar.TabIndex = 23;
-            this.butRemoveAvatar.UseVisualStyleBackColor = false;
-            // 
-            // butIsAdmin
-            // 
-            this.butIsAdmin.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butIsAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.butIsAdmin.BackgroundImage = global::DiplomaClient.Properties.Resources.MarkerIsAdmin;
-            this.butIsAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butIsAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butIsAdmin.FlatAppearance.BorderSize = 0;
-            this.butIsAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butIsAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butIsAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butIsAdmin.Location = new System.Drawing.Point(413, 3);
-            this.butIsAdmin.Name = "butIsAdmin";
-            this.butIsAdmin.Size = new System.Drawing.Size(40, 40);
-            this.butIsAdmin.TabIndex = 24;
-            this.butIsAdmin.UseVisualStyleBackColor = false;
-            // 
-            // butIsNotAdmin
-            // 
-            this.butIsNotAdmin.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.butIsNotAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.butIsNotAdmin.BackgroundImage = global::DiplomaClient.Properties.Resources.MarkerIsNotAdmin;
-            this.butIsNotAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butIsNotAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butIsNotAdmin.FlatAppearance.BorderSize = 0;
-            this.butIsNotAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butIsNotAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butIsNotAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butIsNotAdmin.Location = new System.Drawing.Point(413, 57);
-            this.butIsNotAdmin.Name = "butIsNotAdmin";
-            this.butIsNotAdmin.Size = new System.Drawing.Size(40, 40);
-            this.butIsNotAdmin.TabIndex = 25;
-            this.butIsNotAdmin.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
