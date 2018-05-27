@@ -22,6 +22,7 @@ namespace DiplomaClient
         
         public LoginForm()
         {
+
             InitializeComponent();
             //controls decoration       
             lblForget.ForeColor = ColorPalette.red1;
@@ -30,6 +31,30 @@ namespace DiplomaClient
             butLog.BackColor = ColorPalette.red1;
             butLog.ForeColor = ColorPalette.white1;
             pbLoading.Visible = false;
+            try
+            {
+                SecurityModule sm = new SecurityModule();
+                Oracle.ManagedDataAccess.Client.OracleConnection con = new Oracle.ManagedDataAccess.Client.OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                con.Open();
+                con.Close();
+                con.Dispose();
+            }
+            catch (Exception ex)
+            {
+
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.ImageNotFound, "404 Not Found - Could not connect to the server\n" + ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                error.Show();
+                tbLogin.Enabled = false;
+                tbPass.Enabled = false;
+                butCleanLogin.Enabled = false;
+                butCleanPass.Enabled = false;
+                buttonMakeVisible.Enabled = false;
+                lblForget.Enabled = false;
+                butLog.Enabled = false;
+                butReg.Enabled = false;
+                
+
+            }
         }
         //Drag Form Feature
         Point MouseHook;

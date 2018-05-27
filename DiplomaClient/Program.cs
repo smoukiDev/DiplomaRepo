@@ -18,6 +18,7 @@ namespace DiplomaClient
         [STAThread]
         static void Main()
         {
+            
             try
             {
                 //!!! ProcedureRegisterImageBufSize = 1000000000

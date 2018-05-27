@@ -172,6 +172,7 @@
             this.Name = "CustomMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomMessageBox";
+            this.TopMost = true;
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CustomMessageBox_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
             this.panel1.ResumeLayout(false);
