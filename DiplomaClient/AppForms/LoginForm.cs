@@ -71,12 +71,13 @@ namespace DiplomaClient
         private void butLog_Click(object sender, EventArgs e)
         {
             bool isSuccess = false;
+            string isAccountLock = "";
             pbLoading.Visible = true;
             try
             {
                 SecurityModule sm = new SecurityModule();
                 OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
-                string loginQuery = "SELECT USERID, LOGIN, PASSHASH FROM CLIENTAPPUSERS";
+                string loginQuery = "SELECT USERID, LOGIN, PASSHASH, ISBLOCK FROM CLIENTAPPUSERS";
                 OracleDataAdapter adp = new OracleDataAdapter(loginQuery, con);
                 DataTable table = new DataTable();
                 adp.Fill(table);
@@ -88,13 +89,24 @@ namespace DiplomaClient
                     {
                         if (sm.GenerateSHA256Hash(tbPass.Text) == row[2].ToString())
                         {
-                            isSuccess = true;
-                            MainForm mainform = new MainForm(row[0].ToString());
-                            this.Hide();
-                            mainform.Show();
-                            tbLogin.Clear();
-                            tbPass.Clear();
-                            break;
+                            if (row[3].ToString() == "F")
+                                isAccountLock = "F";
+                            if (row[3].ToString()=="T")
+                                isAccountLock = "T";
+                            if (row[3].ToString()=="F")
+                                
+                            {
+                                
+                                isSuccess = true;
+                                MainForm mainform = new MainForm(row[0].ToString());
+                                this.Hide();
+                                mainform.Show();
+                                tbLogin.Clear();
+                                tbPass.Clear();
+                                break;
+                            }
+                            
+                            
 
 
                         }
@@ -107,6 +119,14 @@ namespace DiplomaClient
                 CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
                 this.Enabled = false;
                 error.Show();
+            }
+            if(isAccountLock == "T")
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, "Access to accound has been locked", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+                pbLoading.Visible = false;
+                return;
             }
             if (isSuccess == false)
             {
