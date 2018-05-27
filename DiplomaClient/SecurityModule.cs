@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Net.Mail;
 using System.Net;
+using System.Configuration;
 
 namespace DiplomaClient
 {
@@ -88,37 +89,10 @@ namespace DiplomaClient
             return res;
         }
 
-       
+        //connection strings
+        string SalesHistotyConnectionSrting = Properties.Settings.Default.cnSalesHistory;
+        public string SalesHistotyConnectionSrtingProp { get { return SalesHistotyConnectionSrting; } }
+
     }
 }
 
-
-
-
-//Gmail port 587 works very well
-//MailAddress from = new MailAddress("smakdealcase@gmail.com", "Sergii");
-
-//MailAddress to = new MailAddress("smakdealcase@gmail.com");
-
-//MailMessage m = new MailMessage(from, to);
-
-//m.Subject = "Recall Password";
-
-//            m.Body = "<h2>Your New Password sdijfos</h2>";
-
-//            m.IsBodyHtml = true;
-            
-//            SmtpClient smtp_server = new SmtpClient("smtp.gmail.com", 587);
-//smtp_server.UseDefaultCredentials = false;
-//            //gmail special password for application is required
-//            smtp_server.Credentials = new NetworkCredential("smakdealcase@gmail.com", "fsodgumrrohkccmp");
-
-
-//smtp_server.EnableSsl = true;
-
-//            smtp_server.Send(m);
-
-            
-            
-
-//           MessageBox.Show("Letter has been sent on your Email", "@info", MessageBoxButtons.OK, MessageBoxIcon.Information); 

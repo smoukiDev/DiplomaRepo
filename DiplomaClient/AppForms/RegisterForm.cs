@@ -119,13 +119,13 @@ namespace DiplomaClient
                 try
                 {
                     QueriesTableAdapter qta = new QueriesTableAdapter();
-                    SecurityModule sm = new SecurityModule();
+                    SecurityModule sm1 = new SecurityModule();
                     //written as hashing without salt
-                    qta.REGISTERCLIENT(tbLogin.Text, tbPass.Text, sm.GenerateSHA256Hash(tbPass.Text), null, tbFName.Text, tbLName.Text, tbMName.Text, tbEmail.Text, mtbPhone.Text, rtbAdress.Text, cbGender.SelectedItem.ToString(), ImageToByteArray(pbAvatar.Image), null, null, null);
+                    qta.REGISTERCLIENT(tbLogin.Text, tbPass.Text, sm1.GenerateSHA256Hash(tbPass.Text), null, tbFName.Text, tbLName.Text, tbMName.Text, tbEmail.Text, mtbPhone.Text, rtbAdress.Text, cbGender.SelectedItem.ToString(), ImageToByteArray(pbAvatar.Image), null, null, null);
                     qta.Dispose();
-                    CustomMessageBox successRegiste = new CustomMessageBox(Properties.Resources.Success, "Account have been successfully created", "ОК", () => { registerFormBuf.Enabled = true; Thread.Sleep(delay1); this.Close(); Program.loginform.Show(); }, true, ColorPalette.red1, ColorPalette.white1);
+                    CustomMessageBox successRegister = new CustomMessageBox(Properties.Resources.Success, "Account have been successfully created", "ОК", () => { registerFormBuf.Enabled = true; Thread.Sleep(delay1); this.Close(); Program.loginform.Show(); }, true, ColorPalette.red1, ColorPalette.white1);
                     this.Enabled = false;
-                    successRegiste.Show();
+                    successRegister.Show();
                 }
                 catch(Exception ex)
                 {

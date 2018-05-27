@@ -14,7 +14,7 @@ namespace DiplomaClient
 {
     public partial class MainForm : Form
     {
-        private int userId = 0;
+        private string userId = "";
         //constant values in one place
         const int panSliderMIN = 0;
         const int panSliserMAX = 370;
@@ -76,8 +76,9 @@ namespace DiplomaClient
             panSlider.Width = panSliderMIN;
             
         }
-        public MainForm(int userId)
+        public MainForm(string userId)
         {
+            this.userId = userId;
             InitializeComponent();
             //Start up Profile Panel Display          
             panReport.Visible = false;

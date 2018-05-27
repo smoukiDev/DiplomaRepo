@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Runtime.InteropServices;
+using Oracle.ManagedDataAccess.Client;
 
 
 namespace DiplomaClient
@@ -68,8 +69,52 @@ namespace DiplomaClient
                 tbPass.PasswordChar = '⦁';
         }
         private void butLog_Click(object sender, EventArgs e)
-        {           
+        {
+            bool isSuccess = false;
             pbLoading.Visible = true;
+            try
+            {
+                SecurityModule sm = new SecurityModule();
+                OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                string loginQuery = "SELECT USERID, LOGIN, PASSHASH FROM CLIENTAPPUSERS";
+                OracleDataAdapter adp = new OracleDataAdapter(loginQuery, con);
+                DataTable table = new DataTable();
+                adp.Fill(table);
+                adp.Dispose();
+                con.Dispose();
+                foreach (DataRow row in table.Rows)
+                {
+                    if (tbLogin.Text == row[1].ToString())
+                    {
+                        if (sm.GenerateSHA256Hash(tbPass.Text) == row[2].ToString())
+                        {
+                            isSuccess = true;
+                            MainForm mainform = new MainForm(row[0].ToString());
+                            this.Hide();
+                            mainform.Show();
+                            tbLogin.Clear();
+                            tbPass.Clear();
+                            break;
+
+
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                isSuccess = true;
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
+            if (isSuccess == false)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, "Incorrect Login or Password", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
+            pbLoading.Visible = false;
         }
         private void butReg_Click(object sender, EventArgs e)
         {
