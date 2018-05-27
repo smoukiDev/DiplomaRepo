@@ -111,17 +111,20 @@ namespace DiplomaClient
             pbLoading.Visible = true;
 
             //Validation Method Connected One with each other
-            ValidationIsMainFieldsFull();
+            bool stage1 = ValidationIsMainFieldsFull();
             ValidationPasswordSecure();
-            ValidationPasswordConfirm();
-
+            bool stage2 = ValidationPasswordConfirm();
+            if(stage1 && stage2)
+            {
+                
+            }
 
 
         }
         //Checks Is Main Fields Fill in or not
-        private void ValidationIsMainFieldsFull()
+        private bool ValidationIsMainFieldsFull()
         {
-
+            bool isSucceess = false;
             //Validation
             if (tbLogin.Text == "")
             {
@@ -213,6 +216,7 @@ namespace DiplomaClient
                 lblErrorLog.Text = "Necessary fields weren't filled in:(";
                 lblErrorLog.Visible = true;
                 lblPassSecure.Visible = false;
+                isSucceess = false;
             }
             else
             if (pEmail.Visible == true || pPhone.Visible == true || pAdress.Visible == true)
@@ -220,18 +224,21 @@ namespace DiplomaClient
                 lblErrorLog.Text = "Necessary fields weren't filled in:(";
                 lblErrorLog.Visible = true;
                 lblPassSecure.Visible = false;
+                isSucceess = false;
             }
             else
             {
                 lblErrorLog.Text = "";
                 lblErrorLog.Visible = false;
                 lblPassSecure.Visible = true;
+                isSucceess = true;
             }
-
+            return isSucceess;
         }
         //Compare Pass & Confirm Pass
-        private void ValidationPasswordConfirm()
+        private bool ValidationPasswordConfirm()
         {
+            bool isSucceess = true;
             if (lblErrorLog.Text == "" || lblErrorLog.Text == "ErrorLog:")
             {
                 if (tbPass.Text != tbPassConfirm.Text)
@@ -239,10 +246,12 @@ namespace DiplomaClient
                     CustomMessageBox incorectConfirm = new CustomMessageBox(Properties.Resources.Error, "Password & Confirm Password fields are different!", "ОК", () => { registerFormBuf.Enabled = true; }, false, ColorPalette.red1, ColorPalette.white1);
                     this.Enabled = false;
                     incorectConfirm.Show();
+                    isSucceess = false;
                 }
 
 
             }
+            return isSucceess;
         }
         //Check Is Password Contains UpperLetter, Digit, Symbol, Appropriate Lenth
         private void ValidationPasswordSecure()

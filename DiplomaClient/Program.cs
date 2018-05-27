@@ -28,9 +28,7 @@ namespace DiplomaClient
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(loginform = new LoginForm());
-            Application.Run(new MainForm());
-            Application.Run(new DiplomaClient.TestTemplates.ResetPassTest());
+            Application.Run(loginform = new LoginForm());
         }
     }
     
