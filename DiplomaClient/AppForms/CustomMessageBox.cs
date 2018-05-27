@@ -13,6 +13,8 @@ namespace DiplomaClient
 {
     public partial class CustomMessageBox : Form
     {
+        Action but1Action = null;
+        Action but2Action = null;
         //unlock parent form method
         Action unlockParentForm = null;
         //notification sound
@@ -60,6 +62,40 @@ namespace DiplomaClient
             but2.Text = but2Title;
             unlockParentForm = unlockMethod;
         }
+        public CustomMessageBox(Image icon, bool multiline, string message, Action unlockMethod, string but1Title, string but2Title, string but3Title, Action but1Method, Action but2Method)
+        {
+            //Notification Sound
+            sp = new SoundPlayer(Properties.Resources.Sonar_FX);
+            sp.Play();
+
+            InitializeComponent();
+            pbIcon.Image = icon;
+            but1.Visible = false;
+            but3.Visible = false;
+            if (multiline == true)
+            {
+                tbMessage.Visible = false;
+                rtbMessage.Text = message;
+            }
+            else
+            {
+                rtbMessage.Visible = false;
+                tbMessage.Enabled = false;
+                tbMessage.Text = message;
+            }
+            but1.Text = but1Title;
+            but2.Text = but2Title;
+            but3.Text = but3Title;
+            but1.BackColor = ColorPalette.red2;
+            but2.BackColor = ColorPalette.red2;
+            but3.BackColor = ColorPalette.red2;
+            but1.ForeColor = ColorPalette.white1;
+            but2.ForeColor = ColorPalette.white1;
+            but3.ForeColor = ColorPalette.white1;
+            but1Action = but1Method;
+            but2Action = but2Method;
+            unlockParentForm = unlockMethod;
+        }
         //Drag Form Feature
         Point MouseHook;
         private void CustomMessageBox_MouseMove(object sender, MouseEventArgs e)
@@ -70,6 +106,7 @@ namespace DiplomaClient
         //Button Close
         private void butClose_Click(object sender, EventArgs e)
         {
+
             if (unlockParentForm != null)
                 unlockParentForm();
             this.Close();
@@ -77,13 +114,17 @@ namespace DiplomaClient
         //Button 1
         private void but1_Click(object sender, EventArgs e)
         {
+            if (but1Action != null)
+                but1Action();
             if (unlockParentForm != null)
                 unlockParentForm();
         }
         //Button 2
         private void but2_Click(object sender, EventArgs e)
         {
-            if(unlockParentForm !=null)
+            if (but2Action != null)
+                but2Action();
+            if (unlockParentForm !=null)
             unlockParentForm();
             this.Close();
         }
@@ -92,6 +133,7 @@ namespace DiplomaClient
         {
             if (unlockParentForm != null)
                 unlockParentForm();
+            this.Close();
         }
         //useless
         private void tbMessage_MouseClick(object sender, MouseEventArgs e)
