@@ -288,6 +288,7 @@ namespace DiplomaClient
                 buttonMakeVisible2.Visible = false;
                 buttonMakeVisible3.Visible = false;
                 butGenderExchange.Visible = false;
+                butSaveAvatar.Visible = false;
                 lbl1.Visible = false;
                 lbl2.Visible = false;
                 lbl3.Visible = false;
@@ -370,6 +371,7 @@ namespace DiplomaClient
                 buttonMakeVisible2.Visible = true;
                 buttonMakeVisible3.Visible = true;
                 butGenderExchange.Visible = true;
+                butSaveAvatar.Visible = true;
                 lbl1.Visible = true;
                 lbl2.Visible = true;
                 lbl3.Visible = true;
@@ -424,6 +426,7 @@ namespace DiplomaClient
                 buttonMakeVisible2.Visible = false;
                 buttonMakeVisible3.Visible = false;
                 butGenderExchange.Visible = false;
+                butSaveAvatar.Visible = false;
                 lbl1.Visible = false;
                 lbl2.Visible = false;
                 lbl3.Visible = false;
@@ -520,6 +523,7 @@ namespace DiplomaClient
                 buttonMakeVisible2.Visible = true;
                 buttonMakeVisible3.Visible = true;
                 butGenderExchange.Visible = true;
+                butSaveAvatar.Visible = true;
                 lbl1.Visible = true;
                 lbl2.Visible = true;
                 lbl3.Visible = true;
