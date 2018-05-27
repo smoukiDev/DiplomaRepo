@@ -949,7 +949,11 @@ namespace DiplomaClient
                 buttonMakeVisible2.Enabled = false;
                 buttonMakeVisible3.Enabled = false;
                 isEditPass = false;
+                tbOldPassword.Clear();
+                tbPass.Clear();
+                tbPassConfirm.Clear();
             }
+            
         }
         //Button Save changes
         private void butSaveProfileChanges_Click(object sender, EventArgs e)
@@ -975,14 +979,56 @@ namespace DiplomaClient
         
             if(isEditPass)
             {
+                try
+                {
+                    SecurityModule sm = new SecurityModule();
+                    OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                    con.Open();
+                    string ProfileInfoQuery = $"SELECT PASSHASH FROM CLIENTAPPUSERS WHERE USERID={userId}";
+                    OracleCommand ok = new OracleCommand(ProfileInfoQuery, con);
+                    OracleDataReader odr = ok.ExecuteReader();
+                    odr.Read();
+                    ProfileInfoQuery = null;
+                    if(odr.GetString(0) == sm.GenerateSHA256Hash(tbOldPassword.Text))
+                    {
+                        if(tbPass.Text==tbPassConfirm.Text && tbPass.Text != "" && tbPassConfirm.Text!="")
+                        {
+                            CustomMessageBox update2 = new CustomMessageBox(Properties.Resources.ImageNotFound, false, "Are you sure you want to change password?", () => { this.Enabled = true; }, "Yes", "No", "Cancel", () => { SPFCommitPassword(); }, () => { SPFRevertPassword(); });
+                            this.Enabled = false;
+                            update2.Show();
+                        }
+                        else
+                        {
+                            CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, "Incorrect Password Confirmation\n OrFieldsEmpty", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                            this.Enabled = false;
+                            error.Show();
+                            tbOldPassword.Clear();
+                            tbPass.Clear();
+                            tbPassConfirm.Clear();
+                        }
+                    }
+                    else
+                    {
+                        CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, "Incorrect Previous Password", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                        this.Enabled = false;
+                        error.Show();
+                        tbOldPassword.Clear();
+                        tbPass.Clear();
+                        tbPassConfirm.Clear();
+                    }
+                    odr.Dispose();
+                    ok.Dispose();
+                    con.Clone();
+                    con.Dispose();
+                    sm = null;
+                }
+                catch (Exception ex)
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
                 
-                tbOldPassword.Enabled = false;
-                tbPass.Enabled = false;
-                tbPassConfirm.Enabled = false;
-                buttonMakeVisible1.Enabled = false;
-                buttonMakeVisible2.Enabled = false;
-                buttonMakeVisible3.Enabled = false;
-                isEditPass = false;
             }
         }
         private void SPFCommitProfile()
@@ -1032,6 +1078,31 @@ namespace DiplomaClient
         }
         private void SPFCommitPassword()
         {
+            try
+            {
+                SecurityModule sm = new SecurityModule();
+                QueriesTableAdapter qta = new QueriesTableAdapter();
+                qta.UPDATEPASS(Convert.ToDecimal(userId), tbPass.Text, sm.GenerateSHA256Hash(tbPass.Text));
+                qta.UPDATEPASSLOG(Convert.ToDecimal(userId));
+                qta.Dispose();
+
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", null, true, ColorPalette.red1, ColorPalette.white1);
+                error.Show();
+            }
+            butEditProfile.Enabled = true;
+            tbOldPassword.Clear();
+            tbPass.Clear();
+            tbPassConfirm.Clear();
+            tbOldPassword.Enabled = false;
+            tbPass.Enabled = false;
+            tbPassConfirm.Enabled = false;
+            buttonMakeVisible1.Enabled = false;
+            buttonMakeVisible2.Enabled = false;
+            buttonMakeVisible3.Enabled = false;
+            isEditPass = false;
 
         }
         private void SPFRevertProfile()
@@ -1091,6 +1162,17 @@ namespace DiplomaClient
         }
         private void SPFRevertPassword()
         {
+            butEditProfile.Enabled = true;
+            tbOldPassword.Clear();
+            tbPass.Clear();
+            tbPassConfirm.Clear();
+            tbOldPassword.Enabled = false;
+            tbPass.Enabled = false;
+            tbPassConfirm.Enabled = false;
+            buttonMakeVisible1.Enabled = false;
+            buttonMakeVisible2.Enabled = false;
+            buttonMakeVisible3.Enabled = false;
+            isEditPass = false;
 
         }
         //Set ToolTips for Profile Pannel Buttons

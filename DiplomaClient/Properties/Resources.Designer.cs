@@ -273,6 +273,16 @@ namespace DiplomaClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PassValidation {
+            get {
+                object obj = ResourceManager.GetObject("PassValidation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RefreshGridButton {
             get {
                 object obj = ResourceManager.GetObject("RefreshGridButton", resourceCulture);

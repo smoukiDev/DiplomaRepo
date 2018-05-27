@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panFooter = new System.Windows.Forms.Panel();
             this.panWindowTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.buts2 = new System.Windows.Forms.Button();
             this.buts1 = new System.Windows.Forms.Button();
             this.panProfile = new System.Windows.Forms.Panel();
+            this.butPassValid = new System.Windows.Forms.Button();
             this.butGenderExchange = new System.Windows.Forms.Button();
             this.buttonMakeVisible3 = new System.Windows.Forms.Button();
             this.buttonMakeVisible2 = new System.Windows.Forms.Button();
@@ -450,6 +451,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panProfile.BackColor = System.Drawing.Color.Gainsboro;
+            this.panProfile.Controls.Add(this.butPassValid);
             this.panProfile.Controls.Add(this.butGenderExchange);
             this.panProfile.Controls.Add(this.buttonMakeVisible3);
             this.panProfile.Controls.Add(this.buttonMakeVisible2);
@@ -484,6 +486,24 @@
             this.panProfile.Size = new System.Drawing.Size(1000, 628);
             this.panProfile.TabIndex = 0;
             this.panProfile.Visible = false;
+            // 
+            // butPassValid
+            // 
+            this.butPassValid.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.butPassValid.BackColor = System.Drawing.Color.Transparent;
+            this.butPassValid.BackgroundImage = global::DiplomaClient.Properties.Resources.SaveUpdaterAvatar;
+            this.butPassValid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butPassValid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butPassValid.FlatAppearance.BorderSize = 0;
+            this.butPassValid.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butPassValid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butPassValid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butPassValid.Location = new System.Drawing.Point(254, 490);
+            this.butPassValid.Name = "butPassValid";
+            this.butPassValid.Size = new System.Drawing.Size(30, 30);
+            this.butPassValid.TabIndex = 27;
+            this.butPassValid.UseVisualStyleBackColor = false;
+            this.butPassValid.Visible = false;
             // 
             // butGenderExchange
             // 
@@ -1194,14 +1214,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -1209,9 +1229,9 @@
             this.Column3});
             this.dgvAdmin.Location = new System.Drawing.Point(0, 122);
             this.dgvAdmin.Name = "dgvAdmin";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAdmin.RowTemplate.Height = 30;
             this.dgvAdmin.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAdmin.Size = new System.Drawing.Size(1000, 450);
@@ -1586,5 +1606,6 @@
         private System.Windows.Forms.Button butAddAvatar;
         private System.Windows.Forms.OpenFileDialog ofdProfilePic;
         private System.Windows.Forms.Button butSaveAvatar;
+        private System.Windows.Forms.Button butPassValid;
     }
 }
