@@ -150,6 +150,7 @@ namespace DiplomaClient
         private void butClose_Click(object sender, EventArgs e)
         {
             //exit applicatuion - auto logout
+            //!!!Exception control add
             QueriesTableAdapter qta = new QueriesTableAdapter();
             qta.CLOSELOG(Convert.ToDecimal(userId));
             qta.Dispose();
@@ -728,6 +729,7 @@ namespace DiplomaClient
         {
             //log out
             isCloseByButton = true;
+            //!!!Exception control add
             QueriesTableAdapter qta = new QueriesTableAdapter();
             qta.LOGOUTLOG(Convert.ToDecimal(userId));
             qta.Dispose();
@@ -1077,8 +1079,9 @@ namespace DiplomaClient
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //log out
-            if(!isCloseByButton && !isCloseByLogOut)
+            //non-normal closing
+            //!!!Exception control add
+            if (!isCloseByButton && !isCloseByLogOut)
             {
                 QueriesTableAdapter qta = new QueriesTableAdapter();
                 qta.SHUTDOWNLOG(Convert.ToDecimal(userId));
