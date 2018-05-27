@@ -14,3 +14,6 @@ Example:
 
 3.Additional note - this service name should be written in tnsnames.ora in Oracle Home Directory
 Example Path: C:\ORACUL12\app\ORUVGE\product\12.1.0\dbhome_1\NETWORK\ADMIN\tnsnames.ora
+
+Note
+The simliest way is to copy content of NETWORK from Oracle_Home to Oracle Develop Tools Network
