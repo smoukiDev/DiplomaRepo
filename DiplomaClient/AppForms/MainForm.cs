@@ -301,7 +301,7 @@ namespace DiplomaClient
                 //Slider Appearance Animation
                 for (int i = 0; i < panSliserMAX; i++)
                 {
-                    Thread.Sleep(1);
+                    //Thread.Sleep(1);
                     panSlider.Width++;
                     
 
@@ -445,7 +445,7 @@ namespace DiplomaClient
                 //Slider Disapperance Animation
                 for (int i = 0; i < panSliserMAX; i++)
                 {
-                    Thread.Sleep(1);
+                    //Thread.Sleep(1);
                     panSlider.Width--;
                 }
                 //Admin/Profile/Report Width Gap Separated Variables
