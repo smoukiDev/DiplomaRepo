@@ -77,6 +77,7 @@
             this.pPhone = new System.Windows.Forms.Panel();
             this.pAdress = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.butMoveBack = new System.Windows.Forms.Button();
             this.panHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -130,6 +131,7 @@
             // 
             // panHeader
             // 
+            this.panHeader.Controls.Add(this.butMoveBack);
             this.panHeader.Controls.Add(this.lblWindowTitle);
             this.panHeader.Controls.Add(this.pbLogo);
             this.panHeader.Controls.Add(this.butClose);
@@ -597,6 +599,23 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // butMoveBack
+            // 
+            this.butMoveBack.BackColor = System.Drawing.Color.Transparent;
+            this.butMoveBack.BackgroundImage = global::DiplomaClient.Properties.Resources.MoveBackButton;
+            this.butMoveBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butMoveBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butMoveBack.FlatAppearance.BorderSize = 0;
+            this.butMoveBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butMoveBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butMoveBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butMoveBack.Location = new System.Drawing.Point(835, 7);
+            this.butMoveBack.Name = "butMoveBack";
+            this.butMoveBack.Size = new System.Drawing.Size(50, 50);
+            this.butMoveBack.TabIndex = 14;
+            this.butMoveBack.UseVisualStyleBackColor = false;
+            this.butMoveBack.Click += new System.EventHandler(this.butMoveBack_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -708,5 +727,6 @@
         private System.Windows.Forms.Panel pAdress;
         private System.Windows.Forms.Label lblPassSecure;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button butMoveBack;
     }
 }

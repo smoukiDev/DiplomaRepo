@@ -294,5 +294,8 @@
   <ItemGroup>
     <None Include="Image\EmailSupport.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MoveBackButton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

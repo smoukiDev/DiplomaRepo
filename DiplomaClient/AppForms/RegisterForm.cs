@@ -79,8 +79,7 @@ namespace DiplomaClient
         private void butClose_Click(object sender, EventArgs e)
         {
             Thread.Sleep(delay1);
-            this.Close();
-            Program.loginform.Show();
+            Environment.Exit(0);
 
         }
         //Mimimize Button with Delay
@@ -405,7 +404,7 @@ namespace DiplomaClient
 
             base.WndProc(ref m);
         }
-
+        //Convert Image in byte[]
         public byte[] ImageToByteArray(Image imageIn)
         {
             using (var ms = new MemoryStream())
@@ -413,6 +412,13 @@ namespace DiplomaClient
                 imageIn.Save(ms, imageIn.RawFormat);
                 return ms.ToArray();
             }
+        }
+        //Back To Login
+        private void butMoveBack_Click(object sender, EventArgs e)
+        {
+            Thread.Sleep(delay1);
+            this.Close();
+            Program.loginform.Show();
         }
     }
 }
