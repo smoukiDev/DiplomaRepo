@@ -126,7 +126,7 @@ namespace DiplomaClient
                 }
                 catch(Exception ex)
                 {
-                    CustomMessageBox incorectConfirm = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { registerFormBuf.Enabled = true; }, false, ColorPalette.red1, ColorPalette.white1);
+                    CustomMessageBox incorectConfirm = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { registerFormBuf.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
                     this.Enabled = false;
                     incorectConfirm.Show();
                 }

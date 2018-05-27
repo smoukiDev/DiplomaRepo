@@ -151,9 +151,24 @@ v_eccode,v_echash,v_ecsalt
 );
 INSERT INTO CLIENTAPPUSERACTIVITY (USERID,DESCRIPTION,ACTIVITYTIME)
 VALUES (ClientIDSeq.CURRVAL,'User has registered', CURRENT_DATE);
+INSERT INTO CLIENTMODULEACCESS(USERID,M1,M2,M3,M4,M5,M6)
+VALUES(ClientIDSeq.CURRVAL,'F','F','F','F','F','F');
 --Required to Add Script of locking access to modules which will be added soon
 END REGISTERCLIENT;
 
 --Session Date Format
 ALTER SESSION SET nls_date_format='yyyy-mm-dd hh24:mi:ss';
+
+--M1 - it's Explore Model Access
+ALTER TABLE CLIENTMODULEACCESS ADD M1 CHAR(1 CHAR);
+--M2 - it's Association Model Access
+ALTER TABLE CLIENTMODULEACCESS ADD M2 CHAR(1 CHAR);
+--M3 - it's Classification Model Access
+ALTER TABLE CLIENTMODULEACCESS ADD M3 CHAR(1 CHAR);
+--M4 - it's Clustering Model Access
+ALTER TABLE CLIENTMODULEACCESS ADD M4 CHAR(1 CHAR);
+--M5 - it's Regression Model Access
+ALTER TABLE CLIENTMODULEACCESS ADD M5 CHAR(1 CHAR);
+--M1 - it's Anomaly Detection Model Access
+ALTER TABLE CLIENTMODULEACCESS ADD M6 CHAR(1 CHAR);
 
