@@ -988,6 +988,7 @@ namespace DiplomaClient
         ToolTip ttSaveChanges;
         ToolTip ttAddAvatar;
         ToolTip ttRemoveAvatar;
+        ToolTip ttSaveAvatar;
         private void SetProfilePanelTips()
         {
             ttEditProfile = new ToolTip();
@@ -1005,6 +1006,9 @@ namespace DiplomaClient
             ttRemoveAvatar = new ToolTip();
             ttRemoveAvatar.SetToolTip(butRemoveAvatar, "Remove Avatar & delete it from profile");
             ttRemoveAvatar.ToolTipIcon = ToolTipIcon.Info;
+            ttSaveAvatar = new ToolTip();
+            ttSaveAvatar.SetToolTip(butSaveAvatar, "Save chosen avatar in prifile");
+            ttSaveAvatar.ToolTipIcon = ToolTipIcon.Info;
 
         }
         //UserAccountData OnLoad Form Filling       

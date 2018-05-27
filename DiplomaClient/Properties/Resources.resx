@@ -196,6 +196,9 @@
   <data name="SaveButtonV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\SaveButtonV2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SaveUpdaterAvatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\SaveUpdaterAvatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SearchButtonMinimal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\SearchButtonMinimal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

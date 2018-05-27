@@ -78,6 +78,7 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.tbLogin1 = new System.Windows.Forms.TextBox();
             this.panProfileAvatar = new System.Windows.Forms.Panel();
+            this.butSaveAvatar = new System.Windows.Forms.Button();
             this.butIsNotAdmin = new System.Windows.Forms.Button();
             this.butIsAdmin = new System.Windows.Forms.Button();
             this.butRemoveAvatar = new System.Windows.Forms.Button();
@@ -798,6 +799,7 @@
             // panProfileAvatar
             // 
             this.panProfileAvatar.BackColor = System.Drawing.Color.DimGray;
+            this.panProfileAvatar.Controls.Add(this.butSaveAvatar);
             this.panProfileAvatar.Controls.Add(this.butIsNotAdmin);
             this.panProfileAvatar.Controls.Add(this.butIsAdmin);
             this.panProfileAvatar.Controls.Add(this.butRemoveAvatar);
@@ -808,6 +810,23 @@
             this.panProfileAvatar.Name = "panProfileAvatar";
             this.panProfileAvatar.Size = new System.Drawing.Size(1000, 100);
             this.panProfileAvatar.TabIndex = 37;
+            // 
+            // butSaveAvatar
+            // 
+            this.butSaveAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.butSaveAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.butSaveAvatar.BackgroundImage = global::DiplomaClient.Properties.Resources.SaveUpdaterAvatar;
+            this.butSaveAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butSaveAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butSaveAvatar.FlatAppearance.BorderSize = 0;
+            this.butSaveAvatar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butSaveAvatar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butSaveAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butSaveAvatar.Location = new System.Drawing.Point(570, 67);
+            this.butSaveAvatar.Name = "butSaveAvatar";
+            this.butSaveAvatar.Size = new System.Drawing.Size(30, 30);
+            this.butSaveAvatar.TabIndex = 26;
+            this.butSaveAvatar.UseVisualStyleBackColor = false;
             // 
             // butIsNotAdmin
             // 
@@ -854,9 +873,9 @@
             this.butRemoveAvatar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.butRemoveAvatar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.butRemoveAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butRemoveAvatar.Location = new System.Drawing.Point(560, 58);
+            this.butRemoveAvatar.Location = new System.Drawing.Point(570, 35);
             this.butRemoveAvatar.Name = "butRemoveAvatar";
-            this.butRemoveAvatar.Size = new System.Drawing.Size(40, 40);
+            this.butRemoveAvatar.Size = new System.Drawing.Size(30, 30);
             this.butRemoveAvatar.TabIndex = 23;
             this.butRemoveAvatar.UseVisualStyleBackColor = false;
             this.butRemoveAvatar.Click += new System.EventHandler(this.butRemoveAvatar_Click);
@@ -872,9 +891,9 @@
             this.butAddAvatar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.butAddAvatar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.butAddAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butAddAvatar.Location = new System.Drawing.Point(561, 3);
+            this.butAddAvatar.Location = new System.Drawing.Point(570, 3);
             this.butAddAvatar.Name = "butAddAvatar";
-            this.butAddAvatar.Size = new System.Drawing.Size(40, 40);
+            this.butAddAvatar.Size = new System.Drawing.Size(30, 30);
             this.butAddAvatar.TabIndex = 22;
             this.butAddAvatar.UseVisualStyleBackColor = false;
             this.butAddAvatar.Click += new System.EventHandler(this.butAddAvatar_Click);
@@ -1566,5 +1585,6 @@
         private System.Windows.Forms.Button butRemoveAvatar;
         private System.Windows.Forms.Button butAddAvatar;
         private System.Windows.Forms.OpenFileDialog ofdProfilePic;
+        private System.Windows.Forms.Button butSaveAvatar;
     }
 }

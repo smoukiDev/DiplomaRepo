@@ -323,6 +323,16 @@ namespace DiplomaClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SaveUpdaterAvatar {
+            get {
+                object obj = ResourceManager.GetObject("SaveUpdaterAvatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SearchButtonMinimal {
             get {
                 object obj = ResourceManager.GetObject("SearchButtonMinimal", resourceCulture);

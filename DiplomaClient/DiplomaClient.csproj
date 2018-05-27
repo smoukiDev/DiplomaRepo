@@ -303,5 +303,8 @@
   <ItemGroup>
     <None Include="Image\Success.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\SaveUpdaterAvatar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
