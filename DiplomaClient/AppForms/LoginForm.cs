@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Runtime.InteropServices;
 using Oracle.ManagedDataAccess.Client;
+using DiplomaClient.dsSalesHistoryTableAdapters;
 
 
 namespace DiplomaClient
@@ -99,6 +100,9 @@ namespace DiplomaClient
                                 
                                 isSuccess = true;
                                 MainForm mainform = new MainForm(row[0].ToString());
+                                QueriesTableAdapter qta = new QueriesTableAdapter();
+                                qta.LOGINLOG(Convert.ToDecimal(row[0].ToString()));
+                                qta.Dispose();
                                 this.Hide();
                                 mainform.Show();
                                 tbLogin.Clear();
