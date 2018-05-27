@@ -123,12 +123,15 @@ namespace DiplomaClient
                     //written as hashing without salt
                     qta.REGISTERCLIENT(tbLogin.Text, tbPass.Text, sm.GenerateSHA256Hash(tbPass.Text), null, tbFName.Text, tbLName.Text, tbMName.Text, tbEmail.Text, mtbPhone.Text, rtbAdress.Text, cbGender.SelectedItem.ToString(), ImageToByteArray(pbAvatar.Image), null, null, null);
                     qta.Dispose();
+                    CustomMessageBox successRegiste = new CustomMessageBox(Properties.Resources.Success, "Account have been successfully created", "ОК", () => { registerFormBuf.Enabled = true; Thread.Sleep(delay1); this.Close(); Program.loginform.Show(); }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    successRegiste.Show();
                 }
                 catch(Exception ex)
                 {
-                    CustomMessageBox incorectConfirm = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { registerFormBuf.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    CustomMessageBox errorDuringRegister = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { registerFormBuf.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
                     this.Enabled = false;
-                    incorectConfirm.Show();
+                    errorDuringRegister.Show();
                 }
             }
             pbLoading.Visible = false;
@@ -327,9 +330,6 @@ namespace DiplomaClient
                 fs.Read(newAvatarPicture, 0, Convert.ToInt32(fs.Length));
                 pbAvatar.Image = byteArrayToImage(newAvatarPicture);
                 fs.Dispose();
-                Thread.Sleep(delay1);
-                this.Close();
-                Program.loginform.Show();
 
             }
             catch

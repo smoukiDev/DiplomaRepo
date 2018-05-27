@@ -73,7 +73,6 @@ DECLARE
 
 BEGIN
 :new.UserID := ClientIDSeq.NEXTVAL;
-INSERT INTO ClientModuleAccess(UserID) VALUES(ClientIDSeq.CURRVAL);
 :new.ISBLOCK := 'T';
 :new.ISADMIN :='F';
 :new.ISEMAILCONFIRM := 'F';
@@ -119,7 +118,7 @@ ALTER TABLE ClientAppUsers ADD EmailActivationHash VARCHAR2(200 CHAR);
 ALTER TABLE ClientAppUsers ADD EmailActivationSalt VARCHAR2(200 CHAR);
 ALTER TABLE ClientAppUsers ADD IsEmailConfirm CHAR(1 CHAR);
 --Create account procedure
-CREATE OR REPLACE PROCEDURE REGISTERCLIENT
+create or replace PROCEDURE REGISTERCLIENT
 (
 v_login in ClientAppUsers.LOGIN%TYPE,
 v_pass in CLIENTAPPUSERS.PASS%TYPE,
@@ -138,6 +137,7 @@ v_echash in CLIENTAPPUSERS.EMAILACTIVATIONHASH%TYPE,
 v_ecsalt in CLIENTAPPUSERS.EMAILACTIVATIONSALT%TYPE
 )
 IS
+idbuf NUMBER(10);
 BEGIN
 INSERT INTO CLIENTAPPUSERS
 (
@@ -149,10 +149,11 @@ VALUES
 v_login,v_pass,v_passhash,v_passsalt,v_fname,v_lname,v_mname,v_email,v_phone,v_adress,v_gender,v_avatar,
 v_eccode,v_echash,v_ecsalt
 );
+idbuf :=ClientIDSeq.CURRVAL;
 INSERT INTO CLIENTAPPUSERACTIVITY (USERID,DESCRIPTION,ACTIVITYTIME)
-VALUES (ClientIDSeq.CURRVAL,'User has registered', CURRENT_DATE);
+VALUES (idbuf,'User has registered', CURRENT_DATE);
 INSERT INTO CLIENTMODULEACCESS(USERID,M1,M2,M3,M4,M5,M6)
-VALUES(ClientIDSeq.CURRVAL,'F','F','F','F','F','F');
+VALUES(idbuf,'F','F','F','F','F','F');
 --Required to Add Script of locking access to modules which will be added soon
 END REGISTERCLIENT;
 
