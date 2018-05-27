@@ -1513,5 +1513,22 @@ namespace DiplomaClient
                 return ms.ToArray();
             }
         }
+
+        private void pbAvatar_Click(object sender, EventArgs e)
+        {
+            if(isAdminSliderBag)
+            {
+                panReport.Visible = false;
+                panProfile.Visible = false;
+                panAdminPanel.Visible = true;
+                
+            }
+            else
+            {
+                panAdminPanel.Visible = false;
+                panReport.Visible = false;
+                panProfile.Visible = true;
+            }
+        }
     }
 }
