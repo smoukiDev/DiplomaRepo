@@ -204,7 +204,7 @@ namespace DiplomaClient
                 error.Show();
             }
 
-            bool isSuccess2 = false;
+            
             
             if(isSuccess)
             {
@@ -220,11 +220,11 @@ namespace DiplomaClient
                     butDo.Visible = false;
                     butUseCode.Visible = true;
                     lblSendAgain.Visible = true;
-                    isSuccess2 = true;
+                    
                 }
                 catch (Exception ex)
                 {
-                    isSuccess2 = true;
+                    
                     CustomMessageBox error = new CustomMessageBox(Properties.Resources.ImageNotFound, "404 Not Found - There isn't Internet Connection\n" + ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
                     this.Enabled = false;
                     error.Show();

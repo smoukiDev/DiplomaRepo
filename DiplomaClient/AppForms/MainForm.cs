@@ -797,6 +797,8 @@ namespace DiplomaClient
             SetProfilePanelTips();
             //UserAccountData OnLoad Form Filling
             UserDataFormFill();
+            //AdminPanel OnLoad Form Filling
+            AdminPanelStartUp();
 
 
         }
@@ -1528,6 +1530,30 @@ namespace DiplomaClient
                 panAdminPanel.Visible = false;
                 panReport.Visible = false;
                 panProfile.Visible = true;
+            }
+        }
+
+        private void AdminPanelStartUp()
+        {
+            try
+            {
+                SecurityModule sm = new SecurityModule();
+                OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                string menuButsAccessQuery = "SELECT * FROM CLIENTAPPUSERS";
+                OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
+                //menuButTable
+                DataTable mBT = new DataTable();
+                adp.Fill(mBT);
+                menuButsAccessQuery = null;
+                adp.Dispose();
+                con.Dispose();                
+                dgvAdmin.DataSource = mBT;
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
             }
         }
     }
