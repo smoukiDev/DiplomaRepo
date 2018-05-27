@@ -76,6 +76,9 @@
     <Compile Include="AppForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="dsSalesHistory.cs">
+      <DependentUpon>dsSalesHistory.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsSalesHistory.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
