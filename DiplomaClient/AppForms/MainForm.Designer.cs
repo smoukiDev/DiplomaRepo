@@ -847,6 +847,7 @@
             this.butSaveAvatar.Size = new System.Drawing.Size(30, 30);
             this.butSaveAvatar.TabIndex = 26;
             this.butSaveAvatar.UseVisualStyleBackColor = false;
+            this.butSaveAvatar.Click += new System.EventHandler(this.butSaveAvatar_Click);
             // 
             // butIsNotAdmin
             // 

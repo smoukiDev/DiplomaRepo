@@ -1478,5 +1478,36 @@ namespace DiplomaClient
                 tbGender.Text = "Male";
             }
         }
+
+        private void butSaveAvatar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                QueriesTableAdapter qta = new QueriesTableAdapter();
+                qta.UPDATEAVATAR(Convert.ToDecimal(userId), ImageToByteArray(butAvatarDisplay.BackgroundImage));
+                CustomMessageBox success = new CustomMessageBox(Properties.Resources.Success, "Avatar Picture has been updated:)", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                success.Show();
+                pbAvatar.Image = butAvatarDisplay.BackgroundImage;
+                ava = butAvatarDisplay.BackgroundImage;
+                qta.Dispose();
+
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", ()=> { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
+        }
+        //Convert Image in byte[]
+        public byte[] ImageToByteArray(Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
+        }
     }
 }
