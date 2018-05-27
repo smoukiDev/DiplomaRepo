@@ -345,8 +345,10 @@ namespace DiplomaClient
                 buts8.Visible = true;
                 buts9.Visible = true;
                 //soft animation Profile Panel
-                butIsAdmin.Visible = true;
-                butIsNotAdmin.Visible = true;
+                if(isAdminSliderBag)
+                    butIsAdmin.Visible = true;
+                else
+                    butIsNotAdmin.Visible = true;
                 butAvatarDisplay.Visible = true;
                 butAddAvatar.Visible = true;
                 butRemoveAvatar.Visible = true;
@@ -493,8 +495,10 @@ namespace DiplomaClient
                 //Switch picture box menu image
                 pbMenuOne.Image = Properties.Resources.MenuButtonDisable;
                 //soft animation Profile Panel
-                butIsAdmin.Visible = true;
-                butIsNotAdmin.Visible = true;
+                if (isAdminSliderBag)
+                    butIsAdmin.Visible = true;
+                else
+                    butIsNotAdmin.Visible = true;
                 butAvatarDisplay.Visible = true;
                 butAddAvatar.Visible = true;
                 butRemoveAvatar.Visible = true;
@@ -1097,6 +1101,7 @@ namespace DiplomaClient
             }
         }
         Image ava = Properties.Resources.UserProfileDefault;
+        bool isAdminSliderBag = false;
         private void UDFFProfileLoad()
         {
             try
@@ -1119,9 +1124,18 @@ namespace DiplomaClient
                 //
 
                 if (odr.GetString(9) == "T")
+                {
                     tbLogin.Text = $"{odr.GetString(1)} {odr.GetString(3)} (Administrator)";
+                    isAdminSliderBag = true;
+
+                }
                 else
-                    tbLogin.Text = $"{odr.GetString(1)} {odr.GetString(3)}";
+                {
+                     tbLogin.Text = $"{odr.GetString(1)} {odr.GetString(3)}";
+                    isAdminSliderBag = false;
+                }
+                
+                   
 
                 tbLogin1.Text = odr.GetString(0);
                 tbFName.Text = odr.GetString(1);
