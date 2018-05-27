@@ -146,8 +146,14 @@ namespace DiplomaClient
             }
         }
         //Close Form
+        bool isCloseByButton = false;
         private void butClose_Click(object sender, EventArgs e)
         {
+            //exit applicatuion - auto logout
+            QueriesTableAdapter qta = new QueriesTableAdapter();
+            qta.CLOSELOG(Convert.ToDecimal(userId));
+            qta.Dispose();
+            isCloseByButton = true;
             Environment.Exit(0);
         }
         //Minimize Window condition
@@ -717,9 +723,17 @@ namespace DiplomaClient
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.orange1;
         }
+        bool isCloseByLogOut = false;
         private void buts9_Click(object sender, EventArgs e)
         {
-
+            //log out
+            isCloseByButton = true;
+            QueriesTableAdapter qta = new QueriesTableAdapter();
+            qta.LOGOUTLOG(Convert.ToDecimal(userId));
+            qta.Dispose();
+            Program.loginform.Show();
+            this.Close();
+            
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -1059,6 +1073,18 @@ namespace DiplomaClient
                 this.Enabled = false;
                 error.Show();
             }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //log out
+            if(!isCloseByButton && !isCloseByLogOut)
+            {
+                QueriesTableAdapter qta = new QueriesTableAdapter();
+                qta.SHUTDOWNLOG(Convert.ToDecimal(userId));
+                qta.Dispose();
+            }
+
         }
     }
 }
