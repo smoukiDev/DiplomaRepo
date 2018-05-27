@@ -83,6 +83,9 @@ namespace DiplomaClient
                 tbMessage.Enabled = false;
                 tbMessage.Text = message;
             }
+            but1.Visible = true;
+            but2.Visible = true;
+            but3.Visible = true;
             but1.Text = but1Title;
             but2.Text = but2Title;
             but3.Text = but3Title;
@@ -118,6 +121,7 @@ namespace DiplomaClient
                 but1Action();
             if (unlockParentForm != null)
                 unlockParentForm();
+            this.Close();
         }
         //Button 2
         private void but2_Click(object sender, EventArgs e)

@@ -958,16 +958,19 @@ namespace DiplomaClient
             if(isEdit)
             {
                 
-
-                tbLogin1.Enabled = false;
-                tbFName.Enabled = false;
-                tbMName.Enabled = false;
-                tbLName.Enabled = false;
-                butGenderExchange.Enabled = false;
-                tbEmail.Enabled = false;
-                mtbPhone.Enabled = false;
-                tbAdress.Enabled = false;
-                isEdit = false;
+                if(mtbPhone.Text.Length == 13)
+                {
+                    CustomMessageBox update = new CustomMessageBox(Properties.Resources.ImageNotFound, false, "Would you like to save changes?", () => { this.Enabled = true; }, "Yes", "No", "Cancel", ()=> { SPFCommitProfile(); },()=> { SPFRevertProfile(); });
+                    this.Enabled = false;
+                    update.Show();
+                }
+                else
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, "Incorrect phone number for update", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
+                
             }
         
             if(isEditPass)
@@ -981,6 +984,114 @@ namespace DiplomaClient
                 buttonMakeVisible3.Enabled = false;
                 isEditPass = false;
             }
+        }
+        private void SPFCommitProfile()
+        {
+            try
+            {
+                QueriesTableAdapter qta = new QueriesTableAdapter();
+                qta.UPDATEPROFILE(Convert.ToDecimal(userId), tbLogin1.Text, tbFName.Text, tbLName.Text, tbMName.Text, tbGender.Text, tbEmail.Text, mtbPhone.Text, tbAdress.Text);
+                qta.UPDATEACCOUNTLOG(Convert.ToDecimal(userId));
+                qta.Dispose();
+                
+            }
+            catch(Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", null, true, ColorPalette.red1, ColorPalette.white1);
+                error.Show();
+            }
+            SecurityModule sm = new SecurityModule();
+            OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+            con.Open();
+            string ProfileInfoQuery = $"SELECT LOGIN, FNAME, MNAME, LNAME, GENDER, EMAIL, PHONE, ADRESS, AVATAR, ISADMIN FROM CLIENTAPPUSERS WHERE USERID={userId}";
+            OracleCommand ok = new OracleCommand(ProfileInfoQuery, con);
+            OracleDataReader odr = ok.ExecuteReader();
+            odr.Read();
+            ProfileInfoQuery = null;
+            if (odr.GetString(9) == "T")
+            {
+                tbLogin.Text = $"{odr.GetString(1)} {odr.GetString(3)} (Administrator)";
+                isAdminSliderBag = true;
+
+            }
+            else
+            {
+                tbLogin.Text = $"{odr.GetString(1)} {odr.GetString(3)}";
+                isAdminSliderBag = false;
+            }
+            butChangePassword.Enabled = true;
+            tbLogin1.Enabled = false;
+            tbFName.Enabled = false;
+            tbMName.Enabled = false;
+            tbLName.Enabled = false;
+            butGenderExchange.Enabled = false;
+            tbEmail.Enabled = false;
+            mtbPhone.Enabled = false;
+            tbAdress.Enabled = false;
+            isEdit = false;
+        }
+        private void SPFCommitPassword()
+        {
+
+        }
+        private void SPFRevertProfile()
+        {
+            try
+            {
+                SecurityModule sm = new SecurityModule();
+                OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                con.Open();
+                string ProfileInfoQuery = $"SELECT LOGIN, FNAME, MNAME, LNAME, GENDER, EMAIL, PHONE, ADRESS, AVATAR, ISADMIN FROM CLIENTAPPUSERS WHERE USERID={userId}";
+                OracleCommand ok = new OracleCommand(ProfileInfoQuery, con);
+                OracleDataReader odr = ok.ExecuteReader();
+                odr.Read();
+                ProfileInfoQuery = null;
+                if (odr.GetString(9) == "T")
+                {
+                    tbLogin.Text = $"{odr.GetString(1)} {odr.GetString(3)} (Administrator)";
+                    isAdminSliderBag = true;
+
+                }
+                else
+                {
+                    tbLogin.Text = $"{odr.GetString(1)} {odr.GetString(3)}";
+                    isAdminSliderBag = false;
+                }
+
+                tbLogin1.Text = odr.GetString(0);
+                tbFName.Text = odr.GetString(1);
+                tbMName.Text = odr.GetString(2);
+                tbLName.Text = odr.GetString(3);
+                tbGender.Text = odr.GetString(4);
+                tbEmail.Text = odr.GetString(5);
+                mtbPhone.Text = odr.GetString(6);
+                tbAdress.Text = odr.GetString(7);
+                odr.Dispose();
+                ok.Dispose();
+                con.Clone();
+                con.Dispose();
+                sm = null;
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
+            butChangePassword.Enabled = true;
+            tbLogin1.Enabled = false;
+            tbFName.Enabled = false;
+            tbMName.Enabled = false;
+            tbLName.Enabled = false;
+            butGenderExchange.Enabled = false;
+            tbEmail.Enabled = false;
+            mtbPhone.Enabled = false;
+            tbAdress.Enabled = false;
+            isEdit = false;
+        }
+        private void SPFRevertPassword()
+        {
+
         }
         //Set ToolTips for Profile Pannel Buttons
         ToolTip ttEditProfile;
