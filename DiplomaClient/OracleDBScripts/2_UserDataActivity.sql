@@ -204,4 +204,30 @@ BEGIN
 INSERT INTO CLIENTAPPUSERACTIVITY (USERID,DESCRIPTION,ACTIVITYTIME)
 VALUES (v_id,'User has closed application', CURRENT_DATE);
 END CLOSELOG;
-
+--UpdateProfileFields Procedure
+create or replace PROCEDURE UPDATEPROFILE
+(
+v_userid in ClientAppUsers.USERID%TYPE,
+v_login in ClientAppUsers.LOGIN%TYPE,
+v_fname in CLIENTAPPUSERS.FNAME%TYPE,
+v_lname in CLIENTAPPUSERS.LNAME%TYPE,
+v_mname in CLIENTAPPUSERS.MNAME%TYPE,
+v_gender in CLIENTAPPUSERS.GENDER%TYPE,
+v_email in CLIENTAPPUSERS.EMAIL%TYPE,
+v_phone in CLIENTAPPUSERS.PHONE%TYPE,
+v_adress in CLIENTAPPUSERS.ADRESS%TYPE
+)
+IS
+BEGIN
+UPDATE CLIENTAPPUSERS 
+SET 
+LOGIN = v_login,
+FNAME = v_fname,
+MNAME = v_mname,
+LNAME = v_lname,
+GENDER = v_gender,
+EMAIL = v_email,
+PHONE = v_phone,
+ADRESS = v_adress
+WHERE USERID = v_userid;
+END UPDATEPROFILE;

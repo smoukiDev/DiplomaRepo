@@ -896,6 +896,7 @@ namespace DiplomaClient
         {
             if(!isEdit)
             {
+                butChangePassword.Enabled = false;
                 tbLogin1.Enabled = true;
                 tbFName.Enabled = true;
                 tbMName.Enabled = true;
@@ -908,6 +909,7 @@ namespace DiplomaClient
             }
             else
             {
+                butChangePassword.Enabled =true;
                 tbLogin1.Enabled = false;
                 tbFName.Enabled = false;
                 tbMName.Enabled = false;
@@ -928,6 +930,7 @@ namespace DiplomaClient
         {
             if(!isEditPass)
             {
+                butEditProfile.Enabled = false;
                 tbOldPassword.Enabled = true;
                 tbPass.Enabled = true;
                 tbPassConfirm.Enabled = true;
@@ -938,6 +941,7 @@ namespace DiplomaClient
             }
             else
             {
+                butEditProfile.Enabled = true;
                 tbOldPassword.Enabled = false;
                 tbPass.Enabled = false;
                 tbPassConfirm.Enabled = false;
@@ -950,8 +954,11 @@ namespace DiplomaClient
         //Button Save changes
         private void butSaveProfileChanges_Click(object sender, EventArgs e)
         {
+
             if(isEdit)
             {
+                
+
                 tbLogin1.Enabled = false;
                 tbFName.Enabled = false;
                 tbMName.Enabled = false;
@@ -965,6 +972,7 @@ namespace DiplomaClient
         
             if(isEditPass)
             {
+                
                 tbOldPassword.Enabled = false;
                 tbPass.Enabled = false;
                 tbPassConfirm.Enabled = false;
