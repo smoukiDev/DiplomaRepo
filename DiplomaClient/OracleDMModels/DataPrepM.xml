@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WorkflowProcess Version="12.2.0.0.1" DBVersion="12.1.0.2.0" Schema="" xmlns="http://xmlns.oracle.com/odmr11">
+    <Nodes>
+        <DataSource Id="10001" Name="MINING_DATA_TEXT_BUILD_V" Status="Complete">
+            <Icon XCOORD="321" YCOORD="3"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10001" as (select "MINING_DATA_TEXT_BUILD_V"."BOOKKEEPING_APPLICATION", 
+"MINING_DATA_TEXT_BUILD_V"."OS_DOC_SET_KANJI", 
+"MINING_DATA_TEXT_BUILD_V"."CUST_ID", 
+"MINING_DATA_TEXT_BUILD_V"."AFFINITY_CARD", 
+"MINING_DATA_TEXT_BUILD_V"."BULK_PACK_DISKETTES", 
+"MINING_DATA_TEXT_BUILD_V"."HOME_THEATER_PACKAGE", 
+"MINING_DATA_TEXT_BUILD_V"."COMMENTS", 
+"MINING_DATA_TEXT_BUILD_V"."EDUCATION", 
+"MINING_DATA_TEXT_BUILD_V"."Y_BOX_GAMES", 
+"MINING_DATA_TEXT_BUILD_V"."YRS_RESIDENCE", 
+"MINING_DATA_TEXT_BUILD_V"."PRINTER_SUPPLIES", 
+"MINING_DATA_TEXT_BUILD_V"."FLAT_PANEL_MONITOR", 
+"MINING_DATA_TEXT_BUILD_V"."CUST_INCOME_LEVEL", 
+"MINING_DATA_TEXT_BUILD_V"."CUST_GENDER", 
+"MINING_DATA_TEXT_BUILD_V"."CUST_MARITAL_STATUS", 
+"MINING_DATA_TEXT_BUILD_V"."OCCUPATION", 
+"MINING_DATA_TEXT_BUILD_V"."COUNTRY_NAME", 
+"MINING_DATA_TEXT_BUILD_V"."HOUSEHOLD_SIZE", 
+"MINING_DATA_TEXT_BUILD_V"."AGE" 
+from "DMUSER"."MINING_DATA_TEXT_BUILD_V"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="COMMENTS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="EDUCATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="OCCUPATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="" Name="MINING_DATA_TEXT_BUILD_V" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <DataSource Id="10033" Name="PRODUCTS" Status="Complete">
+            <Icon XCOORD="951" YCOORD="63"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10033" as (select "PRODUCTS"."PROD_MIN_PRICE", 
+"PRODUCTS"."PROD_SUBCATEGORY_ID", 
+"PRODUCTS"."PROD_STATUS", 
+"PRODUCTS"."PROD_SUBCATEGORY", 
+"PRODUCTS"."SUPPLIER_ID", 
+"PRODUCTS"."PROD_DESC", 
+"PRODUCTS"."PROD_NAME", 
+"PRODUCTS"."PROD_EFF_FROM", 
+"PRODUCTS"."PROD_EFF_TO", 
+"PRODUCTS"."PROD_UNIT_OF_MEASURE", 
+"PRODUCTS"."PROD_VALID", 
+"PRODUCTS"."PROD_CATEGORY_DESC", 
+"PRODUCTS"."PROD_TOTAL_ID", 
+"PRODUCTS"."PROD_CATEGORY_ID", 
+"PRODUCTS"."PROD_LIST_PRICE", 
+"PRODUCTS"."PROD_WEIGHT_CLASS", 
+"PRODUCTS"."PROD_PACK_SIZE", 
+"PRODUCTS"."PROD_TOTAL", 
+"PRODUCTS"."PROD_ID", 
+"PRODUCTS"."PROD_SUBCATEGORY_DESC", 
+"PRODUCTS"."PROD_CATEGORY", 
+"PRODUCTS"."PROD_SRC_ID" 
+from "SH"."PRODUCTS"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="PROD_MIN_PRICE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_SUBCATEGORY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_SUBCATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="SUPPLIER_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_DESC" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <Attribute Name="PROD_EFF_TO" DataType="DATE" Status="Valid"/>
+                <Attribute Name="PROD_UNIT_OF_MEASURE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_CATEGORY_DESC" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_CATEGORY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_LIST_PRICE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_WEIGHT_CLASS" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_PACK_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_SUBCATEGORY_DESC" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_CATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_SRC_ID" DataType="NUMBER" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="SH" Name="PRODUCTS" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <DataSource Id="10034" Name="SALES" Status="Complete">
+            <Icon XCOORD="952" YCOORD="-78"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10034" as (select "SALES"."CUST_ID", 
+"SALES"."QUANTITY_SOLD", 
+"SALES"."AMOUNT_SOLD", 
+"SALES"."CHANNEL_ID", 
+"SALES"."PROMO_ID", 
+"SALES"."TIME_ID", 
+"SALES"."PROD_ID" 
+from "SH"."SALES"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="QUANTITY_SOLD" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AMOUNT_SOLD" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CHANNEL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROMO_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="TIME_ID" DataType="DATE" Status="Valid"/>
+                <Attribute Name="PROD_ID" DataType="NUMBER" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="SH" Name="SALES" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <CreateTable TableName="AGGREGATED_DATA" Table="true" Id="10006" Name="Aggregate2Table" Status="Complete">
+            <Icon XCOORD="646" YCOORD="14"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10006" AS ( SELECT  "COUNTRY_NAME" ,
+ "AGE_MIN" ,
+ "AGE_MAX" ,
+ "AGE_AVG"  FROM "AGGREGATED_DATA")</SQLExpression>
+            <DBAttributes>
+                <DBAttribute Key="No" Index="No" Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="&quot;AGE_MIN&quot;" DataType="DM_NESTED_NUMERICALS" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="&quot;AGE_MAX&quot;" DataType="DM_NESTED_NUMERICALS" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="&quot;AGE_AVG&quot;" DataType="DM_NESTED_NUMERICALS" Status="Valid"/>
+            </DBAttributes>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+            <CreateTableOptions>
+                <Logging>NOLOGGING</Logging>
+                <TableCompression>ROW STORE COMPRESS</TableCompression>
+            </CreateTableOptions>
+        </CreateTable>
+        <Aggregation Id="10002" Name="Aggregate 1" Status="Complete">
+            <Icon XCOORD="520" YCOORD="-77"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10002" as (SELECT  t0."COUNTRY_NAME", 
+ t0."AGE_MIN", 
+ t0."AGE_MAX", 
+ t0."AGE_AVG", 
+ t0."YRS_RESIDENCE_AVG"
+FROM
+  (SELECT  "COUNTRY_NAME", 
+    MIN("AGE") "AGE_MIN"
+    ,MAX("AGE") "AGE_MAX"
+    ,AVG("AGE") "AGE_AVG"
+    ,AVG("YRS_RESIDENCE") "YRS_RESIDENCE_AVG"
+  FROM {INPUT_SOURCE}
+   
+  GROUP BY "COUNTRY_NAME") t0
+ )</SQLExpression>
+            <AggregationElements>
+                <AggregationElement>
+                    <Source>
+                        <Attributes>
+                            <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+                        </Attributes>
+                    </Source>
+                    <Output Name="&quot;AGE_MIN&quot;" DataType="NUMBER" Status="Valid"/>
+                    <AggregationFunction>MIN()</AggregationFunction>
+                    <SubGroupBy>
+                        <Attributes/>
+                    </SubGroupBy>
+                </AggregationElement>
+                <AggregationElement>
+                    <Source>
+                        <Attributes>
+                            <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+                        </Attributes>
+                    </Source>
+                    <Output Name="&quot;AGE_MAX&quot;" DataType="NUMBER" Status="Valid"/>
+                    <AggregationFunction>MAX()</AggregationFunction>
+                    <SubGroupBy>
+                        <Attributes/>
+                    </SubGroupBy>
+                </AggregationElement>
+                <AggregationElement>
+                    <Source>
+                        <Attributes>
+                            <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+                        </Attributes>
+                    </Source>
+                    <Output Name="&quot;AGE_AVG&quot;" DataType="NUMBER" Status="Valid"/>
+                    <AggregationFunction>AVG()</AggregationFunction>
+                    <SubGroupBy>
+                        <Attributes/>
+                    </SubGroupBy>
+                </AggregationElement>
+                <AggregationElement>
+                    <Source>
+                        <Attributes>
+                            <Attribute Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                        </Attributes>
+                    </Source>
+                    <Output Name="&quot;YRS_RESIDENCE_AVG&quot;" DataType="NUMBER" Status="Valid"/>
+                    <AggregationFunction>AVG()</AggregationFunction>
+                    <SubGroupBy>
+                        <Attributes/>
+                    </SubGroupBy>
+                </AggregationElement>
+            </AggregationElements>
+            <GroupingElement>
+                <Attributes>
+                    <Attribute Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                </Attributes>
+            </GroupingElement>
+            <AutoSpec>Yes</AutoSpec>
+        </Aggregation>
+        <Aggregation Id="10004" Name="Aggregate 2" Status="Complete">
+            <Icon XCOORD="526" YCOORD="15"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10004" as (SELECT  t0."COUNTRY_NAME", 
+ t0."AGE_MIN", 
+ t0."AGE_MAX", 
+ t0."AGE_AVG"
+FROM
+  (SELECT "COUNTRY_NAME", 
+	CAST(COLLECT(DM_NESTED_NUMERICAL(ID1, "AGE_MIN")) AS DM_NESTED_NUMERICALS)  "AGE_MIN", 
+	CAST(COLLECT(DM_NESTED_NUMERICAL(ID1, "AGE_MAX")) AS DM_NESTED_NUMERICALS)  "AGE_MAX", 
+	CAST(COLLECT(DM_NESTED_NUMERICAL(ID1, "AGE_AVG")) AS DM_NESTED_NUMERICALS  )  "AGE_AVG"
+	FROM
+		(SELECT   "COUNTRY_NAME",
+		("CUST_GENDER") ID1,
+		MIN("AGE") "AGE_MIN",
+		MAX("AGE") "AGE_MAX",
+		AVG("AGE") "AGE_AVG"
+		FROM {INPUT_SOURCE}  
+		GROUP BY "COUNTRY_NAME", (("CUST_GENDER")) )
+	 GROUP BY "COUNTRY_NAME")  t0
+ )</SQLExpression>
+            <AggregationElements>
+                <AggregationElement>
+                    <Source>
+                        <Attributes>
+                            <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+                        </Attributes>
+                    </Source>
+                    <Output Name="&quot;AGE_MIN&quot;" DataType="DM_NESTED_NUMERICALS" Status="Valid"/>
+                    <AggregationFunction>MIN()</AggregationFunction>
+                    <SubGroupBy>
+                        <Attributes>
+                            <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                        </Attributes>
+                    </SubGroupBy>
+                </AggregationElement>
+                <AggregationElement>
+                    <Source>
+                        <Attributes>
+                            <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+                        </Attributes>
+                    </Source>
+                    <Output Name="&quot;AGE_MAX&quot;" DataType="DM_NESTED_NUMERICALS" Status="Valid"/>
+                    <AggregationFunction>MAX()</AggregationFunction>
+                    <SubGroupBy>
+                        <Attributes>
+                            <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                        </Attributes>
+                    </SubGroupBy>
+                </AggregationElement>
+                <AggregationElement>
+                    <Source>
+                        <Attributes>
+                            <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+                        </Attributes>
+                    </Source>
+                    <Output Name="&quot;AGE_AVG&quot;" DataType="DM_NESTED_NUMERICALS" Status="Valid"/>
+                    <AggregationFunction>AVG()</AggregationFunction>
+                    <SubGroupBy>
+                        <Attributes>
+                            <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                        </Attributes>
+                    </SubGroupBy>
+                </AggregationElement>
+            </AggregationElements>
+            <GroupingElement>
+                <Attributes>
+                    <Attribute Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                </Attributes>
+            </GroupingElement>
+            <AutoSpec>Yes</AutoSpec>
+        </Aggregation>
+        <Aggregation Id="10012" Name="Aggregate 3" Status="Complete">
+            <Icon XCOORD="522" YCOORD="108"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10012" as (SELECT  t0."COUNTRY_NAME", 
+ t0."FLOOR_AGE_YRS_RESID"
+FROM
+  (SELECT  "COUNTRY_NAME", 
+    AVG("YRS_RESIDENCE") "FLOOR_AGE_YRS_RESID"
+  FROM {INPUT_SOURCE}
+   
+  GROUP BY "COUNTRY_NAME") t0
+ )</SQLExpression>
+            <AggregationElements>
+                <AggregationElement>
+                    <Source>
+                        <Expression>AVG("YRS_RESIDENCE")</Expression>
+                    </Source>
+                    <Output Name="FLOOR_AGE_YRS_RESID" DataType="NUMBER" Status="Valid" Alias="FLOOR_AGE_YRS_RESID"/>
+                    <SubGroupBy>
+                        <Attributes/>
+                    </SubGroupBy>
+                </AggregationElement>
+            </AggregationElements>
+            <GroupingElement>
+                <Attributes>
+                    <Attribute Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                </Attributes>
+            </GroupingElement>
+            <AutoSpec>Yes</AutoSpec>
+        </Aggregation>
+        <Transformation Id="10042" Name="Transform" Status="Complete">
+            <Icon XCOORD="79" YCOORD="128"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10042" AS ( SELECT "BOOKKEEPING_APPLICATION",
+  "OS_DOC_SET_KANJI",
+  "CUST_ID",
+  "AFFINITY_CARD",
+  "BULK_PACK_DISKETTES",
+  "HOME_THEATER_PACKAGE",
+  "COMMENTS",
+  "EDUCATION",
+  "Y_BOX_GAMES",
+  "YRS_RESIDENCE",
+  "PRINTER_SUPPLIES",
+  "FLAT_PANEL_MONITOR",
+  "CUST_INCOME_LEVEL",
+  "CUST_GENDER",
+  "CUST_MARITAL_STATUS",
+  "OCCUPATION",
+  "COUNTRY_NAME",
+  "HOUSEHOLD_SIZE",
+  "AGE" FROM {INPUT_SOURCE} ) </SQLExpression>
+            <TransformationSourceAttributes>
+                <TransformationSourceAttributeType Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="CUST_ID" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="COMMENTS" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="EDUCATION" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="CUST_GENDER" DataType="CHAR" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="OCCUPATION" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+                <TransformationSourceAttributeType Name="AGE" DataType="NUMBER" Status="Valid">
+                    <IsOutput>true</IsOutput>
+                </TransformationSourceAttributeType>
+            </TransformationSourceAttributes>
+            <TransformedAttributes/>
+            <DataProfileSettings>
+                <NumericalBins>10</NumericalBins>
+                <CategoricalBins>10</CategoricalBins>
+                <DateBins>10</DateBins>
+            </DataProfileSettings>
+            <SampleSettings UseFullData="false" GenerateCache="true">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <Random Seed="12345"/>
+                </Method>
+                <OutputTable Name="ODMR$12_38_48_430000VMPNWYE" CreationDate="2018-05-27T12:38:50"/>
+            </SampleSettings>
+            
+            <StatsSelection percentdistinct="true" percentnull="true" max="true" min="true" avg="true" std="true" var="true" kurtosis="false" median="true" skewness="false" mode="true" modesampled="true" modeall="false" histogram="true" rowcount="1500"/>
+        </Transformation>
+        <Join UseCartesian="false" Id="10037" Name="Join" Status="Complete">
+            <Icon XCOORD="1095" YCOORD="-18"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10037" as (SELECT 
+"SALES"."CUST_ID"
+, "SALES"."QUANTITY_SOLD"
+, "SALES"."AMOUNT_SOLD"
+, "SALES"."CHANNEL_ID"
+, "SALES"."PROMO_ID"
+, "SALES"."TIME_ID"
+, "SALES"."PROD_ID"
+, "PRODUCTS"."PROD_NAME"
+
+FROM
+{INPUT_SOURCE:10034} "SALES"
+INNER JOIN {INPUT_SOURCE:10033} "PRODUCTS"
+ON "SALES"."PROD_ID" = "PRODUCTS"."PROD_ID"
+
+WHERE
+"SALES"."PROMO_ID"  = 33 )</SQLExpression>
+            <KeyColumns AutoSpec="No">
+                <JoinColumn Type="Inner">
+                    <LeftColumn NodeId="10034" NodeName="SALES" Key="Yes" Name="PROD_ID" DataType="NUMBER" Status="Valid"/>
+                    <RightColumn NodeId="10033" NodeName="PRODUCTS" Key="Yes" Name="PROD_ID" DataType="NUMBER" Status="Valid"/>
+                </JoinColumn>
+            </KeyColumns>
+            <OutputColumns AutoSpec="No">
+                <RefDBColumn NodeId="10034" NodeName="SALES" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10034" NodeName="SALES" Name="QUANTITY_SOLD" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10034" NodeName="SALES" Name="AMOUNT_SOLD" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10034" NodeName="SALES" Name="CHANNEL_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10034" NodeName="SALES" Name="PROMO_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10034" NodeName="SALES" Name="TIME_ID" DataType="DATE" Status="Valid"/>
+                <RefDBColumn NodeId="10034" NodeName="SALES" Name="PROD_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10033" NodeName="PRODUCTS" Name="PROD_NAME" DataType="VARCHAR2" Status="Valid"/>
+            </OutputColumns>
+            <Filter>"SALES"."PROMO_ID"  = 33</Filter>
+        </Join>
+        <Sample Id="10040" Name="Sample" Status="Complete">
+            <Icon XCOORD="142" YCOORD="-87"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10040.1" as (SELECT  row_number() OVER(partition by "CUST_GENDER" ORDER BY ORA_HASH("AFFINITY_CARD", 4294967295, 12345)) "ODMR$12_34_21_196000ZALVTTQ", "AFFINITY_CARD" FROM {INPUT_SOURCE} t), 
+"N$10040.2" as (SELECT  t.*, p."ODMR$12_34_21_196000ZALVTTQ" FROM {INPUT_SOURCE} t, "N$10040.1" p WHERE t."AFFINITY_CARD" = p."AFFINITY_CARD"), 
+"N$10040.3" as (SELECT "CUST_GENDER" "ODMR$12_34_21_196000PNEHZDY", COUNT(*) "ODMR$12_34_21_196000TQBBVYI", SUM(COUNT(*)) OVER() "ODMR$12_34_21_196000MJUKMKU" FROM {INPUT_SOURCE} GROUP BY "CUST_GENDER"), 
+"N$10040" as (
+SELECT 
+"BOOKKEEPING_APPLICATION"
+, "OS_DOC_SET_KANJI"
+, "CUST_ID"
+, "AFFINITY_CARD"
+, "BULK_PACK_DISKETTES"
+, "HOME_THEATER_PACKAGE"
+, "COMMENTS"
+, "EDUCATION"
+, "Y_BOX_GAMES"
+, "YRS_RESIDENCE"
+, "PRINTER_SUPPLIES"
+, "FLAT_PANEL_MONITOR"
+, "CUST_INCOME_LEVEL"
+, "CUST_GENDER"
+, "CUST_MARITAL_STATUS"
+, "OCCUPATION"
+, "COUNTRY_NAME"
+, "HOUSEHOLD_SIZE"
+, "AGE"
+FROM "N$10040.2" v1 ,"N$10040.3" v2 
+ WHERE v1."CUST_GENDER" = v2."ODMR$12_34_21_196000PNEHZDY" 
+ AND v1."ODMR$12_34_21_196000ZALVTTQ" &lt;= GREATEST(1, ROUND(v2."ODMR$12_34_21_196000TQBBVYI" * 59 / 100)) 
+)</SQLExpression>
+            <SamplingSettings>
+                <PercentOfTotal>59.0</PercentOfTotal>
+                <Method>
+                    <Stratified TargetAttr="CUST_GENDER" DataType="CHAR" Status="Valid" Type="Original" Seed="12345">
+                        <Distributions/>
+                    </Stratified>
+                </Method>
+                <CaseAttribute Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+            </SamplingSettings>
+            <StatisticTable Column="CUST_GENDER" Name="ODMR$12_34_21_122000AZEIMJR" CreationDate="2018-05-27T12:34:21"/>
+        </Sample>
+        <ColumnFilter Id="10022" Name="Filter Columns" Status="Complete">
+            <Icon XCOORD="527" YCOORD="226"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="true">
+                <PercentOfTotal>80.0</PercentOfTotal>
+                <Method>
+                    <TopN/>
+                </Method>
+                <OutputTable Name="ODMR$12_05_58_278000RTQQMTG" CreationDate="2018-05-27T12:05:58"/>
+            </CacheSettings>
+            <SQLExpression>"N$10022" as (
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT 
+"AFFINITY_CARD","AGE","BOOKKEEPING_APPLICATION","BULK_PACK_DISKETTES","COMMENTS","COUNTRY_NAME","CUST_GENDER","CUST_ID","CUST_INCOME_LEVEL","CUST_MARITAL_STATUS","EDUCATION","FLAT_PANEL_MONITOR","HOME_THEATER_PACKAGE","HOUSEHOLD_SIZE","OCCUPATION","OS_DOC_SET_KANJI","PRINTER_SUPPLIES","YRS_RESIDENCE","Y_BOX_GAMES"
+FROM {INPUT_SOURCE}
+ )</SQLExpression>
+            <ColumnFilterSettings SamplingEnabled="true" NumberOfRows="10000">
+                <DataQualitySettings NullsPercent="95.0" UniquePercent="95.0" ConstantPercent="95.0"/>
+                <AttrImportantSettings CutOff="0.0" TopN="100" SamplingType="Stratified" AttributeDependency="true">
+                    <TargetAttribute Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                </AttrImportantSettings>
+            </ColumnFilterSettings>
+            <ColumnFilterAttributes AutoSpec="No" AutomaticFilterEnable="No">
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="AGE" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="COMMENTS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="EDUCATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="OCCUPATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid"/>
+            </ColumnFilterAttributes>
+            <ColumnFilterResults DataQualityOutput="ODMR$12_05_58_041000TKPKAFN" AttrImportanceOutput="ODMR$FILTER_COLUMNS_AI" AttrDependencyOutput="ODMR$12_05_58_242000ZWIBGDG" GenerateImportanceOutput="true">
+                <Attribute Name="AFFINITY_CARD"/>
+                <Attribute Name="AGE"/>
+                <Attribute Name="BOOKKEEPING_APPLICATION"/>
+                <Attribute Name="BULK_PACK_DISKETTES">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="COMMENTS"/>
+                <Attribute Name="COUNTRY_NAME">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_GENDER"/>
+                <Attribute Name="CUST_ID">
+                    <Reason Type="UNIQUE_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_INCOME_LEVEL">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_MARITAL_STATUS"/>
+                <Attribute Name="EDUCATION"/>
+                <Attribute Name="FLAT_PANEL_MONITOR">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="HOME_THEATER_PACKAGE"/>
+                <Attribute Name="HOUSEHOLD_SIZE"/>
+                <Attribute Name="OCCUPATION"/>
+                <Attribute Name="OS_DOC_SET_KANJI">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="PRINTER_SUPPLIES">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="YRS_RESIDENCE"/>
+                <Attribute Name="Y_BOX_GAMES"/>
+            </ColumnFilterResults>
+        </ColumnFilter>
+        <RowFilter Id="10029" Name="Filter Rows" Status="Complete">
+            <Icon XCOORD="517" YCOORD="324"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10029" as (SELECT 
+"BOOKKEEPING_APPLICATION"
+, "OS_DOC_SET_KANJI"
+, "CUST_ID"
+, "AFFINITY_CARD"
+, "BULK_PACK_DISKETTES"
+, "HOME_THEATER_PACKAGE"
+, "COMMENTS"
+, "EDUCATION"
+, "Y_BOX_GAMES"
+, "YRS_RESIDENCE"
+, "PRINTER_SUPPLIES"
+, "FLAT_PANEL_MONITOR"
+, "CUST_INCOME_LEVEL"
+, "CUST_GENDER"
+, "CUST_MARITAL_STATUS"
+, "OCCUPATION"
+, "COUNTRY_NAME"
+, "HOUSEHOLD_SIZE"
+, "AGE"
+
+FROM
+{INPUT_SOURCE}
+WHERE
+"COUNTRY_NAME"  = 'United States of America' )</SQLExpression>
+            <OutputColumns>
+                <Attribute Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="COMMENTS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="EDUCATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="OCCUPATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+            </OutputColumns>
+            <Filter>"COUNTRY_NAME"  = 'United States of America'</Filter>
+        </RowFilter>
+        <FilterDetails Id="10023" Name="Filter Columns Details" Status="Invalid">
+            <Icon XCOORD="683" YCOORD="225"></Icon>
+            <Messages>
+                <Message Type="INCOMPLETE">
+                    <Resource Id="COLUMN_FILTER_DETAIL_NO_OUTPUT_COLUMNS">
+                        <Parameters/>
+                    </Resource>
+                </Message>
+            </Messages>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression></SQLExpression>
+            <FilterDetailsOutput Type="AttributeImportance" AutoSpec="Yes">
+                <Attributes/>
+            </FilterDetailsOutput>
+        </FilterDetails>
+        <SQLQuery HasWithClause="false" GenerateView="false" ViewName="OUTPUT_2_5" Id="10010" Name="SQL Query" Status="Complete">
+            <Icon XCOORD="773" YCOORD="10"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10010" as (SELECT country_name, b.attribute_name CUST_GENDER, b.value MAX_CUST_AGE
+FROM aggregated_data,
+     table(age_max) b)
+</SQLExpression>
+            <SQLQueryExpression>SELECT country_name, b.attribute_name CUST_GENDER, b.value MAX_CUST_AGE
+FROM aggregated_data,
+     table(age_max) b</SQLQueryExpression>
+            <SQLQueryOutputColumns>
+                <Attribute Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="MAX_CUST_AGE" DataType="NUMBER" Status="Valid"/>
+            </SQLQueryOutputColumns>
+        </SQLQuery>
+    </Nodes>
+    <Links>
+        <Link Id="10003" From="10001" To="10002" Name="Link" Label="From &quot;MINING_DATA_TEXT_BUILD_V&quot; to &quot;Aggregate 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10005" From="10001" To="10004" Name="Link" Label="From &quot;MINING_DATA_TEXT_BUILD_V&quot; to &quot;Aggregate 2&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10007" From="10004" To="10006" Name="Link" Label="From &quot;Aggregate 2&quot; to &quot;Aggregate2Table&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10011" From="10006" To="10010" Name="Link" Label="From &quot;Aggregate2Table&quot; to &quot;SQL Query&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10013" From="10001" To="10012" Name="Link" Label="From &quot;MINING_DATA_TEXT_BUILD_V&quot; to &quot;Aggregate 3&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10024" From="10001" To="10022" Name="Link" Label="From &quot;MINING_DATA_TEXT_BUILD_V&quot; to &quot;Filter Columns&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10026" From="10022" To="10023" Name="Link" Label="From &quot;Filter Columns&quot; to &quot;Filter Columns Details&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10030" From="10001" To="10029" Name="Link" Label="From &quot;MINING_DATA_TEXT_BUILD_V&quot; to &quot;Filter Rows&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10038" From="10034" To="10037" Name="Link" Label="From &quot;SALES&quot; to &quot;Join&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10039" From="10033" To="10037" Name="Link" Label="From &quot;PRODUCTS&quot; to &quot;Join&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10041" From="10001" To="10040" Name="Link" Label="From &quot;MINING_DATA_TEXT_BUILD_V&quot; to &quot;Sample&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10043" From="10001" To="10042" Name="Link" Label="From &quot;MINING_DATA_TEXT_BUILD_V&quot; to &quot;Transform&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+    </Links>
+</WorkflowProcess>
