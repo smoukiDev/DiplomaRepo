@@ -327,6 +327,9 @@ namespace DiplomaClient
                 fs.Read(newAvatarPicture, 0, Convert.ToInt32(fs.Length));
                 pbAvatar.Image = byteArrayToImage(newAvatarPicture);
                 fs.Dispose();
+                Thread.Sleep(delay1);
+                this.Close();
+                Program.loginform.Show();
 
             }
             catch
