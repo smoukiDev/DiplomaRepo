@@ -12,6 +12,7 @@ using System.Reflection;
 using System.IO;
 using System.Collections;
 using System.Runtime.InteropServices;
+using DiplomaClient.dsSalesHistoryTableAdapters;
 
 namespace DiplomaClient
 {
@@ -116,8 +117,22 @@ namespace DiplomaClient
             bool stage2 = ValidationPasswordConfirm();
             if(stage1 && stage2)
             {
-                
+                try
+                {
+                    QueriesTableAdapter qta = new QueriesTableAdapter();
+                    SecurityModule sm = new SecurityModule();
+                    //written as hashing without salt
+                    qta.REGISTERCLIENT(tbLogin.Text, tbPass.Text, sm.GenerateSHA256Hash(tbPass.Text), null, tbFName.Text, tbLName.Text, tbMName.Text, tbEmail.Text, mtbPhone.Text, rtbAdress.Text, cbGender.SelectedItem.ToString(), ImageToByteArray(pbAvatar.Image), null, null, null);
+                    qta.Dispose();
+                }
+                catch(Exception ex)
+                {
+                    CustomMessageBox incorectConfirm = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { registerFormBuf.Enabled = true; }, false, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    incorectConfirm.Show();
+                }
             }
+            pbLoading.Visible = false;
 
 
         }
@@ -389,6 +404,15 @@ namespace DiplomaClient
             }
 
             base.WndProc(ref m);
+        }
+
+        public byte[] ImageToByteArray(Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
         }
     }
 }

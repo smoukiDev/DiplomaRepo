@@ -5073,7 +5073,7 @@ namespace DiplomaClient.dsSalesHistoryTableAdapters {
             param.ParameterName = "V_AVATAR";
             param.DbType = global::System.Data.DbType.Object;
             param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Blob;
-            param.Size = 65536;
+            param.Size = 1000000000;
             param.IsNullable = true;
             param.SourceColumn = null;
             ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[0])).Parameters.Add(param);
