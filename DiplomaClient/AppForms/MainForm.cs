@@ -965,48 +965,100 @@ namespace DiplomaClient
         {
             //Menu Buttons Activation
             UDFFMenuButs();
+            UDFFAdminPanelBut();
 
         }
         //Menu Buttons Activation
         private void UDFFMenuButs()
         {
-            
-            SecurityModule sm = new SecurityModule();
-            OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
-            string menuButsAccessQuery = $"SELECT M1, M2, M3, M4, M5, M6 FROM CLIENTMODULEACCESS WHERE USERID={userId}";
-            OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
-            //menuButTable
-            DataTable mBT = new DataTable();
-            adp.Fill(mBT);
-            menuButsAccessQuery = null;
-            adp.Dispose();
-            con.Dispose();
-            DataRow dr = mBT.Rows[0];
-            mBT = null;
-            if (dr[0].ToString() == "T")
-                buts3.Enabled = true;
-            else
-                buts3.Enabled = false;
-            if (dr[1].ToString() == "T")
-                buts4.Enabled = true;
-            else
-                buts4.Enabled = false;
-            if (dr[2].ToString() == "T")
-                buts5.Enabled = true;
-            else
-                buts5.Enabled = false;
-            if (dr[3].ToString() == "T")
-                buts6.Enabled = true;
-            else
-                buts6.Enabled = false;
-            if (dr[4].ToString() == "T")
-                buts7.Enabled = true;
-            else
-                buts7.Enabled = false;
-            if (dr[5].ToString() == "T")
-                buts8.Enabled = true;
-            else
-                buts8.Enabled = false;
+            try
+            {
+                SecurityModule sm = new SecurityModule();
+                OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                string menuButsAccessQuery = $"SELECT M1, M2, M3, M4, M5, M6 FROM CLIENTMODULEACCESS WHERE USERID={userId}";
+                OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
+                //menuButTable
+                DataTable mBT = new DataTable();
+                adp.Fill(mBT);
+                menuButsAccessQuery = null;
+                adp.Dispose();
+                con.Dispose();
+                DataRow dr = mBT.Rows[0];
+                mBT = null;
+                if (dr[0].ToString() == "T")
+                    buts3.Enabled = true;
+                else
+                    buts3.Enabled = false;
+                if (dr[1].ToString() == "T")
+                    buts4.Enabled = true;
+                else
+                    buts4.Enabled = false;
+                if (dr[2].ToString() == "T")
+                    buts5.Enabled = true;
+                else
+                    buts5.Enabled = false;
+                if (dr[3].ToString() == "T")
+                    buts6.Enabled = true;
+                else
+                    buts6.Enabled = false;
+                if (dr[4].ToString() == "T")
+                    buts7.Enabled = true;
+                else
+                    buts7.Enabled = false;
+                if (dr[5].ToString() == "T")
+                    buts8.Enabled = true;
+                else
+                    buts8.Enabled = false;
+            }
+            catch(Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => {this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
+        }
+
+        private void UDFFAdminPanelBut()
+        {
+            try
+            {
+                SecurityModule sm = new SecurityModule();
+                OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                string adminPanAccessQuery = $"SELECT ISADMIN FROM CLIENTAPPUSERS WHERE USERID={userId}";
+                OracleDataAdapter adp = new OracleDataAdapter(adminPanAccessQuery, con);
+                //adminButTable
+                DataTable aBT = new DataTable();
+                adp.Fill(aBT);
+                adminPanAccessQuery = null;
+                adp.Dispose();
+                con.Dispose();
+                DataRow dr = aBT.Rows[0];
+                string isAdminFlag = dr[0].ToString();
+                aBT = null;
+                dr = null;
+                if (isAdminFlag == "T")
+                {
+                    buts2.Enabled = true;
+                    butIsAdmin.Visible = true;
+                    butIsNotAdmin.Visible = false;
+                    
+                }
+                    
+                else
+                {
+                    buts2.Enabled = false;
+                    butIsAdmin.Visible = false;
+                    butIsNotAdmin.Visible = true;
+                }
+                    
+
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
         }
     }
 }
