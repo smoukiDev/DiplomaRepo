@@ -306,5 +306,11 @@
   <ItemGroup>
     <None Include="Image\SaveUpdaterAvatar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\PasswordValidation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\PassValidation.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

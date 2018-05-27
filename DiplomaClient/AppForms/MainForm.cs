@@ -945,6 +945,7 @@ namespace DiplomaClient
                 tbOldPassword.Enabled = false;
                 tbPass.Enabled = false;
                 tbPassConfirm.Enabled = false;
+                butPassValid.Visible = false;
                 buttonMakeVisible1.Enabled = false;
                 buttonMakeVisible2.Enabled = false;
                 buttonMakeVisible3.Enabled = false;
@@ -993,6 +994,7 @@ namespace DiplomaClient
                     {
                         if(tbPass.Text==tbPassConfirm.Text && tbPass.Text != "" && tbPassConfirm.Text!="")
                         {
+                            ValidationPasswordSecure();
                             CustomMessageBox update2 = new CustomMessageBox(Properties.Resources.ImageNotFound, false, "Are you sure you want to change password?", () => { this.Enabled = true; }, "Yes", "No", "Cancel", () => { SPFCommitPassword(); }, () => { SPFRevertPassword(); });
                             this.Enabled = false;
                             update2.Show();
@@ -1096,6 +1098,7 @@ namespace DiplomaClient
             tbOldPassword.Clear();
             tbPass.Clear();
             tbPassConfirm.Clear();
+            butPassValid.Visible = false;
             tbOldPassword.Enabled = false;
             tbPass.Enabled = false;
             tbPassConfirm.Enabled = false;
@@ -1166,6 +1169,7 @@ namespace DiplomaClient
             tbOldPassword.Clear();
             tbPass.Clear();
             tbPassConfirm.Clear();
+            butPassValid.Visible = false;
             tbOldPassword.Enabled = false;
             tbPass.Enabled = false;
             tbPassConfirm.Enabled = false;
@@ -1173,6 +1177,46 @@ namespace DiplomaClient
             buttonMakeVisible2.Enabled = false;
             buttonMakeVisible3.Enabled = false;
             isEditPass = false;
+
+        }
+        ToolTip ttPassValid = new ToolTip();
+        private void ValidationPasswordSecure()
+        {
+
+            bool isCaps = false, isDigit = false, isSymbol = false;
+            string pass = tbPass.Text;
+            for (int i = 0; i < pass.Length; i++)
+            {
+                if (char.IsUpper(pass[i]))
+                    isCaps = true;
+                if (char.IsDigit(pass[i]))
+                    isDigit = true;
+                if (char.IsPunctuation(pass[i]))
+                    isSymbol = true;
+
+            }
+            if (isCaps == false || isDigit == false || isSymbol == false || pass.Length < 8)
+            {
+                butPassValid.BackgroundImage = Properties.Resources.PassValidation;
+                ttPassValid.Dispose();
+                ttPassValid = new ToolTip();
+                ttPassValid.SetToolTip(butPassValid, "Insecure Pass. It has to be at least 8 symbols with digit, uppercase letter and symbol.");
+                ttPassValid.ToolTipIcon = ToolTipIcon.Info;
+                butPassValid.Visible = true;
+
+            }
+            else
+            {
+                butPassValid.BackgroundImage = Properties.Resources.SaveUpdaterAvatar;
+                ttPassValid.Dispose();
+                ttPassValid = new ToolTip();
+                ttPassValid.SetToolTip(butPassValid, "Secure pass");
+                ttPassValid.ToolTipIcon = ToolTipIcon.Info;
+                butPassValid.Visible = true;
+
+
+            }
+
 
         }
         //Set ToolTips for Profile Pannel Buttons

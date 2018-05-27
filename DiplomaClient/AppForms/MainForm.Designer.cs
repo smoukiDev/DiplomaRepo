@@ -498,7 +498,7 @@
             this.butPassValid.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.butPassValid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.butPassValid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butPassValid.Location = new System.Drawing.Point(254, 490);
+            this.butPassValid.Location = new System.Drawing.Point(254, 489);
             this.butPassValid.Name = "butPassValid";
             this.butPassValid.Size = new System.Drawing.Size(30, 30);
             this.butPassValid.TabIndex = 27;
