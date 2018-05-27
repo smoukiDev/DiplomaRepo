@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Oracle.ManagedDataAccess.Client;
 using DiplomaClient.dsSalesHistoryTableAdapters;
+using System.IO;
 
 namespace DiplomaClient
 {
@@ -151,9 +152,18 @@ namespace DiplomaClient
         {
             //exit applicatuion - auto logout
             //!!!Exception control add
-            QueriesTableAdapter qta = new QueriesTableAdapter();
-            qta.CLOSELOG(Convert.ToDecimal(userId));
-            qta.Dispose();
+            try
+            {
+                QueriesTableAdapter qta = new QueriesTableAdapter();
+                qta.CLOSELOG(Convert.ToDecimal(userId));
+                qta.Dispose();
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
             isCloseByButton = true;
             Environment.Exit(0);
         }
@@ -730,9 +740,18 @@ namespace DiplomaClient
             //log out
             isCloseByButton = true;
             //!!!Exception control add
-            QueriesTableAdapter qta = new QueriesTableAdapter();
-            qta.LOGOUTLOG(Convert.ToDecimal(userId));
-            qta.Dispose();
+            try
+            {
+                QueriesTableAdapter qta = new QueriesTableAdapter();
+                qta.LOGOUTLOG(Convert.ToDecimal(userId));
+                qta.Dispose();
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
             Program.loginform.Show();
             this.Close();
             
@@ -982,6 +1001,7 @@ namespace DiplomaClient
             //Menu Buttons Activation
             UDFFMenuButs();
             UDFFAdminPanelBut();
+            UDFFProfileLoad();
 
         }
         //Menu Buttons Activation
@@ -1076,18 +1096,124 @@ namespace DiplomaClient
                 error.Show();
             }
         }
+        Image ava = Properties.Resources.UserProfileDefault;
+        private void UDFFProfileLoad()
+        {
+            try
+            {
+                SecurityModule sm = new SecurityModule();
+                OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                con.Open();
+                string ProfileInfoQuery = $"SELECT LOGIN, FNAME, MNAME, LNAME, GENDER, EMAIL, PHONE, ADRESS, AVATAR, ISADMIN FROM CLIENTAPPUSERS WHERE USERID={userId}";
+                OracleCommand ok = new OracleCommand(ProfileInfoQuery, con);
+                OracleDataReader odr = ok.ExecuteReader();
+                odr.Read();
+                ProfileInfoQuery = null;
+                //avatar load
+                int avaLenth = ((byte[])odr[8]).Length;
+                byte[] avaBinary = new byte[avaLenth];
+                odr.GetBytes(8, 0, avaBinary, 0, avaLenth);
+                ava = byteArrayToImage(ref avaBinary);
+                pbAvatar.Image = ava;
+                butAvatarDisplay.BackgroundImage = ava;
+                //
 
+                if (odr.GetString(9) == "T")
+                    tbLogin.Text = $"{odr.GetString(1)} {odr.GetString(3)} (Administrator)";
+                else
+                    tbLogin.Text = $"{odr.GetString(1)} {odr.GetString(3)}";
+
+                tbLogin1.Text = odr.GetString(0);
+                tbFName.Text = odr.GetString(1);
+                tbMName.Text = odr.GetString(2);
+                tbLName.Text = odr.GetString(3);
+                tbGender.Text = odr.GetString(4);
+                tbEmail.Text = odr.GetString(5);
+                mtbPhone.Text = odr.GetString(6);
+                tbAdress.Text = odr.GetString(7);
+                odr.Dispose();
+                ok.Dispose();
+                con.Clone();
+                con.Dispose();
+                sm = null;
+
+
+
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
+        }
+        //бинарный код в граф объект
+        public Image byteArrayToImage(ref byte[] byteArrayIn) // метод що перетворює двійковий код в графічний обєкт
+        {
+            MemoryStream ms = new System.IO.MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms, true, false);
+            return returnImage;
+        }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             //non-normal closing
             //!!!Exception control add
             if (!isCloseByButton && !isCloseByLogOut)
             {
-                QueriesTableAdapter qta = new QueriesTableAdapter();
-                qta.SHUTDOWNLOG(Convert.ToDecimal(userId));
-                qta.Dispose();
+                try
+                {
+                    QueriesTableAdapter qta = new QueriesTableAdapter();
+                    qta.SHUTDOWNLOG(Convert.ToDecimal(userId));
+                    qta.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
             }
 
+        }
+
+        private void butRemoveAvatar_Click(object sender, EventArgs e)
+        {
+            butAvatarDisplay.BackgroundImage = ava;
+        }
+
+        private void butAddAvatar_Click(object sender, EventArgs e)
+        {
+            butAvatarDisplay.BackgroundImage = ava;
+            try
+            {
+                ofdProfilePic = new OpenFileDialog();
+                ofdProfilePic.ShowDialog();
+                FileStream fs = new FileStream(ofdProfilePic.FileName, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+                var newAvatarPicture = new byte[fs.Length];
+                fs.Read(newAvatarPicture, 0, Convert.ToInt32(fs.Length));
+                butAvatarDisplay.BackgroundImage = byteArrayToImage(ref newAvatarPicture);
+                fs.Dispose();
+
+            }
+            catch
+            {
+                //Custom Message Box
+                CustomMessageBox cmb = new CustomMessageBox(Properties.Resources.ImageNotFound, "Sorry:( Image wasn't been uploaded", "OK", () => { this.Enabled = true; }, false, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                cmb.Show();
+            }
+        }
+
+        private void butGenderExchange_Click(object sender, EventArgs e)
+        {
+            if(tbGender.Text == "Male")
+            {
+                tbGender.Text = "Female";
+            }
+            else
+            {
+                tbGender.Text = "Male";
+            }
         }
     }
 }

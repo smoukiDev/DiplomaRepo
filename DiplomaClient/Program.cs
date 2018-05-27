@@ -18,7 +18,15 @@ namespace DiplomaClient
         [STAThread]
         static void Main()
         {
-            
+            try
+            {
+                //!!! ProcedureRegisterImageBufSize = 1000000000
+                
+            }
+            catch
+            {
+
+            }
             //Prevent running app twice or more
             bool isAppRun;
             string guid = Marshal.GetTypeLibGuidForAssembly(Assembly.GetExecutingAssembly()).ToString();
@@ -28,8 +36,8 @@ namespace DiplomaClient
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(loginform = new LoginForm());
-            Application.Run(new MainForm());
+            Application.Run(loginform = new LoginForm());
+            //Application.Run(new MainForm());
             
         }
     }
