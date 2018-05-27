@@ -198,6 +198,7 @@
             this.lblForget.Size = new System.Drawing.Size(176, 25);
             this.lblForget.TabIndex = 11;
             this.lblForget.Text = "Forget Password";
+            this.lblForget.Click += new System.EventHandler(this.lblForget_Click);
             // 
             // label2
             // 

@@ -70,6 +70,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppForms\PasswordReset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\PasswordReset.Designer.cs">
+      <DependentUpon>PasswordReset.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     <Compile Include="TestTemplates\ResetPassTest.Designer.cs">
       <DependentUpon>ResetPassTest.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AppForms\PasswordReset.resx">
+      <DependentUpon>PasswordReset.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

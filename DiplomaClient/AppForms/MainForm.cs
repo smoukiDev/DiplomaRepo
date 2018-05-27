@@ -1082,36 +1082,6 @@ namespace DiplomaClient
             tbAdress.Enabled = false;
             isEdit = false;
         }
-        private void SPFCommitPassword()
-        {
-            try
-            {
-                SecurityModule sm = new SecurityModule();
-                QueriesTableAdapter qta = new QueriesTableAdapter();
-                qta.UPDATEPASS(Convert.ToDecimal(userId), tbPass.Text, sm.GenerateSHA256Hash(tbPass.Text));
-                qta.UPDATEPASSLOG(Convert.ToDecimal(userId));
-                qta.Dispose();
-
-            }
-            catch (Exception ex)
-            {
-                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", null, true, ColorPalette.red1, ColorPalette.white1);
-                error.Show();
-            }
-            butEditProfile.Enabled = true;
-            tbOldPassword.Clear();
-            tbPass.Clear();
-            tbPassConfirm.Clear();
-            butPassValid.Visible = false;
-            tbOldPassword.Enabled = false;
-            tbPass.Enabled = false;
-            tbPassConfirm.Enabled = false;
-            buttonMakeVisible1.Enabled = false;
-            buttonMakeVisible2.Enabled = false;
-            buttonMakeVisible3.Enabled = false;
-            isEditPass = false;
-
-        }
         private void SPFRevertProfile()
         {
             try
@@ -1167,6 +1137,36 @@ namespace DiplomaClient
             tbAdress.Enabled = false;
             isEdit = false;
         }
+        private void SPFCommitPassword()
+        {
+            try
+            {
+                SecurityModule sm = new SecurityModule();
+                QueriesTableAdapter qta = new QueriesTableAdapter();
+                qta.UPDATEPASS(Convert.ToDecimal(userId), tbPass.Text, sm.GenerateSHA256Hash(tbPass.Text));
+                qta.UPDATEPASSLOG(Convert.ToDecimal(userId));
+                qta.Dispose();
+
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", null, true, ColorPalette.red1, ColorPalette.white1);
+                error.Show();
+            }
+            butEditProfile.Enabled = true;
+            tbOldPassword.Clear();
+            tbPass.Clear();
+            tbPassConfirm.Clear();
+            butPassValid.Visible = false;
+            tbOldPassword.Enabled = false;
+            tbPass.Enabled = false;
+            tbPassConfirm.Enabled = false;
+            buttonMakeVisible1.Enabled = false;
+            buttonMakeVisible2.Enabled = false;
+            buttonMakeVisible3.Enabled = false;
+            isEditPass = false;
+
+        }      
         private void SPFRevertPassword()
         {
             butEditProfile.Enabled = true;

@@ -211,5 +211,14 @@ namespace DiplomaClient
 
             base.WndProc(ref m);
         }
+
+        private void lblForget_Click(object sender, EventArgs e)
+        {
+            tbLogin.Clear();
+            tbPass.Clear();
+            PasswordReset passwordReset = new PasswordReset();
+            this.Hide();
+            passwordReset.Show();
+        }
     }
 }
