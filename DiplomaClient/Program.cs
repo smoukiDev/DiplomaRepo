@@ -38,6 +38,10 @@ namespace DiplomaClient
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(loginform = new LoginForm());
+
+            //easter eggg
+            //CustomMessageBox cmb = new CustomMessageBox(Properties.Resources.Error, "joke", "joke", null, false, ColorPalette.red2, ColorPalette.white1);
+            //Application.Run(cmb);
             
             
         }
