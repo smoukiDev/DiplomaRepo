@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panFooter = new System.Windows.Forms.Panel();
             this.panWindowTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -60,8 +60,8 @@
             this.butEditUser = new System.Windows.Forms.Button();
             this.butBlokUser = new System.Windows.Forms.Button();
             this.butAddUser = new System.Windows.Forms.Button();
-            this.butEditModules = new System.Windows.Forms.Button();
             this.butDeleteUser = new System.Windows.Forms.Button();
+            this.butEditModules = new System.Windows.Forms.Button();
             this.dgvAdmin = new System.Windows.Forms.DataGridView();
             this.panelAdminPanelHeader = new System.Windows.Forms.Panel();
             this.butUserModules = new System.Windows.Forms.Button();
@@ -576,6 +576,7 @@
             this.butBlokUser.Size = new System.Drawing.Size(50, 50);
             this.butBlokUser.TabIndex = 17;
             this.butBlokUser.UseVisualStyleBackColor = false;
+            this.butBlokUser.Click += new System.EventHandler(this.butBlokUser_Click);
             // 
             // butAddUser
             // 
@@ -593,6 +594,23 @@
             this.butAddUser.Size = new System.Drawing.Size(50, 50);
             this.butAddUser.TabIndex = 15;
             this.butAddUser.UseVisualStyleBackColor = false;
+            // 
+            // butDeleteUser
+            // 
+            this.butDeleteUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butDeleteUser.BackColor = System.Drawing.Color.Transparent;
+            this.butDeleteUser.BackgroundImage = global::DiplomaClient.Properties.Resources.RemoveImageButton;
+            this.butDeleteUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butDeleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butDeleteUser.FlatAppearance.BorderSize = 0;
+            this.butDeleteUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butDeleteUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butDeleteUser.Location = new System.Drawing.Point(943, 7);
+            this.butDeleteUser.Name = "butDeleteUser";
+            this.butDeleteUser.Size = new System.Drawing.Size(50, 50);
+            this.butDeleteUser.TabIndex = 16;
+            this.butDeleteUser.UseVisualStyleBackColor = false;
             // 
             // butEditModules
             // 
@@ -612,23 +630,6 @@
             this.butEditModules.UseVisualStyleBackColor = false;
             this.butEditModules.Click += new System.EventHandler(this.butEditModules_Click);
             // 
-            // butDeleteUser
-            // 
-            this.butDeleteUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butDeleteUser.BackColor = System.Drawing.Color.Transparent;
-            this.butDeleteUser.BackgroundImage = global::DiplomaClient.Properties.Resources.RemoveImageButton;
-            this.butDeleteUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butDeleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butDeleteUser.FlatAppearance.BorderSize = 0;
-            this.butDeleteUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butDeleteUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butDeleteUser.Location = new System.Drawing.Point(943, 7);
-            this.butDeleteUser.Name = "butDeleteUser";
-            this.butDeleteUser.Size = new System.Drawing.Size(50, 50);
-            this.butDeleteUser.TabIndex = 16;
-            this.butDeleteUser.UseVisualStyleBackColor = false;
-            // 
             // dgvAdmin
             // 
             this.dgvAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -636,21 +637,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdmin.Location = new System.Drawing.Point(0, 122);
             this.dgvAdmin.MultiSelect = false;
             this.dgvAdmin.Name = "dgvAdmin";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAdmin.RowTemplate.Height = 30;
             this.dgvAdmin.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAdmin.Size = new System.Drawing.Size(1000, 450);

@@ -1823,5 +1823,38 @@ namespace DiplomaClient
                 error.Show();
             }
         }
+
+        private void butBlokUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                QueriesTableAdapter qta = new QueriesTableAdapter();
+                if(dgvAdmin.SelectedRows[0].Cells[4].Value.ToString() == "F")
+                {
+                    dgvAdmin.SelectedRows[0].Cells[4].Value = "T";
+                    qta.BLOCKUSER(Convert.ToDecimal(dgvAdmin.SelectedRows[0].Cells[0].Value.ToString()));
+                    qta.Dispose();
+                }
+                else                    
+                {
+                    dgvAdmin.SelectedRows[0].Cells[4].Value = "F";
+                    qta.UNBLOCKUSER(Convert.ToDecimal(dgvAdmin.SelectedRows[0].Cells[0].Value.ToString()));
+                    qta.Dispose();
+                }
+
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Success, $"Access to application for user with USERID={dgvAdmin.SelectedRows[0].Cells[0].Value.ToString()} were successfully updated:) ", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
+        }
     }
 }
