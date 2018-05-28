@@ -167,6 +167,8 @@ namespace DiplomaClient
         }
         private void butReg_Click(object sender, EventArgs e)
         {
+            tbLogin.Clear();
+            tbPass.Clear();
             RegisterForm registerForm = new RegisterForm(); 
             this.Hide();
             

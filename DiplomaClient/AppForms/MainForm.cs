@@ -817,6 +817,25 @@ namespace DiplomaClient
             ttSearchAdvice = new ToolTip();
             ttSearchAdvice.SetToolTip(tbSearch, "Search by Last Name");
             ttSearchAdvice.ToolTipIcon = ToolTipIcon.Info;
+            try
+            {
+                SecurityModule sm = new SecurityModule();
+                OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                string menuButsAccessQuery = "SELECT USERID, LOGIN, PASS, PASSHASH, ISBLOCK, FNAME,MNAME, LNAME, EMAIL, PHONE, ADRESS,GENDER FROM CLIENTAPPUSERS";
+                OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
+                DataTable mBT = new DataTable();
+                adp.Fill(mBT);
+                menuButsAccessQuery = null;
+                adp.Dispose();
+                con.Dispose();
+                dgvAdmin.DataSource = mBT;
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
 
         }
         private void butUserActivity_Click(object sender, EventArgs e)
@@ -832,6 +851,27 @@ namespace DiplomaClient
             ttSearchAdvice = new ToolTip();
             ttSearchAdvice.SetToolTip(tbSearch, "Search by UserID");
             ttSearchAdvice.ToolTipIcon = ToolTipIcon.Info;
+
+            try
+            {
+                SecurityModule sm = new SecurityModule();
+                OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                string menuButsAccessQuery = "SELECT * FROM CLIENTAPPUSERACTIVITY";
+                OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
+                DataTable mBT = new DataTable();
+                adp.Fill(mBT);
+                menuButsAccessQuery = null;
+                adp.Dispose();
+                con.Dispose();
+                dgvAdmin.DataSource = mBT;
+                dgvAdmin.Columns[3].HeaderText = "ACTIVITY TIME";
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
         }
         private void butUserModules_Click(object sender, EventArgs e)
         {
@@ -846,6 +886,32 @@ namespace DiplomaClient
             ttSearchAdvice = new ToolTip();
             ttSearchAdvice.SetToolTip(tbSearch, "Search by UserID");
             ttSearchAdvice.ToolTipIcon = ToolTipIcon.Info;
+            try
+            {
+                SecurityModule sm = new SecurityModule();
+                OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                string menuButsAccessQuery = @"SELECT USERID, M1 , M2 , M3 , M4 , M5 ,M6  FROM CLIENTMODULEACCESS";
+                OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
+                DataTable mBT = new DataTable();
+                adp.Fill(mBT);
+                menuButsAccessQuery = null;
+                adp.Dispose();
+                con.Dispose();
+                dgvAdmin.DataSource = mBT;
+                dgvAdmin.Columns[0].HeaderText = "USERID";
+                dgvAdmin.Columns[1].HeaderText = "EXPLORE";
+                dgvAdmin.Columns[2].HeaderText = "ASSOCIATION";
+                dgvAdmin.Columns[3].HeaderText = "CLASSIFICATION";
+                dgvAdmin.Columns[4].HeaderText = "CLUSTERING";
+                dgvAdmin.Columns[5].HeaderText = "REGRESSION";
+                dgvAdmin.Columns[6].HeaderText = "ANOMALY DETECT";
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
         }
         //Set ToolTips for Admin Panel Buttons
         ToolTip ttAddUser;
@@ -1559,21 +1625,180 @@ namespace DiplomaClient
 
         private void butSearch_Click(object sender, EventArgs e)
         {
-            if(lblAdminOption.Text == "User Data")
+            bool isSuccess = false;
+            if(tbSearch.Text!="")
             {
-                DataTable tabuf = (DataTable)dgvAdmin.DataSource;
-                for (int i = 0; i < tabuf.Rows.Count; i++)
+                if (lblAdminOption.Text == "User Data")
                 {
-                    if (tabuf.Rows[i][7].ToString() != tbSearch.Text)
+                    DataTable tabuf = ((DataTable)dgvAdmin.DataSource).Copy();
+                    for (int i = 0; i < tabuf.Rows.Count; i++)
                     {
-                        tabuf.Rows[i].Delete();
-                    }
+                        if (tabuf.Rows[i][7].ToString() != tbSearch.Text)
+                        {
+                            tabuf.Rows[i].Delete();
+                        }
+                        else
+                        {
+                            isSuccess = true;
+                        }
 
+                    }
+                    if (isSuccess)
+                    {
+                        dgvAdmin.DataSource = tabuf;
+                    }
+                    else
+                    {
+
+                        CustomMessageBox error = new CustomMessageBox(Properties.Resources.ImageNotFound, "Imposible to find user with such LastName", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                        this.Enabled = false;
+                        error.Show();
+
+                    }
                 }
-               
-                dgvAdmin.DataSource = tabuf;
+
+                if (lblAdminOption.Text == "User Activity")
+                {
+                    DataTable tabuf = ((DataTable)dgvAdmin.DataSource).Copy();
+                    for (int i = 0; i < tabuf.Rows.Count; i++)
+                    {
+                        if (tabuf.Rows[i][1].ToString() != tbSearch.Text)
+                        {
+                            tabuf.Rows[i].Delete();
+                        }
+                        else
+                        {
+                            isSuccess = true;
+                        }
+
+                    }
+                    if (isSuccess)
+                    {
+                        dgvAdmin.DataSource = tabuf;
+                    }
+                    else
+                    {
+
+                        CustomMessageBox error = new CustomMessageBox(Properties.Resources.ImageNotFound, "There isn't any activity of user with USERID. Or User dosn't exist.", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                        this.Enabled = false;
+                        error.Show();
+
+                    }
+                }
+                if (lblAdminOption.Text == "User's Models")
+                {
+                    DataTable tabuf = ((DataTable)dgvAdmin.DataSource).Copy();
+                    for (int i = 0; i < tabuf.Rows.Count; i++)
+                    {
+                        if (tabuf.Rows[i][0].ToString() != tbSearch.Text)
+                        {
+                            tabuf.Rows[i].Delete();
+                        }
+                        else
+                        {
+                            isSuccess = true;
+                        }
+
+                    }
+                    if (isSuccess)
+                    {
+                        dgvAdmin.DataSource = tabuf;
+                    }
+                    else
+                    {
+
+                        CustomMessageBox error = new CustomMessageBox(Properties.Resources.ImageNotFound, "There isn't any activity of user with USERID. Or User dosn't exist.", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                        this.Enabled = false;
+                        error.Show();
+
+                    }
+                }
+
             }
+
+
             
+            
+        }
+
+        private void butRefreshGrid_Click(object sender, EventArgs e)
+        {
+            if (lblAdminOption.Text == "User Data")
+            {
+                try
+                {
+                    SecurityModule sm = new SecurityModule();
+                    OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                    string menuButsAccessQuery = "SELECT USERID, LOGIN, PASS, PASSHASH, ISBLOCK, FNAME,MNAME, LNAME, EMAIL, PHONE, ADRESS,GENDER FROM CLIENTAPPUSERS";
+                    OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
+                    DataTable mBT = new DataTable();
+                    adp.Fill(mBT);
+                    menuButsAccessQuery = null;
+                    adp.Dispose();
+                    con.Dispose();
+                    dgvAdmin.DataSource = mBT;
+                }
+                catch (Exception ex)
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
+            }
+
+            if (lblAdminOption.Text == "User Activity")
+            {
+                try
+                {
+                    SecurityModule sm = new SecurityModule();
+                    OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                    string menuButsAccessQuery = "SELECT * FROM CLIENTAPPUSERACTIVITY";
+                    OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
+                    DataTable mBT = new DataTable();
+                    adp.Fill(mBT);
+                    menuButsAccessQuery = null;
+                    adp.Dispose();
+                    con.Dispose();
+                    dgvAdmin.DataSource = mBT;
+                    dgvAdmin.Columns[3].HeaderText = "ACTIVITY TIME";
+                }
+                catch (Exception ex)
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
+            }
+            if (lblAdminOption.Text == "User's Models")
+            {
+                try
+                {
+                    SecurityModule sm = new SecurityModule();
+                    OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                    string menuButsAccessQuery = @"SELECT USERID, M1 , M2 , M3 , M4 , M5 ,M6  FROM CLIENTMODULEACCESS";
+                    OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
+                    DataTable mBT = new DataTable();
+                    adp.Fill(mBT);
+                    menuButsAccessQuery = null;
+                    adp.Dispose();
+                    con.Dispose();
+                    dgvAdmin.DataSource = mBT;
+                    dgvAdmin.Columns[0].HeaderText = "USERID";
+                    dgvAdmin.Columns[1].HeaderText = "EXPLORE";
+                    dgvAdmin.Columns[2].HeaderText = "ASSOCIATION";
+                    dgvAdmin.Columns[3].HeaderText = "CLASSIFICATION";
+                    dgvAdmin.Columns[4].HeaderText = "CLUSTERING";
+                    dgvAdmin.Columns[5].HeaderText = "REGRESSION";
+                    dgvAdmin.Columns[6].HeaderText = "ANOMALY DETECT";
+                }
+                catch (Exception ex)
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
+            }
+
         }
     }
 }
