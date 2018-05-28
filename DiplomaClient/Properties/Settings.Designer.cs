@@ -32,5 +32,15 @@ namespace DiplomaClient.Properties {
                 return ((string)(this["cnSalesHistory"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("DATA SOURCE=PDBORTW;PASSWORD=dmuser;PERSIST SECURITY INFO=True;USER ID=DMUSER")]
+        public string cnDMUSER {
+            get {
+                return ((string)(this["cnDMUSER"]));
+            }
+        }
     }
 }
