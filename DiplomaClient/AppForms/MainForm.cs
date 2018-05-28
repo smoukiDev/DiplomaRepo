@@ -1813,6 +1813,8 @@ namespace DiplomaClient
                 this.Enabled = false;
                 error.Show();
 
+
+
             }
             catch (Exception ex)
             {
