@@ -1532,16 +1532,15 @@ namespace DiplomaClient
                 panProfile.Visible = true;
             }
         }
-
+        
         private void AdminPanelStartUp()
         {
             try
             {
                 SecurityModule sm = new SecurityModule();
                 OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
-                string menuButsAccessQuery = "SELECT * FROM CLIENTAPPUSERS";
+                string menuButsAccessQuery = "SELECT USERID, LOGIN, PASS, PASSHASH, ISBLOCK, FNAME,MNAME, LNAME, EMAIL, PHONE, ADRESS,GENDER FROM CLIENTAPPUSERS";
                 OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
-                //menuButTable
                 DataTable mBT = new DataTable();
                 adp.Fill(mBT);
                 menuButsAccessQuery = null;
@@ -1555,6 +1554,26 @@ namespace DiplomaClient
                 this.Enabled = false;
                 error.Show();
             }
+            
+        }
+
+        private void butSearch_Click(object sender, EventArgs e)
+        {
+            if(lblAdminOption.Text == "User Data")
+            {
+                DataTable tabuf = (DataTable)dgvAdmin.DataSource;
+                for (int i = 0; i < tabuf.Rows.Count; i++)
+                {
+                    if (tabuf.Rows[i][7].ToString() != tbSearch.Text)
+                    {
+                        tabuf.Rows[i].Delete();
+                    }
+
+                }
+               
+                dgvAdmin.DataSource = tabuf;
+            }
+            
         }
     }
 }
