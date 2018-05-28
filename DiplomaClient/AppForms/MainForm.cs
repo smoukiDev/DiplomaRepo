@@ -1856,5 +1856,27 @@ namespace DiplomaClient
                 error.Show();
             }
         }
+
+        private void butDeleteUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                QueriesTableAdapter qta = new QueriesTableAdapter();
+                CustomMessageBox update2 = new CustomMessageBox(Properties.Resources.ImageNotFound, false, "Are you sure you want to delete this user account?", () => { this.Enabled = true; }, "Yes", "No", "Cancel", () => { qta.DELETEUSER(Convert.ToDecimal(dgvAdmin.SelectedRows[0].Cells[0].Value.ToString())); dgvAdmin.Rows.RemoveAt(dgvAdmin.SelectedRows[0].Index); }, () => {; });
+                this.Enabled = false;
+                update2.Show();
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
+        }
     }
 }
