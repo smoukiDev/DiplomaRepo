@@ -1878,5 +1878,64 @@ namespace DiplomaClient
                 error.Show();
             }
         }
+
+        private void butAddUser_Click(object sender, EventArgs e)
+        {
+            //!!!Add User
+            try
+            {
+                QueriesTableAdapter qta = new QueriesTableAdapter();
+                SecurityModule sm = new SecurityModule();
+                qta.CREATEUSER(dgvAdmin.SelectedRows[0].Cells[1].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[2].Value.ToString(), sm.GenerateSHA256Hash(dgvAdmin.SelectedRows[0].Cells[2].Value.ToString()), dgvAdmin.SelectedRows[0].Cells[5].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[7].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[6].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[8].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[9].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[10].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[11].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[4].Value.ToString(),ImageToByteArray(Properties.Resources.UserProfileDefault));
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Success, $"New user have been created:) ", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+                try
+                {
+                    
+                    OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
+                    string menuButsAccessQuery = $"SELECT USERID, LOGIN, PASS, PASSHASH, ISBLOCK, FNAME,MNAME, LNAME, EMAIL, PHONE, ADRESS,GENDER FROM CLIENTAPPUSERS WHERE ISADMIN LIKE 'F'";
+                    OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
+                    DataTable mBT = new DataTable();
+                    adp.Fill(mBT);
+                    menuButsAccessQuery = null;
+                    adp.Dispose();
+                    con.Dispose();
+                    dgvAdmin.DataSource = mBT;
+                }
+                catch (Exception ex)
+                {
+                    CustomMessageBox error2 = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error2.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
+        }
+
+        private void butEditUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                QueriesTableAdapter qta = new QueriesTableAdapter();
+                SecurityModule sm = new SecurityModule();
+                qta.UPDATEUSER(Convert.ToDecimal(dgvAdmin.SelectedRows[0].Cells[0].Value.ToString()), dgvAdmin.SelectedRows[0].Cells[1].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[2].Value.ToString(), sm.GenerateSHA256Hash(dgvAdmin.SelectedRows[0].Cells[2].Value.ToString()), dgvAdmin.SelectedRows[0].Cells[4].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[5].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[7].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[6].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[11].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[8].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[9].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[10].Value.ToString());
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Success, $"User data with USERID={dgvAdmin.SelectedRows[0].Cells[0].Value.ToString()} were successfully updated:) ", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);                
+                dgvAdmin.SelectedRows[0].Cells[3].Value= sm.GenerateSHA256Hash(dgvAdmin.SelectedRows[0].Cells[2].Value.ToString());
+                this.Enabled = false;
+                error.Show();
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
+        }
     }
 }

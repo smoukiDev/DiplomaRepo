@@ -379,7 +379,8 @@ v_email in CLIENTAPPUSERS.EMAIL%TYPE,
 v_phone in CLIENTAPPUSERS.PHONE%TYPE,
 v_adress in CLIENTAPPUSERS.ADRESS%TYPE,
 v_gender in CLIENTAPPUSERS.ISBLOCK%TYPE,
-v_isblock in CLIENTAPPUSERS.GENDER%TYPE
+v_isblock in CLIENTAPPUSERS.GENDER%TYPE,
+v_avatar in CLIENTAPPUSERS.AVATAR %TYPE
 )
 IS
 idbuf NUMBER(10);
@@ -391,7 +392,7 @@ EMAILACTIVATIONCODE,EMAILACTIVATIONHASH,EMAILACTIVATIONSALT
 ) 
 VALUES
 (
-v_login,v_pass,v_passhash,null,v_fname,v_lname,v_mname,v_email,v_phone,v_adress,v_gender,null,
+v_login,v_pass,v_passhash,null,v_fname,v_lname,v_mname,v_email,v_phone,v_adress,v_gender,v_avatar,
 null,null,null
 );
 idbuf :=ClientIDSeq.CURRVAL;
