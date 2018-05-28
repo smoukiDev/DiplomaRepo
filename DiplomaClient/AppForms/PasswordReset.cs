@@ -39,6 +39,7 @@ namespace DiplomaClient
             butUseCode.ForeColor = ColorPalette.white1;
             butChangePass.BackColor = ColorPalette.red1;
             butChangePass.ForeColor = ColorPalette.white1;
+            lblSendAgain.ForeColor = ColorPalette.red1;
             pbLoading.Visible = false;
         }
         //Stick To Desctop Bounds
