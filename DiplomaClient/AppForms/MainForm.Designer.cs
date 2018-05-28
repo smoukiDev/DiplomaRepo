@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panFooter = new System.Windows.Forms.Panel();
             this.panWindowTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -50,29 +50,6 @@
             this.buts3 = new System.Windows.Forms.Button();
             this.buts2 = new System.Windows.Forms.Button();
             this.buts1 = new System.Windows.Forms.Button();
-            this.panAdminPanel = new System.Windows.Forms.Panel();
-            this.panAdminPanelSearch = new System.Windows.Forms.Panel();
-            this.tbSearch = new System.Windows.Forms.TextBox();
-            this.butSearch = new System.Windows.Forms.Button();
-            this.butRefreshGrid = new System.Windows.Forms.Button();
-            this.panAdminPanelFooter = new System.Windows.Forms.Panel();
-            this.lblAdminOption = new System.Windows.Forms.Label();
-            this.butEditUser = new System.Windows.Forms.Button();
-            this.butBlokUser = new System.Windows.Forms.Button();
-            this.butAddUser = new System.Windows.Forms.Button();
-            this.butDeleteUser = new System.Windows.Forms.Button();
-            this.butEditModules = new System.Windows.Forms.Button();
-            this.dgvAdmin = new System.Windows.Forms.DataGridView();
-            this.panelAdminPanelHeader = new System.Windows.Forms.Panel();
-            this.butUserModules = new System.Windows.Forms.Button();
-            this.butUserActivity = new System.Windows.Forms.Button();
-            this.butUserData = new System.Windows.Forms.Button();
-            this.lblAdminPanel = new System.Windows.Forms.Label();
-            this.panReport = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.panReportHeader = new System.Windows.Forms.Panel();
-            this.lblDMAlgoritm = new System.Windows.Forms.Label();
-            this.butAnalysis = new System.Windows.Forms.Button();
             this.panProfile = new System.Windows.Forms.Panel();
             this.butPassValid = new System.Windows.Forms.Button();
             this.butGenderExchange = new System.Windows.Forms.Button();
@@ -114,6 +91,29 @@
             this.butEditProfile = new System.Windows.Forms.Button();
             this.panProfileHeader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panAdminPanel = new System.Windows.Forms.Panel();
+            this.panAdminPanelSearch = new System.Windows.Forms.Panel();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.butSearch = new System.Windows.Forms.Button();
+            this.butRefreshGrid = new System.Windows.Forms.Button();
+            this.panAdminPanelFooter = new System.Windows.Forms.Panel();
+            this.lblAdminOption = new System.Windows.Forms.Label();
+            this.butEditUser = new System.Windows.Forms.Button();
+            this.butBlokUser = new System.Windows.Forms.Button();
+            this.butAddUser = new System.Windows.Forms.Button();
+            this.butDeleteUser = new System.Windows.Forms.Button();
+            this.butEditModules = new System.Windows.Forms.Button();
+            this.dgvAdmin = new System.Windows.Forms.DataGridView();
+            this.panelAdminPanelHeader = new System.Windows.Forms.Panel();
+            this.butUserModules = new System.Windows.Forms.Button();
+            this.butUserActivity = new System.Windows.Forms.Button();
+            this.butUserData = new System.Windows.Forms.Button();
+            this.lblAdminPanel = new System.Windows.Forms.Label();
+            this.panReport = new System.Windows.Forms.Panel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.panReportHeader = new System.Windows.Forms.Panel();
+            this.lblDMAlgoritm = new System.Windows.Forms.Label();
+            this.butAnalysis = new System.Windows.Forms.Button();
             this.panMenu = new System.Windows.Forms.Panel();
             this.panAccount = new System.Windows.Forms.Panel();
             this.tbLogin = new System.Windows.Forms.TextBox();
@@ -127,6 +127,10 @@
             this.panWinStateButtons.SuspendLayout();
             this.panBackArea.SuspendLayout();
             this.panSlider.SuspendLayout();
+            this.panProfile.SuspendLayout();
+            this.panProfileAvatar.SuspendLayout();
+            this.panProfileFooter.SuspendLayout();
+            this.panProfileHeader.SuspendLayout();
             this.panAdminPanel.SuspendLayout();
             this.panAdminPanelSearch.SuspendLayout();
             this.panAdminPanelFooter.SuspendLayout();
@@ -134,10 +138,6 @@
             this.panelAdminPanelHeader.SuspendLayout();
             this.panReport.SuspendLayout();
             this.panReportHeader.SuspendLayout();
-            this.panProfile.SuspendLayout();
-            this.panProfileAvatar.SuspendLayout();
-            this.panProfileFooter.SuspendLayout();
-            this.panProfileHeader.SuspendLayout();
             this.panMenu.SuspendLayout();
             this.panAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -257,9 +257,9 @@
             // 
             this.panBackArea.BackColor = System.Drawing.Color.Crimson;
             this.panBackArea.Controls.Add(this.panSlider);
+            this.panBackArea.Controls.Add(this.panReport);
             this.panBackArea.Controls.Add(this.panProfile);
             this.panBackArea.Controls.Add(this.panAdminPanel);
-            this.panBackArea.Controls.Add(this.panReport);
             this.panBackArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panBackArea.Location = new System.Drawing.Point(0, 120);
             this.panBackArea.Name = "panBackArea";
@@ -441,363 +441,6 @@
             this.buts1.UseVisualStyleBackColor = false;
             this.buts1.Visible = false;
             this.buts1.Click += new System.EventHandler(this.buts1_Click);
-            // 
-            // panAdminPanel
-            // 
-            this.panAdminPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panAdminPanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panAdminPanel.Controls.Add(this.panAdminPanelSearch);
-            this.panAdminPanel.Controls.Add(this.panAdminPanelFooter);
-            this.panAdminPanel.Controls.Add(this.dgvAdmin);
-            this.panAdminPanel.Controls.Add(this.panelAdminPanelHeader);
-            this.panAdminPanel.Location = new System.Drawing.Point(12, 9);
-            this.panAdminPanel.Name = "panAdminPanel";
-            this.panAdminPanel.Size = new System.Drawing.Size(1000, 628);
-            this.panAdminPanel.TabIndex = 1;
-            // 
-            // panAdminPanelSearch
-            // 
-            this.panAdminPanelSearch.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panAdminPanelSearch.Controls.Add(this.tbSearch);
-            this.panAdminPanelSearch.Controls.Add(this.butSearch);
-            this.panAdminPanelSearch.Controls.Add(this.butRefreshGrid);
-            this.panAdminPanelSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panAdminPanelSearch.Location = new System.Drawing.Point(0, 60);
-            this.panAdminPanelSearch.Name = "panAdminPanelSearch";
-            this.panAdminPanelSearch.Size = new System.Drawing.Size(1000, 40);
-            this.panAdminPanelSearch.TabIndex = 4;
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tbSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbSearch.Location = new System.Drawing.Point(381, 7);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(529, 26);
-            this.tbSearch.TabIndex = 23;
-            this.tbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // butSearch
-            // 
-            this.butSearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butSearch.BackColor = System.Drawing.Color.Transparent;
-            this.butSearch.BackgroundImage = global::DiplomaClient.Properties.Resources.SearchButtonMinimal;
-            this.butSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butSearch.FlatAppearance.BorderSize = 0;
-            this.butSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butSearch.Location = new System.Drawing.Point(919, 3);
-            this.butSearch.Name = "butSearch";
-            this.butSearch.Size = new System.Drawing.Size(34, 34);
-            this.butSearch.TabIndex = 21;
-            this.butSearch.UseVisualStyleBackColor = false;
-            this.butSearch.Click += new System.EventHandler(this.butSearch_Click);
-            // 
-            // butRefreshGrid
-            // 
-            this.butRefreshGrid.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butRefreshGrid.BackColor = System.Drawing.Color.Transparent;
-            this.butRefreshGrid.BackgroundImage = global::DiplomaClient.Properties.Resources.RefreshGridButton;
-            this.butRefreshGrid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butRefreshGrid.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butRefreshGrid.FlatAppearance.BorderSize = 0;
-            this.butRefreshGrid.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butRefreshGrid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butRefreshGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butRefreshGrid.Location = new System.Drawing.Point(959, 3);
-            this.butRefreshGrid.Name = "butRefreshGrid";
-            this.butRefreshGrid.Size = new System.Drawing.Size(34, 34);
-            this.butRefreshGrid.TabIndex = 20;
-            this.butRefreshGrid.UseVisualStyleBackColor = false;
-            this.butRefreshGrid.Click += new System.EventHandler(this.butRefreshGrid_Click);
-            // 
-            // panAdminPanelFooter
-            // 
-            this.panAdminPanelFooter.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panAdminPanelFooter.Controls.Add(this.lblAdminOption);
-            this.panAdminPanelFooter.Controls.Add(this.butEditUser);
-            this.panAdminPanelFooter.Controls.Add(this.butBlokUser);
-            this.panAdminPanelFooter.Controls.Add(this.butAddUser);
-            this.panAdminPanelFooter.Controls.Add(this.butDeleteUser);
-            this.panAdminPanelFooter.Controls.Add(this.butEditModules);
-            this.panAdminPanelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panAdminPanelFooter.Location = new System.Drawing.Point(0, 568);
-            this.panAdminPanelFooter.Name = "panAdminPanelFooter";
-            this.panAdminPanelFooter.Size = new System.Drawing.Size(1000, 60);
-            this.panAdminPanelFooter.TabIndex = 3;
-            // 
-            // lblAdminOption
-            // 
-            this.lblAdminOption.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblAdminOption.AutoSize = true;
-            this.lblAdminOption.BackColor = System.Drawing.Color.Transparent;
-            this.lblAdminOption.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAdminOption.Location = new System.Drawing.Point(13, 16);
-            this.lblAdminOption.Name = "lblAdminOption";
-            this.lblAdminOption.Size = new System.Drawing.Size(165, 30);
-            this.lblAdminOption.TabIndex = 38;
-            this.lblAdminOption.Text = "Admin Panel";
-            // 
-            // butEditUser
-            // 
-            this.butEditUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butEditUser.BackColor = System.Drawing.Color.Transparent;
-            this.butEditUser.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
-            this.butEditUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butEditUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butEditUser.FlatAppearance.BorderSize = 0;
-            this.butEditUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butEditUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butEditUser.Location = new System.Drawing.Point(887, 7);
-            this.butEditUser.Name = "butEditUser";
-            this.butEditUser.Size = new System.Drawing.Size(50, 50);
-            this.butEditUser.TabIndex = 18;
-            this.butEditUser.UseVisualStyleBackColor = false;
-            this.butEditUser.Click += new System.EventHandler(this.butEditUser_Click);
-            // 
-            // butBlokUser
-            // 
-            this.butBlokUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butBlokUser.BackColor = System.Drawing.Color.Transparent;
-            this.butBlokUser.BackgroundImage = global::DiplomaClient.Properties.Resources.LockButton;
-            this.butBlokUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butBlokUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butBlokUser.FlatAppearance.BorderSize = 0;
-            this.butBlokUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butBlokUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butBlokUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butBlokUser.Location = new System.Drawing.Point(775, 7);
-            this.butBlokUser.Name = "butBlokUser";
-            this.butBlokUser.Size = new System.Drawing.Size(50, 50);
-            this.butBlokUser.TabIndex = 17;
-            this.butBlokUser.UseVisualStyleBackColor = false;
-            this.butBlokUser.Click += new System.EventHandler(this.butBlokUser_Click);
-            // 
-            // butAddUser
-            // 
-            this.butAddUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butAddUser.BackColor = System.Drawing.Color.Transparent;
-            this.butAddUser.BackgroundImage = global::DiplomaClient.Properties.Resources.AddUserButton;
-            this.butAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butAddUser.FlatAppearance.BorderSize = 0;
-            this.butAddUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butAddUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butAddUser.Location = new System.Drawing.Point(831, 7);
-            this.butAddUser.Name = "butAddUser";
-            this.butAddUser.Size = new System.Drawing.Size(50, 50);
-            this.butAddUser.TabIndex = 15;
-            this.butAddUser.UseVisualStyleBackColor = false;
-            this.butAddUser.Click += new System.EventHandler(this.butAddUser_Click);
-            // 
-            // butDeleteUser
-            // 
-            this.butDeleteUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butDeleteUser.BackColor = System.Drawing.Color.Transparent;
-            this.butDeleteUser.BackgroundImage = global::DiplomaClient.Properties.Resources.RemoveImageButton;
-            this.butDeleteUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butDeleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butDeleteUser.FlatAppearance.BorderSize = 0;
-            this.butDeleteUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butDeleteUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butDeleteUser.Location = new System.Drawing.Point(943, 7);
-            this.butDeleteUser.Name = "butDeleteUser";
-            this.butDeleteUser.Size = new System.Drawing.Size(50, 50);
-            this.butDeleteUser.TabIndex = 16;
-            this.butDeleteUser.UseVisualStyleBackColor = false;
-            this.butDeleteUser.Click += new System.EventHandler(this.butDeleteUser_Click);
-            // 
-            // butEditModules
-            // 
-            this.butEditModules.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butEditModules.BackColor = System.Drawing.Color.Transparent;
-            this.butEditModules.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
-            this.butEditModules.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butEditModules.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butEditModules.FlatAppearance.BorderSize = 0;
-            this.butEditModules.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.butEditModules.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.butEditModules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butEditModules.Location = new System.Drawing.Point(943, 7);
-            this.butEditModules.Name = "butEditModules";
-            this.butEditModules.Size = new System.Drawing.Size(50, 50);
-            this.butEditModules.TabIndex = 19;
-            this.butEditModules.UseVisualStyleBackColor = false;
-            this.butEditModules.Click += new System.EventHandler(this.butEditModules_Click);
-            // 
-            // dgvAdmin
-            // 
-            this.dgvAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAdmin.Location = new System.Drawing.Point(0, 122);
-            this.dgvAdmin.MultiSelect = false;
-            this.dgvAdmin.Name = "dgvAdmin";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvAdmin.RowTemplate.Height = 30;
-            this.dgvAdmin.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAdmin.Size = new System.Drawing.Size(1000, 450);
-            this.dgvAdmin.TabIndex = 2;
-            // 
-            // panelAdminPanelHeader
-            // 
-            this.panelAdminPanelHeader.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panelAdminPanelHeader.Controls.Add(this.butUserModules);
-            this.panelAdminPanelHeader.Controls.Add(this.butUserActivity);
-            this.panelAdminPanelHeader.Controls.Add(this.butUserData);
-            this.panelAdminPanelHeader.Controls.Add(this.lblAdminPanel);
-            this.panelAdminPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAdminPanelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelAdminPanelHeader.Name = "panelAdminPanelHeader";
-            this.panelAdminPanelHeader.Size = new System.Drawing.Size(1000, 60);
-            this.panelAdminPanelHeader.TabIndex = 1;
-            // 
-            // butUserModules
-            // 
-            this.butUserModules.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butUserModules.BackColor = System.Drawing.Color.Tomato;
-            this.butUserModules.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.butUserModules.FlatAppearance.BorderSize = 0;
-            this.butUserModules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butUserModules.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butUserModules.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.butUserModules.Location = new System.Drawing.Point(853, 5);
-            this.butUserModules.Name = "butUserModules";
-            this.butUserModules.Size = new System.Drawing.Size(140, 49);
-            this.butUserModules.TabIndex = 37;
-            this.butUserModules.Text = "Modules";
-            this.butUserModules.UseVisualStyleBackColor = false;
-            this.butUserModules.Click += new System.EventHandler(this.butUserModules_Click);
-            // 
-            // butUserActivity
-            // 
-            this.butUserActivity.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butUserActivity.BackColor = System.Drawing.Color.Tomato;
-            this.butUserActivity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.butUserActivity.FlatAppearance.BorderSize = 0;
-            this.butUserActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butUserActivity.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butUserActivity.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.butUserActivity.Location = new System.Drawing.Point(707, 5);
-            this.butUserActivity.Name = "butUserActivity";
-            this.butUserActivity.Size = new System.Drawing.Size(140, 49);
-            this.butUserActivity.TabIndex = 36;
-            this.butUserActivity.Text = "Activity";
-            this.butUserActivity.UseVisualStyleBackColor = false;
-            this.butUserActivity.Click += new System.EventHandler(this.butUserActivity_Click);
-            // 
-            // butUserData
-            // 
-            this.butUserData.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butUserData.BackColor = System.Drawing.Color.Tomato;
-            this.butUserData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.butUserData.FlatAppearance.BorderSize = 0;
-            this.butUserData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butUserData.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butUserData.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.butUserData.Location = new System.Drawing.Point(561, 5);
-            this.butUserData.Name = "butUserData";
-            this.butUserData.Size = new System.Drawing.Size(140, 49);
-            this.butUserData.TabIndex = 35;
-            this.butUserData.Text = "Accounts";
-            this.butUserData.UseVisualStyleBackColor = false;
-            this.butUserData.Click += new System.EventHandler(this.butUserData_Click);
-            // 
-            // lblAdminPanel
-            // 
-            this.lblAdminPanel.AutoSize = true;
-            this.lblAdminPanel.BackColor = System.Drawing.Color.Transparent;
-            this.lblAdminPanel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAdminPanel.Location = new System.Drawing.Point(13, 12);
-            this.lblAdminPanel.Name = "lblAdminPanel";
-            this.lblAdminPanel.Size = new System.Drawing.Size(165, 30);
-            this.lblAdminPanel.TabIndex = 19;
-            this.lblAdminPanel.Text = "Admin Panel";
-            // 
-            // panReport
-            // 
-            this.panReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panReport.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panReport.Controls.Add(this.reportViewer1);
-            this.panReport.Controls.Add(this.panReportHeader);
-            this.panReport.Location = new System.Drawing.Point(12, 9);
-            this.panReport.Name = "panReport";
-            this.panReport.Size = new System.Drawing.Size(1000, 628);
-            this.panReport.TabIndex = 1;
-            this.panReport.Visible = false;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 86);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1000, 542);
-            this.reportViewer1.TabIndex = 2;
-            // 
-            // panReportHeader
-            // 
-            this.panReportHeader.BackColor = System.Drawing.Color.DarkGreen;
-            this.panReportHeader.Controls.Add(this.lblDMAlgoritm);
-            this.panReportHeader.Controls.Add(this.butAnalysis);
-            this.panReportHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panReportHeader.Location = new System.Drawing.Point(0, 0);
-            this.panReportHeader.Name = "panReportHeader";
-            this.panReportHeader.Size = new System.Drawing.Size(1000, 60);
-            this.panReportHeader.TabIndex = 1;
-            // 
-            // lblDMAlgoritm
-            // 
-            this.lblDMAlgoritm.AutoSize = true;
-            this.lblDMAlgoritm.BackColor = System.Drawing.Color.Transparent;
-            this.lblDMAlgoritm.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblDMAlgoritm.Location = new System.Drawing.Point(13, 13);
-            this.lblDMAlgoritm.Name = "lblDMAlgoritm";
-            this.lblDMAlgoritm.Size = new System.Drawing.Size(169, 30);
-            this.lblDMAlgoritm.TabIndex = 18;
-            this.lblDMAlgoritm.Text = "Analysis Type";
-            // 
-            // butAnalysis
-            // 
-            this.butAnalysis.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butAnalysis.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.butAnalysis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.butAnalysis.FlatAppearance.BorderSize = 0;
-            this.butAnalysis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butAnalysis.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAnalysis.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.butAnalysis.Location = new System.Drawing.Point(767, 5);
-            this.butAnalysis.Name = "butAnalysis";
-            this.butAnalysis.Size = new System.Drawing.Size(226, 49);
-            this.butAnalysis.TabIndex = 35;
-            this.butAnalysis.Text = "Run Analysis";
-            this.butAnalysis.UseVisualStyleBackColor = false;
             // 
             // panProfile
             // 
@@ -1377,6 +1020,364 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Profile";
             // 
+            // panAdminPanel
+            // 
+            this.panAdminPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panAdminPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panAdminPanel.Controls.Add(this.panAdminPanelSearch);
+            this.panAdminPanel.Controls.Add(this.panAdminPanelFooter);
+            this.panAdminPanel.Controls.Add(this.dgvAdmin);
+            this.panAdminPanel.Controls.Add(this.panelAdminPanelHeader);
+            this.panAdminPanel.Location = new System.Drawing.Point(12, 9);
+            this.panAdminPanel.Name = "panAdminPanel";
+            this.panAdminPanel.Size = new System.Drawing.Size(1000, 628);
+            this.panAdminPanel.TabIndex = 1;
+            // 
+            // panAdminPanelSearch
+            // 
+            this.panAdminPanelSearch.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panAdminPanelSearch.Controls.Add(this.tbSearch);
+            this.panAdminPanelSearch.Controls.Add(this.butSearch);
+            this.panAdminPanelSearch.Controls.Add(this.butRefreshGrid);
+            this.panAdminPanelSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panAdminPanelSearch.Location = new System.Drawing.Point(0, 60);
+            this.panAdminPanelSearch.Name = "panAdminPanelSearch";
+            this.panAdminPanelSearch.Size = new System.Drawing.Size(1000, 40);
+            this.panAdminPanelSearch.TabIndex = 4;
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tbSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSearch.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbSearch.Location = new System.Drawing.Point(381, 7);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(529, 26);
+            this.tbSearch.TabIndex = 23;
+            this.tbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // butSearch
+            // 
+            this.butSearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butSearch.BackColor = System.Drawing.Color.Transparent;
+            this.butSearch.BackgroundImage = global::DiplomaClient.Properties.Resources.SearchButtonMinimal;
+            this.butSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butSearch.FlatAppearance.BorderSize = 0;
+            this.butSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butSearch.Location = new System.Drawing.Point(919, 3);
+            this.butSearch.Name = "butSearch";
+            this.butSearch.Size = new System.Drawing.Size(34, 34);
+            this.butSearch.TabIndex = 21;
+            this.butSearch.UseVisualStyleBackColor = false;
+            this.butSearch.Click += new System.EventHandler(this.butSearch_Click);
+            // 
+            // butRefreshGrid
+            // 
+            this.butRefreshGrid.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butRefreshGrid.BackColor = System.Drawing.Color.Transparent;
+            this.butRefreshGrid.BackgroundImage = global::DiplomaClient.Properties.Resources.RefreshGridButton;
+            this.butRefreshGrid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butRefreshGrid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butRefreshGrid.FlatAppearance.BorderSize = 0;
+            this.butRefreshGrid.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butRefreshGrid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butRefreshGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butRefreshGrid.Location = new System.Drawing.Point(959, 3);
+            this.butRefreshGrid.Name = "butRefreshGrid";
+            this.butRefreshGrid.Size = new System.Drawing.Size(34, 34);
+            this.butRefreshGrid.TabIndex = 20;
+            this.butRefreshGrid.UseVisualStyleBackColor = false;
+            this.butRefreshGrid.Click += new System.EventHandler(this.butRefreshGrid_Click);
+            // 
+            // panAdminPanelFooter
+            // 
+            this.panAdminPanelFooter.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panAdminPanelFooter.Controls.Add(this.lblAdminOption);
+            this.panAdminPanelFooter.Controls.Add(this.butEditUser);
+            this.panAdminPanelFooter.Controls.Add(this.butBlokUser);
+            this.panAdminPanelFooter.Controls.Add(this.butAddUser);
+            this.panAdminPanelFooter.Controls.Add(this.butDeleteUser);
+            this.panAdminPanelFooter.Controls.Add(this.butEditModules);
+            this.panAdminPanelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panAdminPanelFooter.Location = new System.Drawing.Point(0, 568);
+            this.panAdminPanelFooter.Name = "panAdminPanelFooter";
+            this.panAdminPanelFooter.Size = new System.Drawing.Size(1000, 60);
+            this.panAdminPanelFooter.TabIndex = 3;
+            // 
+            // lblAdminOption
+            // 
+            this.lblAdminOption.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblAdminOption.AutoSize = true;
+            this.lblAdminOption.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdminOption.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAdminOption.Location = new System.Drawing.Point(13, 16);
+            this.lblAdminOption.Name = "lblAdminOption";
+            this.lblAdminOption.Size = new System.Drawing.Size(165, 30);
+            this.lblAdminOption.TabIndex = 38;
+            this.lblAdminOption.Text = "Admin Panel";
+            // 
+            // butEditUser
+            // 
+            this.butEditUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butEditUser.BackColor = System.Drawing.Color.Transparent;
+            this.butEditUser.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
+            this.butEditUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butEditUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butEditUser.FlatAppearance.BorderSize = 0;
+            this.butEditUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butEditUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butEditUser.Location = new System.Drawing.Point(887, 7);
+            this.butEditUser.Name = "butEditUser";
+            this.butEditUser.Size = new System.Drawing.Size(50, 50);
+            this.butEditUser.TabIndex = 18;
+            this.butEditUser.UseVisualStyleBackColor = false;
+            this.butEditUser.Click += new System.EventHandler(this.butEditUser_Click);
+            // 
+            // butBlokUser
+            // 
+            this.butBlokUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butBlokUser.BackColor = System.Drawing.Color.Transparent;
+            this.butBlokUser.BackgroundImage = global::DiplomaClient.Properties.Resources.LockButton;
+            this.butBlokUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butBlokUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butBlokUser.FlatAppearance.BorderSize = 0;
+            this.butBlokUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butBlokUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butBlokUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butBlokUser.Location = new System.Drawing.Point(775, 7);
+            this.butBlokUser.Name = "butBlokUser";
+            this.butBlokUser.Size = new System.Drawing.Size(50, 50);
+            this.butBlokUser.TabIndex = 17;
+            this.butBlokUser.UseVisualStyleBackColor = false;
+            this.butBlokUser.Click += new System.EventHandler(this.butBlokUser_Click);
+            // 
+            // butAddUser
+            // 
+            this.butAddUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butAddUser.BackColor = System.Drawing.Color.Transparent;
+            this.butAddUser.BackgroundImage = global::DiplomaClient.Properties.Resources.AddUserButton;
+            this.butAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butAddUser.FlatAppearance.BorderSize = 0;
+            this.butAddUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butAddUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butAddUser.Location = new System.Drawing.Point(831, 7);
+            this.butAddUser.Name = "butAddUser";
+            this.butAddUser.Size = new System.Drawing.Size(50, 50);
+            this.butAddUser.TabIndex = 15;
+            this.butAddUser.UseVisualStyleBackColor = false;
+            this.butAddUser.Click += new System.EventHandler(this.butAddUser_Click);
+            // 
+            // butDeleteUser
+            // 
+            this.butDeleteUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butDeleteUser.BackColor = System.Drawing.Color.Transparent;
+            this.butDeleteUser.BackgroundImage = global::DiplomaClient.Properties.Resources.RemoveImageButton;
+            this.butDeleteUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butDeleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butDeleteUser.FlatAppearance.BorderSize = 0;
+            this.butDeleteUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butDeleteUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butDeleteUser.Location = new System.Drawing.Point(943, 7);
+            this.butDeleteUser.Name = "butDeleteUser";
+            this.butDeleteUser.Size = new System.Drawing.Size(50, 50);
+            this.butDeleteUser.TabIndex = 16;
+            this.butDeleteUser.UseVisualStyleBackColor = false;
+            this.butDeleteUser.Click += new System.EventHandler(this.butDeleteUser_Click);
+            // 
+            // butEditModules
+            // 
+            this.butEditModules.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butEditModules.BackColor = System.Drawing.Color.Transparent;
+            this.butEditModules.BackgroundImage = global::DiplomaClient.Properties.Resources.EditButton;
+            this.butEditModules.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butEditModules.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butEditModules.FlatAppearance.BorderSize = 0;
+            this.butEditModules.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butEditModules.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butEditModules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butEditModules.Location = new System.Drawing.Point(943, 7);
+            this.butEditModules.Name = "butEditModules";
+            this.butEditModules.Size = new System.Drawing.Size(50, 50);
+            this.butEditModules.TabIndex = 19;
+            this.butEditModules.UseVisualStyleBackColor = false;
+            this.butEditModules.Click += new System.EventHandler(this.butEditModules_Click);
+            // 
+            // dgvAdmin
+            // 
+            this.dgvAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAdmin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAdmin.Location = new System.Drawing.Point(0, 122);
+            this.dgvAdmin.MultiSelect = false;
+            this.dgvAdmin.Name = "dgvAdmin";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAdmin.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAdmin.RowTemplate.Height = 30;
+            this.dgvAdmin.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAdmin.Size = new System.Drawing.Size(1000, 450);
+            this.dgvAdmin.TabIndex = 2;
+            // 
+            // panelAdminPanelHeader
+            // 
+            this.panelAdminPanelHeader.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panelAdminPanelHeader.Controls.Add(this.butUserModules);
+            this.panelAdminPanelHeader.Controls.Add(this.butUserActivity);
+            this.panelAdminPanelHeader.Controls.Add(this.butUserData);
+            this.panelAdminPanelHeader.Controls.Add(this.lblAdminPanel);
+            this.panelAdminPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAdminPanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelAdminPanelHeader.Name = "panelAdminPanelHeader";
+            this.panelAdminPanelHeader.Size = new System.Drawing.Size(1000, 60);
+            this.panelAdminPanelHeader.TabIndex = 1;
+            // 
+            // butUserModules
+            // 
+            this.butUserModules.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butUserModules.BackColor = System.Drawing.Color.Tomato;
+            this.butUserModules.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.butUserModules.FlatAppearance.BorderSize = 0;
+            this.butUserModules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butUserModules.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butUserModules.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.butUserModules.Location = new System.Drawing.Point(853, 5);
+            this.butUserModules.Name = "butUserModules";
+            this.butUserModules.Size = new System.Drawing.Size(140, 49);
+            this.butUserModules.TabIndex = 37;
+            this.butUserModules.Text = "Modules";
+            this.butUserModules.UseVisualStyleBackColor = false;
+            this.butUserModules.Click += new System.EventHandler(this.butUserModules_Click);
+            // 
+            // butUserActivity
+            // 
+            this.butUserActivity.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butUserActivity.BackColor = System.Drawing.Color.Tomato;
+            this.butUserActivity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.butUserActivity.FlatAppearance.BorderSize = 0;
+            this.butUserActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butUserActivity.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butUserActivity.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.butUserActivity.Location = new System.Drawing.Point(707, 5);
+            this.butUserActivity.Name = "butUserActivity";
+            this.butUserActivity.Size = new System.Drawing.Size(140, 49);
+            this.butUserActivity.TabIndex = 36;
+            this.butUserActivity.Text = "Activity";
+            this.butUserActivity.UseVisualStyleBackColor = false;
+            this.butUserActivity.Click += new System.EventHandler(this.butUserActivity_Click);
+            // 
+            // butUserData
+            // 
+            this.butUserData.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butUserData.BackColor = System.Drawing.Color.Tomato;
+            this.butUserData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.butUserData.FlatAppearance.BorderSize = 0;
+            this.butUserData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butUserData.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butUserData.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.butUserData.Location = new System.Drawing.Point(561, 5);
+            this.butUserData.Name = "butUserData";
+            this.butUserData.Size = new System.Drawing.Size(140, 49);
+            this.butUserData.TabIndex = 35;
+            this.butUserData.Text = "Accounts";
+            this.butUserData.UseVisualStyleBackColor = false;
+            this.butUserData.Click += new System.EventHandler(this.butUserData_Click);
+            // 
+            // lblAdminPanel
+            // 
+            this.lblAdminPanel.AutoSize = true;
+            this.lblAdminPanel.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdminPanel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAdminPanel.Location = new System.Drawing.Point(13, 12);
+            this.lblAdminPanel.Name = "lblAdminPanel";
+            this.lblAdminPanel.Size = new System.Drawing.Size(165, 30);
+            this.lblAdminPanel.TabIndex = 19;
+            this.lblAdminPanel.Text = "Admin Panel";
+            // 
+            // panReport
+            // 
+            this.panReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panReport.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panReport.Controls.Add(this.reportViewer1);
+            this.panReport.Controls.Add(this.panReportHeader);
+            this.panReport.Location = new System.Drawing.Point(12, 9);
+            this.panReport.Name = "panReport";
+            this.panReport.Size = new System.Drawing.Size(1000, 628);
+            this.panReport.TabIndex = 1;
+            this.panReport.Visible = false;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 86);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1000, 542);
+            this.reportViewer1.TabIndex = 2;
+            // 
+            // panReportHeader
+            // 
+            this.panReportHeader.BackColor = System.Drawing.Color.DarkGreen;
+            this.panReportHeader.Controls.Add(this.lblDMAlgoritm);
+            this.panReportHeader.Controls.Add(this.butAnalysis);
+            this.panReportHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panReportHeader.Location = new System.Drawing.Point(0, 0);
+            this.panReportHeader.Name = "panReportHeader";
+            this.panReportHeader.Size = new System.Drawing.Size(1000, 60);
+            this.panReportHeader.TabIndex = 1;
+            // 
+            // lblDMAlgoritm
+            // 
+            this.lblDMAlgoritm.AutoSize = true;
+            this.lblDMAlgoritm.BackColor = System.Drawing.Color.Transparent;
+            this.lblDMAlgoritm.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDMAlgoritm.Location = new System.Drawing.Point(13, 13);
+            this.lblDMAlgoritm.Name = "lblDMAlgoritm";
+            this.lblDMAlgoritm.Size = new System.Drawing.Size(169, 30);
+            this.lblDMAlgoritm.TabIndex = 18;
+            this.lblDMAlgoritm.Text = "Analysis Type";
+            // 
+            // butAnalysis
+            // 
+            this.butAnalysis.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butAnalysis.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.butAnalysis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.butAnalysis.FlatAppearance.BorderSize = 0;
+            this.butAnalysis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butAnalysis.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAnalysis.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.butAnalysis.Location = new System.Drawing.Point(767, 5);
+            this.butAnalysis.Name = "butAnalysis";
+            this.butAnalysis.Size = new System.Drawing.Size(226, 49);
+            this.butAnalysis.TabIndex = 35;
+            this.butAnalysis.Text = "Run Analysis";
+            this.butAnalysis.UseVisualStyleBackColor = false;
+            this.butAnalysis.Click += new System.EventHandler(this.butAnalysis_Click);
+            // 
             // panMenu
             // 
             this.panMenu.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -1472,6 +1473,12 @@
             this.panWinStateButtons.ResumeLayout(false);
             this.panBackArea.ResumeLayout(false);
             this.panSlider.ResumeLayout(false);
+            this.panProfile.ResumeLayout(false);
+            this.panProfile.PerformLayout();
+            this.panProfileAvatar.ResumeLayout(false);
+            this.panProfileFooter.ResumeLayout(false);
+            this.panProfileHeader.ResumeLayout(false);
+            this.panProfileHeader.PerformLayout();
             this.panAdminPanel.ResumeLayout(false);
             this.panAdminPanelSearch.ResumeLayout(false);
             this.panAdminPanelSearch.PerformLayout();
@@ -1483,12 +1490,6 @@
             this.panReport.ResumeLayout(false);
             this.panReportHeader.ResumeLayout(false);
             this.panReportHeader.PerformLayout();
-            this.panProfile.ResumeLayout(false);
-            this.panProfile.PerformLayout();
-            this.panProfileAvatar.ResumeLayout(false);
-            this.panProfileFooter.ResumeLayout(false);
-            this.panProfileHeader.ResumeLayout(false);
-            this.panProfileHeader.PerformLayout();
             this.panMenu.ResumeLayout(false);
             this.panMenu.PerformLayout();
             this.panAccount.ResumeLayout(false);

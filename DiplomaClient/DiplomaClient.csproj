@@ -82,6 +82,11 @@
     <Compile Include="AppForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="dsDMUSER.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDMUSER.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsSalesHistory.cs">
       <DependentUpon>dsSalesHistory.xsd</DependentUpon>
     </Compile>
@@ -147,6 +152,7 @@
     <EmbeddedResource Include="AppForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarketBasket.rdlc" />
     <EmbeddedResource Include="TestTemplates\BorderAvailable.resx">
       <DependentUpon>BorderAvailable.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +179,17 @@
     <EmbeddedResource Include="TestTemplates\ResetPassTest.resx">
       <DependentUpon>ResetPassTest.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsDMUSER.xsc">
+      <DependentUpon>dsDMUSER.xsd</DependentUpon>
+    </None>
+    <None Include="dsDMUSER.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDMUSER.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsDMUSER.xss">
+      <DependentUpon>dsDMUSER.xsd</DependentUpon>
+    </None>
     <None Include="dsSalesHistory.xsc">
       <DependentUpon>dsSalesHistory.xsd</DependentUpon>
     </None>
@@ -205,6 +222,7 @@
     <None Include="Image\UserProfileDefault.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="OracleDMReports\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>

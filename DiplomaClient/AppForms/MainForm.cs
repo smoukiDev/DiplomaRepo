@@ -1945,5 +1945,12 @@ namespace DiplomaClient
                 error.Show();
             }
         }
+
+        private void butAnalysis_Click(object sender, EventArgs e)
+        {
+            
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "<VSProjectName>.MarketBasket.rdlc";
+            reportViewer1.RefreshReport();
+        }
     }
 }
