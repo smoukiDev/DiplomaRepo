@@ -288,17 +288,48 @@ namespace DiplomaClient
                 CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", null, true, ColorPalette.red1, ColorPalette.white1);
                 error.Show();
             }
+            tbEmail.Clear();
+            tbConfirmCode.Clear();
             tbConfirmPass.Clear();
             tbPass.Clear();
             butPassValid.Visible = false;
+            tbConfirmCode.Enabled = false;
+            butCleanPass2.Enabled = false;
+            buttonMakeVisible1.Enabled = false;
+            tbPass.Enabled = false;
+            butCleanPass3.Enabled = false;
+            buttonMakeVisible2.Enabled = false;
+            tbConfirmPass.Enabled = false;
+            butCleanPass3.Enabled = false;
+            buttonMakeVisible2.Enabled = false;
+            lblSendAgain.Visible = false;
+            butChangePass.Visible = false;
+            butUseCode.Visible = false;
+            butDo.Visible = true;
+
 
 
         }
         private void SPFRevertPassword()
         {
+            tbEmail.Clear();
+            tbConfirmCode.Clear();
             tbConfirmPass.Clear();
             tbPass.Clear();
             butPassValid.Visible = false;
+            tbConfirmCode.Enabled = false;
+            butCleanPass2.Enabled = false;
+            buttonMakeVisible1.Enabled = false;
+            tbPass.Enabled = false;
+            butCleanPass3.Enabled = false;
+            buttonMakeVisible2.Enabled = false;
+            tbConfirmPass.Enabled = false;
+            butCleanPass3.Enabled = false;
+            buttonMakeVisible2.Enabled = false;
+            lblSendAgain.Visible = false;
+            butChangePass.Visible = false;
+            butUseCode.Visible = false;
+            butDo.Visible = true;
         }
         ToolTip ttPassValid = new ToolTip();
         private void ValidationPasswordSecure()

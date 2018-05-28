@@ -1460,7 +1460,15 @@ namespace DiplomaClient
 
                 tbLogin1.Text = odr.GetString(0);
                 tbFName.Text = odr.GetString(1);
-                tbMName.Text = odr.GetString(2);
+                try
+                {
+                    tbMName.Text = odr.GetString(2);
+                }
+                catch
+                {
+                    tbMName.Text = "";
+                }
+                
                 tbLName.Text = odr.GetString(3);
                 tbGender.Text = odr.GetString(4);
                 tbEmail.Text = odr.GetString(5);
