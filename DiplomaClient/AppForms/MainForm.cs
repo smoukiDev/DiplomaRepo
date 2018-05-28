@@ -821,7 +821,7 @@ namespace DiplomaClient
             {
                 SecurityModule sm = new SecurityModule();
                 OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
-                string menuButsAccessQuery = "SELECT USERID, LOGIN, PASS, PASSHASH, ISBLOCK, FNAME,MNAME, LNAME, EMAIL, PHONE, ADRESS,GENDER FROM CLIENTAPPUSERS";
+                string menuButsAccessQuery = $"SELECT USERID, LOGIN, PASS, PASSHASH, ISBLOCK, FNAME,MNAME, LNAME, EMAIL, PHONE, ADRESS,GENDER FROM CLIENTAPPUSERS WHERE ISADMIN LIKE 'F'";
                 OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
                 DataTable mBT = new DataTable();
                 adp.Fill(mBT);
@@ -890,7 +890,7 @@ namespace DiplomaClient
             {
                 SecurityModule sm = new SecurityModule();
                 OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
-                string menuButsAccessQuery = @"SELECT USERID, M1 , M2 , M3 , M4 , M5 ,M6  FROM CLIENTMODULEACCESS";
+                string menuButsAccessQuery = @"SELECT K.USERID, K.M1, K.M2, K.M3, K.M4, K.M5, K.M6 FROM CLIENTMODULEACCESS K, CLIENTAPPUSERS U WHERE K.USERID=U.USERID AND U.ISADMIN LIKE 'F'";
                 OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
                 DataTable mBT = new DataTable();
                 adp.Fill(mBT);
@@ -1605,7 +1605,7 @@ namespace DiplomaClient
             {
                 SecurityModule sm = new SecurityModule();
                 OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
-                string menuButsAccessQuery = "SELECT USERID, LOGIN, PASS, PASSHASH, ISBLOCK, FNAME,MNAME, LNAME, EMAIL, PHONE, ADRESS,GENDER FROM CLIENTAPPUSERS";
+                string menuButsAccessQuery = "SELECT USERID, LOGIN, PASS, PASSHASH, ISBLOCK, FNAME,MNAME, LNAME, EMAIL, PHONE, ADRESS,GENDER FROM CLIENTAPPUSERS WHERE ISADMIN LIKE 'F'";
                 OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
                 DataTable mBT = new DataTable();
                 adp.Fill(mBT);
@@ -1728,8 +1728,8 @@ namespace DiplomaClient
                 try
                 {
                     SecurityModule sm = new SecurityModule();
-                    OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
-                    string menuButsAccessQuery = "SELECT USERID, LOGIN, PASS, PASSHASH, ISBLOCK, FNAME,MNAME, LNAME, EMAIL, PHONE, ADRESS,GENDER FROM CLIENTAPPUSERS";
+                    OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp); 
+                    string menuButsAccessQuery = "SELECT USERID, LOGIN, PASS, PASSHASH, ISBLOCK, FNAME,MNAME, LNAME, EMAIL, PHONE, ADRESS,GENDER FROM CLIENTAPPUSERS WHERE ISADMIN LIKE 'F'";
                     OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
                     DataTable mBT = new DataTable();
                     adp.Fill(mBT);
@@ -1775,7 +1775,7 @@ namespace DiplomaClient
                 {
                     SecurityModule sm = new SecurityModule();
                     OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
-                    string menuButsAccessQuery = @"SELECT USERID, M1 , M2 , M3 , M4 , M5 ,M6  FROM CLIENTMODULEACCESS";
+                    string menuButsAccessQuery = @"SELECT K.USERID, K.M1, K.M2, K.M3, K.M4, K.M5, K.M6 FROM CLIENTMODULEACCESS K, CLIENTAPPUSERS U WHERE K.USERID=U.USERID AND U.ISADMIN LIKE 'F'";
                     OracleDataAdapter adp = new OracleDataAdapter(menuButsAccessQuery, con);
                     DataTable mBT = new DataTable();
                     adp.Fill(mBT);
@@ -1799,6 +1799,27 @@ namespace DiplomaClient
                 }
             }
 
+        }
+
+        private void butEditModules_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                QueriesTableAdapter qta = new QueriesTableAdapter();
+                
+                qta.EDITMODELACCESS(Convert.ToDecimal(dgvAdmin.SelectedRows[0].Cells[0].Value), dgvAdmin.SelectedRows[0].Cells[1].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[2].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[3].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[4].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[5].Value.ToString(), dgvAdmin.SelectedRows[0].Cells[6].Value.ToString());
+                qta.Dispose();
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Success,$"Access to models for user with USERID={dgvAdmin.SelectedRows[0].Cells[0].Value.ToString()} were successfully updated:) ", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", ()=> { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+            }
         }
     }
 }
