@@ -24,7 +24,9 @@ namespace DiplomaClient {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class dsDMUSER : global::System.Data.DataSet {
         
-        private SALESASSOCIATIONDataTable tableSALESASSOCIATION;
+        private MBRESULTDataTable tableMBRESULT;
+        
+        private MBRESULT2DataTable tableMBRESULT2;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +56,11 @@ namespace DiplomaClient {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["SALESASSOCIATION"] != null)) {
-                    base.Tables.Add(new SALESASSOCIATIONDataTable(ds.Tables["SALESASSOCIATION"]));
+                if ((ds.Tables["MBRESULT"] != null)) {
+                    base.Tables.Add(new MBRESULTDataTable(ds.Tables["MBRESULT"]));
+                }
+                if ((ds.Tables["MBRESULT2"] != null)) {
+                    base.Tables.Add(new MBRESULT2DataTable(ds.Tables["MBRESULT2"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +84,19 @@ namespace DiplomaClient {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SALESASSOCIATIONDataTable SALESASSOCIATION {
+        public MBRESULTDataTable MBRESULT {
             get {
-                return this.tableSALESASSOCIATION;
+                return this.tableMBRESULT;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public MBRESULT2DataTable MBRESULT2 {
+            get {
+                return this.tableMBRESULT2;
             }
         }
         
@@ -152,8 +167,11 @@ namespace DiplomaClient {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["SALESASSOCIATION"] != null)) {
-                    base.Tables.Add(new SALESASSOCIATIONDataTable(ds.Tables["SALESASSOCIATION"]));
+                if ((ds.Tables["MBRESULT"] != null)) {
+                    base.Tables.Add(new MBRESULTDataTable(ds.Tables["MBRESULT"]));
+                }
+                if ((ds.Tables["MBRESULT2"] != null)) {
+                    base.Tables.Add(new MBRESULT2DataTable(ds.Tables["MBRESULT2"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +206,16 @@ namespace DiplomaClient {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableSALESASSOCIATION = ((SALESASSOCIATIONDataTable)(base.Tables["SALESASSOCIATION"]));
+            this.tableMBRESULT = ((MBRESULTDataTable)(base.Tables["MBRESULT"]));
             if ((initTable == true)) {
-                if ((this.tableSALESASSOCIATION != null)) {
-                    this.tableSALESASSOCIATION.InitVars();
+                if ((this.tableMBRESULT != null)) {
+                    this.tableMBRESULT.InitVars();
+                }
+            }
+            this.tableMBRESULT2 = ((MBRESULT2DataTable)(base.Tables["MBRESULT2"]));
+            if ((initTable == true)) {
+                if ((this.tableMBRESULT2 != null)) {
+                    this.tableMBRESULT2.InitVars();
                 }
             }
         }
@@ -204,13 +228,21 @@ namespace DiplomaClient {
             this.Namespace = "http://tempuri.org/dsDMUSER.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableSALESASSOCIATION = new SALESASSOCIATIONDataTable();
-            base.Tables.Add(this.tableSALESASSOCIATION);
+            this.tableMBRESULT = new MBRESULTDataTable();
+            base.Tables.Add(this.tableMBRESULT);
+            this.tableMBRESULT2 = new MBRESULT2DataTable();
+            base.Tables.Add(this.tableMBRESULT2);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeSALESASSOCIATION() {
+        private bool ShouldSerializeMBRESULT() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeMBRESULT2() {
             return false;
         }
         
@@ -270,26 +302,25 @@ namespace DiplomaClient {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void SALESASSOCIATIONRowChangeEventHandler(object sender, SALESASSOCIATIONRowChangeEvent e);
+        public delegate void MBRESULTRowChangeEventHandler(object sender, MBRESULTRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void MBRESULT2RowChangeEventHandler(object sender, MBRESULT2RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SALESASSOCIATIONDataTable : global::System.Data.TypedTableBase<SALESASSOCIATIONRow> {
+        public partial class MBRESULTDataTable : global::System.Data.TypedTableBase<MBRESULTRow> {
             
-            private global::System.Data.DataColumn columnANTECEDENT_ITEMS;
+            private global::System.Data.DataColumn columnRECORDID;
             
-            private global::System.Data.DataColumn columnANTECEDENT_SUPPORT;
+            private global::System.Data.DataColumn columnBUYBEFORE;
+            
+            private global::System.Data.DataColumn columnBUYAFTER;
             
             private global::System.Data.DataColumn columnCONFIDENCE;
-            
-            private global::System.Data.DataColumn columnCONSEQUENT_ITEMS;
-            
-            private global::System.Data.DataColumn columnCONSEQUENT_SUPPORT;
-            
-            private global::System.Data.DataColumn columnID;
             
             private global::System.Data.DataColumn columnLIFT;
             
@@ -297,8 +328,8 @@ namespace DiplomaClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SALESASSOCIATIONDataTable() {
-                this.TableName = "SALESASSOCIATION";
+            public MBRESULTDataTable() {
+                this.TableName = "MBRESULT";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +337,7 @@ namespace DiplomaClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal SALESASSOCIATIONDataTable(global::System.Data.DataTable table) {
+            internal MBRESULTDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,24 +354,32 @@ namespace DiplomaClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected SALESASSOCIATIONDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected MBRESULTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ANTECEDENT_ITEMSColumn {
+            public global::System.Data.DataColumn RECORDIDColumn {
                 get {
-                    return this.columnANTECEDENT_ITEMS;
+                    return this.columnRECORDID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ANTECEDENT_SUPPORTColumn {
+            public global::System.Data.DataColumn BUYBEFOREColumn {
                 get {
-                    return this.columnANTECEDENT_SUPPORT;
+                    return this.columnBUYBEFORE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BUYAFTERColumn {
+                get {
+                    return this.columnBUYAFTER;
                 }
             }
             
@@ -349,30 +388,6 @@ namespace DiplomaClient {
             public global::System.Data.DataColumn CONFIDENCEColumn {
                 get {
                     return this.columnCONFIDENCE;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CONSEQUENT_ITEMSColumn {
-                get {
-                    return this.columnCONSEQUENT_ITEMS;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CONSEQUENT_SUPPORTColumn {
-                get {
-                    return this.columnCONSEQUENT_SUPPORT;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
-                get {
-                    return this.columnID;
                 }
             }
             
@@ -403,59 +418,57 @@ namespace DiplomaClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SALESASSOCIATIONRow this[int index] {
+            public MBRESULTRow this[int index] {
                 get {
-                    return ((SALESASSOCIATIONRow)(this.Rows[index]));
+                    return ((MBRESULTRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event SALESASSOCIATIONRowChangeEventHandler SALESASSOCIATIONRowChanging;
+            public event MBRESULTRowChangeEventHandler MBRESULTRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event SALESASSOCIATIONRowChangeEventHandler SALESASSOCIATIONRowChanged;
+            public event MBRESULTRowChangeEventHandler MBRESULTRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event SALESASSOCIATIONRowChangeEventHandler SALESASSOCIATIONRowDeleting;
+            public event MBRESULTRowChangeEventHandler MBRESULTRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event SALESASSOCIATIONRowChangeEventHandler SALESASSOCIATIONRowDeleted;
+            public event MBRESULTRowChangeEventHandler MBRESULTRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddSALESASSOCIATIONRow(SALESASSOCIATIONRow row) {
+            public void AddMBRESULTRow(MBRESULTRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SALESASSOCIATIONRow AddSALESASSOCIATIONRow(string ANTECEDENT_ITEMS, decimal ANTECEDENT_SUPPORT, decimal CONFIDENCE, string CONSEQUENT_ITEMS, decimal CONSEQUENT_SUPPORT, decimal ID, decimal LIFT, decimal SUPPORT) {
-                SALESASSOCIATIONRow rowSALESASSOCIATIONRow = ((SALESASSOCIATIONRow)(this.NewRow()));
+            public MBRESULTRow AddMBRESULTRow(decimal RECORDID, string BUYBEFORE, string BUYAFTER, decimal CONFIDENCE, decimal LIFT, decimal SUPPORT) {
+                MBRESULTRow rowMBRESULTRow = ((MBRESULTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ANTECEDENT_ITEMS,
-                        ANTECEDENT_SUPPORT,
+                        RECORDID,
+                        BUYBEFORE,
+                        BUYAFTER,
                         CONFIDENCE,
-                        CONSEQUENT_ITEMS,
-                        CONSEQUENT_SUPPORT,
-                        ID,
                         LIFT,
                         SUPPORT};
-                rowSALESASSOCIATIONRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSALESASSOCIATIONRow);
-                return rowSALESASSOCIATIONRow;
+                rowMBRESULTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMBRESULTRow);
+                return rowMBRESULTRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SALESASSOCIATIONRow FindByID(decimal ID) {
-                return ((SALESASSOCIATIONRow)(this.Rows.Find(new object[] {
-                            ID})));
+            public MBRESULTRow FindByRECORDID(decimal RECORDID) {
+                return ((MBRESULTRow)(this.Rows.Find(new object[] {
+                            RECORDID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                SALESASSOCIATIONDataTable cln = ((SALESASSOCIATIONDataTable)(base.Clone()));
+                MBRESULTDataTable cln = ((MBRESULTDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,18 +476,16 @@ namespace DiplomaClient {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new SALESASSOCIATIONDataTable();
+                return new MBRESULTDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnANTECEDENT_ITEMS = base.Columns["ANTECEDENT_ITEMS"];
-                this.columnANTECEDENT_SUPPORT = base.Columns["ANTECEDENT_SUPPORT"];
+                this.columnRECORDID = base.Columns["RECORDID"];
+                this.columnBUYBEFORE = base.Columns["BUYBEFORE"];
+                this.columnBUYAFTER = base.Columns["BUYAFTER"];
                 this.columnCONFIDENCE = base.Columns["CONFIDENCE"];
-                this.columnCONSEQUENT_ITEMS = base.Columns["CONSEQUENT_ITEMS"];
-                this.columnCONSEQUENT_SUPPORT = base.Columns["CONSEQUENT_SUPPORT"];
-                this.columnID = base.Columns["ID"];
                 this.columnLIFT = base.Columns["LIFT"];
                 this.columnSUPPORT = base.Columns["SUPPORT"];
             }
@@ -482,54 +493,50 @@ namespace DiplomaClient {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnANTECEDENT_ITEMS = new global::System.Data.DataColumn("ANTECEDENT_ITEMS", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnANTECEDENT_ITEMS);
-                this.columnANTECEDENT_SUPPORT = new global::System.Data.DataColumn("ANTECEDENT_SUPPORT", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnANTECEDENT_SUPPORT);
+                this.columnRECORDID = new global::System.Data.DataColumn("RECORDID", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECORDID);
+                this.columnBUYBEFORE = new global::System.Data.DataColumn("BUYBEFORE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBUYBEFORE);
+                this.columnBUYAFTER = new global::System.Data.DataColumn("BUYAFTER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBUYAFTER);
                 this.columnCONFIDENCE = new global::System.Data.DataColumn("CONFIDENCE", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCONFIDENCE);
-                this.columnCONSEQUENT_ITEMS = new global::System.Data.DataColumn("CONSEQUENT_ITEMS", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCONSEQUENT_ITEMS);
-                this.columnCONSEQUENT_SUPPORT = new global::System.Data.DataColumn("CONSEQUENT_SUPPORT", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCONSEQUENT_SUPPORT);
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
                 this.columnLIFT = new global::System.Data.DataColumn("LIFT", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLIFT);
                 this.columnSUPPORT = new global::System.Data.DataColumn("SUPPORT", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSUPPORT);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnANTECEDENT_ITEMS.MaxLength = 4000;
-                this.columnCONSEQUENT_ITEMS.MaxLength = 4000;
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
+                                this.columnRECORDID}, true));
+                this.columnRECORDID.AllowDBNull = false;
+                this.columnRECORDID.Unique = true;
+                this.columnBUYBEFORE.MaxLength = 4000;
+                this.columnBUYAFTER.MaxLength = 4000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SALESASSOCIATIONRow NewSALESASSOCIATIONRow() {
-                return ((SALESASSOCIATIONRow)(this.NewRow()));
+            public MBRESULTRow NewMBRESULTRow() {
+                return ((MBRESULTRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SALESASSOCIATIONRow(builder);
+                return new MBRESULTRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(SALESASSOCIATIONRow);
+                return typeof(MBRESULTRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.SALESASSOCIATIONRowChanged != null)) {
-                    this.SALESASSOCIATIONRowChanged(this, new SALESASSOCIATIONRowChangeEvent(((SALESASSOCIATIONRow)(e.Row)), e.Action));
+                if ((this.MBRESULTRowChanged != null)) {
+                    this.MBRESULTRowChanged(this, new MBRESULTRowChangeEvent(((MBRESULTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -537,8 +544,8 @@ namespace DiplomaClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.SALESASSOCIATIONRowChanging != null)) {
-                    this.SALESASSOCIATIONRowChanging(this, new SALESASSOCIATIONRowChangeEvent(((SALESASSOCIATIONRow)(e.Row)), e.Action));
+                if ((this.MBRESULTRowChanging != null)) {
+                    this.MBRESULTRowChanging(this, new MBRESULTRowChangeEvent(((MBRESULTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -546,8 +553,8 @@ namespace DiplomaClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.SALESASSOCIATIONRowDeleted != null)) {
-                    this.SALESASSOCIATIONRowDeleted(this, new SALESASSOCIATIONRowChangeEvent(((SALESASSOCIATIONRow)(e.Row)), e.Action));
+                if ((this.MBRESULTRowDeleted != null)) {
+                    this.MBRESULTRowDeleted(this, new MBRESULTRowChangeEvent(((MBRESULTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -555,14 +562,14 @@ namespace DiplomaClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.SALESASSOCIATIONRowDeleting != null)) {
-                    this.SALESASSOCIATIONRowDeleting(this, new SALESASSOCIATIONRowChangeEvent(((SALESASSOCIATIONRow)(e.Row)), e.Action));
+                if ((this.MBRESULTRowDeleting != null)) {
+                    this.MBRESULTRowDeleting(this, new MBRESULTRowChangeEvent(((MBRESULTRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveSALESASSOCIATIONRow(SALESASSOCIATIONRow row) {
+            public void RemoveMBRESULTRow(MBRESULTRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -589,7 +596,337 @@ namespace DiplomaClient {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SALESASSOCIATIONDataTable";
+                attribute2.FixedValue = "MBRESULTDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class MBRESULT2DataTable : global::System.Data.TypedTableBase<MBRESULT2Row> {
+            
+            private global::System.Data.DataColumn columnRECORDID;
+            
+            private global::System.Data.DataColumn columnBUYBEFORE;
+            
+            private global::System.Data.DataColumn columnBUYAFTER;
+            
+            private global::System.Data.DataColumn columnCONFIDENCE;
+            
+            private global::System.Data.DataColumn columnLIFT;
+            
+            private global::System.Data.DataColumn columnSUPPORT;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MBRESULT2DataTable() {
+                this.TableName = "MBRESULT2";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal MBRESULT2DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected MBRESULT2DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RECORDIDColumn {
+                get {
+                    return this.columnRECORDID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BUYBEFOREColumn {
+                get {
+                    return this.columnBUYBEFORE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BUYAFTERColumn {
+                get {
+                    return this.columnBUYAFTER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CONFIDENCEColumn {
+                get {
+                    return this.columnCONFIDENCE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LIFTColumn {
+                get {
+                    return this.columnLIFT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SUPPORTColumn {
+                get {
+                    return this.columnSUPPORT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MBRESULT2Row this[int index] {
+                get {
+                    return ((MBRESULT2Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event MBRESULT2RowChangeEventHandler MBRESULT2RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event MBRESULT2RowChangeEventHandler MBRESULT2RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event MBRESULT2RowChangeEventHandler MBRESULT2RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event MBRESULT2RowChangeEventHandler MBRESULT2RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddMBRESULT2Row(MBRESULT2Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MBRESULT2Row AddMBRESULT2Row(decimal RECORDID, string BUYBEFORE, string BUYAFTER, decimal CONFIDENCE, decimal LIFT, decimal SUPPORT) {
+                MBRESULT2Row rowMBRESULT2Row = ((MBRESULT2Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        RECORDID,
+                        BUYBEFORE,
+                        BUYAFTER,
+                        CONFIDENCE,
+                        LIFT,
+                        SUPPORT};
+                rowMBRESULT2Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMBRESULT2Row);
+                return rowMBRESULT2Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MBRESULT2Row FindByRECORDID(decimal RECORDID) {
+                return ((MBRESULT2Row)(this.Rows.Find(new object[] {
+                            RECORDID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                MBRESULT2DataTable cln = ((MBRESULT2DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new MBRESULT2DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnRECORDID = base.Columns["RECORDID"];
+                this.columnBUYBEFORE = base.Columns["BUYBEFORE"];
+                this.columnBUYAFTER = base.Columns["BUYAFTER"];
+                this.columnCONFIDENCE = base.Columns["CONFIDENCE"];
+                this.columnLIFT = base.Columns["LIFT"];
+                this.columnSUPPORT = base.Columns["SUPPORT"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnRECORDID = new global::System.Data.DataColumn("RECORDID", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECORDID);
+                this.columnBUYBEFORE = new global::System.Data.DataColumn("BUYBEFORE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBUYBEFORE);
+                this.columnBUYAFTER = new global::System.Data.DataColumn("BUYAFTER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBUYAFTER);
+                this.columnCONFIDENCE = new global::System.Data.DataColumn("CONFIDENCE", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCONFIDENCE);
+                this.columnLIFT = new global::System.Data.DataColumn("LIFT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLIFT);
+                this.columnSUPPORT = new global::System.Data.DataColumn("SUPPORT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSUPPORT);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnRECORDID}, true));
+                this.columnRECORDID.AllowDBNull = false;
+                this.columnRECORDID.Unique = true;
+                this.columnBUYBEFORE.MaxLength = 4000;
+                this.columnBUYAFTER.MaxLength = 4000;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MBRESULT2Row NewMBRESULT2Row() {
+                return ((MBRESULT2Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new MBRESULT2Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(MBRESULT2Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.MBRESULT2RowChanged != null)) {
+                    this.MBRESULT2RowChanged(this, new MBRESULT2RowChangeEvent(((MBRESULT2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.MBRESULT2RowChanging != null)) {
+                    this.MBRESULT2RowChanging(this, new MBRESULT2RowChangeEvent(((MBRESULT2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.MBRESULT2RowDeleted != null)) {
+                    this.MBRESULT2RowDeleted(this, new MBRESULT2RowChangeEvent(((MBRESULT2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.MBRESULT2RowDeleting != null)) {
+                    this.MBRESULT2RowDeleting(this, new MBRESULT2RowChangeEvent(((MBRESULT2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveMBRESULT2Row(MBRESULT2Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsDMUSER ds = new dsDMUSER();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "MBRESULT2DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -633,46 +970,57 @@ namespace DiplomaClient {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class SALESASSOCIATIONRow : global::System.Data.DataRow {
+        public partial class MBRESULTRow : global::System.Data.DataRow {
             
-            private SALESASSOCIATIONDataTable tableSALESASSOCIATION;
+            private MBRESULTDataTable tableMBRESULT;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal SALESASSOCIATIONRow(global::System.Data.DataRowBuilder rb) : 
+            internal MBRESULTRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableSALESASSOCIATION = ((SALESASSOCIATIONDataTable)(this.Table));
+                this.tableMBRESULT = ((MBRESULTDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ANTECEDENT_ITEMS {
+            public decimal RECORDID {
                 get {
-                    try {
-                        return ((string)(this[this.tableSALESASSOCIATION.ANTECEDENT_ITEMSColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ANTECEDENT_ITEMS\' in table \'SALESASSOCIATION\' is DBNull.", e);
-                    }
+                    return ((decimal)(this[this.tableMBRESULT.RECORDIDColumn]));
                 }
                 set {
-                    this[this.tableSALESASSOCIATION.ANTECEDENT_ITEMSColumn] = value;
+                    this[this.tableMBRESULT.RECORDIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal ANTECEDENT_SUPPORT {
+            public string BUYBEFORE {
                 get {
                     try {
-                        return ((decimal)(this[this.tableSALESASSOCIATION.ANTECEDENT_SUPPORTColumn]));
+                        return ((string)(this[this.tableMBRESULT.BUYBEFOREColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ANTECEDENT_SUPPORT\' in table \'SALESASSOCIATION\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'BUYBEFORE\' in table \'MBRESULT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSALESASSOCIATION.ANTECEDENT_SUPPORTColumn] = value;
+                    this[this.tableMBRESULT.BUYBEFOREColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BUYAFTER {
+                get {
+                    try {
+                        return ((string)(this[this.tableMBRESULT.BUYAFTERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BUYAFTER\' in table \'MBRESULT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMBRESULT.BUYAFTERColumn] = value;
                 }
             }
             
@@ -681,57 +1029,14 @@ namespace DiplomaClient {
             public decimal CONFIDENCE {
                 get {
                     try {
-                        return ((decimal)(this[this.tableSALESASSOCIATION.CONFIDENCEColumn]));
+                        return ((decimal)(this[this.tableMBRESULT.CONFIDENCEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CONFIDENCE\' in table \'SALESASSOCIATION\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CONFIDENCE\' in table \'MBRESULT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSALESASSOCIATION.CONFIDENCEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string CONSEQUENT_ITEMS {
-                get {
-                    try {
-                        return ((string)(this[this.tableSALESASSOCIATION.CONSEQUENT_ITEMSColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CONSEQUENT_ITEMS\' in table \'SALESASSOCIATION\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSALESASSOCIATION.CONSEQUENT_ITEMSColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal CONSEQUENT_SUPPORT {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableSALESASSOCIATION.CONSEQUENT_SUPPORTColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CONSEQUENT_SUPPORT\' in table \'SALESASSOCIATION\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSALESASSOCIATION.CONSEQUENT_SUPPORTColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal ID {
-                get {
-                    return ((decimal)(this[this.tableSALESASSOCIATION.IDColumn]));
-                }
-                set {
-                    this[this.tableSALESASSOCIATION.IDColumn] = value;
+                    this[this.tableMBRESULT.CONFIDENCEColumn] = value;
                 }
             }
             
@@ -740,14 +1045,14 @@ namespace DiplomaClient {
             public decimal LIFT {
                 get {
                     try {
-                        return ((decimal)(this[this.tableSALESASSOCIATION.LIFTColumn]));
+                        return ((decimal)(this[this.tableMBRESULT.LIFTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LIFT\' in table \'SALESASSOCIATION\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'LIFT\' in table \'MBRESULT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSALESASSOCIATION.LIFTColumn] = value;
+                    this[this.tableMBRESULT.LIFTColumn] = value;
                 }
             }
             
@@ -756,99 +1061,241 @@ namespace DiplomaClient {
             public decimal SUPPORT {
                 get {
                     try {
-                        return ((decimal)(this[this.tableSALESASSOCIATION.SUPPORTColumn]));
+                        return ((decimal)(this[this.tableMBRESULT.SUPPORTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SUPPORT\' in table \'SALESASSOCIATION\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SUPPORT\' in table \'MBRESULT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSALESASSOCIATION.SUPPORTColumn] = value;
+                    this[this.tableMBRESULT.SUPPORTColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsANTECEDENT_ITEMSNull() {
-                return this.IsNull(this.tableSALESASSOCIATION.ANTECEDENT_ITEMSColumn);
+            public bool IsBUYBEFORENull() {
+                return this.IsNull(this.tableMBRESULT.BUYBEFOREColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetANTECEDENT_ITEMSNull() {
-                this[this.tableSALESASSOCIATION.ANTECEDENT_ITEMSColumn] = global::System.Convert.DBNull;
+            public void SetBUYBEFORENull() {
+                this[this.tableMBRESULT.BUYBEFOREColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsANTECEDENT_SUPPORTNull() {
-                return this.IsNull(this.tableSALESASSOCIATION.ANTECEDENT_SUPPORTColumn);
+            public bool IsBUYAFTERNull() {
+                return this.IsNull(this.tableMBRESULT.BUYAFTERColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetANTECEDENT_SUPPORTNull() {
-                this[this.tableSALESASSOCIATION.ANTECEDENT_SUPPORTColumn] = global::System.Convert.DBNull;
+            public void SetBUYAFTERNull() {
+                this[this.tableMBRESULT.BUYAFTERColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCONFIDENCENull() {
-                return this.IsNull(this.tableSALESASSOCIATION.CONFIDENCEColumn);
+                return this.IsNull(this.tableMBRESULT.CONFIDENCEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCONFIDENCENull() {
-                this[this.tableSALESASSOCIATION.CONFIDENCEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCONSEQUENT_ITEMSNull() {
-                return this.IsNull(this.tableSALESASSOCIATION.CONSEQUENT_ITEMSColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCONSEQUENT_ITEMSNull() {
-                this[this.tableSALESASSOCIATION.CONSEQUENT_ITEMSColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCONSEQUENT_SUPPORTNull() {
-                return this.IsNull(this.tableSALESASSOCIATION.CONSEQUENT_SUPPORTColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCONSEQUENT_SUPPORTNull() {
-                this[this.tableSALESASSOCIATION.CONSEQUENT_SUPPORTColumn] = global::System.Convert.DBNull;
+                this[this.tableMBRESULT.CONFIDENCEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsLIFTNull() {
-                return this.IsNull(this.tableSALESASSOCIATION.LIFTColumn);
+                return this.IsNull(this.tableMBRESULT.LIFTColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetLIFTNull() {
-                this[this.tableSALESASSOCIATION.LIFTColumn] = global::System.Convert.DBNull;
+                this[this.tableMBRESULT.LIFTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSUPPORTNull() {
-                return this.IsNull(this.tableSALESASSOCIATION.SUPPORTColumn);
+                return this.IsNull(this.tableMBRESULT.SUPPORTColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSUPPORTNull() {
-                this[this.tableSALESASSOCIATION.SUPPORTColumn] = global::System.Convert.DBNull;
+                this[this.tableMBRESULT.SUPPORTColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class MBRESULT2Row : global::System.Data.DataRow {
+            
+            private MBRESULT2DataTable tableMBRESULT2;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal MBRESULT2Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableMBRESULT2 = ((MBRESULT2DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal RECORDID {
+                get {
+                    return ((decimal)(this[this.tableMBRESULT2.RECORDIDColumn]));
+                }
+                set {
+                    this[this.tableMBRESULT2.RECORDIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BUYBEFORE {
+                get {
+                    try {
+                        return ((string)(this[this.tableMBRESULT2.BUYBEFOREColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BUYBEFORE\' in table \'MBRESULT2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMBRESULT2.BUYBEFOREColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BUYAFTER {
+                get {
+                    try {
+                        return ((string)(this[this.tableMBRESULT2.BUYAFTERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BUYAFTER\' in table \'MBRESULT2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMBRESULT2.BUYAFTERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal CONFIDENCE {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMBRESULT2.CONFIDENCEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CONFIDENCE\' in table \'MBRESULT2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMBRESULT2.CONFIDENCEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal LIFT {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMBRESULT2.LIFTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LIFT\' in table \'MBRESULT2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMBRESULT2.LIFTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal SUPPORT {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMBRESULT2.SUPPORTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SUPPORT\' in table \'MBRESULT2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMBRESULT2.SUPPORTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBUYBEFORENull() {
+                return this.IsNull(this.tableMBRESULT2.BUYBEFOREColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBUYBEFORENull() {
+                this[this.tableMBRESULT2.BUYBEFOREColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBUYAFTERNull() {
+                return this.IsNull(this.tableMBRESULT2.BUYAFTERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBUYAFTERNull() {
+                this[this.tableMBRESULT2.BUYAFTERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCONFIDENCENull() {
+                return this.IsNull(this.tableMBRESULT2.CONFIDENCEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCONFIDENCENull() {
+                this[this.tableMBRESULT2.CONFIDENCEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLIFTNull() {
+                return this.IsNull(this.tableMBRESULT2.LIFTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLIFTNull() {
+                this[this.tableMBRESULT2.LIFTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSUPPORTNull() {
+                return this.IsNull(this.tableMBRESULT2.SUPPORTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSUPPORTNull() {
+                this[this.tableMBRESULT2.SUPPORTColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -856,22 +1303,56 @@ namespace DiplomaClient {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class SALESASSOCIATIONRowChangeEvent : global::System.EventArgs {
+        public class MBRESULTRowChangeEvent : global::System.EventArgs {
             
-            private SALESASSOCIATIONRow eventRow;
+            private MBRESULTRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SALESASSOCIATIONRowChangeEvent(SALESASSOCIATIONRow row, global::System.Data.DataRowAction action) {
+            public MBRESULTRowChangeEvent(MBRESULTRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SALESASSOCIATIONRow Row {
+            public MBRESULTRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class MBRESULT2RowChangeEvent : global::System.EventArgs {
+            
+            private MBRESULT2Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MBRESULT2RowChangeEvent(MBRESULT2Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MBRESULT2Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -899,7 +1380,7 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class SALESASSOCIATIONTableAdapter : global::System.ComponentModel.Component {
+    public partial class MBRESULTTableAdapter : global::System.ComponentModel.Component {
         
         private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
         
@@ -913,7 +1394,7 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public SALESASSOCIATIONTableAdapter() {
+        public MBRESULTTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1010,55 +1491,61 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
             this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "SALESASSOCIATION";
-            tableMapping.ColumnMappings.Add("ANTECEDENT_ITEMS", "ANTECEDENT_ITEMS");
-            tableMapping.ColumnMappings.Add("ANTECEDENT_SUPPORT", "ANTECEDENT_SUPPORT");
+            tableMapping.DataSetTable = "MBRESULT";
+            tableMapping.ColumnMappings.Add("RECORDID", "RECORDID");
+            tableMapping.ColumnMappings.Add("BUYBEFORE", "BUYBEFORE");
+            tableMapping.ColumnMappings.Add("BUYAFTER", "BUYAFTER");
             tableMapping.ColumnMappings.Add("CONFIDENCE", "CONFIDENCE");
-            tableMapping.ColumnMappings.Add("CONSEQUENT_ITEMS", "CONSEQUENT_ITEMS");
-            tableMapping.ColumnMappings.Add("CONSEQUENT_SUPPORT", "CONSEQUENT_SUPPORT");
-            tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("LIFT", "LIFT");
             tableMapping.ColumnMappings.Add("SUPPORT", "SUPPORT");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""DMUSER"".""SALESASSOCIATION"" WHERE (((:IsNull_ANTECEDENT_ITEMS = 1 AND ""ANTECEDENT_ITEMS"" IS NULL) OR (""ANTECEDENT_ITEMS"" = :Original_ANTECEDENT_ITEMS)) AND ((:IsNull_ANTECEDENT_SUPPORT = 1 AND ""ANTECEDENT_SUPPORT"" IS NULL) OR (""ANTECEDENT_SUPPORT"" = :Original_ANTECEDENT_SUPPORT)) AND ((:IsNull_CONFIDENCE = 1 AND ""CONFIDENCE"" IS NULL) OR (""CONFIDENCE"" = :Original_CONFIDENCE)) AND ((:IsNull_CONSEQUENT_ITEMS = 1 AND ""CONSEQUENT_ITEMS"" IS NULL) OR (""CONSEQUENT_ITEMS"" = :Original_CONSEQUENT_ITEMS)) AND ((:IsNull_CONSEQUENT_SUPPORT = 1 AND ""CONSEQUENT_SUPPORT"" IS NULL) OR (""CONSEQUENT_SUPPORT"" = :Original_CONSEQUENT_SUPPORT)) AND (""ID"" = :Original_ID) AND ((:IsNull_LIFT = 1 AND ""LIFT"" IS NULL) OR (""LIFT"" = :Original_LIFT)) AND ((:IsNull_SUPPORT = 1 AND ""SUPPORT"" IS NULL) OR (""SUPPORT"" = :Original_SUPPORT)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""DMUSER"".""MBRESULT"" WHERE ((""RECORDID"" = :Original_RECORDID) AND ((:IsNull_BUYBEFORE = 1 AND ""BUYBEFORE"" IS NULL) OR (""BUYBEFORE"" = :Original_BUYBEFORE)) AND ((:IsNull_BUYAFTER = 1 AND ""BUYAFTER"" IS NULL) OR (""BUYAFTER"" = :Original_BUYAFTER)) AND ((:IsNull_CONFIDENCE = 1 AND ""CONFIDENCE"" IS NULL) OR (""CONFIDENCE"" = :Original_CONFIDENCE)) AND ((:IsNull_LIFT = 1 AND ""LIFT"" IS NULL) OR (""LIFT"" = :Original_LIFT)) AND ((:IsNull_SUPPORT = 1 AND ""SUPPORT"" IS NULL) OR (""SUPPORT"" = :Original_SUPPORT)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IsNull_ANTECEDENT_ITEMS";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
-            param.Size = 4000;
-            param.IsNullable = true;
-            param.SourceColumn = "ANTECEDENT_ITEMS";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_ANTECEDENT_ITEMS";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 4000;
-            param.IsNullable = true;
-            param.SourceColumn = "ANTECEDENT_ITEMS";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IsNull_ANTECEDENT_SUPPORT";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "ANTECEDENT_SUPPORT";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_ANTECEDENT_SUPPORT";
+            param.ParameterName = "Original_RECORDID";
             param.DbType = global::System.Data.DbType.Decimal;
             param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
             param.Size = 22;
             param.IsNullable = true;
-            param.SourceColumn = "ANTECEDENT_SUPPORT";
+            param.SourceColumn = "RECORDID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_BUYBEFORE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYBEFORE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_BUYBEFORE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYBEFORE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_BUYAFTER";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYAFTER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_BUYAFTER";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYAFTER";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
@@ -1078,52 +1565,6 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
             param.Size = 22;
             param.IsNullable = true;
             param.SourceColumn = "CONFIDENCE";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IsNull_CONSEQUENT_ITEMS";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
-            param.Size = 4000;
-            param.IsNullable = true;
-            param.SourceColumn = "CONSEQUENT_ITEMS";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_CONSEQUENT_ITEMS";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 4000;
-            param.IsNullable = true;
-            param.SourceColumn = "CONSEQUENT_ITEMS";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IsNull_CONSEQUENT_SUPPORT";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "CONSEQUENT_SUPPORT";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_CONSEQUENT_SUPPORT";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "CONSEQUENT_SUPPORT";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_ID";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "ID";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
@@ -1166,22 +1607,31 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""DMUSER"".""SALESASSOCIATION"" (""ANTECEDENT_ITEMS"", ""ANTECEDENT_SUPPORT"", ""CONFIDENCE"", ""CONSEQUENT_ITEMS"", ""CONSEQUENT_SUPPORT"", ""ID"", ""LIFT"", ""SUPPORT"") VALUES (:ANTECEDENT_ITEMS, :ANTECEDENT_SUPPORT, :CONFIDENCE, :CONSEQUENT_ITEMS, :CONSEQUENT_SUPPORT, :ID, :LIFT, :SUPPORT)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO \"DMUSER\".\"MBRESULT\" (\"RECORDID\", \"BUYBEFORE\", \"BUYAFTER\", \"CONFIDENCE" +
+                "\", \"LIFT\", \"SUPPORT\") VALUES (:RECORDID, :BUYBEFORE, :BUYAFTER, :CONFIDENCE, :LI" +
+                "FT, :SUPPORT)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "ANTECEDENT_ITEMS";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 4000;
-            param.IsNullable = true;
-            param.SourceColumn = "ANTECEDENT_ITEMS";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "ANTECEDENT_SUPPORT";
+            param.ParameterName = "RECORDID";
             param.DbType = global::System.Data.DbType.Decimal;
             param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
             param.Size = 22;
             param.IsNullable = true;
-            param.SourceColumn = "ANTECEDENT_SUPPORT";
+            param.SourceColumn = "RECORDID";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "BUYBEFORE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYBEFORE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "BUYAFTER";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYAFTER";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "CONFIDENCE";
@@ -1190,29 +1640,6 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
             param.Size = 22;
             param.IsNullable = true;
             param.SourceColumn = "CONFIDENCE";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "CONSEQUENT_ITEMS";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 4000;
-            param.IsNullable = true;
-            param.SourceColumn = "CONSEQUENT_ITEMS";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "CONSEQUENT_SUPPORT";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "CONSEQUENT_SUPPORT";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "ID";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "ID";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "LIFT";
@@ -1232,22 +1659,29 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""DMUSER"".""SALESASSOCIATION"" SET ""ANTECEDENT_ITEMS"" = :ANTECEDENT_ITEMS, ""ANTECEDENT_SUPPORT"" = :ANTECEDENT_SUPPORT, ""CONFIDENCE"" = :CONFIDENCE, ""CONSEQUENT_ITEMS"" = :CONSEQUENT_ITEMS, ""CONSEQUENT_SUPPORT"" = :CONSEQUENT_SUPPORT, ""ID"" = :ID, ""LIFT"" = :LIFT, ""SUPPORT"" = :SUPPORT WHERE (((:IsNull_ANTECEDENT_ITEMS = 1 AND ""ANTECEDENT_ITEMS"" IS NULL) OR (""ANTECEDENT_ITEMS"" = :Original_ANTECEDENT_ITEMS)) AND ((:IsNull_ANTECEDENT_SUPPORT = 1 AND ""ANTECEDENT_SUPPORT"" IS NULL) OR (""ANTECEDENT_SUPPORT"" = :Original_ANTECEDENT_SUPPORT)) AND ((:IsNull_CONFIDENCE = 1 AND ""CONFIDENCE"" IS NULL) OR (""CONFIDENCE"" = :Original_CONFIDENCE)) AND ((:IsNull_CONSEQUENT_ITEMS = 1 AND ""CONSEQUENT_ITEMS"" IS NULL) OR (""CONSEQUENT_ITEMS"" = :Original_CONSEQUENT_ITEMS)) AND ((:IsNull_CONSEQUENT_SUPPORT = 1 AND ""CONSEQUENT_SUPPORT"" IS NULL) OR (""CONSEQUENT_SUPPORT"" = :Original_CONSEQUENT_SUPPORT)) AND (""ID"" = :Original_ID) AND ((:IsNull_LIFT = 1 AND ""LIFT"" IS NULL) OR (""LIFT"" = :Original_LIFT)) AND ((:IsNull_SUPPORT = 1 AND ""SUPPORT"" IS NULL) OR (""SUPPORT"" = :Original_SUPPORT)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""DMUSER"".""MBRESULT"" SET ""RECORDID"" = :RECORDID, ""BUYBEFORE"" = :BUYBEFORE, ""BUYAFTER"" = :BUYAFTER, ""CONFIDENCE"" = :CONFIDENCE, ""LIFT"" = :LIFT, ""SUPPORT"" = :SUPPORT WHERE ((""RECORDID"" = :Original_RECORDID) AND ((:IsNull_BUYBEFORE = 1 AND ""BUYBEFORE"" IS NULL) OR (""BUYBEFORE"" = :Original_BUYBEFORE)) AND ((:IsNull_BUYAFTER = 1 AND ""BUYAFTER"" IS NULL) OR (""BUYAFTER"" = :Original_BUYAFTER)) AND ((:IsNull_CONFIDENCE = 1 AND ""CONFIDENCE"" IS NULL) OR (""CONFIDENCE"" = :Original_CONFIDENCE)) AND ((:IsNull_LIFT = 1 AND ""LIFT"" IS NULL) OR (""LIFT"" = :Original_LIFT)) AND ((:IsNull_SUPPORT = 1 AND ""SUPPORT"" IS NULL) OR (""SUPPORT"" = :Original_SUPPORT)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "ANTECEDENT_ITEMS";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 4000;
-            param.IsNullable = true;
-            param.SourceColumn = "ANTECEDENT_ITEMS";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "ANTECEDENT_SUPPORT";
+            param.ParameterName = "RECORDID";
             param.DbType = global::System.Data.DbType.Decimal;
             param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
             param.Size = 22;
             param.IsNullable = true;
-            param.SourceColumn = "ANTECEDENT_SUPPORT";
+            param.SourceColumn = "RECORDID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "BUYBEFORE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYBEFORE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "BUYAFTER";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYAFTER";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "CONFIDENCE";
@@ -1256,29 +1690,6 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
             param.Size = 22;
             param.IsNullable = true;
             param.SourceColumn = "CONFIDENCE";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "CONSEQUENT_ITEMS";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 4000;
-            param.IsNullable = true;
-            param.SourceColumn = "CONSEQUENT_ITEMS";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "CONSEQUENT_SUPPORT";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "CONSEQUENT_SUPPORT";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "ID";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "ID";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "LIFT";
@@ -1297,40 +1708,48 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
             param.SourceColumn = "SUPPORT";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IsNull_ANTECEDENT_ITEMS";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
-            param.Size = 4000;
-            param.IsNullable = true;
-            param.SourceColumn = "ANTECEDENT_ITEMS";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_ANTECEDENT_ITEMS";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 4000;
-            param.IsNullable = true;
-            param.SourceColumn = "ANTECEDENT_ITEMS";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IsNull_ANTECEDENT_SUPPORT";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "ANTECEDENT_SUPPORT";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_ANTECEDENT_SUPPORT";
+            param.ParameterName = "Original_RECORDID";
             param.DbType = global::System.Data.DbType.Decimal;
             param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
             param.Size = 22;
             param.IsNullable = true;
-            param.SourceColumn = "ANTECEDENT_SUPPORT";
+            param.SourceColumn = "RECORDID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_BUYBEFORE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYBEFORE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_BUYBEFORE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYBEFORE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_BUYAFTER";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYAFTER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_BUYAFTER";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYAFTER";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
@@ -1350,52 +1769,6 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
             param.Size = 22;
             param.IsNullable = true;
             param.SourceColumn = "CONFIDENCE";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IsNull_CONSEQUENT_ITEMS";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
-            param.Size = 4000;
-            param.IsNullable = true;
-            param.SourceColumn = "CONSEQUENT_ITEMS";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_CONSEQUENT_ITEMS";
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 4000;
-            param.IsNullable = true;
-            param.SourceColumn = "CONSEQUENT_ITEMS";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "IsNull_CONSEQUENT_SUPPORT";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "CONSEQUENT_SUPPORT";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_CONSEQUENT_SUPPORT";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "CONSEQUENT_SUPPORT";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "Original_ID";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = "ID";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
@@ -1451,8 +1824,8 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ANTECEDENT_ITEMS, ANTECEDENT_SUPPORT, CONFIDENCE, CONSEQUENT_ITEMS, CONSEQ" +
-                "UENT_SUPPORT, ID, LIFT, SUPPORT FROM DMUSER.SALESASSOCIATION";
+            this._commandCollection[0].CommandText = "SELECT RECORDID, BUYBEFORE, BUYAFTER, CONFIDENCE, LIFT, SUPPORT FROM DMUSER.MBRES" +
+                "ULT";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1460,7 +1833,7 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsDMUSER.SALESASSOCIATIONDataTable dataTable) {
+        public virtual int Fill(dsDMUSER.MBRESULTDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1473,9 +1846,9 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsDMUSER.SALESASSOCIATIONDataTable GetData() {
+        public virtual dsDMUSER.MBRESULTDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsDMUSER.SALESASSOCIATIONDataTable dataTable = new dsDMUSER.SALESASSOCIATIONDataTable();
+            dsDMUSER.MBRESULTDataTable dataTable = new dsDMUSER.MBRESULTDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1483,7 +1856,7 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsDMUSER.SALESASSOCIATIONDataTable dataTable) {
+        public virtual int Update(dsDMUSER.MBRESULTDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -1491,7 +1864,7 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(dsDMUSER dataSet) {
-            return this.Adapter.Update(dataSet, "SALESASSOCIATION");
+            return this.Adapter.Update(dataSet, "MBRESULT");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1513,63 +1886,47 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_ANTECEDENT_ITEMS, global::System.Nullable<decimal> Original_ANTECEDENT_SUPPORT, global::System.Nullable<decimal> Original_CONFIDENCE, string Original_CONSEQUENT_ITEMS, global::System.Nullable<decimal> Original_CONSEQUENT_SUPPORT, decimal Original_ID, global::System.Nullable<decimal> Original_LIFT, global::System.Nullable<decimal> Original_SUPPORT) {
-            if ((Original_ANTECEDENT_ITEMS == null)) {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+        public virtual int Delete(decimal Original_RECORDID, string Original_BUYBEFORE, string Original_BUYAFTER, global::System.Nullable<decimal> Original_CONFIDENCE, global::System.Nullable<decimal> Original_LIFT, global::System.Nullable<decimal> Original_SUPPORT) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_RECORDID));
+            if ((Original_BUYBEFORE == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_ANTECEDENT_ITEMS));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_BUYBEFORE));
             }
-            if ((Original_ANTECEDENT_SUPPORT.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_ANTECEDENT_SUPPORT.Value));
+            if ((Original_BUYAFTER == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_BUYAFTER));
             }
             if ((Original_CONFIDENCE.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(Original_CONFIDENCE.Value));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(Original_CONFIDENCE.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_CONSEQUENT_ITEMS == null)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_CONSEQUENT_ITEMS));
-            }
-            if ((Original_CONSEQUENT_SUPPORT.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((decimal)(Original_CONSEQUENT_SUPPORT.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(Original_ID));
             if ((Original_LIFT.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_LIFT.Value));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(Original_LIFT.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             if ((Original_SUPPORT.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((decimal)(Original_SUPPORT.Value));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(Original_SUPPORT.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1591,49 +1948,37 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ANTECEDENT_ITEMS, global::System.Nullable<decimal> ANTECEDENT_SUPPORT, global::System.Nullable<decimal> CONFIDENCE, string CONSEQUENT_ITEMS, global::System.Nullable<decimal> CONSEQUENT_SUPPORT, decimal ID, global::System.Nullable<decimal> LIFT, global::System.Nullable<decimal> SUPPORT) {
-            if ((ANTECEDENT_ITEMS == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ANTECEDENT_ITEMS));
-            }
-            if ((ANTECEDENT_SUPPORT.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(ANTECEDENT_SUPPORT.Value));
-            }
-            else {
+        public virtual int Insert(decimal RECORDID, string BUYBEFORE, string BUYAFTER, global::System.Nullable<decimal> CONFIDENCE, global::System.Nullable<decimal> LIFT, global::System.Nullable<decimal> SUPPORT) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(RECORDID));
+            if ((BUYBEFORE == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((CONFIDENCE.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(CONFIDENCE.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(BUYBEFORE));
+            }
+            if ((BUYAFTER == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((CONSEQUENT_ITEMS == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(BUYAFTER));
+            }
+            if ((CONFIDENCE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(CONFIDENCE.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CONSEQUENT_ITEMS));
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((CONSEQUENT_SUPPORT.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(CONSEQUENT_SUPPORT.Value));
+            if ((LIFT.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(LIFT.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(ID));
-            if ((LIFT.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(LIFT.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
             if ((SUPPORT.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(SUPPORT.Value));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(SUPPORT.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1655,122 +2000,78 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string ANTECEDENT_ITEMS, 
-                    global::System.Nullable<decimal> ANTECEDENT_SUPPORT, 
-                    global::System.Nullable<decimal> CONFIDENCE, 
-                    string CONSEQUENT_ITEMS, 
-                    global::System.Nullable<decimal> CONSEQUENT_SUPPORT, 
-                    decimal ID, 
-                    global::System.Nullable<decimal> LIFT, 
-                    global::System.Nullable<decimal> SUPPORT, 
-                    string Original_ANTECEDENT_ITEMS, 
-                    global::System.Nullable<decimal> Original_ANTECEDENT_SUPPORT, 
-                    global::System.Nullable<decimal> Original_CONFIDENCE, 
-                    string Original_CONSEQUENT_ITEMS, 
-                    global::System.Nullable<decimal> Original_CONSEQUENT_SUPPORT, 
-                    decimal Original_ID, 
-                    global::System.Nullable<decimal> Original_LIFT, 
-                    global::System.Nullable<decimal> Original_SUPPORT) {
-            if ((ANTECEDENT_ITEMS == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ANTECEDENT_ITEMS));
-            }
-            if ((ANTECEDENT_SUPPORT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(ANTECEDENT_SUPPORT.Value));
-            }
-            else {
+        public virtual int Update(decimal RECORDID, string BUYBEFORE, string BUYAFTER, global::System.Nullable<decimal> CONFIDENCE, global::System.Nullable<decimal> LIFT, global::System.Nullable<decimal> SUPPORT, decimal Original_RECORDID, string Original_BUYBEFORE, string Original_BUYAFTER, global::System.Nullable<decimal> Original_CONFIDENCE, global::System.Nullable<decimal> Original_LIFT, global::System.Nullable<decimal> Original_SUPPORT) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(RECORDID));
+            if ((BUYBEFORE == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((CONFIDENCE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(CONFIDENCE.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(BUYBEFORE));
+            }
+            if ((BUYAFTER == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((CONSEQUENT_ITEMS == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(BUYAFTER));
+            }
+            if ((CONFIDENCE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(CONFIDENCE.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(CONSEQUENT_ITEMS));
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((CONSEQUENT_SUPPORT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(CONSEQUENT_SUPPORT.Value));
+            if ((LIFT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(LIFT.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(ID));
-            if ((LIFT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(LIFT.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
             if ((SUPPORT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(SUPPORT.Value));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(SUPPORT.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Original_ANTECEDENT_ITEMS == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_ANTECEDENT_ITEMS));
-            }
-            if ((Original_ANTECEDENT_SUPPORT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_ANTECEDENT_SUPPORT.Value));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_RECORDID));
+            if ((Original_BUYBEFORE == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_BUYBEFORE));
+            }
+            if ((Original_BUYAFTER == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_BUYAFTER));
             }
             if ((Original_CONFIDENCE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_CONFIDENCE.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((decimal)(Original_CONFIDENCE.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_CONSEQUENT_ITEMS == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_CONSEQUENT_ITEMS));
-            }
-            if ((Original_CONSEQUENT_SUPPORT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((decimal)(Original_CONSEQUENT_SUPPORT.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((decimal)(Original_ID));
             if ((Original_LIFT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(Original_LIFT.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(Original_LIFT.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             if ((Original_SUPPORT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((decimal)(Original_SUPPORT.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(Original_SUPPORT.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1792,8 +2093,735 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ANTECEDENT_ITEMS, global::System.Nullable<decimal> ANTECEDENT_SUPPORT, global::System.Nullable<decimal> CONFIDENCE, string CONSEQUENT_ITEMS, global::System.Nullable<decimal> CONSEQUENT_SUPPORT, global::System.Nullable<decimal> LIFT, global::System.Nullable<decimal> SUPPORT, string Original_ANTECEDENT_ITEMS, global::System.Nullable<decimal> Original_ANTECEDENT_SUPPORT, global::System.Nullable<decimal> Original_CONFIDENCE, string Original_CONSEQUENT_ITEMS, global::System.Nullable<decimal> Original_CONSEQUENT_SUPPORT, decimal Original_ID, global::System.Nullable<decimal> Original_LIFT, global::System.Nullable<decimal> Original_SUPPORT) {
-            return this.Update(ANTECEDENT_ITEMS, ANTECEDENT_SUPPORT, CONFIDENCE, CONSEQUENT_ITEMS, CONSEQUENT_SUPPORT, Original_ID, LIFT, SUPPORT, Original_ANTECEDENT_ITEMS, Original_ANTECEDENT_SUPPORT, Original_CONFIDENCE, Original_CONSEQUENT_ITEMS, Original_CONSEQUENT_SUPPORT, Original_ID, Original_LIFT, Original_SUPPORT);
+        public virtual int Update(string BUYBEFORE, string BUYAFTER, global::System.Nullable<decimal> CONFIDENCE, global::System.Nullable<decimal> LIFT, global::System.Nullable<decimal> SUPPORT, decimal Original_RECORDID, string Original_BUYBEFORE, string Original_BUYAFTER, global::System.Nullable<decimal> Original_CONFIDENCE, global::System.Nullable<decimal> Original_LIFT, global::System.Nullable<decimal> Original_SUPPORT) {
+            return this.Update(Original_RECORDID, BUYBEFORE, BUYAFTER, CONFIDENCE, LIFT, SUPPORT, Original_RECORDID, Original_BUYBEFORE, Original_BUYAFTER, Original_CONFIDENCE, Original_LIFT, Original_SUPPORT);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class MBRESULT2TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public MBRESULT2TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "MBRESULT2";
+            tableMapping.ColumnMappings.Add("RECORDID", "RECORDID");
+            tableMapping.ColumnMappings.Add("BUYBEFORE", "BUYBEFORE");
+            tableMapping.ColumnMappings.Add("BUYAFTER", "BUYAFTER");
+            tableMapping.ColumnMappings.Add("CONFIDENCE", "CONFIDENCE");
+            tableMapping.ColumnMappings.Add("LIFT", "LIFT");
+            tableMapping.ColumnMappings.Add("SUPPORT", "SUPPORT");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""DMUSER"".""MBRESULT2"" WHERE ((""RECORDID"" = :Original_RECORDID) AND ((:IsNull_BUYBEFORE = 1 AND ""BUYBEFORE"" IS NULL) OR (""BUYBEFORE"" = :Original_BUYBEFORE)) AND ((:IsNull_BUYAFTER = 1 AND ""BUYAFTER"" IS NULL) OR (""BUYAFTER"" = :Original_BUYAFTER)) AND ((:IsNull_CONFIDENCE = 1 AND ""CONFIDENCE"" IS NULL) OR (""CONFIDENCE"" = :Original_CONFIDENCE)) AND ((:IsNull_LIFT = 1 AND ""LIFT"" IS NULL) OR (""LIFT"" = :Original_LIFT)) AND ((:IsNull_SUPPORT = 1 AND ""SUPPORT"" IS NULL) OR (""SUPPORT"" = :Original_SUPPORT)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_RECORDID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "RECORDID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_BUYBEFORE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYBEFORE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_BUYBEFORE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYBEFORE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_BUYAFTER";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYAFTER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_BUYAFTER";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYAFTER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CONFIDENCE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CONFIDENCE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CONFIDENCE";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CONFIDENCE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_LIFT";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LIFT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_LIFT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LIFT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_SUPPORT";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "SUPPORT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_SUPPORT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "SUPPORT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO \"DMUSER\".\"MBRESULT2\" (\"RECORDID\", \"BUYBEFORE\", \"BUYAFTER\", \"CONFIDENC" +
+                "E\", \"LIFT\", \"SUPPORT\") VALUES (:RECORDID, :BUYBEFORE, :BUYAFTER, :CONFIDENCE, :L" +
+                "IFT, :SUPPORT)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "RECORDID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "RECORDID";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "BUYBEFORE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYBEFORE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "BUYAFTER";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYAFTER";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CONFIDENCE";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CONFIDENCE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "LIFT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LIFT";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "SUPPORT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "SUPPORT";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            this._adapter.UpdateCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""DMUSER"".""MBRESULT2"" SET ""RECORDID"" = :RECORDID, ""BUYBEFORE"" = :BUYBEFORE, ""BUYAFTER"" = :BUYAFTER, ""CONFIDENCE"" = :CONFIDENCE, ""LIFT"" = :LIFT, ""SUPPORT"" = :SUPPORT WHERE ((""RECORDID"" = :Original_RECORDID) AND ((:IsNull_BUYBEFORE = 1 AND ""BUYBEFORE"" IS NULL) OR (""BUYBEFORE"" = :Original_BUYBEFORE)) AND ((:IsNull_BUYAFTER = 1 AND ""BUYAFTER"" IS NULL) OR (""BUYAFTER"" = :Original_BUYAFTER)) AND ((:IsNull_CONFIDENCE = 1 AND ""CONFIDENCE"" IS NULL) OR (""CONFIDENCE"" = :Original_CONFIDENCE)) AND ((:IsNull_LIFT = 1 AND ""LIFT"" IS NULL) OR (""LIFT"" = :Original_LIFT)) AND ((:IsNull_SUPPORT = 1 AND ""SUPPORT"" IS NULL) OR (""SUPPORT"" = :Original_SUPPORT)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "RECORDID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "RECORDID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "BUYBEFORE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYBEFORE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "BUYAFTER";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYAFTER";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CONFIDENCE";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CONFIDENCE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "LIFT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LIFT";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "SUPPORT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "SUPPORT";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_RECORDID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "RECORDID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_BUYBEFORE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYBEFORE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_BUYBEFORE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYBEFORE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_BUYAFTER";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYAFTER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_BUYAFTER";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 4000;
+            param.IsNullable = true;
+            param.SourceColumn = "BUYAFTER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CONFIDENCE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CONFIDENCE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CONFIDENCE";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CONFIDENCE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_LIFT";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LIFT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_LIFT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "LIFT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_SUPPORT";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "SUPPORT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_SUPPORT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "SUPPORT";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
+            this._connection.ConnectionString = global::DiplomaClient.Properties.Settings.Default.cnDMUSER;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT RECORDID, BUYBEFORE, BUYAFTER, CONFIDENCE, LIFT, SUPPORT FROM DMUSER.MBRES" +
+                "ULT2";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsDMUSER.MBRESULT2DataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsDMUSER.MBRESULT2DataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsDMUSER.MBRESULT2DataTable dataTable = new dsDMUSER.MBRESULT2DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsDMUSER.MBRESULT2DataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsDMUSER dataSet) {
+            return this.Adapter.Update(dataSet, "MBRESULT2");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(decimal Original_RECORDID, string Original_BUYBEFORE, string Original_BUYAFTER, global::System.Nullable<decimal> Original_CONFIDENCE, global::System.Nullable<decimal> Original_LIFT, global::System.Nullable<decimal> Original_SUPPORT) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_RECORDID));
+            if ((Original_BUYBEFORE == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_BUYBEFORE));
+            }
+            if ((Original_BUYAFTER == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_BUYAFTER));
+            }
+            if ((Original_CONFIDENCE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(Original_CONFIDENCE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_LIFT.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(Original_LIFT.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SUPPORT.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(Original_SUPPORT.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(decimal RECORDID, string BUYBEFORE, string BUYAFTER, global::System.Nullable<decimal> CONFIDENCE, global::System.Nullable<decimal> LIFT, global::System.Nullable<decimal> SUPPORT) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(RECORDID));
+            if ((BUYBEFORE == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(BUYBEFORE));
+            }
+            if ((BUYAFTER == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(BUYAFTER));
+            }
+            if ((CONFIDENCE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(CONFIDENCE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((LIFT.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(LIFT.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((SUPPORT.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(SUPPORT.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(decimal RECORDID, string BUYBEFORE, string BUYAFTER, global::System.Nullable<decimal> CONFIDENCE, global::System.Nullable<decimal> LIFT, global::System.Nullable<decimal> SUPPORT, decimal Original_RECORDID, string Original_BUYBEFORE, string Original_BUYAFTER, global::System.Nullable<decimal> Original_CONFIDENCE, global::System.Nullable<decimal> Original_LIFT, global::System.Nullable<decimal> Original_SUPPORT) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(RECORDID));
+            if ((BUYBEFORE == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(BUYBEFORE));
+            }
+            if ((BUYAFTER == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(BUYAFTER));
+            }
+            if ((CONFIDENCE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(CONFIDENCE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((LIFT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(LIFT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((SUPPORT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(SUPPORT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_RECORDID));
+            if ((Original_BUYBEFORE == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_BUYBEFORE));
+            }
+            if ((Original_BUYAFTER == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_BUYAFTER));
+            }
+            if ((Original_CONFIDENCE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((decimal)(Original_CONFIDENCE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_LIFT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(Original_LIFT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SUPPORT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(Original_SUPPORT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string BUYBEFORE, string BUYAFTER, global::System.Nullable<decimal> CONFIDENCE, global::System.Nullable<decimal> LIFT, global::System.Nullable<decimal> SUPPORT, decimal Original_RECORDID, string Original_BUYBEFORE, string Original_BUYAFTER, global::System.Nullable<decimal> Original_CONFIDENCE, global::System.Nullable<decimal> Original_LIFT, global::System.Nullable<decimal> Original_SUPPORT) {
+            return this.Update(Original_RECORDID, BUYBEFORE, BUYAFTER, CONFIDENCE, LIFT, SUPPORT, Original_RECORDID, Original_BUYBEFORE, Original_BUYAFTER, Original_CONFIDENCE, Original_LIFT, Original_SUPPORT);
         }
     }
     
@@ -1809,7 +2837,9 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private SALESASSOCIATIONTableAdapter _sALESASSOCIATIONTableAdapter;
+        private MBRESULTTableAdapter _mBRESULTTableAdapter;
+        
+        private MBRESULT2TableAdapter _mBRESULT2TableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1831,12 +2861,26 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public SALESASSOCIATIONTableAdapter SALESASSOCIATIONTableAdapter {
+        public MBRESULTTableAdapter MBRESULTTableAdapter {
             get {
-                return this._sALESASSOCIATIONTableAdapter;
+                return this._mBRESULTTableAdapter;
             }
             set {
-                this._sALESASSOCIATIONTableAdapter = value;
+                this._mBRESULTTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public MBRESULT2TableAdapter MBRESULT2TableAdapter {
+            get {
+                return this._mBRESULT2TableAdapter;
+            }
+            set {
+                this._mBRESULT2TableAdapter = value;
             }
         }
         
@@ -1859,9 +2903,13 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._sALESASSOCIATIONTableAdapter != null) 
-                            && (this._sALESASSOCIATIONTableAdapter.Connection != null))) {
-                    return this._sALESASSOCIATIONTableAdapter.Connection;
+                if (((this._mBRESULTTableAdapter != null) 
+                            && (this._mBRESULTTableAdapter.Connection != null))) {
+                    return this._mBRESULTTableAdapter.Connection;
+                }
+                if (((this._mBRESULT2TableAdapter != null) 
+                            && (this._mBRESULT2TableAdapter.Connection != null))) {
+                    return this._mBRESULT2TableAdapter.Connection;
                 }
                 return null;
             }
@@ -1876,7 +2924,10 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._sALESASSOCIATIONTableAdapter != null)) {
+                if ((this._mBRESULTTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._mBRESULT2TableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1890,12 +2941,21 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(dsDMUSER dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._sALESASSOCIATIONTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.SALESASSOCIATION.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._mBRESULTTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.MBRESULT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._sALESASSOCIATIONTableAdapter.Update(updatedRows));
+                    result = (result + this._mBRESULTTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._mBRESULT2TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.MBRESULT2.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._mBRESULT2TableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1909,11 +2969,19 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(dsDMUSER dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._sALESASSOCIATIONTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.SALESASSOCIATION.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._mBRESULTTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.MBRESULT.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._sALESASSOCIATIONTableAdapter.Update(addedRows));
+                    result = (result + this._mBRESULTTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._mBRESULT2TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.MBRESULT2.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._mBRESULT2TableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1927,11 +2995,19 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(dsDMUSER dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._sALESASSOCIATIONTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.SALESASSOCIATION.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._mBRESULT2TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.MBRESULT2.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._sALESASSOCIATIONTableAdapter.Update(deletedRows));
+                    result = (result + this._mBRESULT2TableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._mBRESULTTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.MBRESULT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._mBRESULTTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1974,8 +3050,13 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._sALESASSOCIATIONTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._sALESASSOCIATIONTableAdapter.Connection) == false))) {
+            if (((this._mBRESULTTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._mBRESULTTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._mBRESULT2TableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._mBRESULT2TableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -2011,13 +3092,22 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._sALESASSOCIATIONTableAdapter != null)) {
-                    revertConnections.Add(this._sALESASSOCIATIONTableAdapter, this._sALESASSOCIATIONTableAdapter.Connection);
-                    this._sALESASSOCIATIONTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(workConnection));
-                    this._sALESASSOCIATIONTableAdapter.Transaction = ((global::Oracle.ManagedDataAccess.Client.OracleTransaction)(workTransaction));
-                    if (this._sALESASSOCIATIONTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._sALESASSOCIATIONTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._sALESASSOCIATIONTableAdapter.Adapter);
+                if ((this._mBRESULTTableAdapter != null)) {
+                    revertConnections.Add(this._mBRESULTTableAdapter, this._mBRESULTTableAdapter.Connection);
+                    this._mBRESULTTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(workConnection));
+                    this._mBRESULTTableAdapter.Transaction = ((global::Oracle.ManagedDataAccess.Client.OracleTransaction)(workTransaction));
+                    if (this._mBRESULTTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._mBRESULTTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._mBRESULTTableAdapter.Adapter);
+                    }
+                }
+                if ((this._mBRESULT2TableAdapter != null)) {
+                    revertConnections.Add(this._mBRESULT2TableAdapter, this._mBRESULT2TableAdapter.Connection);
+                    this._mBRESULT2TableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(workConnection));
+                    this._mBRESULT2TableAdapter.Transaction = ((global::Oracle.ManagedDataAccess.Client.OracleTransaction)(workTransaction));
+                    if (this._mBRESULT2TableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._mBRESULT2TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._mBRESULT2TableAdapter.Adapter);
                     }
                 }
                 // 
@@ -2078,9 +3168,13 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._sALESASSOCIATIONTableAdapter != null)) {
-                    this._sALESASSOCIATIONTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._sALESASSOCIATIONTableAdapter]));
-                    this._sALESASSOCIATIONTableAdapter.Transaction = null;
+                if ((this._mBRESULTTableAdapter != null)) {
+                    this._mBRESULTTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._mBRESULTTableAdapter]));
+                    this._mBRESULTTableAdapter.Transaction = null;
+                }
+                if ((this._mBRESULT2TableAdapter != null)) {
+                    this._mBRESULT2TableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._mBRESULT2TableAdapter]));
+                    this._mBRESULT2TableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

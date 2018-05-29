@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.MBRESULTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsDMUSER = new DiplomaClient.dsDMUSER();
             this.panFooter = new System.Windows.Forms.Panel();
             this.panWindowTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -50,6 +54,11 @@
             this.buts3 = new System.Windows.Forms.Button();
             this.buts2 = new System.Windows.Forms.Button();
             this.buts1 = new System.Windows.Forms.Button();
+            this.panReport = new System.Windows.Forms.Panel();
+            this.rwTwo = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.panReportHeader = new System.Windows.Forms.Panel();
+            this.lblDMAlgoritm = new System.Windows.Forms.Label();
+            this.butAnalysis = new System.Windows.Forms.Button();
             this.panProfile = new System.Windows.Forms.Panel();
             this.butPassValid = new System.Windows.Forms.Button();
             this.butGenderExchange = new System.Windows.Forms.Button();
@@ -109,11 +118,6 @@
             this.butUserActivity = new System.Windows.Forms.Button();
             this.butUserData = new System.Windows.Forms.Button();
             this.lblAdminPanel = new System.Windows.Forms.Label();
-            this.panReport = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.panReportHeader = new System.Windows.Forms.Panel();
-            this.lblDMAlgoritm = new System.Windows.Forms.Label();
-            this.butAnalysis = new System.Windows.Forms.Button();
             this.panMenu = new System.Windows.Forms.Panel();
             this.panAccount = new System.Windows.Forms.Panel();
             this.tbLogin = new System.Windows.Forms.TextBox();
@@ -121,12 +125,19 @@
             this.lblMenu = new System.Windows.Forms.Label();
             this.pbMenuOne = new System.Windows.Forms.PictureBox();
             this.ofdProfilePic = new System.Windows.Forms.OpenFileDialog();
+            this.MBRESULTTableAdapter = new DiplomaClient.dsDMUSERTableAdapters.MBRESULTTableAdapter();
+            this.MBRESULT2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MBRESULT2TableAdapter = new DiplomaClient.dsDMUSERTableAdapters.MBRESULT2TableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.MBRESULTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDMUSER)).BeginInit();
             this.panFooter.SuspendLayout();
             this.panWindowTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
             this.panWinStateButtons.SuspendLayout();
             this.panBackArea.SuspendLayout();
             this.panSlider.SuspendLayout();
+            this.panReport.SuspendLayout();
+            this.panReportHeader.SuspendLayout();
             this.panProfile.SuspendLayout();
             this.panProfileAvatar.SuspendLayout();
             this.panProfileFooter.SuspendLayout();
@@ -136,13 +147,22 @@
             this.panAdminPanelFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             this.panelAdminPanelHeader.SuspendLayout();
-            this.panReport.SuspendLayout();
-            this.panReportHeader.SuspendLayout();
             this.panMenu.SuspendLayout();
             this.panAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenuOne)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MBRESULT2BindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // MBRESULTBindingSource
+            // 
+            this.MBRESULTBindingSource.DataMember = "MBRESULT";
+            this.MBRESULTBindingSource.DataSource = this.dsDMUSER;
+            // 
+            // dsDMUSER
+            // 
+            this.dsDMUSER.DataSetName = "dsDMUSER";
+            this.dsDMUSER.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panFooter
             // 
@@ -441,6 +461,76 @@
             this.buts1.UseVisualStyleBackColor = false;
             this.buts1.Visible = false;
             this.buts1.Click += new System.EventHandler(this.buts1_Click);
+            // 
+            // panReport
+            // 
+            this.panReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panReport.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panReport.Controls.Add(this.rwTwo);
+            this.panReport.Controls.Add(this.panReportHeader);
+            this.panReport.Location = new System.Drawing.Point(12, 9);
+            this.panReport.Name = "panReport";
+            this.panReport.Size = new System.Drawing.Size(1000, 628);
+            this.panReport.TabIndex = 1;
+            this.panReport.Visible = false;
+            // 
+            // rwTwo
+            // 
+            this.rwTwo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rwTwo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            reportDataSource1.Name = "dm2";
+            reportDataSource1.Value = this.MBRESULT2BindingSource;
+            this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
+            this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.TwoMarketBasketAssociationRules2.rdlc";
+            this.rwTwo.Location = new System.Drawing.Point(0, 86);
+            this.rwTwo.Name = "rwTwo";
+            this.rwTwo.ServerReport.BearerToken = null;
+            this.rwTwo.Size = new System.Drawing.Size(1000, 542);
+            this.rwTwo.TabIndex = 2;
+            this.rwTwo.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            // 
+            // panReportHeader
+            // 
+            this.panReportHeader.BackColor = System.Drawing.Color.DarkGreen;
+            this.panReportHeader.Controls.Add(this.lblDMAlgoritm);
+            this.panReportHeader.Controls.Add(this.butAnalysis);
+            this.panReportHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panReportHeader.Location = new System.Drawing.Point(0, 0);
+            this.panReportHeader.Name = "panReportHeader";
+            this.panReportHeader.Size = new System.Drawing.Size(1000, 60);
+            this.panReportHeader.TabIndex = 1;
+            // 
+            // lblDMAlgoritm
+            // 
+            this.lblDMAlgoritm.AutoSize = true;
+            this.lblDMAlgoritm.BackColor = System.Drawing.Color.Transparent;
+            this.lblDMAlgoritm.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDMAlgoritm.Location = new System.Drawing.Point(13, 13);
+            this.lblDMAlgoritm.Name = "lblDMAlgoritm";
+            this.lblDMAlgoritm.Size = new System.Drawing.Size(169, 30);
+            this.lblDMAlgoritm.TabIndex = 18;
+            this.lblDMAlgoritm.Text = "Analysis Type";
+            // 
+            // butAnalysis
+            // 
+            this.butAnalysis.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.butAnalysis.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.butAnalysis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.butAnalysis.FlatAppearance.BorderSize = 0;
+            this.butAnalysis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butAnalysis.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAnalysis.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.butAnalysis.Location = new System.Drawing.Point(767, 5);
+            this.butAnalysis.Name = "butAnalysis";
+            this.butAnalysis.Size = new System.Drawing.Size(226, 49);
+            this.butAnalysis.TabIndex = 35;
+            this.butAnalysis.Text = "Run Analysis";
+            this.butAnalysis.UseVisualStyleBackColor = false;
+            this.butAnalysis.Click += new System.EventHandler(this.butAnalysis_Click);
             // 
             // panProfile
             // 
@@ -1313,71 +1403,6 @@
             this.lblAdminPanel.TabIndex = 19;
             this.lblAdminPanel.Text = "Admin Panel";
             // 
-            // panReport
-            // 
-            this.panReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panReport.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panReport.Controls.Add(this.reportViewer1);
-            this.panReport.Controls.Add(this.panReportHeader);
-            this.panReport.Location = new System.Drawing.Point(12, 9);
-            this.panReport.Name = "panReport";
-            this.panReport.Size = new System.Drawing.Size(1000, 628);
-            this.panReport.TabIndex = 1;
-            this.panReport.Visible = false;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 86);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1000, 542);
-            this.reportViewer1.TabIndex = 2;
-            // 
-            // panReportHeader
-            // 
-            this.panReportHeader.BackColor = System.Drawing.Color.DarkGreen;
-            this.panReportHeader.Controls.Add(this.lblDMAlgoritm);
-            this.panReportHeader.Controls.Add(this.butAnalysis);
-            this.panReportHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panReportHeader.Location = new System.Drawing.Point(0, 0);
-            this.panReportHeader.Name = "panReportHeader";
-            this.panReportHeader.Size = new System.Drawing.Size(1000, 60);
-            this.panReportHeader.TabIndex = 1;
-            // 
-            // lblDMAlgoritm
-            // 
-            this.lblDMAlgoritm.AutoSize = true;
-            this.lblDMAlgoritm.BackColor = System.Drawing.Color.Transparent;
-            this.lblDMAlgoritm.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblDMAlgoritm.Location = new System.Drawing.Point(13, 13);
-            this.lblDMAlgoritm.Name = "lblDMAlgoritm";
-            this.lblDMAlgoritm.Size = new System.Drawing.Size(169, 30);
-            this.lblDMAlgoritm.TabIndex = 18;
-            this.lblDMAlgoritm.Text = "Analysis Type";
-            // 
-            // butAnalysis
-            // 
-            this.butAnalysis.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.butAnalysis.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.butAnalysis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.butAnalysis.FlatAppearance.BorderSize = 0;
-            this.butAnalysis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butAnalysis.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAnalysis.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.butAnalysis.Location = new System.Drawing.Point(767, 5);
-            this.butAnalysis.Name = "butAnalysis";
-            this.butAnalysis.Size = new System.Drawing.Size(226, 49);
-            this.butAnalysis.TabIndex = 35;
-            this.butAnalysis.Text = "Run Analysis";
-            this.butAnalysis.UseVisualStyleBackColor = false;
-            this.butAnalysis.Click += new System.EventHandler(this.butAnalysis_Click);
-            // 
             // panMenu
             // 
             this.panMenu.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -1451,6 +1476,19 @@
             this.pbMenuOne.TabStop = false;
             this.pbMenuOne.Click += new System.EventHandler(this.pbMenuOne_Click);
             // 
+            // MBRESULTTableAdapter
+            // 
+            this.MBRESULTTableAdapter.ClearBeforeFill = true;
+            // 
+            // MBRESULT2BindingSource
+            // 
+            this.MBRESULT2BindingSource.DataMember = "MBRESULT2";
+            this.MBRESULT2BindingSource.DataSource = this.dsDMUSER;
+            // 
+            // MBRESULT2TableAdapter
+            // 
+            this.MBRESULT2TableAdapter.ClearBeforeFill = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1466,6 +1504,8 @@
             this.Text = "MainForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.MBRESULTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDMUSER)).EndInit();
             this.panFooter.ResumeLayout(false);
             this.panWindowTitle.ResumeLayout(false);
             this.panWindowTitle.PerformLayout();
@@ -1473,6 +1513,9 @@
             this.panWinStateButtons.ResumeLayout(false);
             this.panBackArea.ResumeLayout(false);
             this.panSlider.ResumeLayout(false);
+            this.panReport.ResumeLayout(false);
+            this.panReportHeader.ResumeLayout(false);
+            this.panReportHeader.PerformLayout();
             this.panProfile.ResumeLayout(false);
             this.panProfile.PerformLayout();
             this.panProfileAvatar.ResumeLayout(false);
@@ -1487,15 +1530,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).EndInit();
             this.panelAdminPanelHeader.ResumeLayout(false);
             this.panelAdminPanelHeader.PerformLayout();
-            this.panReport.ResumeLayout(false);
-            this.panReportHeader.ResumeLayout(false);
-            this.panReportHeader.PerformLayout();
             this.panMenu.ResumeLayout(false);
             this.panMenu.PerformLayout();
             this.panAccount.ResumeLayout(false);
             this.panAccount.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenuOne)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MBRESULT2BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1530,7 +1571,7 @@
         private System.Windows.Forms.Button buts1;
         private System.Windows.Forms.Panel panProfile;
         private System.Windows.Forms.Panel panReport;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer rwTwo;
         private System.Windows.Forms.Panel panReportHeader;
         private System.Windows.Forms.Label lblDMAlgoritm;
         private System.Windows.Forms.Button butAnalysis;
@@ -1592,5 +1633,10 @@
         private System.Windows.Forms.OpenFileDialog ofdProfilePic;
         private System.Windows.Forms.Button butSaveAvatar;
         private System.Windows.Forms.Button butPassValid;
+        private System.Windows.Forms.BindingSource MBRESULTBindingSource;
+        private dsDMUSER dsDMUSER;
+        private dsDMUSERTableAdapters.MBRESULTTableAdapter MBRESULTTableAdapter;
+        private System.Windows.Forms.BindingSource MBRESULT2BindingSource;
+        private dsDMUSERTableAdapters.MBRESULT2TableAdapter MBRESULT2TableAdapter;
     }
 }

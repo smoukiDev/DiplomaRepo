@@ -302,7 +302,7 @@ namespace DiplomaClient
                 lbl11.Visible = false;
                 // soft animation Report Panel
                 butAnalysis.Visible = false;
-                reportViewer1.Visible = false;
+                rwTwo.Visible = false;
                 // soft animation Admin Panel
                 dgvAdmin.Visible = false;
                 butUserData.Visible = false;
@@ -385,7 +385,7 @@ namespace DiplomaClient
                 lbl11.Visible = true;
                 // soft animation Models Panel
                 butAnalysis.Visible = true;
-                reportViewer1.Visible = true;
+                rwTwo.Visible = true;
                 // soft animation admin panel
                 dgvAdmin.Visible = true;
                 butUserData.Visible = true;
@@ -440,7 +440,7 @@ namespace DiplomaClient
                 lbl11.Visible = false;
                 // soft animation Report Panel
                 butAnalysis.Visible = false;
-                reportViewer1.Visible = false;
+                rwTwo.Visible = false;
                 // soft animation Admin Panel
                 dgvAdmin.Visible = false;
                 butUserData.Visible = false;
@@ -537,7 +537,7 @@ namespace DiplomaClient
                 lbl11.Visible = true;
                 // soft animation Models Panel
                 butAnalysis.Visible = true;
-                reportViewer1.Visible = true;
+                rwTwo.Visible = true;
                 // soft animation admin panel
                 dgvAdmin.Visible = true;
                 butUserData.Visible = true;
@@ -766,8 +766,12 @@ namespace DiplomaClient
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dsDMUSER.MBRESULT2' table. You can move, or remove it, as needed.
+            this.MBRESULT2TableAdapter.Fill(this.dsDMUSER.MBRESULT2);
+            // TODO: This line of code loads data into the 'dsDMUSER.MBRESULT' table. You can move, or remove it, as needed.
+            this.MBRESULTTableAdapter.Fill(this.dsDMUSER.MBRESULT);
 
-            this.reportViewer1.RefreshReport();
+            this.rwTwo.RefreshReport();
             //Defaulth value for lblAdminOption
             lblAdminOption.Text = "User Data";
             //Data Grid Material Design
@@ -1949,8 +1953,8 @@ namespace DiplomaClient
         private void butAnalysis_Click(object sender, EventArgs e)
         {
             
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "<VSProjectName>.MarketBasket.rdlc";
-            reportViewer1.RefreshReport();
+            this.rwTwo.LocalReport.ReportEmbeddedResource = "<VSProjectName>.MarketBasket.rdlc";
+            rwTwo.RefreshReport();
         }
     }
 }
