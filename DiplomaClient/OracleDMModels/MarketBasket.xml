@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WorkflowProcess Version="12.2.0.0.1" DBVersion="12.1.0.2.0" Schema="" xmlns="http://xmlns.oracle.com/odmr11">
+    <Nodes>
+        <DataSource Id="10001" Name="SALES" Status="Complete">
+            <Icon XCOORD="91" YCOORD="92"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10001" as (select "SALES"."CUST_ID", 
+"SALES"."QUANTITY_SOLD", 
+"SALES"."AMOUNT_SOLD", 
+"SALES"."CHANNEL_ID", 
+"SALES"."PROMO_ID", 
+"SALES"."TIME_ID", 
+"SALES"."PROD_ID" 
+from "SH"."SALES"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="QUANTITY_SOLD" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AMOUNT_SOLD" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CHANNEL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROMO_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="TIME_ID" DataType="DATE" Status="Valid"/>
+                <Attribute Name="PROD_ID" DataType="NUMBER" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="SH" Name="SALES" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <DataSource Id="10002" Name="PRODUCTS" Status="Complete">
+            <Icon XCOORD="80" YCOORD="227"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10002" as (select "PRODUCTS"."PROD_MIN_PRICE", 
+"PRODUCTS"."PROD_SUBCATEGORY_ID", 
+"PRODUCTS"."PROD_STATUS", 
+"PRODUCTS"."PROD_SUBCATEGORY", 
+"PRODUCTS"."SUPPLIER_ID", 
+"PRODUCTS"."PROD_DESC", 
+"PRODUCTS"."PROD_NAME", 
+"PRODUCTS"."PROD_EFF_FROM", 
+"PRODUCTS"."PROD_EFF_TO", 
+"PRODUCTS"."PROD_UNIT_OF_MEASURE", 
+"PRODUCTS"."PROD_VALID", 
+"PRODUCTS"."PROD_CATEGORY_DESC", 
+"PRODUCTS"."PROD_TOTAL_ID", 
+"PRODUCTS"."PROD_CATEGORY_ID", 
+"PRODUCTS"."PROD_LIST_PRICE", 
+"PRODUCTS"."PROD_WEIGHT_CLASS", 
+"PRODUCTS"."PROD_PACK_SIZE", 
+"PRODUCTS"."PROD_TOTAL", 
+"PRODUCTS"."PROD_ID", 
+"PRODUCTS"."PROD_SUBCATEGORY_DESC", 
+"PRODUCTS"."PROD_CATEGORY", 
+"PRODUCTS"."PROD_SRC_ID" 
+from "SH"."PRODUCTS"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="PROD_MIN_PRICE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_SUBCATEGORY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_SUBCATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="SUPPLIER_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_DESC" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <Attribute Name="PROD_EFF_TO" DataType="DATE" Status="Valid"/>
+                <Attribute Name="PROD_UNIT_OF_MEASURE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_CATEGORY_DESC" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_CATEGORY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_LIST_PRICE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_WEIGHT_CLASS" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_PACK_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PROD_SUBCATEGORY_DESC" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_CATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="PROD_SRC_ID" DataType="NUMBER" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="SH" Name="PRODUCTS" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <CreateTable TableName="MBRESULT" Table="true" AutoSpec="No" Id="10027" Name="MBRESULT" Status="Complete">
+            <Icon XCOORD="464" YCOORD="236"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10027" AS ( SELECT  "RECORDID" ,
+ "BUYBEFORE" ,
+ "BUYAFTER" ,
+ "CONFIDENCE" ,
+ "LIFT" ,
+ "SUPPORT"  FROM "MBRESULT")</SQLExpression>
+            <DBAttributes>
+                <DBAttribute Key="Yes" Index="No" Name="RECORDID" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="BUYBEFORE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="BUYAFTER" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CONFIDENCE" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="LIFT" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="SUPPORT" DataType="NUMBER" Status="Valid"/>
+            </DBAttributes>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+            <CreateTableOptions>
+                <Logging>NOLOGGING</Logging>
+                <TableCompression>ROW STORE COMPRESS</TableCompression>
+            </CreateTableOptions>
+        </CreateTable>
+        <Join UseCartesian="false" Id="10003" Name="Join" Status="Complete">
+            <Icon XCOORD="242" YCOORD="156"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10003" as (SELECT 
+"SALES"."CUST_ID"
+, "SALES"."QUANTITY_SOLD"
+, "SALES"."AMOUNT_SOLD"
+, "SALES"."CHANNEL_ID"
+, "SALES"."PROMO_ID"
+, "SALES"."TIME_ID"
+, "SALES"."PROD_ID"
+, "PRODUCTS"."PROD_NAME"
+
+FROM
+{INPUT_SOURCE:10001} "SALES"
+INNER JOIN {INPUT_SOURCE:10002} "PRODUCTS"
+ON "SALES"."PROD_ID" = "PRODUCTS"."PROD_ID"
+
+ )</SQLExpression>
+            <KeyColumns AutoSpec="No">
+                <JoinColumn Type="Inner">
+                    <LeftColumn NodeId="10001" NodeName="SALES" Key="Yes" Name="PROD_ID" DataType="NUMBER" Status="Valid"/>
+                    <RightColumn NodeId="10002" NodeName="PRODUCTS" Key="Yes" Name="PROD_ID" DataType="NUMBER" Status="Valid"/>
+                </JoinColumn>
+            </KeyColumns>
+            <OutputColumns AutoSpec="No">
+                <RefDBColumn NodeId="10001" NodeName="SALES" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10001" NodeName="SALES" Name="QUANTITY_SOLD" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10001" NodeName="SALES" Name="AMOUNT_SOLD" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10001" NodeName="SALES" Name="CHANNEL_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10001" NodeName="SALES" Name="PROMO_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10001" NodeName="SALES" Name="TIME_ID" DataType="DATE" Status="Valid"/>
+                <RefDBColumn NodeId="10001" NodeName="SALES" Name="PROD_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10002" NodeName="PRODUCTS" Name="PROD_NAME" DataType="VARCHAR2" Status="Valid"/>
+            </OutputColumns>
+        </Join>
+        <Sample Id="10006" Name="Sample" Status="Complete">
+            <Icon XCOORD="368" YCOORD="150"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10006.1" as (SELECT  COUNT(*) "COUNT" FROM {INPUT_SOURCE}), 
+"N$10006" as (
+SELECT 
+"CUST_ID"
+, "QUANTITY_SOLD"
+, "AMOUNT_SOLD"
+, "CHANNEL_ID"
+, "PROMO_ID"
+, "TIME_ID"
+, "PROD_ID"
+, "PROD_NAME"
+ FROM (SELECT t.*, row_number() OVER(ORDER BY ORA_HASH(rownum, 4294967295, 12345)) "ODMR$11_13_50_880000PZHQBFW" FROM {INPUT_SOURCE} t) WHERE "ODMR$11_13_50_880000PZHQBFW" &lt;= (SELECT "COUNT" FROM "N$10006.1") * 30 / 100)</SQLExpression>
+            <SamplingSettings>
+                <PercentOfTotal>30.0</PercentOfTotal>
+                <Method>
+                    <Random Seed="12345"/>
+                </Method>
+            </SamplingSettings>
+        </Sample>
+        <AssociationBuild MaxDistinctItemValue="10" ASSO_GENERATE_PREPROCESSED_TABLE="false" ASSO_PREPROCESSED_TABLE_NAME="NONE" Id="10009" Name="Assoc Build" Status="Complete">
+            <Icon XCOORD="530" YCOORD="64"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <BuildDataSource SourceId="10006"/>
+            <CaseAttributes>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="TIME_ID" DataType="DATE" Status="Valid"/>
+            </CaseAttributes>
+            <MiningAttributes AutoSpec="Yes">
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AMOUNT_SOLD" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CHANNEL_ID" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="PROD_ID" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="PROD_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="PROMO_ID" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="QUANTITY_SOLD" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="TIME_ID" DataType="DATE" Status="Valid"/>
+            </MiningAttributes>
+            <ASSO_AGGREGATES/>
+            <ItemID Name="PROD_NAME" DataType="VARCHAR2" Status="Valid"/>
+            <Models>
+                <AprioriModel Id="10008" Name="ASSOC_AP_1_15" Status="Complete" CreationDate="2018-05-29T11:14:04" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="MANUAL" MiningUsage="MANUAL">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="QUANTITY_SOLD" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AMOUNT_SOLD" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CHANNEL_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="PROMO_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="TIME_ID" DataType="DATE" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="PROD_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="PROD_NAME" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                    </InputMiningData>
+                    <AprioriAlgo>
+                        <ASSO_MAX_RULE_LENGTH>4</ASSO_MAX_RULE_LENGTH>
+                        <ASSO_MIN_CONFIDENCE>0.1</ASSO_MIN_CONFIDENCE>
+                        <ASSO_MIN_SUPPORT>0.01</ASSO_MIN_SUPPORT>
+                    </AprioriAlgo>
+                </AprioriModel>
+            </Models>
+        </AssociationBuild>
+        <ModelDetails Id="10011" Name="Model Details" Status="Complete">
+            <Icon XCOORD="691" YCOORD="59"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10011" as (
+     SELECT CAST('DMUSER' AS VARCHAR2(30)) as "MODEL_SCHEMA", 
+     CAST('ASSOC_AP_1_15' AS VARCHAR2(30)) as "MODEL_NAME", 
+     AR.rule_id as "ID", 
+    dbms_xmlgen.CONVERT(REPLACE(REPLACE(REPLACE(EXTRACT(XMLELEMENT("R", XMLAGG( XMLELEMENT("V", NVL2( ant_pred.attribute_subname, ant_pred.attribute_name || '.' || ant_pred.attribute_subname, ant_pred.attribute_name) || ' ' || ant_pred.conditional_operator || ' '
+         ||ant_pred.attribute_str_value
+         ||ant_pred.attribute_num_value))), '/R/V').getstringval(), '&lt;/V&gt;&lt;V&gt;',', '),'&lt;V&gt;', ''),'&lt;/V&gt;',''), 1) AS ANTECEDENT_ITEMS,
+     dbms_xmlgen.CONVERT(MAX(NVL2( cons_pred.attribute_subname, cons_pred.attribute_name || '.' || cons_pred.attribute_subname, cons_pred.attribute_name) || ' ' || cons_pred.conditional_operator || ' '
+         ||ant_pred.attribute_str_value
+         ||ant_pred.attribute_num_value), 1) CONSEQUENT_ITEMS,
+     AVG(ar.rule_support) AS SUPPORT,
+     AVG(ar.rule_confidence) AS CONFIDENCE,
+     AVG(ar.rule_lift) AS LIFT,
+     AVG(ar.antecedent_support) AS ANTECEDENT_SUPPORT,
+     AVG(ar.consequent_support) AS CONSEQUENT_SUPPORT,
+     AVG(ar.number_of_items) AS LENGTH
+     FROM TABLE(dbms_data_mining.get_association_rules('"DMUSER"."ASSOC_AP_1_15"')) AR, 
+     TABLE(AR.antecedent) ant_pred ,  TABLE(AR.consequent) cons_pred
+     GROUP BY AR.rule_id )</SQLExpression>
+            <ModelDetailsOutput Type="ARRulesStringVersion" MiningFunction="ASSOCIATION" MiningAlgorithm="APRIORI_ASSOCIATION_RULES" AutoSpec="Yes">
+                <Models>
+                    <Model IsModelBuilt="false" NodeId="10009" Schema="" Name="ASSOC_AP_1_15" MiningFunction="ASSOCIATION" MiningAlgorithm="APRIORI_ASSOCIATION_RULES" Status="Valid" UseForOutput="false" ModelId="10008"/>
+                </Models>
+                <Attributes>
+                    <Attribute Name="MODEL_SCHEMA" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="MODEL_NAME" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="ID" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="ANTECEDENT_ITEMS" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CONSEQUENT_ITEMS" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="SUPPORT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="CONFIDENCE" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="LIFT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="ANTECEDENT_SUPPORT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="CONSEQUENT_SUPPORT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="LENGTH" DataType="NUMBER" Status="Valid"/>
+                </Attributes>
+            </ModelDetailsOutput>
+        </ModelDetails>
+        <SQLQuery HasWithClause="false" GenerateView="false" ViewName="OUTPUT_1_15" Id="10013" Name="SQL Query" Status="Complete">
+            <Icon XCOORD="813" YCOORD="26"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"Model Details_N$10011" as (SELECT * FROM {INPUT_SOURCE:10011}),
+"N$10013" as (SELECT COUNT("Model Details_N$10011"."ID")
+FROM "Model Details_N$10011")
+</SQLExpression>
+            <SQLQueryExpression>SELECT COUNT("Model Details_N$10011"."ID")
+FROM "Model Details_N$10011"</SQLQueryExpression>
+            <SQLQueryOutputColumns>
+                <Attribute Name="COUNT(&quot;MODELDETAILS_N$10011&quot;.&quot;ID&quot;)" DataType="NUMBER" Status="Valid"/>
+            </SQLQueryOutputColumns>
+        </SQLQuery>
+        <SQLQuery HasWithClause="false" GenerateView="false" ViewName="OUTPUT_2_15" Id="10019" Name="SQL Query 1" Status="Complete">
+            <Icon XCOORD="726" YCOORD="213"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"Model Details_N$10011" as (SELECT * FROM {INPUT_SOURCE:10011}),
+"N$10019" as (SELECT
+"Model Details_N$10011"."ID" AS RECORDID,
+REPLACE("Model Details_N$10011"."ANTECEDENT_ITEMS",'PROD_NAME.') AS BUYBEFORE,
+REPLACE("Model Details_N$10011"."CONSEQUENT_ITEMS",'PROD_NAME.') AS BUYAFTER,
+ROUND("Model Details_N$10011"."CONFIDENCE",2) AS CONFIDENCE,
+ROUND("Model Details_N$10011"."LIFT",2) AS LIFT,
+ROUND("Model Details_N$10011"."SUPPORT",2) AS SUPPORT
+FROM "Model Details_N$10011")
+</SQLExpression>
+            <SQLQueryExpression>SELECT
+"Model Details_N$10011"."ID" AS RECORDID,
+REPLACE("Model Details_N$10011"."ANTECEDENT_ITEMS",'PROD_NAME.') AS BUYBEFORE,
+REPLACE("Model Details_N$10011"."CONSEQUENT_ITEMS",'PROD_NAME.') AS BUYAFTER,
+ROUND("Model Details_N$10011"."CONFIDENCE",2) AS CONFIDENCE,
+ROUND("Model Details_N$10011"."LIFT",2) AS LIFT,
+ROUND("Model Details_N$10011"."SUPPORT",2) AS SUPPORT
+FROM "Model Details_N$10011"</SQLQueryExpression>
+            <SQLQueryOutputColumns>
+                <Attribute Name="RECORDID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="BUYBEFORE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="BUYAFTER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CONFIDENCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="LIFT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="SUPPORT" DataType="NUMBER" Status="Valid"/>
+            </SQLQueryOutputColumns>
+        </SQLQuery>
+        <SQLQuery HasWithClause="false" GenerateView="false" ViewName="OUTPUT_4_15" Id="10022" Name="SQL Query 2" Status="Complete">
+            <Icon XCOORD="606" YCOORD="217"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"SQL Query 1_N$10019" as (SELECT * FROM {INPUT_SOURCE:10019}),
+"N$10022" as (SELECT
+"SQL Query 1_N$10019"."RECORDID" AS RECORDID,
+REPLACE("SQL Query 1_N$10019"."BUYBEFORE",' = ') AS BUYBEFORE,
+REPLACE("SQL Query 1_N$10019"."BUYAFTER",' = ') AS BUYAFTER,
+ROUND("SQL Query 1_N$10019"."CONFIDENCE",2) AS CONFIDENCE,
+ROUND("SQL Query 1_N$10019"."LIFT",2) AS LIFT,
+ROUND("SQL Query 1_N$10019"."SUPPORT",2) AS SUPPORT
+FROM "SQL Query 1_N$10019")
+</SQLExpression>
+            <SQLQueryExpression>SELECT
+"SQL Query 1_N$10019"."RECORDID" AS RECORDID,
+REPLACE("SQL Query 1_N$10019"."BUYBEFORE",' = ') AS BUYBEFORE,
+REPLACE("SQL Query 1_N$10019"."BUYAFTER",' = ') AS BUYAFTER,
+ROUND("SQL Query 1_N$10019"."CONFIDENCE",2) AS CONFIDENCE,
+ROUND("SQL Query 1_N$10019"."LIFT",2) AS LIFT,
+ROUND("SQL Query 1_N$10019"."SUPPORT",2) AS SUPPORT
+FROM "SQL Query 1_N$10019"</SQLQueryExpression>
+            <SQLQueryOutputColumns>
+                <Attribute Name="RECORDID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="BUYBEFORE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="BUYAFTER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CONFIDENCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="LIFT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="SUPPORT" DataType="NUMBER" Status="Valid"/>
+            </SQLQueryOutputColumns>
+        </SQLQuery>
+    </Nodes>
+    <Links>
+        <Link Id="10004" From="10001" To="10003" Name="Link" Label="From &quot;SALES&quot; to &quot;Join&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10005" From="10002" To="10003" Name="Link" Label="From &quot;PRODUCTS&quot; to &quot;Join&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10007" From="10003" To="10006" Name="Link" Label="From &quot;Join&quot; to &quot;Sample&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10010" From="10006" To="10009" Name="Link" Label="From &quot;Sample&quot; to &quot;Assoc Build&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10012" From="10009" To="10011" Name="Link" Label="From &quot;Assoc Build&quot; to &quot;Model Details&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10014" From="10011" To="10013" Name="Link" Label="From &quot;Model Details&quot; to &quot;SQL Query&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10020" From="10011" To="10019" Name="Link" Label="From &quot;Model Details&quot; to &quot;SQL Query 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10023" From="10019" To="10022" Name="Link" Label="From &quot;SQL Query 1&quot; to &quot;SQL Query 2&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10028" From="10022" To="10027" Name="Link" Label="From &quot;SQL Query 2&quot; to &quot;MBRESULT&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+    </Links>
+</WorkflowProcess>
