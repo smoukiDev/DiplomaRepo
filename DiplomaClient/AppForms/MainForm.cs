@@ -685,6 +685,7 @@ namespace DiplomaClient
             buts6.BackColor = ColorPalette.white1;
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.white1;
+            lblDMAlgoritm.Text = "Assosiaton Rules";
         }
         private void buts5_Click(object sender, EventArgs e)
         {
@@ -770,7 +771,7 @@ namespace DiplomaClient
             this.MBRESULT2TableAdapter.Fill(this.dsDMUSER.MBRESULT2);
             // TODO: This line of code loads data into the 'dsDMUSER.MBRESULT' table. You can move, or remove it, as needed.
             this.MBRESULTTableAdapter.Fill(this.dsDMUSER.MBRESULT);
-
+            
             this.rwTwo.RefreshReport();
             //Defaulth value for lblAdminOption
             lblAdminOption.Text = "User Data";
@@ -1953,8 +1954,10 @@ namespace DiplomaClient
         private void butAnalysis_Click(object sender, EventArgs e)
         {
             
-            this.rwTwo.LocalReport.ReportEmbeddedResource = "<VSProjectName>.MarketBasket.rdlc";
-            rwTwo.RefreshReport();
+            if(lblDMAlgoritm.Text == "Assosiaton Rules")
+            {
+                
+            }
         }
     }
 }

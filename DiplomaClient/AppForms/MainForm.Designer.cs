@@ -305,7 +305,7 @@
             this.panSlider.Dock = System.Windows.Forms.DockStyle.Left;
             this.panSlider.Location = new System.Drawing.Point(0, 0);
             this.panSlider.Name = "panSlider";
-            this.panSlider.Size = new System.Drawing.Size(10, 648);
+            this.panSlider.Size = new System.Drawing.Size(419, 648);
             this.panSlider.TabIndex = 0;
             // 
             // buts8
@@ -485,12 +485,13 @@
             reportDataSource1.Name = "dm2";
             reportDataSource1.Value = this.MBRESULT2BindingSource;
             this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
-            this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.TwoMarketBasketAssociationRules2.rdlc";
+            this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.TwoMarketBasketAssociationRules.rdlc";
             this.rwTwo.Location = new System.Drawing.Point(0, 86);
             this.rwTwo.Name = "rwTwo";
             this.rwTwo.ServerReport.BearerToken = null;
             this.rwTwo.Size = new System.Drawing.Size(1000, 542);
             this.rwTwo.TabIndex = 2;
+            this.rwTwo.Visible = false;
             this.rwTwo.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // panReportHeader
