@@ -659,7 +659,7 @@ namespace DiplomaClient
         }
         private void buts3_Click(object sender, EventArgs e)
         {
-            
+            ReportReset();
             panProfile.Visible = false;
             panAdminPanel.Visible = false;
             panReport.Visible = true;
@@ -674,6 +674,7 @@ namespace DiplomaClient
         }
         private void buts4_Click(object sender, EventArgs e)
         {
+            ReportReset();
             panProfile.Visible = false;
             panAdminPanel.Visible = false;
             panReport.Visible = true;
@@ -689,6 +690,7 @@ namespace DiplomaClient
         }
         private void buts5_Click(object sender, EventArgs e)
         {
+            ReportReset();
             panProfile.Visible = false;
             panAdminPanel.Visible = false;
             panReport.Visible = true;
@@ -703,6 +705,7 @@ namespace DiplomaClient
         }
         private void buts6_Click(object sender, EventArgs e)
         {
+            ReportReset();
             panProfile.Visible = false;
             panAdminPanel.Visible = false;
             panReport.Visible = true;
@@ -717,6 +720,7 @@ namespace DiplomaClient
         }
         private void buts7_Click(object sender, EventArgs e)
         {
+            ReportReset();
             panProfile.Visible = false;
             panAdminPanel.Visible = false;
             panReport.Visible = true;
@@ -731,6 +735,7 @@ namespace DiplomaClient
         }
         private void buts8_Click(object sender, EventArgs e)
         {
+            ReportReset();
             panProfile.Visible = false;
             panAdminPanel.Visible = false;
             panReport.Visible = true;
@@ -765,13 +770,15 @@ namespace DiplomaClient
             this.Close();
             
         }
+        
         private void MainForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dsDMUSER.MBRESULT2' table. You can move, or remove it, as needed.
             this.MBRESULT2TableAdapter.Fill(this.dsDMUSER.MBRESULT2);
             // TODO: This line of code loads data into the 'dsDMUSER.MBRESULT' table. You can move, or remove it, as needed.
-            this.MBRESULTTableAdapter.Fill(this.dsDMUSER.MBRESULT);
             
+            //!!!last garbage auto report load in designer.cs
+            this.rwTwo.LocalReport.ReportEmbeddedResource = null;
             this.rwTwo.RefreshReport();
             //Defaulth value for lblAdminOption
             lblAdminOption.Text = "User Data";
@@ -1951,13 +1958,25 @@ namespace DiplomaClient
             }
         }
 
+        Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
         private void butAnalysis_Click(object sender, EventArgs e)
         {
             
             if(lblDMAlgoritm.Text == "Assosiaton Rules")
             {
-                
+                this.MBRESULTTableAdapter.Fill(this.dsDMUSER.MBRESULT);
+                reportDataSource1.Name = "dm2";
+                reportDataSource1.Value = this.MBRESULT2BindingSource;
+                this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
+                this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.TwoMarketBasketAssociationRules.rdlc";
+                rwTwo.RefreshReport();
             }
+        }
+
+        private void ReportReset()
+        {
+            this.rwTwo.LocalReport.ReportEmbeddedResource = null;
+            this.rwTwo.RefreshReport();
         }
     }
 }
