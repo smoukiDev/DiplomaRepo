@@ -719,6 +719,7 @@ namespace DiplomaClient
             buts6.BackColor = ColorPalette.orange1;
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.white1;
+            lblDMAlgoritm.Text = "Clustering";
         }
         private void buts7_Click(object sender, EventArgs e)
         {
@@ -734,6 +735,7 @@ namespace DiplomaClient
             buts6.BackColor = ColorPalette.white1;
             buts7.BackColor = ColorPalette.orange1;
             buts8.BackColor = ColorPalette.white1;
+            lblDMAlgoritm.Text = "Regression";
         }
         private void buts8_Click(object sender, EventArgs e)
         {
@@ -2061,7 +2063,27 @@ namespace DiplomaClient
                 }
                 
             }
-            if(lblDMAlgoritm.Text == "Anomaly Detect")
+            if (lblDMAlgoritm.Text == "Clustering")
+            {
+                //!!No Monitor
+                ReportReset();
+                CustomMessageBox error = new CustomMessageBox(Properties.Resources.ImageNotFound,"Sorry, Clustering Model isn't available now:(\nDatabase Administrators are Mining for You$)", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error.Show();
+
+            }
+            
+            if (lblDMAlgoritm.Text == "Regression")
+            {
+                //!!No Monitor
+                ReportReset();
+                CustomMessageBox error2 = new CustomMessageBox(Properties.Resources.ImageNotFound, "Sorry, Regression Model isn't available now:(\nDatabase Administrators are Mining for You$)", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                this.Enabled = false;
+                error2.Show();
+
+            }
+            
+            if (lblDMAlgoritm.Text == "Anomaly Detect")
             {
                 try
                 {
