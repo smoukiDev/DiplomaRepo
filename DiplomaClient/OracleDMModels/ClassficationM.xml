@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WorkflowProcess Version="12.2.0.0.1" DBVersion="12.1.0.2.0" Schema="" xmlns="http://xmlns.oracle.com/odmr11">
+    <Nodes>
+        <DataSource Id="10001" Name="MINING_DATA_BUILD_V" Status="Complete">
+            <Icon XCOORD="84" YCOORD="26"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10001" as (select "MINING_DATA_BUILD_V"."BOOKKEEPING_APPLICATION", 
+"MINING_DATA_BUILD_V"."OS_DOC_SET_KANJI", 
+"MINING_DATA_BUILD_V"."CUST_ID", 
+"MINING_DATA_BUILD_V"."AFFINITY_CARD", 
+"MINING_DATA_BUILD_V"."BULK_PACK_DISKETTES", 
+"MINING_DATA_BUILD_V"."HOME_THEATER_PACKAGE", 
+"MINING_DATA_BUILD_V"."EDUCATION", 
+"MINING_DATA_BUILD_V"."Y_BOX_GAMES", 
+"MINING_DATA_BUILD_V"."YRS_RESIDENCE", 
+"MINING_DATA_BUILD_V"."PRINTER_SUPPLIES", 
+"MINING_DATA_BUILD_V"."FLAT_PANEL_MONITOR", 
+"MINING_DATA_BUILD_V"."CUST_INCOME_LEVEL", 
+"MINING_DATA_BUILD_V"."CUST_GENDER", 
+"MINING_DATA_BUILD_V"."CUST_MARITAL_STATUS", 
+"MINING_DATA_BUILD_V"."OCCUPATION", 
+"MINING_DATA_BUILD_V"."COUNTRY_NAME", 
+"MINING_DATA_BUILD_V"."HOUSEHOLD_SIZE", 
+"MINING_DATA_BUILD_V"."AGE" 
+from "DMUSER"."MINING_DATA_BUILD_V"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="EDUCATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="OCCUPATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="" Name="MINING_DATA_BUILD_V" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <DataSource Id="10008" Name="MINING_DATA_TEST_V" Status="Complete">
+            <Icon XCOORD="75" YCOORD="182"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10008" as (select "MINING_DATA_TEST_V"."BOOKKEEPING_APPLICATION", 
+"MINING_DATA_TEST_V"."OS_DOC_SET_KANJI", 
+"MINING_DATA_TEST_V"."CUST_ID", 
+"MINING_DATA_TEST_V"."AFFINITY_CARD", 
+"MINING_DATA_TEST_V"."BULK_PACK_DISKETTES", 
+"MINING_DATA_TEST_V"."HOME_THEATER_PACKAGE", 
+"MINING_DATA_TEST_V"."EDUCATION", 
+"MINING_DATA_TEST_V"."Y_BOX_GAMES", 
+"MINING_DATA_TEST_V"."YRS_RESIDENCE", 
+"MINING_DATA_TEST_V"."PRINTER_SUPPLIES", 
+"MINING_DATA_TEST_V"."FLAT_PANEL_MONITOR", 
+"MINING_DATA_TEST_V"."CUST_INCOME_LEVEL", 
+"MINING_DATA_TEST_V"."CUST_GENDER", 
+"MINING_DATA_TEST_V"."CUST_MARITAL_STATUS", 
+"MINING_DATA_TEST_V"."OCCUPATION", 
+"MINING_DATA_TEST_V"."COUNTRY_NAME", 
+"MINING_DATA_TEST_V"."HOUSEHOLD_SIZE", 
+"MINING_DATA_TEST_V"."AGE" 
+from "DMUSER"."MINING_DATA_TEST_V"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="EDUCATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="OCCUPATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="" Name="MINING_DATA_TEST_V" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <DataSource Id="10019" Name="CUSTOMERS" Status="Complete">
+            <Icon XCOORD="79" YCOORD="370"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10019" as (select "CUSTOMERS"."CUST_STATE_PROVINCE", 
+"CUSTOMERS"."CUST_ID", 
+"CUSTOMERS"."CUST_LAST_NAME", 
+"CUSTOMERS"."COUNTRY_ID", 
+"CUSTOMERS"."CUST_VALID", 
+"CUSTOMERS"."CUST_YEAR_OF_BIRTH", 
+"CUSTOMERS"."CUST_TOTAL", 
+"CUSTOMERS"."CUST_SRC_ID", 
+"CUSTOMERS"."CUST_TOTAL_ID", 
+"CUSTOMERS"."CUST_STREET_ADDRESS", 
+"CUSTOMERS"."CUST_MAIN_PHONE_NUMBER", 
+"CUSTOMERS"."CUST_FIRST_NAME", 
+"CUSTOMERS"."CUST_EFF_FROM", 
+"CUSTOMERS"."CUST_CITY", 
+"CUSTOMERS"."CUST_INCOME_LEVEL", 
+"CUSTOMERS"."CUST_GENDER", 
+"CUSTOMERS"."CUST_CREDIT_LIMIT", 
+"CUSTOMERS"."CUST_MARITAL_STATUS", 
+"CUSTOMERS"."CUST_STATE_PROVINCE_ID", 
+"CUSTOMERS"."CUST_POSTAL_CODE", 
+"CUSTOMERS"."CUST_EMAIL", 
+"CUSTOMERS"."CUST_EFF_TO", 
+"CUSTOMERS"."CUST_CITY_ID" 
+from "SH"."CUSTOMERS"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="SH" Name="CUSTOMERS" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <Join UseCartesian="false" Id="10020" Name="Join" Status="Complete">
+            <Icon XCOORD="204" YCOORD="317"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10020" as (SELECT 
+"MINING_DATA_TEST_V"."BOOKKEEPING_APPLICATION"
+, "MINING_DATA_TEST_V"."OS_DOC_SET_KANJI"
+, "MINING_DATA_TEST_V"."CUST_ID"
+, "MINING_DATA_TEST_V"."AFFINITY_CARD"
+, "MINING_DATA_TEST_V"."BULK_PACK_DISKETTES"
+, "MINING_DATA_TEST_V"."HOME_THEATER_PACKAGE"
+, "MINING_DATA_TEST_V"."EDUCATION"
+, "MINING_DATA_TEST_V"."Y_BOX_GAMES"
+, "MINING_DATA_TEST_V"."YRS_RESIDENCE"
+, "MINING_DATA_TEST_V"."PRINTER_SUPPLIES"
+, "MINING_DATA_TEST_V"."FLAT_PANEL_MONITOR"
+, "MINING_DATA_TEST_V"."CUST_INCOME_LEVEL"
+, "MINING_DATA_TEST_V"."CUST_GENDER"
+, "MINING_DATA_TEST_V"."CUST_MARITAL_STATUS"
+, "MINING_DATA_TEST_V"."OCCUPATION"
+, "MINING_DATA_TEST_V"."COUNTRY_NAME"
+, "MINING_DATA_TEST_V"."HOUSEHOLD_SIZE"
+, "MINING_DATA_TEST_V"."AGE"
+, "CUSTOMERS"."CUST_STATE_PROVINCE"
+, "CUSTOMERS"."CUST_ID" "CUST_ID1"
+, "CUSTOMERS"."CUST_LAST_NAME"
+, "CUSTOMERS"."COUNTRY_ID"
+, "CUSTOMERS"."CUST_VALID"
+, "CUSTOMERS"."CUST_YEAR_OF_BIRTH"
+, "CUSTOMERS"."CUST_TOTAL"
+, "CUSTOMERS"."CUST_SRC_ID"
+, "CUSTOMERS"."CUST_TOTAL_ID"
+, "CUSTOMERS"."CUST_STREET_ADDRESS"
+, "CUSTOMERS"."CUST_MAIN_PHONE_NUMBER"
+, "CUSTOMERS"."CUST_FIRST_NAME"
+, "CUSTOMERS"."CUST_EFF_FROM"
+, "CUSTOMERS"."CUST_CITY"
+, "CUSTOMERS"."CUST_INCOME_LEVEL" "CUST_INCOME_LEVEL1"
+, "CUSTOMERS"."CUST_GENDER" "CUST_GENDER1"
+, "CUSTOMERS"."CUST_CREDIT_LIMIT"
+, "CUSTOMERS"."CUST_MARITAL_STATUS" "CUST_MARITAL_STATUS1"
+, "CUSTOMERS"."CUST_STATE_PROVINCE_ID"
+, "CUSTOMERS"."CUST_POSTAL_CODE"
+, "CUSTOMERS"."CUST_EMAIL"
+, "CUSTOMERS"."CUST_EFF_TO"
+, "CUSTOMERS"."CUST_CITY_ID"
+
+FROM
+{INPUT_SOURCE:10008} "MINING_DATA_TEST_V"
+INNER JOIN {INPUT_SOURCE:10019} "CUSTOMERS"
+ON "MINING_DATA_TEST_V"."CUST_ID" = "CUSTOMERS"."CUST_ID"
+
+ )</SQLExpression>
+            <KeyColumns AutoSpec="No">
+                <JoinColumn Type="Inner">
+                    <LeftColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Key="Yes" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                    <RightColumn NodeId="10019" NodeName="CUSTOMERS" Key="Yes" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                </JoinColumn>
+            </KeyColumns>
+            <OutputColumns AutoSpec="Yes">
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="EDUCATION" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="OCCUPATION" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10008" NodeName="MINING_DATA_TEST_V" Name="AGE" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_ID" DataType="NUMBER" Status="Valid" Alias="CUST_ID1"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid" Alias="CUST_INCOME_LEVEL1"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_GENDER" DataType="CHAR" Status="Valid" Alias="CUST_GENDER1"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid" Alias="CUST_MARITAL_STATUS1"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                <RefDBColumn NodeId="10019" NodeName="CUSTOMERS" Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+            </OutputColumns>
+        </Join>
+        <ClassificationBuild Id="10006" Name="Class Build" Status="Complete">
+            <Icon XCOORD="280" YCOORD="26"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <BuildDataSource SourceId="10001"/>
+            <CaseAttributes>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+            </CaseAttributes>
+            <MiningAttributes AutoSpec="Yes">
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AGE" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="EDUCATION" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OCCUPATION" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid"/>
+            </MiningAttributes>
+            <Stoplists>
+                <Stoplist Id="1" Name="Default" Type="Basic" Language="ENGLISH" DBName="">
+                    <StopTokens>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>a</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>all</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>almost</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>also</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>although</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>an</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>and</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>any</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>are</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>as</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>at</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>be</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>because</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>been</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>both</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>but</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>by</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>can</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>could</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>d</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>did</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>do</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>does</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>either</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>for</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>from</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>had</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>has</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>have</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>having</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>he</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>her</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>here</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>hers</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>him</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>his</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>how</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>however</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>i</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>if</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>in</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>into</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>is</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>it</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>its</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>just</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ll</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>me</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>might</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mr</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mrs</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Ms</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>my</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>no</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>non</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>nor</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>not</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>of</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>on</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>one</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>only</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>onto</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>or</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>our</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ours</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>s</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>shall</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>she</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>should</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>since</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>so</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>some</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>still</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>such</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>t</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>than</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>that</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>the</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>their</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>them</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>then</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>there</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>therefore</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>these</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>they</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>this</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>those</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>though</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>through</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>thus</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>to</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>too</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>until</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ve</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>very</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>was</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>we</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>were</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>what</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>when</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>where</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whether</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>which</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>while</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>who</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whose</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>why</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>will</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>with</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>would</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yet</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>you</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>your</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yours</Item>
+                        </Token>
+                    </StopTokens>
+                </Stoplist>
+            </Stoplists>
+            <TextSettings TransformType="Token" CategoricalCutOffValue="200">
+                <Token>
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Name="" Type="Basic">
+                            <Settings/>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Token>
+                <Theme Type="Single">
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Type="Basic">
+                            <Settings>
+                                <Attribute Name="index_themes" ValueString="YES" Type="String"/>
+                                <Attribute Name="theme_language" ValueString="ENGLISH" Type="String"/>
+                            </Settings>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Theme>
+            </TextSettings>
+            <TextAttributes/>
+            <HeuristicSummaryResult StatisticTable="ODMR$01_58_02_073000JEZYUJB">
+                <Attribute Name="BOOKKEEPING_APPLICATION">
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="BULK_PACK_DISKETTES">
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="CUST_ID">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="FLAT_PANEL_MONITOR">
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="HOME_THEATER_PACKAGE">
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="OS_DOC_SET_KANJI">
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="PRINTER_SUPPLIES">
+                    <Reason Type="INPUT_NONE"/>
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="Y_BOX_GAMES">
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+            </HeuristicSummaryResult>
+            <TestDataSource>
+                <TestData SourceId="10008"/>
+            </TestDataSource>
+            <TargetAttribute Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+            <Models>
+                <NaiveBayesModel Id="10002" Name="CLAS_NB_1_17" Status="Complete" CreationDate="2018-05-30T01:17:30" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="EDUCATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OCCUPATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AGE" DataType="NUMBER" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$01_17_23_348000HADWXOI">
+                            <Attribute Name="BOOKKEEPING_APPLICATION">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="BULK_PACK_DISKETTES">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="FLAT_PANEL_MONITOR">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="HOME_THEATER_PACKAGE">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="OS_DOC_SET_KANJI">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="PRINTER_SUPPLIES">
+                                <Reason Type="CONSTANT_LIMIT"/>
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="Y_BOX_GAMES">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$01_17_24_199000QIXZWIR"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <NaiveBayesAlgo>
+                        <NABS_PAIRWISE_THRESHOLD>0.0</NABS_PAIRWISE_THRESHOLD>
+                        <NABS_SINGLETON_THRESHOLD>0.0</NABS_SINGLETON_THRESHOLD>
+                    </NaiveBayesAlgo>
+                </NaiveBayesModel>
+                <DecisionTreeModel Id="10003" Name="CLAS_DT_1_17" Status="Complete" CreationDate="2018-05-30T01:17:31" Annotation="" UseForOutput="false">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="EDUCATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OCCUPATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AGE" DataType="NUMBER" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$01_17_23_348000HADWXOI">
+                            <Attribute Name="BOOKKEEPING_APPLICATION">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="BULK_PACK_DISKETTES">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="FLAT_PANEL_MONITOR">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="HOME_THEATER_PACKAGE">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="OS_DOC_SET_KANJI">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="PRINTER_SUPPLIES">
+                                <Reason Type="CONSTANT_LIMIT"/>
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="Y_BOX_GAMES">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$01_17_24_177000QJAFWYP"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <DecisionTreeAlgo>
+                        <TREE_IMPURITY_METRIC>TREE_IMPURITY_GINI</TREE_IMPURITY_METRIC>
+                        <TREE_TERM_MAX_DEPTH>7</TREE_TERM_MAX_DEPTH>
+                        <TREE_TERM_MINPCT_NODE>0.05</TREE_TERM_MINPCT_NODE>
+                        <TREE_TERM_MINPCT_SPLIT>0.1</TREE_TERM_MINPCT_SPLIT>
+                        <TREE_TERM_MINREC_NODE>10</TREE_TERM_MINREC_NODE>
+                        <TREE_TERM_MINREC_SPLIT>20</TREE_TERM_MINREC_SPLIT>
+                    </DecisionTreeAlgo>
+                </DecisionTreeModel>
+                <CSupportVectorMachineModel Id="10004" Name="CLAS_SVM_1_17" Status="Complete" CreationDate="2018-05-30T01:17:30" Annotation="" UseForOutput="false">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="EDUCATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OCCUPATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AGE" DataType="NUMBER" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$01_17_23_348000HADWXOI">
+                            <Attribute Name="BOOKKEEPING_APPLICATION">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="BULK_PACK_DISKETTES">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="FLAT_PANEL_MONITOR">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="HOME_THEATER_PACKAGE">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="OS_DOC_SET_KANJI">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="PRINTER_SUPPLIES">
+                                <Reason Type="CONSTANT_LIMIT"/>
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="Y_BOX_GAMES">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$01_17_24_220000IZUUVFT"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <CSupportVectorMachineAlgo>
+                        <SVMS_ACTIVE_LEARNING>SVMS_AL_ENABLE</SVMS_ACTIVE_LEARNING>
+                        <SVMS_CONV_TOLERANCE>0.001</SVMS_CONV_TOLERANCE>
+                    </CSupportVectorMachineAlgo>
+                </CSupportVectorMachineModel>
+                <CGeneralizedLinearModel Id="10005" Name="CLAS_GLM_1_17" Status="Complete" CreationDate="2018-05-30T01:17:30" Annotation="" UseForOutput="false">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="EDUCATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="OCCUPATION" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AGE" DataType="NUMBER" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$01_17_23_348000HADWXOI">
+                            <Attribute Name="BOOKKEEPING_APPLICATION">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="BULK_PACK_DISKETTES">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="FLAT_PANEL_MONITOR">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="HOME_THEATER_PACKAGE">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="OS_DOC_SET_KANJI">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="PRINTER_SUPPLIES">
+                                <Reason Type="CONSTANT_LIMIT"/>
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="Y_BOX_GAMES">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <Performance>
+                        <Balanced WeightsTable="ODMR$01_17_24_242000ULWOQDG"/>
+                    </Performance>
+                    <Tuning>
+                        <None/>
+                    </Tuning>
+                    <CGeneralizedLinearAlgo>
+                        <GLMS_CONF_LEVEL>0.95</GLMS_CONF_LEVEL>
+                        <GLMS_FTR_SELECTION>GLMS_FTR_SELECTION_DISABLE</GLMS_FTR_SELECTION>
+                    </CGeneralizedLinearAlgo>
+                </CGeneralizedLinearModel>
+            </Models>
+            <TestSettings>
+                <TopNTargets Value="5"/>
+            </TestSettings>
+            <Results genAccuracyMetrics="true" genConfusionMatrix="true" genROC="true" genLift="true" genTuning="false">
+                <ClassificationResult ModelId="10002" Status="Complete" Name="CLAS_NB_1_17" CreationDate="2018-05-30T01:17:41">
+                    <TestMetrics Name="ODMR$01_17_34_015000NTXEOAY" CreationDate="2018-05-30T01:17:34"/>
+                    <ConfusionMatrix Name="ODMR$01_17_31_983000IVGAXAY" CreationDate="2018-05-30T01:17:34"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$01_17_34_097000JOAETST" CreationDate="2018-05-30T01:17:35"/>
+                        <Lift TargetValue="1" Name="ODMR$01_17_35_496000AYUIYAL" CreationDate="2018-05-30T01:17:37"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$01_17_37_296000TGSEHAM" CreationDate="2018-05-30T01:17:39"/>
+                        <ROC TargetValue="1" Name="ODMR$01_17_39_479000HMTUJFM" CreationDate="2018-05-30T01:17:41"/>
+                        <AreaUnderCurve Area="0.8690769076347351" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.8699484467506409" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+                <ClassificationResult ModelId="10005" Status="Complete" Name="CLAS_GLM_1_17" CreationDate="2018-05-30T01:17:41">
+                    <TestMetrics Name="ODMR$01_17_34_015000IJUEFXJ" CreationDate="2018-05-30T01:17:34"/>
+                    <ConfusionMatrix Name="ODMR$01_17_31_983000UHPLIGG" CreationDate="2018-05-30T01:17:34"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$01_17_34_046000TUHTZHJ" CreationDate="2018-05-30T01:17:35"/>
+                        <Lift TargetValue="1" Name="ODMR$01_17_35_495000MYUEEPO" CreationDate="2018-05-30T01:17:37"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$01_17_37_406000FRUWFFY" CreationDate="2018-05-30T01:17:39"/>
+                        <ROC TargetValue="1" Name="ODMR$01_17_39_301000YBFKOWJ" CreationDate="2018-05-30T01:17:41"/>
+                        <AreaUnderCurve Area="0.8693161010742188" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.8702314496040344" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+                <ClassificationResult ModelId="10003" Status="Complete" Name="CLAS_DT_1_17" CreationDate="2018-05-30T01:17:41">
+                    <TestMetrics Name="ODMR$01_17_34_142000CLTUOCC" CreationDate="2018-05-30T01:17:34"/>
+                    <ConfusionMatrix Name="ODMR$01_17_32_094000TXHGWPQ" CreationDate="2018-05-30T01:17:34"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$01_17_34_215000XFRLRTZ" CreationDate="2018-05-30T01:17:35"/>
+                        <Lift TargetValue="1" Name="ODMR$01_17_35_789000VTRJBXH" CreationDate="2018-05-30T01:17:37"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$01_17_37_369000SEQLPGD" CreationDate="2018-05-30T01:17:39"/>
+                        <ROC TargetValue="1" Name="ODMR$01_17_39_445000NLHVYTL" CreationDate="2018-05-30T01:17:41"/>
+                        <AreaUnderCurve Area="0.8528040051460266" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.8528040051460266" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+                <ClassificationResult ModelId="10004" Status="Complete" Name="CLAS_SVM_1_17" CreationDate="2018-05-30T01:17:41">
+                    <TestMetrics Name="ODMR$01_17_34_810000KJFKBXQ" CreationDate="2018-05-30T01:17:34"/>
+                    <ConfusionMatrix Name="ODMR$01_17_32_079000KKSDLAZ" CreationDate="2018-05-30T01:17:34"/>
+                    <Lifts>
+                        <Lift TargetValue="0" Name="ODMR$01_17_34_840000OVLHYQD" CreationDate="2018-05-30T01:17:37"/>
+                        <Lift TargetValue="1" Name="ODMR$01_17_37_334000GAQTNCA" CreationDate="2018-05-30T01:17:38"/>
+                    </Lifts>
+                    <ROCs>
+                        <ROC TargetValue="0" Name="ODMR$01_17_38_492000IACHZPM" CreationDate="2018-05-30T01:17:40"/>
+                        <ROC TargetValue="1" Name="ODMR$01_17_40_072000BYCKYGK" CreationDate="2018-05-30T01:17:41"/>
+                        <AreaUnderCurve Area="0.8650810122489929" TargetValue="0"/>
+                        <AreaUnderCurve Area="0.8660790324211121" TargetValue="1"/>
+                    </ROCs>
+                </ClassificationResult>
+            </Results>
+        </ClassificationBuild>
+        <Apply ColumnOutputOrder="SupplementalColumns" OrderPartitions="Yes" Id="10010" Name="Apply" Status="Complete">
+            <Icon XCOORD="287" YCOORD="183"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10010" as (SELECT 
+"CUST_ID", 
+"CUST_FIRST_NAME", 
+"CUST_LAST_NAME", 
+PREDICTION("CLAS_NB_1_17" USING *) "CLAS_NB_1_17_PRED", 
+PREDICTION_PROBABILITY("CLAS_NB_1_17" USING *) "CLAS_NB_1_17_PROB"
+FROM {INPUT_SOURCE} )</SQLExpression>
+            <SupplementalAttributes AutoSpec="No">
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+            </SupplementalAttributes>
+            <OutputColumns AutoSpec="Yes">
+                <OutputColumn>
+                    <Model IsModelBuilt="true" NodeId="10006" Schema="" Name="CLAS_NB_1_17" MiningFunction="CLASSIFICATION" MiningAlgorithm="NAIVE_BAYES" Status="Valid" UseForOutput="true" ModelId="10002"/>
+                    <Prediction>
+                        <CostOption>
+                            <None/>
+                        </CostOption>
+                        <Column Name="CLAS_NB_1_17_PRED"/>
+                    </Prediction>
+                </OutputColumn>
+                <OutputColumn>
+                    <Model IsModelBuilt="true" NodeId="10006" Schema="" Name="CLAS_NB_1_17" MiningFunction="CLASSIFICATION" MiningAlgorithm="NAIVE_BAYES" Status="Valid" UseForOutput="true" ModelId="10002"/>
+                    <PredictionProbability>
+                        <Column Name="CLAS_NB_1_17_PROB"/>
+                    </PredictionProbability>
+                </OutputColumn>
+            </OutputColumns>
+            <CaseAttributes>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+            </CaseAttributes>
+        </Apply>
+        <SQLQuery HasWithClause="false" GenerateView="false" ViewName="OUTPUT_1_17" Id="10015" Name="SQL Query" Status="Ready">
+            <Icon XCOORD="400" YCOORD="109"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"Apply_N$10010" as (SELECT * FROM {INPUT_SOURCE:10010}),
+"N$10015" as (SELECT COUNT("Apply_N$10010"."CUST_ID")
+FROM "Apply_N$10010")
+</SQLExpression>
+            <SQLQueryExpression>SELECT COUNT("Apply_N$10010"."CUST_ID")
+FROM "Apply_N$10010"</SQLQueryExpression>
+            <SQLQueryOutputColumns>
+                <Attribute Name="COUNT(&quot;APPLY_N$10010&quot;.&quot;CUST_ID&quot;)" DataType="NUMBER" Status="Valid"/>
+            </SQLQueryOutputColumns>
+        </SQLQuery>
+        <SQLQuery HasWithClause="false" GenerateView="false" ViewName="OUTPUT_2_17" Id="10017" Name="SQL Query 1" Status="Complete">
+            <Icon XCOORD="-70" YCOORD="316"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"MINING_DATA_TEST_V_N$10008" as (SELECT * FROM {INPUT_SOURCE:10008}),
+"N$10017" as (SELECT COUNT("MINING_DATA_TEST_V_N$10008"."CUST_ID")
+FROM "MINING_DATA_TEST_V_N$10008")
+</SQLExpression>
+            <SQLQueryExpression>SELECT COUNT("MINING_DATA_TEST_V_N$10008"."CUST_ID")
+FROM "MINING_DATA_TEST_V_N$10008"</SQLQueryExpression>
+            <SQLQueryOutputColumns>
+                <Attribute Name="COUNT(&quot;MINING_DATA_TEST_V_N$10008&quot;.&quot;CUST_ID&quot;)" DataType="NUMBER" Status="Valid"/>
+            </SQLQueryOutputColumns>
+        </SQLQuery>
+    </Nodes>
+    <Links>
+        <Link Id="10007" From="10001" To="10006" Name="Link" Label="From &quot;MINING_DATA_BUILD_V&quot; to &quot;Class Build&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10009" From="10008" To="10006" Name="Link" Label="From &quot;MINING_DATA_TEST_V&quot; to &quot;Class Build&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10013" From="10006" To="10010" Name="Link" Label="From &quot;Class Build&quot; to &quot;Apply&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10016" From="10010" To="10015" Name="Link" Label="From &quot;Apply&quot; to &quot;SQL Query&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10018" From="10008" To="10017" Name="Link" Label="From &quot;MINING_DATA_TEST_V&quot; to &quot;SQL Query 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10021" From="10008" To="10020" Name="Link" Label="From &quot;MINING_DATA_TEST_V&quot; to &quot;Join&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10022" From="10019" To="10020" Name="Link" Label="From &quot;CUSTOMERS&quot; to &quot;Join&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10023" From="10020" To="10010" Name="Link" Label="From &quot;Join&quot; to &quot;Apply&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+    </Links>
+</WorkflowProcess>
