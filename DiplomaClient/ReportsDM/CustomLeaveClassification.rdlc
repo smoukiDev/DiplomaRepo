@@ -40,12 +40,14 @@
                               <Value>CUSTOMERID</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <Color>#f0e8e8</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox1</rd:DefaultName>
@@ -61,6 +63,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -75,12 +78,14 @@
                               <Value>BIRTH YEAR</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <Color>#f0e8e8</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -96,6 +101,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -110,12 +116,14 @@
                               <Value>MATERIAL STATUS</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <Color>#f0e8e8</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -131,6 +139,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -145,12 +154,14 @@
                               <Value>CREDIT LIMIT</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <Color>#f0e8e8</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -166,6 +177,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -180,12 +192,14 @@
                               <Value>INCOME LEVEL</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <Color>#f0e8e8</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -201,6 +215,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -212,10 +227,25 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>LCONF</Value>
+                              <Value>%</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
+                                <Color>#f0e8e8</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Segoe UI</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <Color>#f0e8e8</Color>
                               </Style>
                             </TextRun>
@@ -236,6 +266,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -255,11 +286,13 @@
                               <Value>=Fields!CUSTID.Value</Value>
                               <Style>
                                 <FontFamily>Century</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>CUSTID</rd:DefaultName>
@@ -289,11 +322,13 @@
                               <Value>=Fields!BIRTHYEAR.Value</Value>
                               <Style>
                                 <FontFamily>Century</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>BIRTHYEAR</rd:DefaultName>
@@ -323,11 +358,13 @@
                               <Value>=Fields!MATERIALSTATUS.Value</Value>
                               <Style>
                                 <FontFamily>Century</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>MATERIALSTATUS</rd:DefaultName>
@@ -357,11 +394,13 @@
                               <Value>=Fields!CREDITLIMIT.Value</Value>
                               <Style>
                                 <FontFamily>Century</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>CREDITLIMIT</rd:DefaultName>
@@ -391,11 +430,13 @@
                               <Value>=Fields!INCOMELEVEL.Value</Value>
                               <Style>
                                 <FontFamily>Century</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>INCOMELEVEL</rd:DefaultName>
@@ -425,11 +466,13 @@
                               <Value>=Fields!LCONF.Value</Value>
                               <Style>
                                 <FontFamily>Century</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>LCONF</rd:DefaultName>

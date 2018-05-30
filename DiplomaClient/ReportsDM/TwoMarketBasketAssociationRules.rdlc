@@ -40,7 +40,7 @@
                               <Value>RECORDID</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <Color>#f0e8e8</Color>
                               </Style>
                             </TextRun>
@@ -75,7 +75,7 @@
                               <Value>BUYBEFORE</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <Color>#f0e8e8</Color>
                               </Style>
                             </TextRun>
@@ -110,7 +110,7 @@
                               <Value>BUYAFTER</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <Color>#f0e8e8</Color>
                               </Style>
                             </TextRun>
@@ -145,7 +145,7 @@
                               <Value>CONFIDENCE</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <Color>#f0e8e8</Color>
                               </Style>
                             </TextRun>
@@ -180,7 +180,7 @@
                               <Value>LIFT</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <Color>#f0e8e8</Color>
                               </Style>
                             </TextRun>
@@ -215,7 +215,7 @@
                               <Value>SUPPORT</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <Color>#f0e8e8</Color>
                               </Style>
                             </TextRun>
@@ -255,7 +255,7 @@
                               <Value>=Fields!RECORDID.Value</Value>
                               <Style>
                                 <FontFamily>Century</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -289,7 +289,7 @@
                               <Value>=Fields!BUYBEFORE.Value</Value>
                               <Style>
                                 <FontFamily>Century</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -323,7 +323,7 @@
                               <Value>=Fields!BUYAFTER.Value</Value>
                               <Style>
                                 <FontFamily>Century</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -357,7 +357,7 @@
                               <Value>=Fields!CONFIDENCE.Value</Value>
                               <Style>
                                 <FontFamily>Century</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -391,7 +391,7 @@
                               <Value>=Fields!LIFT.Value</Value>
                               <Style>
                                 <FontFamily>Century</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -425,7 +425,7 @@
                               <Value>=Fields!SUPPORT.Value</Value>
                               <Style>
                                 <FontFamily>Century</FontFamily>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>

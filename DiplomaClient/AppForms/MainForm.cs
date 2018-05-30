@@ -1994,9 +1994,7 @@ namespace DiplomaClient
                 }
                 catch(Exception ex)
                 {
-                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
-                    this.Enabled = false;
-                    error.Show();
+
                 }
                 
             }
@@ -2023,9 +2021,7 @@ namespace DiplomaClient
                 }
                 catch(Exception ex)
                 {
-                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
-                    this.Enabled = false;
-                    error.Show();
+
                 }
                 
             }
@@ -2053,8 +2049,8 @@ namespace DiplomaClient
                 catch(Exception ex)
                 {
                     CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
-                    this.Enabled = false;
-                    error.Show();
+                this.Enabled = false;
+                error.Show();
                 }
                 
             }
