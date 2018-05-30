@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WorkflowProcess Version="12.2.0.0.1" DBVersion="12.1.0.2.0" Schema="" xmlns="http://xmlns.oracle.com/odmr11">
+    <Nodes>
+        <DataSource Id="10001" Name="MINING_DATA_TEXT_BUILD_V" Status="Complete">
+            <Icon XCOORD="119" YCOORD="63"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10001" as (select "MINING_DATA_TEXT_BUILD_V"."BOOKKEEPING_APPLICATION", 
+"MINING_DATA_TEXT_BUILD_V"."OS_DOC_SET_KANJI", 
+"MINING_DATA_TEXT_BUILD_V"."CUST_ID", 
+"MINING_DATA_TEXT_BUILD_V"."AFFINITY_CARD", 
+"MINING_DATA_TEXT_BUILD_V"."BULK_PACK_DISKETTES", 
+"MINING_DATA_TEXT_BUILD_V"."HOME_THEATER_PACKAGE", 
+"MINING_DATA_TEXT_BUILD_V"."COMMENTS", 
+"MINING_DATA_TEXT_BUILD_V"."EDUCATION", 
+"MINING_DATA_TEXT_BUILD_V"."Y_BOX_GAMES", 
+"MINING_DATA_TEXT_BUILD_V"."YRS_RESIDENCE", 
+"MINING_DATA_TEXT_BUILD_V"."PRINTER_SUPPLIES", 
+"MINING_DATA_TEXT_BUILD_V"."FLAT_PANEL_MONITOR", 
+"MINING_DATA_TEXT_BUILD_V"."CUST_INCOME_LEVEL", 
+"MINING_DATA_TEXT_BUILD_V"."CUST_GENDER", 
+"MINING_DATA_TEXT_BUILD_V"."CUST_MARITAL_STATUS", 
+"MINING_DATA_TEXT_BUILD_V"."OCCUPATION", 
+"MINING_DATA_TEXT_BUILD_V"."COUNTRY_NAME", 
+"MINING_DATA_TEXT_BUILD_V"."HOUSEHOLD_SIZE", 
+"MINING_DATA_TEXT_BUILD_V"."AGE" 
+from "DMUSER"."MINING_DATA_TEXT_BUILD_V"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="BOOKKEEPING_APPLICATION" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="OS_DOC_SET_KANJI" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="BULK_PACK_DISKETTES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="HOME_THEATER_PACKAGE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="COMMENTS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="EDUCATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="Y_BOX_GAMES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="YRS_RESIDENCE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PRINTER_SUPPLIES" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="FLAT_PANEL_MONITOR" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="OCCUPATION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="COUNTRY_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="HOUSEHOLD_SIZE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="" Name="MINING_DATA_TEXT_BUILD_V" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <DataSource Id="10002" Name="CUSTOMERS" Status="Complete">
+            <Icon XCOORD="117" YCOORD="192"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10002" as (select "CUSTOMERS"."CUST_STATE_PROVINCE", 
+"CUSTOMERS"."CUST_ID", 
+"CUSTOMERS"."CUST_LAST_NAME", 
+"CUSTOMERS"."COUNTRY_ID", 
+"CUSTOMERS"."CUST_VALID", 
+"CUSTOMERS"."CUST_YEAR_OF_BIRTH", 
+"CUSTOMERS"."CUST_TOTAL", 
+"CUSTOMERS"."CUST_SRC_ID", 
+"CUSTOMERS"."CUST_TOTAL_ID", 
+"CUSTOMERS"."CUST_STREET_ADDRESS", 
+"CUSTOMERS"."CUST_MAIN_PHONE_NUMBER", 
+"CUSTOMERS"."CUST_FIRST_NAME", 
+"CUSTOMERS"."CUST_EFF_FROM", 
+"CUSTOMERS"."CUST_CITY", 
+"CUSTOMERS"."CUST_INCOME_LEVEL", 
+"CUSTOMERS"."CUST_GENDER", 
+"CUSTOMERS"."CUST_CREDIT_LIMIT", 
+"CUSTOMERS"."CUST_MARITAL_STATUS", 
+"CUSTOMERS"."CUST_STATE_PROVINCE_ID", 
+"CUSTOMERS"."CUST_POSTAL_CODE", 
+"CUSTOMERS"."CUST_EMAIL", 
+"CUSTOMERS"."CUST_EFF_TO", 
+"CUSTOMERS"."CUST_CITY_ID" 
+from "SH"."CUSTOMERS"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="SH" Name="CUSTOMERS" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <DataProfile Id="10008" Name="Explore Data" Status="Complete">
+            <Icon XCOORD="471" YCOORD="40"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10008" AS ( SELECT   ATTR,
+  DATA_TYPE,
+  NULL_PERCENT,
+  DISTINCT_CNT,
+  DISTINCT_PERCENT,
+  MODE_VALUE,
+  AVG,
+  AVG_DATE,
+  AVG_TS_TZ,
+  MEDIAN_VAL,
+  MEDIAN_DATE,
+  MEDIAN_TS_TZ,
+  MIN,
+  MAX,
+  STD,
+  VAR,
+  SKEWNESS,
+  KURTOSIS,
+  HISTOGRAMS FROM OUTPUT_2_21)</SQLExpression>
+            <DataProfileInput>
+                <Attributes>
+                    <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                </Attributes>
+            </DataProfileInput>
+            <DataProfileOutput>
+                <Attributes>
+                    <Attribute Name="ATTR" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="DATA_TYPE" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="NULL_PERCENT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="DISTINCT_CNT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="DISTINCT_PERCENT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="MODE_VALUE" DataType="NVARCHAR2" Status="Valid"/>
+                    <Attribute Name="AVG" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="AVG_DATE" DataType="DATE" Status="Valid"/>
+                    <Attribute Name="AVG_TS_TZ" DataType="TIMESTAMP WITH TIME ZONE" Status="Valid"/>
+                    <Attribute Name="MEDIAN_VAL" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="MEDIAN_DATE" DataType="DATE" Status="Valid"/>
+                    <Attribute Name="MEDIAN_TS_TZ" DataType="TIMESTAMP WITH TIME ZONE" Status="Valid"/>
+                    <Attribute Name="MIN" DataType="NVARCHAR2" Status="Valid"/>
+                    <Attribute Name="MAX" DataType="NVARCHAR2" Status="Valid"/>
+                    <Attribute Name="STD" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="VAR" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="SKEWNESS" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="KURTOSIS" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="HISTOGRAMS" DataType="ODMR_HISTOGRAMS" Status="Valid"/>
+                </Attributes>
+            </DataProfileOutput>
+            <DataProfileSettings>
+                <NumericalBins>10</NumericalBins>
+                <CategoricalBins>10</CategoricalBins>
+                <DateBins>10</DateBins>
+            </DataProfileSettings>
+            <StatisticTable Name="OUTPUT_2_21" CreationDate="2018-05-30T18:50:14"/>
+            <StatsSelection percentdistinct="true" percentnull="true" max="true" min="true" avg="true" std="true" var="true" kurtosis="false" median="true" skewness="false" mode="true" modesampled="true" modeall="false" histogram="true" rowcount="1500"/>
+            <SampleSettings UseFullData="false" GenerateCache="true">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <Random Seed="12345"/>
+                </Method>
+            </SampleSettings>
+        </DataProfile>
+        <CreateTable TableName="AFFINITYCARD" Table="true" Id="10010" Name="AFFINITYCARD" Status="Complete">
+            <Icon XCOORD="490" YCOORD="166"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10010" AS ( SELECT  "CUST_ID" ,
+ "CUST_FIRST_NAME" ,
+ "CUST_LAST_NAME" ,
+ "AFFINITY_CARD" ,
+ "CUST_EMAIL" ,
+ "CUST_MAIN_PHONE_NUMBER" ,
+ "CUST_INCOME_LEVEL" ,
+ "CUST_CREDIT_LIMIT"  FROM "AFFINITYCARD")</SQLExpression>
+            <DBAttributes>
+                <DBAttribute Key="No" Index="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+            </DBAttributes>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+            <CreateTableOptions>
+                <Logging>NOLOGGING</Logging>
+                <TableCompression>ROW STORE COMPRESS</TableCompression>
+            </CreateTableOptions>
+        </CreateTable>
+        <Join UseCartesian="false" Id="10003" Name="Join" Status="Complete">
+            <Icon XCOORD="307" YCOORD="125"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10003" as (SELECT 
+"CUSTOMERS"."CUST_ID"
+, "CUSTOMERS"."CUST_FIRST_NAME"
+, "CUSTOMERS"."CUST_LAST_NAME"
+, "MINING_DATA_TEXT_BUILD_V"."AFFINITY_CARD"
+, "CUSTOMERS"."CUST_EMAIL"
+, "CUSTOMERS"."CUST_MAIN_PHONE_NUMBER"
+, "CUSTOMERS"."CUST_INCOME_LEVEL"
+, "CUSTOMERS"."CUST_CREDIT_LIMIT"
+
+FROM
+{INPUT_SOURCE:10001} "MINING_DATA_TEXT_BUILD_V"
+INNER JOIN {INPUT_SOURCE:10002} "CUSTOMERS"
+ON "MINING_DATA_TEXT_BUILD_V"."CUST_ID" = "CUSTOMERS"."CUST_ID"
+
+ )</SQLExpression>
+            <KeyColumns AutoSpec="No">
+                <JoinColumn Type="Inner">
+                    <LeftColumn NodeId="10001" NodeName="MINING_DATA_TEXT_BUILD_V" Key="Yes" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                    <RightColumn NodeId="10002" NodeName="CUSTOMERS" Key="Yes" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                </JoinColumn>
+            </KeyColumns>
+            <OutputColumns AutoSpec="No">
+                <RefDBColumn NodeId="10002" NodeName="CUSTOMERS" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10002" NodeName="CUSTOMERS" Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10002" NodeName="CUSTOMERS" Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10001" NodeName="MINING_DATA_TEXT_BUILD_V" Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
+                <RefDBColumn NodeId="10002" NodeName="CUSTOMERS" Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10002" NodeName="CUSTOMERS" Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10002" NodeName="CUSTOMERS" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <RefDBColumn NodeId="10002" NodeName="CUSTOMERS" Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+            </OutputColumns>
+        </Join>
+        <SQLQuery HasWithClause="false" GenerateView="false" ViewName="OUTPUT_3_21" Id="10012" Name="SQL Query" Status="Complete">
+            <Icon XCOORD="489" YCOORD="282"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"AFFINITYCARD_N$10010" as (SELECT * FROM {INPUT_SOURCE:10010}),
+"N$10012" as (SELECT COUNT("AFFINITYCARD_N$10010"."CUST_ID")
+FROM "AFFINITYCARD_N$10010")
+</SQLExpression>
+            <SQLQueryExpression>SELECT COUNT("AFFINITYCARD_N$10010"."CUST_ID")
+FROM "AFFINITYCARD_N$10010"</SQLQueryExpression>
+            <SQLQueryOutputColumns>
+                <Attribute Name="COUNT(&quot;AFFINITYCARD_N$10010&quot;.&quot;CUST_ID&quot;)" DataType="NUMBER" Status="Valid"/>
+            </SQLQueryOutputColumns>
+        </SQLQuery>
+    </Nodes>
+    <Links>
+        <Link Id="10004" From="10001" To="10003" Name="Link" Label="From &quot;MINING_DATA_TEXT_BUILD_V&quot; to &quot;Join&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10005" From="10002" To="10003" Name="Link" Label="From &quot;CUSTOMERS&quot; to &quot;Join&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10009" From="10003" To="10008" Name="Link" Label="From &quot;Join&quot; to &quot;Explore Data&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10011" From="10003" To="10010" Name="Link" Label="From &quot;Join&quot; to &quot;AFFINITYCARD&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10013" From="10010" To="10012" Name="Link" Label="From &quot;AFFINITYCARD&quot; to &quot;SQL Query&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+    </Links>
+</WorkflowProcess>
