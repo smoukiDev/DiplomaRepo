@@ -702,7 +702,7 @@ namespace DiplomaClient
             buts6.BackColor = ColorPalette.white1;
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.white1;
-            lblAdminOption.Text = "Classification";
+            lblDMAlgoritm.Text = "Classification";
         }
         private void buts6_Click(object sender, EventArgs e)
         {
@@ -1959,8 +1959,11 @@ namespace DiplomaClient
             }
         }
 
-        Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+        Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1; 
 
+        //
+        private dsDMUSERTableAdapters.MBRESULT2TableAdapter MBRESULT2TableAdapter2;
+        private System.Windows.Forms.BindingSource MBRESULT2BindingSourceBindingSource2;
         //classifiaction
         private dsDMUSERTableAdapters.CUSTLEAVETableAdapter CUSTLEAVETableAdapter; 
         private System.Windows.Forms.BindingSource CUSTLEAVEBindingSourceBindingSource; 
@@ -1970,15 +1973,22 @@ namespace DiplomaClient
             
             if(lblDMAlgoritm.Text == "Assosiaton Rules")
             {
-                this.MBRESULTTableAdapter.Fill(this.dsDMUSER.MBRESULT);
+                reportDataSource1  = new Microsoft.Reporting.WinForms.ReportDataSource();
+                MBRESULT2TableAdapter2 = new dsDMUSERTableAdapters.MBRESULT2TableAdapter();
+                this.MBRESULT2TableAdapter2.ClearBeforeFill = true;
+                this.MBRESULT2TableAdapter2.Fill(this.dsDMUSER.MBRESULT2);
+
+                MBRESULT2BindingSourceBindingSource2 = new BindingSource(dsDMUSER, "MBRESULT2");
+
                 reportDataSource1.Name = "dm2";
-                reportDataSource1.Value = this.MBRESULT2BindingSource;
+                reportDataSource1.Value = this.MBRESULT2BindingSourceBindingSource2;
                 this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
                 this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.TwoMarketBasketAssociationRules.rdlc";
                 rwTwo.RefreshReport();
             }
-            if(lblAdminOption.Text == "Classification")
+            if(lblDMAlgoritm.Text == "Classification")
             {
+                reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
 
                 CUSTLEAVETableAdapter = new dsDMUSERTableAdapters.CUSTLEAVETableAdapter();
                 this.CUSTLEAVETableAdapter.ClearBeforeFill = true;
