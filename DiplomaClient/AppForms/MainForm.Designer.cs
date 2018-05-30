@@ -33,8 +33,9 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.MBRESULTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MBRESULT2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsDMUSER = new DiplomaClient.dsDMUSER();
+            this.MBRESULTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panFooter = new System.Windows.Forms.Panel();
             this.panWindowTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -126,10 +127,10 @@
             this.pbMenuOne = new System.Windows.Forms.PictureBox();
             this.ofdProfilePic = new System.Windows.Forms.OpenFileDialog();
             this.MBRESULTTableAdapter = new DiplomaClient.dsDMUSERTableAdapters.MBRESULTTableAdapter();
-            this.MBRESULT2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MBRESULT2TableAdapter = new DiplomaClient.dsDMUSERTableAdapters.MBRESULT2TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.MBRESULTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MBRESULT2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDMUSER)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MBRESULTBindingSource)).BeginInit();
             this.panFooter.SuspendLayout();
             this.panWindowTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
@@ -151,18 +152,22 @@
             this.panAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenuOne)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MBRESULT2BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // MBRESULTBindingSource
+            // MBRESULT2BindingSource
             // 
-            this.MBRESULTBindingSource.DataMember = "MBRESULT";
-            this.MBRESULTBindingSource.DataSource = this.dsDMUSER;
+            this.MBRESULT2BindingSource.DataMember = "MBRESULT2";
+            this.MBRESULT2BindingSource.DataSource = this.dsDMUSER;
             // 
             // dsDMUSER
             // 
             this.dsDMUSER.DataSetName = "dsDMUSER";
             this.dsDMUSER.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // MBRESULTBindingSource
+            // 
+            this.MBRESULTBindingSource.DataMember = "MBRESULT";
+            this.MBRESULTBindingSource.DataSource = this.dsDMUSER;
             // 
             // panFooter
             // 
@@ -493,6 +498,8 @@
             this.rwTwo.TabIndex = 2;
             this.rwTwo.Visible = false;
             this.rwTwo.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            this.rwTwo.ReportExport += new Microsoft.Reporting.WinForms.ExportEventHandler(this.rwTwo_ReportExport);
+            this.rwTwo.Print += new Microsoft.Reporting.WinForms.ReportPrintEventHandler(this.rwTwo_Print);
             // 
             // panReportHeader
             // 
@@ -1481,11 +1488,6 @@
             // 
             this.MBRESULTTableAdapter.ClearBeforeFill = true;
             // 
-            // MBRESULT2BindingSource
-            // 
-            this.MBRESULT2BindingSource.DataMember = "MBRESULT2";
-            this.MBRESULT2BindingSource.DataSource = this.dsDMUSER;
-            // 
             // MBRESULT2TableAdapter
             // 
             this.MBRESULT2TableAdapter.ClearBeforeFill = true;
@@ -1505,8 +1507,9 @@
             this.Text = "MainForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.MBRESULTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MBRESULT2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDMUSER)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MBRESULTBindingSource)).EndInit();
             this.panFooter.ResumeLayout(false);
             this.panWindowTitle.ResumeLayout(false);
             this.panWindowTitle.PerformLayout();
@@ -1537,7 +1540,6 @@
             this.panAccount.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenuOne)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MBRESULT2BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

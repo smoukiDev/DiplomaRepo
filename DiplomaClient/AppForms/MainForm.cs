@@ -1991,6 +1991,7 @@ namespace DiplomaClient
                     this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
                     this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.TwoMarketBasketAssociationRules.rdlc";
                     rwTwo.RefreshReport();
+                    MonitorReports(1);
                 }
                 catch(Exception ex)
                 {
@@ -2020,6 +2021,7 @@ namespace DiplomaClient
                     this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.CustomLeaveClassification.rdlc";
 
                     rwTwo.RefreshReport();
+                    MonitorReports(1);
                 }
                 catch(Exception ex)
                 {
@@ -2049,6 +2051,7 @@ namespace DiplomaClient
                     this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.CustomerIncomeAnomalyDetection.rdlc";
 
                     rwTwo.RefreshReport();
+                    MonitorReports(1);
                 }
                 catch(Exception ex)
                 {
@@ -2064,6 +2067,90 @@ namespace DiplomaClient
         {
             this.rwTwo.LocalReport.ReportEmbeddedResource = null;
             this.rwTwo.RefreshReport();
+        }
+
+        private void rwTwo_ReportExport(object sender, Microsoft.Reporting.WinForms.ReportExportEventArgs e)
+        {
+            if (lblDMAlgoritm.Text == "Assosiaton Rules")
+            {
+                MonitorReports(2);
+
+            }
+            if (lblDMAlgoritm.Text == "Classification")
+            {
+                MonitorReports(2);
+            }
+            if (lblDMAlgoritm.Text == "Anomaly Detect")
+            {
+                MonitorReports(2);
+            }
+        }
+
+        private void rwTwo_Print(object sender, Microsoft.Reporting.WinForms.ReportPrintEventArgs e)
+        {
+            if (lblDMAlgoritm.Text == "Assosiaton Rules")
+            {
+                MonitorReports(3);
+
+            }
+            if (lblDMAlgoritm.Text == "Classification")
+            {
+                MonitorReports(3);
+            }
+            if (lblDMAlgoritm.Text == "Anomaly Detect")
+            {
+                MonitorReports(3);
+            }
+        }
+        //int option can be 1,2,3
+        private void MonitorReports(int option)
+        {
+            if(option == 1)
+            {
+                try
+                {
+                    QueriesTableAdapter qta = new QueriesTableAdapter();
+                    qta.RUNANILYZELOG(Convert.ToDecimal(userId),lblDMAlgoritm.Text);
+                    qta.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
+            }
+            if (option == 2)
+            {
+                try
+                {
+                    QueriesTableAdapter qta = new QueriesTableAdapter();
+                    qta.EXPORTLOG(Convert.ToDecimal(userId), lblDMAlgoritm.Text);
+                    qta.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
+            }
+            if (option == 3)
+            {
+                try
+                {
+                    QueriesTableAdapter qta = new QueriesTableAdapter();
+                    qta.PRINTLOG(Convert.ToDecimal(userId), lblDMAlgoritm.Text);
+                    qta.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
+
+            }
         }
     }
 }

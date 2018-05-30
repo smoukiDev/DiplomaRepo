@@ -268,7 +268,7 @@ namespace DiplomaClient.dsSalesHistoryTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.IDbCommand[17];
+            this._commandCollection = new global::System.Data.IDbCommand[20];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[0])).Connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection(global::DiplomaClient.Properties.Settings.Default.cnSalesHistory);
             ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[0])).CommandText = "SH.REGISTERCLIENT";
@@ -853,6 +853,63 @@ namespace DiplomaClient.dsSalesHistoryTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = null;
             ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[16])).Parameters.Add(param);
+            this._commandCollection[17] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[17])).Connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection(global::DiplomaClient.Properties.Settings.Default.cnSalesHistory);
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[17])).CommandText = "SH.EXPORTLOG";
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[17])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "V_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[17])).Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "V_MODELNAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 800;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[17])).Parameters.Add(param);
+            this._commandCollection[18] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[18])).Connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection(global::DiplomaClient.Properties.Settings.Default.cnSalesHistory);
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[18])).CommandText = "SH.PRINTLOG";
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[18])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "V_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[18])).Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "V_MODELNAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 800;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[18])).Parameters.Add(param);
+            this._commandCollection[19] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[19])).Connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection(global::DiplomaClient.Properties.Settings.Default.cnSalesHistory);
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[19])).CommandText = "SH.RUNANILYZELOG";
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[19])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "V_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[19])).Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "V_MODELNAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 800;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[19])).Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1631,6 +1688,108 @@ namespace DiplomaClient.dsSalesHistoryTableAdapters {
             }
             else {
                 command.Parameters[11].Value = ((object)(V_AVATAR));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int EXPORTLOG(global::System.Nullable<decimal> V_ID, string V_MODELNAME) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[17]));
+            if ((V_ID.HasValue == true)) {
+                command.Parameters[0].Value = ((decimal)(V_ID.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((V_MODELNAME == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(V_MODELNAME));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int PRINTLOG(global::System.Nullable<decimal> V_ID, string V_MODELNAME) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[18]));
+            if ((V_ID.HasValue == true)) {
+                command.Parameters[0].Value = ((decimal)(V_ID.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((V_MODELNAME == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(V_MODELNAME));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int RUNANILYZELOG(global::System.Nullable<decimal> V_ID, string V_MODELNAME) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[19]));
+            if ((V_ID.HasValue == true)) {
+                command.Parameters[0].Value = ((decimal)(V_ID.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((V_MODELNAME == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(V_MODELNAME));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
