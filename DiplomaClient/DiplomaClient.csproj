@@ -152,6 +152,7 @@
     <EmbeddedResource Include="AppForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportsDM\CustomLeaveClassification.rdlc" />
     <EmbeddedResource Include="ReportsDM\TwoMarketBasketAssociationRules.rdlc" />
     <EmbeddedResource Include="TestTemplates\BorderAvailable.resx">
       <DependentUpon>BorderAvailable.cs</DependentUpon>

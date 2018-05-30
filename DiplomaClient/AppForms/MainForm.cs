@@ -702,6 +702,7 @@ namespace DiplomaClient
             buts6.BackColor = ColorPalette.white1;
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.white1;
+            lblAdminOption.Text = "Classification";
         }
         private void buts6_Click(object sender, EventArgs e)
         {
@@ -1959,6 +1960,11 @@ namespace DiplomaClient
         }
 
         Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+
+        //classifiaction
+        private dsDMUSERTableAdapters.CUSTLEAVETableAdapter CUSTLEAVETableAdapter; 
+        private System.Windows.Forms.BindingSource CUSTLEAVEBindingSourceBindingSource; 
+        
         private void butAnalysis_Click(object sender, EventArgs e)
         {
             
@@ -1969,6 +1975,24 @@ namespace DiplomaClient
                 reportDataSource1.Value = this.MBRESULT2BindingSource;
                 this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
                 this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.TwoMarketBasketAssociationRules.rdlc";
+                rwTwo.RefreshReport();
+            }
+            if(lblAdminOption.Text == "Classification")
+            {
+
+                CUSTLEAVETableAdapter = new dsDMUSERTableAdapters.CUSTLEAVETableAdapter();
+                this.CUSTLEAVETableAdapter.ClearBeforeFill = true;
+                this.CUSTLEAVETableAdapter.Fill(this.dsDMUSER.CUSTLEAVE);
+
+                CUSTLEAVEBindingSourceBindingSource = new BindingSource(dsDMUSER,"CUSTLEAVE"); 
+                                                                            
+                reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+                reportDataSource1.Name = "dm3";
+                reportDataSource1.Value = this.CUSTLEAVEBindingSourceBindingSource;
+
+                this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
+                this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.CustomLeaveClassification.rdlc";
+
                 rwTwo.RefreshReport();
             }
         }
