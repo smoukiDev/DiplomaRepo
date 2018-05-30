@@ -32,6 +32,8 @@ namespace DiplomaClient {
         
         private ANOMALYCUSTDataTable tableANOMALYCUST;
         
+        private AFFINITYCARDDataTable tableAFFINITYCARD;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -71,6 +73,9 @@ namespace DiplomaClient {
                 }
                 if ((ds.Tables["ANOMALYCUST"] != null)) {
                     base.Tables.Add(new ANOMALYCUSTDataTable(ds.Tables["ANOMALYCUST"]));
+                }
+                if ((ds.Tables["AFFINITYCARD"] != null)) {
+                    base.Tables.Add(new AFFINITYCARDDataTable(ds.Tables["AFFINITYCARD"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -127,6 +132,16 @@ namespace DiplomaClient {
         public ANOMALYCUSTDataTable ANOMALYCUST {
             get {
                 return this.tableANOMALYCUST;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public AFFINITYCARDDataTable AFFINITYCARD {
+            get {
+                return this.tableAFFINITYCARD;
             }
         }
         
@@ -209,6 +224,9 @@ namespace DiplomaClient {
                 if ((ds.Tables["ANOMALYCUST"] != null)) {
                     base.Tables.Add(new ANOMALYCUSTDataTable(ds.Tables["ANOMALYCUST"]));
                 }
+                if ((ds.Tables["AFFINITYCARD"] != null)) {
+                    base.Tables.Add(new AFFINITYCARDDataTable(ds.Tables["AFFINITYCARD"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -266,6 +284,12 @@ namespace DiplomaClient {
                     this.tableANOMALYCUST.InitVars();
                 }
             }
+            this.tableAFFINITYCARD = ((AFFINITYCARDDataTable)(base.Tables["AFFINITYCARD"]));
+            if ((initTable == true)) {
+                if ((this.tableAFFINITYCARD != null)) {
+                    this.tableAFFINITYCARD.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -284,6 +308,8 @@ namespace DiplomaClient {
             base.Tables.Add(this.tableCUSTLEAVE);
             this.tableANOMALYCUST = new ANOMALYCUSTDataTable();
             base.Tables.Add(this.tableANOMALYCUST);
+            this.tableAFFINITYCARD = new AFFINITYCARDDataTable();
+            base.Tables.Add(this.tableAFFINITYCARD);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -307,6 +333,12 @@ namespace DiplomaClient {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeANOMALYCUST() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeAFFINITYCARD() {
             return false;
         }
         
@@ -376,6 +408,9 @@ namespace DiplomaClient {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void ANOMALYCUSTRowChangeEventHandler(object sender, ANOMALYCUSTRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void AFFINITYCARDRowChangeEventHandler(object sender, AFFINITYCARDRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1789,6 +1824,361 @@ namespace DiplomaClient {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class AFFINITYCARDDataTable : global::System.Data.TypedTableBase<AFFINITYCARDRow> {
+            
+            private global::System.Data.DataColumn columnAFFENITY_CARD;
+            
+            private global::System.Data.DataColumn columnCUST_CREDIT_LIMIT;
+            
+            private global::System.Data.DataColumn columnCUST_EMAIL;
+            
+            private global::System.Data.DataColumn columnCUST_FIRST_NAME;
+            
+            private global::System.Data.DataColumn columnCUST_ID;
+            
+            private global::System.Data.DataColumn columnCUST_INCOME_LEVEL;
+            
+            private global::System.Data.DataColumn columnCUST_LAST_NAME;
+            
+            private global::System.Data.DataColumn columnCUST_MAIN_PHONE_NUMBER;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AFFINITYCARDDataTable() {
+                this.TableName = "AFFINITYCARD";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal AFFINITYCARDDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected AFFINITYCARDDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AFFENITY_CARDColumn {
+                get {
+                    return this.columnAFFENITY_CARD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_CREDIT_LIMITColumn {
+                get {
+                    return this.columnCUST_CREDIT_LIMIT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_EMAILColumn {
+                get {
+                    return this.columnCUST_EMAIL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_FIRST_NAMEColumn {
+                get {
+                    return this.columnCUST_FIRST_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_IDColumn {
+                get {
+                    return this.columnCUST_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_INCOME_LEVELColumn {
+                get {
+                    return this.columnCUST_INCOME_LEVEL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_LAST_NAMEColumn {
+                get {
+                    return this.columnCUST_LAST_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_MAIN_PHONE_NUMBERColumn {
+                get {
+                    return this.columnCUST_MAIN_PHONE_NUMBER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AFFINITYCARDRow this[int index] {
+                get {
+                    return ((AFFINITYCARDRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event AFFINITYCARDRowChangeEventHandler AFFINITYCARDRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event AFFINITYCARDRowChangeEventHandler AFFINITYCARDRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event AFFINITYCARDRowChangeEventHandler AFFINITYCARDRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event AFFINITYCARDRowChangeEventHandler AFFINITYCARDRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddAFFINITYCARDRow(AFFINITYCARDRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AFFINITYCARDRow AddAFFINITYCARDRow(string AFFENITY_CARD, decimal CUST_CREDIT_LIMIT, string CUST_EMAIL, string CUST_FIRST_NAME, decimal CUST_ID, string CUST_INCOME_LEVEL, string CUST_LAST_NAME, string CUST_MAIN_PHONE_NUMBER) {
+                AFFINITYCARDRow rowAFFINITYCARDRow = ((AFFINITYCARDRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        AFFENITY_CARD,
+                        CUST_CREDIT_LIMIT,
+                        CUST_EMAIL,
+                        CUST_FIRST_NAME,
+                        CUST_ID,
+                        CUST_INCOME_LEVEL,
+                        CUST_LAST_NAME,
+                        CUST_MAIN_PHONE_NUMBER};
+                rowAFFINITYCARDRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAFFINITYCARDRow);
+                return rowAFFINITYCARDRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                AFFINITYCARDDataTable cln = ((AFFINITYCARDDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new AFFINITYCARDDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnAFFENITY_CARD = base.Columns["AFFENITY_CARD"];
+                this.columnCUST_CREDIT_LIMIT = base.Columns["CUST_CREDIT_LIMIT"];
+                this.columnCUST_EMAIL = base.Columns["CUST_EMAIL"];
+                this.columnCUST_FIRST_NAME = base.Columns["CUST_FIRST_NAME"];
+                this.columnCUST_ID = base.Columns["CUST_ID"];
+                this.columnCUST_INCOME_LEVEL = base.Columns["CUST_INCOME_LEVEL"];
+                this.columnCUST_LAST_NAME = base.Columns["CUST_LAST_NAME"];
+                this.columnCUST_MAIN_PHONE_NUMBER = base.Columns["CUST_MAIN_PHONE_NUMBER"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnAFFENITY_CARD = new global::System.Data.DataColumn("AFFENITY_CARD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAFFENITY_CARD);
+                this.columnCUST_CREDIT_LIMIT = new global::System.Data.DataColumn("CUST_CREDIT_LIMIT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_CREDIT_LIMIT);
+                this.columnCUST_EMAIL = new global::System.Data.DataColumn("CUST_EMAIL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_EMAIL);
+                this.columnCUST_FIRST_NAME = new global::System.Data.DataColumn("CUST_FIRST_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_FIRST_NAME);
+                this.columnCUST_ID = new global::System.Data.DataColumn("CUST_ID", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_ID);
+                this.columnCUST_INCOME_LEVEL = new global::System.Data.DataColumn("CUST_INCOME_LEVEL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_INCOME_LEVEL);
+                this.columnCUST_LAST_NAME = new global::System.Data.DataColumn("CUST_LAST_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_LAST_NAME);
+                this.columnCUST_MAIN_PHONE_NUMBER = new global::System.Data.DataColumn("CUST_MAIN_PHONE_NUMBER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_MAIN_PHONE_NUMBER);
+                this.columnAFFENITY_CARD.MaxLength = 240;
+                this.columnCUST_EMAIL.MaxLength = 50;
+                this.columnCUST_FIRST_NAME.AllowDBNull = false;
+                this.columnCUST_FIRST_NAME.MaxLength = 20;
+                this.columnCUST_ID.AllowDBNull = false;
+                this.columnCUST_INCOME_LEVEL.MaxLength = 30;
+                this.columnCUST_LAST_NAME.AllowDBNull = false;
+                this.columnCUST_LAST_NAME.MaxLength = 40;
+                this.columnCUST_MAIN_PHONE_NUMBER.AllowDBNull = false;
+                this.columnCUST_MAIN_PHONE_NUMBER.MaxLength = 25;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AFFINITYCARDRow NewAFFINITYCARDRow() {
+                return ((AFFINITYCARDRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new AFFINITYCARDRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(AFFINITYCARDRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.AFFINITYCARDRowChanged != null)) {
+                    this.AFFINITYCARDRowChanged(this, new AFFINITYCARDRowChangeEvent(((AFFINITYCARDRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.AFFINITYCARDRowChanging != null)) {
+                    this.AFFINITYCARDRowChanging(this, new AFFINITYCARDRowChangeEvent(((AFFINITYCARDRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.AFFINITYCARDRowDeleted != null)) {
+                    this.AFFINITYCARDRowDeleted(this, new AFFINITYCARDRowChangeEvent(((AFFINITYCARDRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.AFFINITYCARDRowDeleting != null)) {
+                    this.AFFINITYCARDRowDeleting(this, new AFFINITYCARDRowChangeEvent(((AFFINITYCARDRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveAFFINITYCARDRow(AFFINITYCARDRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsDMUSER ds = new dsDMUSER();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "AFFINITYCARDDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class MBRESULTRow : global::System.Data.DataRow {
@@ -2621,6 +3011,177 @@ namespace DiplomaClient {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class AFFINITYCARDRow : global::System.Data.DataRow {
+            
+            private AFFINITYCARDDataTable tableAFFINITYCARD;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal AFFINITYCARDRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableAFFINITYCARD = ((AFFINITYCARDDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string AFFENITY_CARD {
+                get {
+                    try {
+                        return ((string)(this[this.tableAFFINITYCARD.AFFENITY_CARDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AFFENITY_CARD\' in table \'AFFINITYCARD\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAFFINITYCARD.AFFENITY_CARDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal CUST_CREDIT_LIMIT {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableAFFINITYCARD.CUST_CREDIT_LIMITColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_CREDIT_LIMIT\' in table \'AFFINITYCARD\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAFFINITYCARD.CUST_CREDIT_LIMITColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_EMAIL {
+                get {
+                    try {
+                        return ((string)(this[this.tableAFFINITYCARD.CUST_EMAILColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_EMAIL\' in table \'AFFINITYCARD\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAFFINITYCARD.CUST_EMAILColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_FIRST_NAME {
+                get {
+                    return ((string)(this[this.tableAFFINITYCARD.CUST_FIRST_NAMEColumn]));
+                }
+                set {
+                    this[this.tableAFFINITYCARD.CUST_FIRST_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal CUST_ID {
+                get {
+                    return ((decimal)(this[this.tableAFFINITYCARD.CUST_IDColumn]));
+                }
+                set {
+                    this[this.tableAFFINITYCARD.CUST_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_INCOME_LEVEL {
+                get {
+                    try {
+                        return ((string)(this[this.tableAFFINITYCARD.CUST_INCOME_LEVELColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_INCOME_LEVEL\' in table \'AFFINITYCARD\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAFFINITYCARD.CUST_INCOME_LEVELColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_LAST_NAME {
+                get {
+                    return ((string)(this[this.tableAFFINITYCARD.CUST_LAST_NAMEColumn]));
+                }
+                set {
+                    this[this.tableAFFINITYCARD.CUST_LAST_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_MAIN_PHONE_NUMBER {
+                get {
+                    return ((string)(this[this.tableAFFINITYCARD.CUST_MAIN_PHONE_NUMBERColumn]));
+                }
+                set {
+                    this[this.tableAFFINITYCARD.CUST_MAIN_PHONE_NUMBERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAFFENITY_CARDNull() {
+                return this.IsNull(this.tableAFFINITYCARD.AFFENITY_CARDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAFFENITY_CARDNull() {
+                this[this.tableAFFINITYCARD.AFFENITY_CARDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_CREDIT_LIMITNull() {
+                return this.IsNull(this.tableAFFINITYCARD.CUST_CREDIT_LIMITColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_CREDIT_LIMITNull() {
+                this[this.tableAFFINITYCARD.CUST_CREDIT_LIMITColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_EMAILNull() {
+                return this.IsNull(this.tableAFFINITYCARD.CUST_EMAILColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_EMAILNull() {
+                this[this.tableAFFINITYCARD.CUST_EMAILColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_INCOME_LEVELNull() {
+                return this.IsNull(this.tableAFFINITYCARD.CUST_INCOME_LEVELColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_INCOME_LEVELNull() {
+                this[this.tableAFFINITYCARD.CUST_INCOME_LEVELColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -2742,6 +3303,40 @@ namespace DiplomaClient {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ANOMALYCUSTRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class AFFINITYCARDRowChangeEvent : global::System.EventArgs {
+            
+            private AFFINITYCARDRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AFFINITYCARDRowChangeEvent(AFFINITYCARDRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AFFINITYCARDRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -6210,6 +6805,337 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class AFFINITYCARDTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public AFFINITYCARDTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "AFFINITYCARD";
+            tableMapping.ColumnMappings.Add("AFFENITY_CARD", "AFFENITY_CARD");
+            tableMapping.ColumnMappings.Add("CUST_CREDIT_LIMIT", "CUST_CREDIT_LIMIT");
+            tableMapping.ColumnMappings.Add("CUST_EMAIL", "CUST_EMAIL");
+            tableMapping.ColumnMappings.Add("CUST_FIRST_NAME", "CUST_FIRST_NAME");
+            tableMapping.ColumnMappings.Add("CUST_ID", "CUST_ID");
+            tableMapping.ColumnMappings.Add("CUST_INCOME_LEVEL", "CUST_INCOME_LEVEL");
+            tableMapping.ColumnMappings.Add("CUST_LAST_NAME", "CUST_LAST_NAME");
+            tableMapping.ColumnMappings.Add("CUST_MAIN_PHONE_NUMBER", "CUST_MAIN_PHONE_NUMBER");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""DMUSER"".""AFFINITYCARD"" (""AFFENITY_CARD"", ""CUST_CREDIT_LIMIT"", ""CUST_EMAIL"", ""CUST_FIRST_NAME"", ""CUST_ID"", ""CUST_INCOME_LEVEL"", ""CUST_LAST_NAME"", ""CUST_MAIN_PHONE_NUMBER"") VALUES (:AFFENITY_CARD, :CUST_CREDIT_LIMIT, :CUST_EMAIL, :CUST_FIRST_NAME, :CUST_ID, :CUST_INCOME_LEVEL, :CUST_LAST_NAME, :p1)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "AFFENITY_CARD";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 240;
+            param.IsNullable = true;
+            param.SourceColumn = "AFFENITY_CARD";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_CREDIT_LIMIT";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_CREDIT_LIMIT";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_EMAIL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_EMAIL";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_FIRST_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_FIRST_NAME";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_ID";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_INCOME_LEVEL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 30;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_INCOME_LEVEL";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_LAST_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_LAST_NAME";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "p1";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 25;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_MAIN_PHONE_NUMBER";
+            this._adapter.InsertCommand.Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
+            this._connection.ConnectionString = global::DiplomaClient.Properties.Settings.Default.cnDMUSER;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT AFFENITY_CARD, CUST_CREDIT_LIMIT, CUST_EMAIL, CUST_FIRST_NAME, CUST_ID, CU" +
+                "ST_INCOME_LEVEL, CUST_LAST_NAME, CUST_MAIN_PHONE_NUMBER FROM DMUSER.AFFINITYCARD" +
+                "";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsDMUSER.AFFINITYCARDDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsDMUSER.AFFINITYCARDDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsDMUSER.AFFINITYCARDDataTable dataTable = new dsDMUSER.AFFINITYCARDDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsDMUSER.AFFINITYCARDDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsDMUSER dataSet) {
+            return this.Adapter.Update(dataSet, "AFFINITYCARD");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string AFFENITY_CARD, global::System.Nullable<decimal> CUST_CREDIT_LIMIT, string CUST_EMAIL, string CUST_FIRST_NAME, decimal CUST_ID, string CUST_INCOME_LEVEL, string CUST_LAST_NAME, string p1) {
+            if ((AFFENITY_CARD == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(AFFENITY_CARD));
+            }
+            if ((CUST_CREDIT_LIMIT.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(CUST_CREDIT_LIMIT.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((CUST_EMAIL == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(CUST_EMAIL));
+            }
+            if ((CUST_FIRST_NAME == null)) {
+                throw new global::System.ArgumentNullException("CUST_FIRST_NAME");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CUST_FIRST_NAME));
+            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(CUST_ID));
+            if ((CUST_INCOME_LEVEL == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(CUST_INCOME_LEVEL));
+            }
+            if ((CUST_LAST_NAME == null)) {
+                throw new global::System.ArgumentNullException("CUST_LAST_NAME");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(CUST_LAST_NAME));
+            }
+            if ((p1 == null)) {
+                throw new global::System.ArgumentNullException("p1");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(p1));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6228,6 +7154,8 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         private CUSTLEAVETableAdapter _cUSTLEAVETableAdapter;
         
         private ANOMALYCUSTTableAdapter _aNOMALYCUSTTableAdapter;
+        
+        private AFFINITYCARDTableAdapter _aFFINITYCARDTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -6302,6 +7230,20 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public AFFINITYCARDTableAdapter AFFINITYCARDTableAdapter {
+            get {
+                return this._aFFINITYCARDTableAdapter;
+            }
+            set {
+                this._aFFINITYCARDTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -6335,6 +7277,10 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                             && (this._aNOMALYCUSTTableAdapter.Connection != null))) {
                     return this._aNOMALYCUSTTableAdapter.Connection;
                 }
+                if (((this._aFFINITYCARDTableAdapter != null) 
+                            && (this._aFFINITYCARDTableAdapter.Connection != null))) {
+                    return this._aFFINITYCARDTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -6358,6 +7304,9 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                     count = (count + 1);
                 }
                 if ((this._aNOMALYCUSTTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._aFFINITYCARDTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -6407,6 +7356,15 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._aFFINITYCARDTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.AFFINITYCARD.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._aFFINITYCARDTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -6449,6 +7407,14 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._aFFINITYCARDTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.AFFINITYCARD.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._aFFINITYCARDTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -6459,6 +7425,14 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(dsDMUSER dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._aFFINITYCARDTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.AFFINITYCARD.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._aFFINITYCARDTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._aNOMALYCUSTTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.ANOMALYCUST.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -6550,6 +7524,11 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._aFFINITYCARDTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._aFFINITYCARDTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -6616,6 +7595,15 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                     if (this._aNOMALYCUSTTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._aNOMALYCUSTTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._aNOMALYCUSTTableAdapter.Adapter);
+                    }
+                }
+                if ((this._aFFINITYCARDTableAdapter != null)) {
+                    revertConnections.Add(this._aFFINITYCARDTableAdapter, this._aFFINITYCARDTableAdapter.Connection);
+                    this._aFFINITYCARDTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(workConnection));
+                    this._aFFINITYCARDTableAdapter.Transaction = ((global::Oracle.ManagedDataAccess.Client.OracleTransaction)(workTransaction));
+                    if (this._aFFINITYCARDTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._aFFINITYCARDTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._aFFINITYCARDTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -6691,6 +7679,10 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                 if ((this._aNOMALYCUSTTableAdapter != null)) {
                     this._aNOMALYCUSTTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._aNOMALYCUSTTableAdapter]));
                     this._aNOMALYCUSTTableAdapter.Transaction = null;
+                }
+                if ((this._aFFINITYCARDTableAdapter != null)) {
+                    this._aFFINITYCARDTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._aFFINITYCARDTableAdapter]));
+                    this._aFFINITYCARDTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -671,6 +671,7 @@ namespace DiplomaClient
             buts6.BackColor = ColorPalette.white1;
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.white1;
+            lblDMAlgoritm.Text = "Explore";
         }
         private void buts4_Click(object sender, EventArgs e)
         {
@@ -1960,9 +1961,12 @@ namespace DiplomaClient
             }
         }
 
-        Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1; 
+        Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1;
 
-        //
+        //explore
+        private dsDMUSERTableAdapters.AFFINITYCARDTableAdapter AFFINITYCARDTableAdapter2;
+        private System.Windows.Forms.BindingSource AFFINITYCARDBindingSourceBindingSource2;
+        //association
         private dsDMUSERTableAdapters.MBRESULT2TableAdapter MBRESULT2TableAdapter2;
         private System.Windows.Forms.BindingSource MBRESULT2BindingSourceBindingSource2;
         //classifiaction
@@ -1974,8 +1978,34 @@ namespace DiplomaClient
 
         private void butAnalysis_Click(object sender, EventArgs e)
         {
-            
-            if(lblDMAlgoritm.Text == "Assosiaton Rules")
+
+            if (lblDMAlgoritm.Text == "Explore")
+            {
+                try
+                {
+                    reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+                    AFFINITYCARDTableAdapter2 = new dsDMUSERTableAdapters.AFFINITYCARDTableAdapter();
+                    this.AFFINITYCARDTableAdapter2.ClearBeforeFill = true;
+                    this.AFFINITYCARDTableAdapter2.Fill(this.dsDMUSER.AFFINITYCARD);
+
+                    AFFINITYCARDBindingSourceBindingSource2 = new BindingSource(dsDMUSER, "AFFINITYCARD");
+
+                    reportDataSource1.Name = "dm1";
+                    reportDataSource1.Value = this.AFFINITYCARDBindingSourceBindingSource2;
+                    this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
+                    this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.AffinityCardExplore.rdlc";
+                    rwTwo.RefreshReport();
+                    MonitorReports(1);
+                }
+                catch (Exception ex)
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
+
+            }
+            if (lblDMAlgoritm.Text == "Assosiaton Rules")
             {
                 try
                 {
@@ -2071,6 +2101,11 @@ namespace DiplomaClient
 
         private void rwTwo_ReportExport(object sender, Microsoft.Reporting.WinForms.ReportExportEventArgs e)
         {
+            if (lblDMAlgoritm.Text == "Explore")
+            {
+                MonitorReports(2);
+
+            }
             if (lblDMAlgoritm.Text == "Assosiaton Rules")
             {
                 MonitorReports(2);
@@ -2088,6 +2123,11 @@ namespace DiplomaClient
 
         private void rwTwo_Print(object sender, Microsoft.Reporting.WinForms.ReportPrintEventArgs e)
         {
+            if (lblDMAlgoritm.Text == "Explore")
+            {
+                MonitorReports(3);
+
+            }
             if (lblDMAlgoritm.Text == "Assosiaton Rules")
             {
                 MonitorReports(3);

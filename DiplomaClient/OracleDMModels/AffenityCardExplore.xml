@@ -209,8 +209,8 @@ from "SH"."CUSTOMERS"  )</SQLExpression>
                 </Method>
             </SampleSettings>
         </DataProfile>
-        <CreateTable TableName="AFFINITYCARD" Table="true" Id="10010" Name="AFFINITYCARD" Status="Complete">
-            <Icon XCOORD="490" YCOORD="166"></Icon>
+        <CreateTable TableName="AFFINITYCARD" Table="true" Id="10029" Name="AFFINITYCARD" Status="Complete">
+            <Icon XCOORD="730" YCOORD="118"></Icon>
             <Messages/>
             <Parallelism Enable="false">
                 <SystemDetermined/>
@@ -221,23 +221,23 @@ from "SH"."CUSTOMERS"  )</SQLExpression>
                     <TopN/>
                 </Method>
             </CacheSettings>
-            <SQLExpression>"N$10010" AS ( SELECT  "CUST_ID" ,
- "CUST_FIRST_NAME" ,
- "CUST_LAST_NAME" ,
- "AFFINITY_CARD" ,
+            <SQLExpression>"N$10029" AS ( SELECT  "AFFENITY_CARD" ,
+ "CUST_CREDIT_LIMIT" ,
  "CUST_EMAIL" ,
- "CUST_MAIN_PHONE_NUMBER" ,
+ "CUST_FIRST_NAME" ,
+ "CUST_ID" ,
  "CUST_INCOME_LEVEL" ,
- "CUST_CREDIT_LIMIT"  FROM "AFFINITYCARD")</SQLExpression>
+ "CUST_LAST_NAME" ,
+ "CUST_MAIN_PHONE_NUMBER"  FROM "AFFINITYCARD")</SQLExpression>
             <DBAttributes>
-                <DBAttribute Key="No" Index="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
-                <DBAttribute Key="No" Index="No" Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
-                <DBAttribute Key="No" Index="No" Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
-                <DBAttribute Key="No" Index="No" Name="AFFINITY_CARD" DataType="NUMBER" Status="Valid"/>
-                <DBAttribute Key="No" Index="No" Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
-                <DBAttribute Key="No" Index="No" Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
-                <DBAttribute Key="No" Index="No" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="AFFENITY_CARD" DataType="VARCHAR2" Status="Valid"/>
                 <DBAttribute Key="No" Index="No" Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
             </DBAttributes>
             <JSONColumns/>
             <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
@@ -294,8 +294,8 @@ ON "MINING_DATA_TEXT_BUILD_V"."CUST_ID" = "CUSTOMERS"."CUST_ID"
                 <RefDBColumn NodeId="10002" NodeName="CUSTOMERS" Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
             </OutputColumns>
         </Join>
-        <SQLQuery HasWithClause="false" GenerateView="false" ViewName="OUTPUT_3_21" Id="10012" Name="SQL Query" Status="Complete">
-            <Icon XCOORD="489" YCOORD="282"></Icon>
+        <SQLQuery HasWithClause="false" GenerateView="false" ViewName="OUTPUT_4_21" Id="10025" Name="SQL Query" Status="Complete">
+            <Icon XCOORD="464" YCOORD="210"></Icon>
             <Messages/>
             <Parallelism Enable="false">
                 <SystemDetermined/>
@@ -306,14 +306,96 @@ ON "MINING_DATA_TEXT_BUILD_V"."CUST_ID" = "CUSTOMERS"."CUST_ID"
                     <TopN/>
                 </Method>
             </CacheSettings>
-            <SQLExpression>"AFFINITYCARD_N$10010" as (SELECT * FROM {INPUT_SOURCE:10010}),
-"N$10012" as (SELECT COUNT("AFFINITYCARD_N$10010"."CUST_ID")
-FROM "AFFINITYCARD_N$10010")
+            <SQLExpression>"Join_N$10003" as (SELECT * FROM {INPUT_SOURCE:10003}),
+"N$10025" as (SELECT
+REPLACE("Join_N$10003"."AFFINITY_CARD",'0','No') AS AFFINITY_CARD_POSSESSION,
+"Join_N$10003"."CUST_CREDIT_LIMIT",
+"Join_N$10003"."CUST_EMAIL",
+"Join_N$10003"."CUST_FIRST_NAME",
+"Join_N$10003"."CUST_ID",
+"Join_N$10003"."CUST_INCOME_LEVEL",
+"Join_N$10003"."CUST_LAST_NAME",
+"Join_N$10003"."CUST_MAIN_PHONE_NUMBER"
+FROM "Join_N$10003")
 </SQLExpression>
-            <SQLQueryExpression>SELECT COUNT("AFFINITYCARD_N$10010"."CUST_ID")
-FROM "AFFINITYCARD_N$10010"</SQLQueryExpression>
+            <SQLQueryExpression>SELECT
+REPLACE("Join_N$10003"."AFFINITY_CARD",'0','No') AS AFFINITY_CARD_POSSESSION,
+"Join_N$10003"."CUST_CREDIT_LIMIT",
+"Join_N$10003"."CUST_EMAIL",
+"Join_N$10003"."CUST_FIRST_NAME",
+"Join_N$10003"."CUST_ID",
+"Join_N$10003"."CUST_INCOME_LEVEL",
+"Join_N$10003"."CUST_LAST_NAME",
+"Join_N$10003"."CUST_MAIN_PHONE_NUMBER"
+FROM "Join_N$10003"</SQLQueryExpression>
             <SQLQueryOutputColumns>
-                <Attribute Name="COUNT(&quot;AFFINITYCARD_N$10010&quot;.&quot;CUST_ID&quot;)" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AFFINITY_CARD_POSSESSION" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+            </SQLQueryOutputColumns>
+        </SQLQuery>
+        <SQLQuery HasWithClause="false" GenerateView="false" ViewName="OUTPUT_3_21" Id="10027" Name="SQL Query 1" Status="Complete">
+            <Icon XCOORD="626" YCOORD="219"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"SQL Query_N$10025" as (SELECT * FROM {INPUT_SOURCE:10025}),
+"N$10027" as (SELECT
+REPLACE("SQL Query_N$10025"."AFFINITY_CARD_POSSESSION",'1','Yes') AS AFFENITY_CARD,
+"SQL Query_N$10025"."CUST_CREDIT_LIMIT","SQL Query_N$10025"."CUST_EMAIL","SQL Query_N$10025"."CUST_FIRST_NAME",
+"SQL Query_N$10025"."CUST_ID","SQL Query_N$10025"."CUST_INCOME_LEVEL","SQL Query_N$10025"."CUST_LAST_NAME",
+"SQL Query_N$10025"."CUST_MAIN_PHONE_NUMBER"
+FROM "SQL Query_N$10025")
+</SQLExpression>
+            <SQLQueryExpression>SELECT
+REPLACE("SQL Query_N$10025"."AFFINITY_CARD_POSSESSION",'1','Yes') AS AFFENITY_CARD,
+"SQL Query_N$10025"."CUST_CREDIT_LIMIT","SQL Query_N$10025"."CUST_EMAIL","SQL Query_N$10025"."CUST_FIRST_NAME",
+"SQL Query_N$10025"."CUST_ID","SQL Query_N$10025"."CUST_INCOME_LEVEL","SQL Query_N$10025"."CUST_LAST_NAME",
+"SQL Query_N$10025"."CUST_MAIN_PHONE_NUMBER"
+FROM "SQL Query_N$10025"</SQLQueryExpression>
+            <SQLQueryOutputColumns>
+                <Attribute Name="AFFENITY_CARD" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+            </SQLQueryOutputColumns>
+        </SQLQuery>
+        <SQLQuery HasWithClause="false" GenerateView="false" ViewName="OUTPUT_5_21" Id="10031" Name="SQL Query 2" Status="Complete">
+            <Icon XCOORD="636" YCOORD="6"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"AFFINITYCARD_N$10029" as (SELECT * FROM {INPUT_SOURCE:10029}),
+"N$10031" as (SELECT COUNT("AFFINITYCARD_N$10029"."CUST_ID")
+FROM "AFFINITYCARD_N$10029")
+</SQLExpression>
+            <SQLQueryExpression>SELECT COUNT("AFFINITYCARD_N$10029"."CUST_ID")
+FROM "AFFINITYCARD_N$10029"</SQLQueryExpression>
+            <SQLQueryOutputColumns>
+                <Attribute Name="COUNT(&quot;AFFINITYCARD_N$10029&quot;.&quot;CUST_ID&quot;)" DataType="NUMBER" Status="Valid"/>
             </SQLQueryOutputColumns>
         </SQLQuery>
     </Nodes>
@@ -333,12 +415,22 @@ FROM "AFFINITYCARD_N$10010"</SQLQueryExpression>
                 <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
             </ConnectorGraphicsInfo>
         </Link>
-        <Link Id="10011" From="10003" To="10010" Name="Link" Label="From &quot;Join&quot; to &quot;AFFINITYCARD&quot;">
+        <Link Id="10026" From="10003" To="10025" Name="Link" Label="From &quot;Join&quot; to &quot;SQL Query&quot;">
             <ConnectorGraphicsInfo>
                 <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
             </ConnectorGraphicsInfo>
         </Link>
-        <Link Id="10013" From="10010" To="10012" Name="Link" Label="From &quot;AFFINITYCARD&quot; to &quot;SQL Query&quot;">
+        <Link Id="10028" From="10025" To="10027" Name="Link" Label="From &quot;SQL Query&quot; to &quot;SQL Query 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10030" From="10027" To="10029" Name="Link" Label="From &quot;SQL Query 1&quot; to &quot;AFFINITYCARD&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10032" From="10029" To="10031" Name="Link" Label="From &quot;AFFINITYCARD&quot; to &quot;SQL Query 2&quot;">
             <ConnectorGraphicsInfo>
                 <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
             </ConnectorGraphicsInfo>
