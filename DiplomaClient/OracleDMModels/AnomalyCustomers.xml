@@ -235,8 +235,8 @@ from "SH"."CUSTOMERS"  )</SQLExpression>
                 <TableCompression>ROW STORE COMPRESS</TableCompression>
             </CreateTableOptions>
         </CreateTable>
-        <CreateTable TableName="OUTPUT_5_19" Table="true" Id="10059" Name="ANNOMALYCUSTOMERS" Status="Complete">
-            <Icon XCOORD="675" YCOORD="167"></Icon>
+        <CreateTable TableName="ANOMALYCUST" Table="true" AutoSpec="No" Id="10062" Name="ANOMALYCUST" Status="Complete">
+            <Icon XCOORD="711" YCOORD="154"></Icon>
             <Messages/>
             <Parallelism Enable="false">
                 <SystemDetermined/>
@@ -247,7 +247,7 @@ from "SH"."CUSTOMERS"  )</SQLExpression>
                     <TopN/>
                 </Method>
             </CacheSettings>
-            <SQLExpression>"N$10059" AS ( SELECT  "ANOMALYPROB" ,
+            <SQLExpression>"N$10062" AS ( SELECT  "ANOMALYPROB" ,
  "CUST_CITY" ,
  "CUST_EMAIL" ,
  "CUST_FIRST_NAME" ,
@@ -258,14 +258,14 @@ from "SH"."CUSTOMERS"  )</SQLExpression>
  "CUST_POSTAL_CODE" ,
  "CUST_STATE_PROVINCE" ,
  "CUST_STREET_ADDRESS" ,
- "CUST_YEAR_OF_BIRTH"  FROM "OUTPUT_5_19")</SQLExpression>
+ "CUST_YEAR_OF_BIRTH"  FROM "ANOMALYCUST")</SQLExpression>
             <DBAttributes>
                 <DBAttribute Key="No" Index="No" Name="ANOMALYPROB" DataType="NUMBER" Status="Valid"/>
                 <DBAttribute Key="No" Index="No" Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
                 <DBAttribute Key="No" Index="No" Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
                 <DBAttribute Key="No" Index="No" Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
                 <DBAttribute Key="No" Index="No" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
-                <DBAttribute Key="No" Index="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="Yes" Index="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
                 <DBAttribute Key="No" Index="No" Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
                 <DBAttribute Key="No" Index="No" Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
                 <DBAttribute Key="No" Index="No" Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
@@ -274,10 +274,6 @@ from "SH"."CUSTOMERS"  )</SQLExpression>
                 <DBAttribute Key="No" Index="No" Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
             </DBAttributes>
             <JSONColumns/>
-            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
-                <NumberOfRows>2000</NumberOfRows>
-                <NumberOfValues>10000</NumberOfValues>
-            </DataGuideSettings>
             <CreateTableOptions>
                 <Logging>NOLOGGING</Logging>
                 <TableCompression>ROW STORE COMPRESS</TableCompression>
@@ -1413,7 +1409,7 @@ FROM"AnomalyColumnGetRidOf_N$10036"</SQLQueryExpression>
                 <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
             </ConnectorGraphicsInfo>
         </Link>
-        <Link Id="10060" From="10056" To="10059" Name="Link" Label="From &quot;NEEDCOLUMNS&quot; to &quot;ANNOMALYCUSTOMERS&quot;">
+        <Link Id="10063" From="10056" To="10062" Name="Link" Label="From &quot;NEEDCOLUMNS&quot; to &quot;ANOMALYCUST&quot;">
             <ConnectorGraphicsInfo>
                 <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
             </ConnectorGraphicsInfo>
