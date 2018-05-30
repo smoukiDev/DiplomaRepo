@@ -1,0 +1,2253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WorkflowProcess Version="12.2.0.0.1" DBVersion="12.1.0.2.0" Schema="" xmlns="http://xmlns.oracle.com/odmr11">
+    <Nodes>
+        <DataSource Id="10005" Name="CUSTOMERS" Status="Complete">
+            <Icon XCOORD="47" YCOORD="28"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10005" as (select "CUSTOMERS"."CUST_STATE_PROVINCE", 
+"CUSTOMERS"."CUST_ID", 
+"CUSTOMERS"."CUST_LAST_NAME", 
+"CUSTOMERS"."COUNTRY_ID", 
+"CUSTOMERS"."CUST_VALID", 
+"CUSTOMERS"."CUST_YEAR_OF_BIRTH", 
+"CUSTOMERS"."CUST_TOTAL", 
+"CUSTOMERS"."CUST_SRC_ID", 
+"CUSTOMERS"."CUST_TOTAL_ID", 
+"CUSTOMERS"."CUST_STREET_ADDRESS", 
+"CUSTOMERS"."CUST_MAIN_PHONE_NUMBER", 
+"CUSTOMERS"."CUST_FIRST_NAME", 
+"CUSTOMERS"."CUST_EFF_FROM", 
+"CUSTOMERS"."CUST_CITY", 
+"CUSTOMERS"."CUST_INCOME_LEVEL", 
+"CUSTOMERS"."CUST_GENDER", 
+"CUSTOMERS"."CUST_CREDIT_LIMIT", 
+"CUSTOMERS"."CUST_MARITAL_STATUS", 
+"CUSTOMERS"."CUST_STATE_PROVINCE_ID", 
+"CUSTOMERS"."CUST_POSTAL_CODE", 
+"CUSTOMERS"."CUST_EMAIL", 
+"CUSTOMERS"."CUST_EFF_TO", 
+"CUSTOMERS"."CUST_CITY_ID" 
+from "SH"."CUSTOMERS"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="SH" Name="CUSTOMERS" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <DataSource Id="10013" Name="CLAIM" Status="Complete">
+            <Icon XCOORD="54" YCOORD="147"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10013" as (select "CLAIM"."MONTH", 
+"CLAIM"."ADDRESSCHANGE_CLAIM", 
+"CLAIM"."SEX", 
+"CLAIM"."MONTHCLAIMED", 
+"CLAIM"."VEHICLECATEGORY", 
+"CLAIM"."VEHICLEPRICE", 
+"CLAIM"."MAKE", 
+"CLAIM"."POLICEREPORTFILED", 
+"CLAIM"."YEAR", 
+"CLAIM"."MARITALSTATUS", 
+"CLAIM"."POLICYTYPE", 
+"CLAIM"."DEDUCTIBLE", 
+"CLAIM"."NUMBEROFSUPPLIMENTS", 
+"CLAIM"."BASEPOLICY", 
+"CLAIM"."AGENTTYPE", 
+"CLAIM"."AGE", 
+"CLAIM"."AGEOFVEHICLE", 
+"CLAIM"."WITNESSPRESENT", 
+"CLAIM"."WEEKOFMONTHCLAIMED", 
+"CLAIM"."PASTNUMBEROFCLAIMS", 
+"CLAIM"."AGEOFPOLICYHOLDER", 
+"CLAIM"."DAYOFWEEK", 
+"CLAIM"."ACCIDENTAREA", 
+"CLAIM"."POLICYNUMBER", 
+"CLAIM"."FRAUDFOUND_P", 
+"CLAIM"."WEEKOFMONTH", 
+"CLAIM"."FAULT", 
+"CLAIM"."NUMBEROFCARS", 
+"CLAIM"."DAYOFWEEKCLAIMED", 
+"CLAIM"."REPNUMBER", 
+"CLAIM"."DRIVERRATING", 
+"CLAIM"."DAYS_POLICY_CLAIM", 
+"CLAIM"."DAYS_POLICY_ACCIDENT" 
+from "SH"."CLAIM"  )</SQLExpression>
+            <Attributes>
+                <Attribute Name="MONTH" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ADDRESSCHANGE_CLAIM" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="SEX" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="MONTHCLAIMED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="VEHICLECATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="VEHICLEPRICE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="MAKE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="POLICEREPORTFILED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="YEAR" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="MARITALSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="POLICYTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DEDUCTIBLE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="NUMBEROFSUPPLIMENTS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="BASEPOLICY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AGENTTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AGEOFVEHICLE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="WITNESSPRESENT" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="WEEKOFMONTHCLAIMED" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PASTNUMBEROFCLAIMS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AGEOFPOLICYHOLDER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DAYOFWEEK" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ACCIDENTAREA" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="POLICYNUMBER" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="FRAUDFOUND_P" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="WEEKOFMONTH" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="FAULT" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="NUMBEROFCARS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DAYOFWEEKCLAIMED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="REPNUMBER" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="DRIVERRATING" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="DAYS_POLICY_CLAIM" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DAYS_POLICY_ACCIDENT" DataType="VARCHAR2" Status="Valid"/>
+            </Attributes>
+            <SourceTable Schema="SH" Name="CLAIM" Synonym="false"/>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+        </DataSource>
+        <DataProfile Id="10020" Name="Explore Data" Status="Complete">
+            <Icon XCOORD="423" YCOORD="157"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10020" AS ( SELECT   ATTR,
+  DATA_TYPE,
+  NULL_PERCENT,
+  DISTINCT_CNT,
+  DISTINCT_PERCENT,
+  MODE_VALUE,
+  AVG,
+  AVG_DATE,
+  AVG_TS_TZ,
+  MEDIAN_VAL,
+  MEDIAN_DATE,
+  MEDIAN_TS_TZ,
+  MIN,
+  MAX,
+  STD,
+  VAR,
+  SKEWNESS,
+  KURTOSIS,
+  HISTOGRAMS FROM OUTPUT_1_19)</SQLExpression>
+            <DataProfileInput>
+                <Attributes>
+                    <Attribute Name="ANOM_SVM_3_19_PRED" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="ANOM_SVM_3_19_PROB" DataType="BINARY_DOUBLE" Status="Valid"/>
+                    <Attribute Name="POLICYNUMBER" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="MONTH" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="ADDRESSCHANGE_CLAIM" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="SEX" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="MONTHCLAIMED" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="VEHICLECATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="VEHICLEPRICE" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="MAKE" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="POLICEREPORTFILED" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="YEAR" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="MARITALSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="POLICYTYPE" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="DEDUCTIBLE" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="NUMBEROFSUPPLIMENTS" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="BASEPOLICY" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="AGENTTYPE" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="AGEOFVEHICLE" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="WITNESSPRESENT" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="WEEKOFMONTHCLAIMED" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="PASTNUMBEROFCLAIMS" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="AGEOFPOLICYHOLDER" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="DAYOFWEEK" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="ACCIDENTAREA" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="FRAUDFOUND_P" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="WEEKOFMONTH" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="FAULT" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="NUMBEROFCARS" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="DAYOFWEEKCLAIMED" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="REPNUMBER" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="DRIVERRATING" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="DAYS_POLICY_CLAIM" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="DAYS_POLICY_ACCIDENT" DataType="VARCHAR2" Status="Valid"/>
+                </Attributes>
+                <GroupByAttribute Name="AGEOFVEHICLE" DataType="VARCHAR2" Status="Valid"/>
+            </DataProfileInput>
+            <DataProfileOutput>
+                <Attributes>
+                    <Attribute Name="ATTR" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="DATA_TYPE" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="NULL_PERCENT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="DISTINCT_CNT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="DISTINCT_PERCENT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="MODE_VALUE" DataType="NVARCHAR2" Status="Valid"/>
+                    <Attribute Name="AVG" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="AVG_DATE" DataType="DATE" Status="Valid"/>
+                    <Attribute Name="AVG_TS_TZ" DataType="TIMESTAMP WITH TIME ZONE" Status="Valid"/>
+                    <Attribute Name="MEDIAN_VAL" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="MEDIAN_DATE" DataType="DATE" Status="Valid"/>
+                    <Attribute Name="MEDIAN_TS_TZ" DataType="TIMESTAMP WITH TIME ZONE" Status="Valid"/>
+                    <Attribute Name="MIN" DataType="NVARCHAR2" Status="Valid"/>
+                    <Attribute Name="MAX" DataType="NVARCHAR2" Status="Valid"/>
+                    <Attribute Name="STD" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="VAR" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="SKEWNESS" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="KURTOSIS" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="HISTOGRAMS" DataType="ODMR_HISTOGRAMS" Status="Valid"/>
+                </Attributes>
+            </DataProfileOutput>
+            <DataProfileSettings>
+                <NumericalBins>10</NumericalBins>
+                <CategoricalBins>10</CategoricalBins>
+                <DateBins>10</DateBins>
+            </DataProfileSettings>
+            <StatisticTable Name="OUTPUT_1_19" CreationDate="2018-05-30T15:10:01"/>
+            <StatsSelection percentdistinct="true" percentnull="true" max="true" min="true" avg="true" std="true" var="true" kurtosis="false" median="true" skewness="false" mode="true" modesampled="true" modeall="false" histogram="true" rowcount="2011"/>
+            <SampleSettings UseFullData="false" GenerateCache="true">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <Random Seed="12345"/>
+                </Method>
+            </SampleSettings>
+        </DataProfile>
+        <DataProfile Id="10054" Name="Explore Data 1" Status="Complete">
+            <Icon XCOORD="313" YCOORD="-93"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10054" AS ( SELECT   ATTR,
+  DATA_TYPE,
+  NULL_PERCENT,
+  DISTINCT_CNT,
+  DISTINCT_PERCENT,
+  MODE_VALUE,
+  AVG,
+  AVG_DATE,
+  AVG_TS_TZ,
+  MEDIAN_VAL,
+  MEDIAN_DATE,
+  MEDIAN_TS_TZ,
+  MIN,
+  MAX,
+  STD,
+  VAR,
+  SKEWNESS,
+  KURTOSIS,
+  HISTOGRAMS FROM OUTPUT_4_19)</SQLExpression>
+            <DataProfileInput>
+                <Attributes>
+                    <Attribute Name="ANOM_SVM_1_19_PRED" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="ANOM_SVM_1_19_PROB" DataType="BINARY_DOUBLE" Status="Valid"/>
+                    <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                    <Attribute Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                    <Attribute Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                    <Attribute Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+                </Attributes>
+                <GroupByAttribute Name="ANOM_SVM_1_19_PRED" DataType="NUMBER" Status="Valid"/>
+            </DataProfileInput>
+            <DataProfileOutput>
+                <Attributes>
+                    <Attribute Name="ATTR" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="DATA_TYPE" DataType="VARCHAR2" Status="Valid"/>
+                    <Attribute Name="NULL_PERCENT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="DISTINCT_CNT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="DISTINCT_PERCENT" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="MODE_VALUE" DataType="NVARCHAR2" Status="Valid"/>
+                    <Attribute Name="AVG" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="AVG_DATE" DataType="DATE" Status="Valid"/>
+                    <Attribute Name="AVG_TS_TZ" DataType="TIMESTAMP WITH TIME ZONE" Status="Valid"/>
+                    <Attribute Name="MEDIAN_VAL" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="MEDIAN_DATE" DataType="DATE" Status="Valid"/>
+                    <Attribute Name="MEDIAN_TS_TZ" DataType="TIMESTAMP WITH TIME ZONE" Status="Valid"/>
+                    <Attribute Name="MIN" DataType="NVARCHAR2" Status="Valid"/>
+                    <Attribute Name="MAX" DataType="NVARCHAR2" Status="Valid"/>
+                    <Attribute Name="STD" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="VAR" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="SKEWNESS" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="KURTOSIS" DataType="NUMBER" Status="Valid"/>
+                    <Attribute Name="HISTOGRAMS" DataType="ODMR_HISTOGRAMS" Status="Valid"/>
+                </Attributes>
+            </DataProfileOutput>
+            <DataProfileSettings>
+                <NumericalBins>10</NumericalBins>
+                <CategoricalBins>10</CategoricalBins>
+                <DateBins>10</DateBins>
+            </DataProfileSettings>
+            <StatisticTable Name="OUTPUT_4_19" CreationDate="2018-05-30T15:58:20"/>
+            <StatsSelection percentdistinct="true" percentnull="true" max="true" min="true" avg="true" std="true" var="true" kurtosis="false" median="true" skewness="false" mode="true" modesampled="true" modeall="false" histogram="true" rowcount="2032"/>
+            <SampleSettings UseFullData="false" GenerateCache="true">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <Random Seed="12345"/>
+                </Method>
+            </SampleSettings>
+        </DataProfile>
+        <CreateTable TableName="BINARY_CONVERT_TEST_TAB" Table="true" AutoSpec="Yes" Id="10046" Name="BINARY_CONVERT_TEST" Status="Complete">
+            <Icon XCOORD="584" YCOORD="-126"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10046" AS ( SELECT  "ANOM_SVM_1_19_PROB" ,
+ "COUNTRY_ID" ,
+ "CUST_CITY" ,
+ "CUST_CITY_ID" ,
+ "CUST_CREDIT_LIMIT" ,
+ "CUST_EFF_FROM" ,
+ "CUST_EFF_TO" ,
+ "CUST_EMAIL" ,
+ "CUST_FIRST_NAME" ,
+ "CUST_GENDER" ,
+ "CUST_ID" ,
+ "CUST_INCOME_LEVEL" ,
+ "CUST_LAST_NAME" ,
+ "CUST_MAIN_PHONE_NUMBER" ,
+ "CUST_MARITAL_STATUS" ,
+ "CUST_POSTAL_CODE" ,
+ "CUST_SRC_ID" ,
+ "CUST_STATE_PROVINCE" ,
+ "CUST_STATE_PROVINCE_ID" ,
+ "CUST_STREET_ADDRESS" ,
+ "CUST_TOTAL" ,
+ "CUST_TOTAL_ID" ,
+ "CUST_VALID" ,
+ "CUST_YEAR_OF_BIRTH"  FROM "BINARY_CONVERT_TEST_TAB")</SQLExpression>
+            <DBAttributes>
+                <DBAttribute Key="No" Index="No" Name="ANOM_SVM_1_19_PROB" DataType="BINARY_DOUBLE" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+            </DBAttributes>
+            <JSONColumns/>
+            <CreateTableOptions>
+                <Logging>NOLOGGING</Logging>
+                <TableCompression>ROW STORE COMPRESS</TableCompression>
+            </CreateTableOptions>
+        </CreateTable>
+        <CreateTable TableName="OUTPUT_5_19" Table="true" Id="10059" Name="ANNOMALYCUSTOMERS" Status="Complete">
+            <Icon XCOORD="675" YCOORD="167"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10059" AS ( SELECT  "ANOMALYPROB" ,
+ "CUST_CITY" ,
+ "CUST_EMAIL" ,
+ "CUST_FIRST_NAME" ,
+ "CUST_GENDER" ,
+ "CUST_ID" ,
+ "CUST_LAST_NAME" ,
+ "CUST_MAIN_PHONE_NUMBER" ,
+ "CUST_POSTAL_CODE" ,
+ "CUST_STATE_PROVINCE" ,
+ "CUST_STREET_ADDRESS" ,
+ "CUST_YEAR_OF_BIRTH"  FROM "OUTPUT_5_19")</SQLExpression>
+            <DBAttributes>
+                <DBAttribute Key="No" Index="No" Name="ANOMALYPROB" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <DBAttribute Key="No" Index="No" Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+            </DBAttributes>
+            <JSONColumns/>
+            <DataGuideSettings Generate="true" UseFullData="false" UseFullDoc="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <NumberOfValues>10000</NumberOfValues>
+            </DataGuideSettings>
+            <CreateTableOptions>
+                <Logging>NOLOGGING</Logging>
+                <TableCompression>ROW STORE COMPRESS</TableCompression>
+            </CreateTableOptions>
+        </CreateTable>
+        <ColumnFilter Id="10036" Name="AnomalyColumnGetRidOf" Status="Complete">
+            <Icon XCOORD="583" YCOORD="4"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10036" as (
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT 
+"ANOM_SVM_1_19_PROB","COUNTRY_ID","CUST_CITY","CUST_CITY_ID","CUST_CREDIT_LIMIT","CUST_EFF_FROM","CUST_EFF_TO","CUST_EMAIL","CUST_FIRST_NAME","CUST_GENDER","CUST_ID","CUST_INCOME_LEVEL","CUST_LAST_NAME","CUST_MAIN_PHONE_NUMBER","CUST_MARITAL_STATUS","CUST_POSTAL_CODE","CUST_SRC_ID","CUST_STATE_PROVINCE","CUST_STATE_PROVINCE_ID","CUST_STREET_ADDRESS","CUST_TOTAL","CUST_TOTAL_ID","CUST_VALID","CUST_YEAR_OF_BIRTH"
+FROM {INPUT_SOURCE}
+ )</SQLExpression>
+            <ColumnFilterSettings SamplingEnabled="true" NumberOfRows="10000">
+                <DataQualitySettings NullsPercent="95.0" UniquePercent="95.0" ConstantPercent="95.0"/>
+                <AttrImportantSettings CutOff="0.0" TopN="100" AttributeDependency="true">
+                    <TargetAttribute Name="ANOM_SVM_1_19_PROB" DataType="BINARY_DOUBLE" Status="Valid"/>
+                </AttrImportantSettings>
+            </ColumnFilterSettings>
+            <ColumnFilterAttributes AutoSpec="No" AutomaticFilterEnable="No">
+                <Attribute AutomaticFiltering="false" Output="No" Name="ANOM_SVM_1_19_PRED" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="ANOM_SVM_1_19_PROB" DataType="BINARY_DOUBLE" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+            </ColumnFilterAttributes>
+            <ColumnFilterResults DataQualityOutput="ODMR$15_22_08_534000EYTEBXA" AttrImportanceOutput="ODMR$FILTER_COLUMNS_AI_1" AttrDependencyOutput="ODMR$15_22_12_264000ZLQZGUZ" GenerateImportanceOutput="true">
+                <Attribute Name="ANOM_SVM_1_19_PRED">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="ANOM_SVM_1_19_PROB">
+                    <Reason Type="UNIQUE_LIMIT"/>
+                </Attribute>
+                <Attribute Name="COUNTRY_ID">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_CITY"/>
+                <Attribute Name="CUST_CITY_ID">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_CREDIT_LIMIT">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_EFF_FROM">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_EFF_TO">
+                    <Reason Type="NULL_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_EMAIL"/>
+                <Attribute Name="CUST_FIRST_NAME"/>
+                <Attribute Name="CUST_GENDER">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_ID">
+                    <Reason Type="UNIQUE_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_INCOME_LEVEL">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_LAST_NAME"/>
+                <Attribute Name="CUST_MAIN_PHONE_NUMBER">
+                    <Reason Type="UNIQUE_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_MARITAL_STATUS"/>
+                <Attribute Name="CUST_POSTAL_CODE"/>
+                <Attribute Name="CUST_SRC_ID">
+                    <Reason Type="NULL_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_STATE_PROVINCE"/>
+                <Attribute Name="CUST_STATE_PROVINCE_ID">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_STREET_ADDRESS">
+                    <Reason Type="UNIQUE_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_TOTAL">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_TOTAL_ID">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_VALID"/>
+                <Attribute Name="CUST_YEAR_OF_BIRTH">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+            </ColumnFilterResults>
+        </ColumnFilter>
+        <ColumnFilter Id="10056" Name="NEEDCOLUMNS" Status="Complete">
+            <Icon XCOORD="857" YCOORD="153"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10056" as (
+
+
+
+
+
+
+
+
+
+
+SELECT 
+"ANOMALYPROB","CUST_CITY","CUST_EMAIL","CUST_FIRST_NAME","CUST_GENDER","CUST_ID","CUST_LAST_NAME","CUST_MAIN_PHONE_NUMBER","CUST_POSTAL_CODE","CUST_STATE_PROVINCE","CUST_STREET_ADDRESS","CUST_YEAR_OF_BIRTH"
+FROM {INPUT_SOURCE}
+ )</SQLExpression>
+            <ColumnFilterSettings SamplingEnabled="true" NumberOfRows="10000">
+                <DataQualitySettings NullsPercent="95.0" UniquePercent="95.0" ConstantPercent="95.0"/>
+                <AttrImportantSettings CutOff="0.0" TopN="100" AttributeDependency="true">
+                    <TargetAttribute Name="ANOMALYPROB" DataType="NUMBER" Status="Valid"/>
+                </AttrImportantSettings>
+            </ColumnFilterSettings>
+            <ColumnFilterAttributes AutoSpec="No" AutomaticFilterEnable="No">
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="ANOMALYPROB" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="No" Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute AutomaticFiltering="false" Output="Yes" Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+            </ColumnFilterAttributes>
+            <ColumnFilterResults DataQualityOutput="ODMR$16_45_04_406000RZGWKCQ" AttrImportanceOutput="ODMR$FILTER_COLUMNS_AI_2" AttrDependencyOutput="ODMR$16_45_04_610000OCIOHJR" GenerateImportanceOutput="true">
+                <Attribute Name="ANOMALYPROB"/>
+                <Attribute Name="COUNTRY_ID">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_CITY">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_CITY_ID">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_CREDIT_LIMIT">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_EFF_FROM">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_EFF_TO">
+                    <Reason Type="NULL_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_EMAIL">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_FIRST_NAME">
+                    <Reason Type="UNIQUE_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_GENDER">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_ID">
+                    <Reason Type="UNIQUE_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_INCOME_LEVEL">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_LAST_NAME">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_MAIN_PHONE_NUMBER">
+                    <Reason Type="UNIQUE_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_MARITAL_STATUS">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_POSTAL_CODE">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_SRC_ID">
+                    <Reason Type="NULL_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_STATE_PROVINCE">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_STATE_PROVINCE_ID">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_STREET_ADDRESS">
+                    <Reason Type="UNIQUE_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_TOTAL">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_TOTAL_ID">
+                    <Reason Type="CONSTANT_LIMIT"/>
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_VALID">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+                <Attribute Name="CUST_YEAR_OF_BIRTH">
+                    <Reason Type="CUTOFF_LIMIT"/>
+                </Attribute>
+            </ColumnFilterResults>
+        </ColumnFilter>
+        <RowFilter Id="10034" Name="Anomaly Only" Status="Complete">
+            <Icon XCOORD="438" YCOORD="2"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10034" as (SELECT 
+"ANOM_SVM_1_19_PRED"
+, "ANOM_SVM_1_19_PROB"
+, "CUST_ID"
+, "CUST_STATE_PROVINCE"
+, "CUST_LAST_NAME"
+, "COUNTRY_ID"
+, "CUST_VALID"
+, "CUST_YEAR_OF_BIRTH"
+, "CUST_TOTAL"
+, "CUST_SRC_ID"
+, "CUST_TOTAL_ID"
+, "CUST_STREET_ADDRESS"
+, "CUST_MAIN_PHONE_NUMBER"
+, "CUST_FIRST_NAME"
+, "CUST_EFF_FROM"
+, "CUST_CITY"
+, "CUST_INCOME_LEVEL"
+, "CUST_GENDER"
+, "CUST_CREDIT_LIMIT"
+, "CUST_MARITAL_STATUS"
+, "CUST_STATE_PROVINCE_ID"
+, "CUST_POSTAL_CODE"
+, "CUST_EMAIL"
+, "CUST_EFF_TO"
+, "CUST_CITY_ID"
+
+FROM
+{INPUT_SOURCE}
+WHERE
+"ANOM_SVM_1_19_PRED" = 0 )</SQLExpression>
+            <OutputColumns>
+                <Attribute Name="ANOM_SVM_1_19_PRED" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="ANOM_SVM_1_19_PROB" DataType="BINARY_DOUBLE" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+            </OutputColumns>
+            <Filter>"ANOM_SVM_1_19_PRED" = 0</Filter>
+        </RowFilter>
+        <RowFilter Id="10052" Name="PROB06" Status="Complete">
+            <Icon XCOORD="862" YCOORD="9"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10052" as (SELECT 
+"ANOMALYPROB"
+, "COUNTRY_ID"
+, "CUST_CITY"
+, "CUST_CITY_ID"
+, "CUST_CREDIT_LIMIT"
+, "CUST_EFF_FROM"
+, "CUST_EFF_TO"
+, "CUST_EMAIL"
+, "CUST_FIRST_NAME"
+, "CUST_GENDER"
+, "CUST_ID"
+, "CUST_INCOME_LEVEL"
+, "CUST_LAST_NAME"
+, "CUST_MAIN_PHONE_NUMBER"
+, "CUST_MARITAL_STATUS"
+, "CUST_POSTAL_CODE"
+, "CUST_SRC_ID"
+, "CUST_STATE_PROVINCE"
+, "CUST_STATE_PROVINCE_ID"
+, "CUST_STREET_ADDRESS"
+, "CUST_TOTAL"
+, "CUST_TOTAL_ID"
+, "CUST_VALID"
+, "CUST_YEAR_OF_BIRTH"
+
+FROM
+{INPUT_SOURCE}
+WHERE
+"ANOMALYPROB" &gt; 0.6 )</SQLExpression>
+            <OutputColumns>
+                <Attribute Name="ANOMALYPROB" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+            </OutputColumns>
+            <Filter>"ANOMALYPROB" &gt; 0.6</Filter>
+        </RowFilter>
+        <AnomalyDetectionBuild Id="10007" Name="Anomaly Build" Status="Complete">
+            <Icon XCOORD="186" YCOORD="29"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <BuildDataSource SourceId="10005"/>
+            <CaseAttributes>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+            </CaseAttributes>
+            <MiningAttributes AutoSpec="Yes">
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+            </MiningAttributes>
+            <Stoplists>
+                <Stoplist Id="1" Name="Default" Type="Basic" Language="ENGLISH" DBName="">
+                    <StopTokens>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>a</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>all</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>almost</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>also</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>although</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>an</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>and</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>any</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>are</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>as</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>at</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>be</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>because</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>been</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>both</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>but</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>by</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>can</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>could</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>d</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>did</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>do</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>does</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>either</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>for</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>from</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>had</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>has</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>have</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>having</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>he</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>her</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>here</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>hers</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>him</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>his</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>how</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>however</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>i</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>if</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>in</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>into</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>is</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>it</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>its</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>just</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ll</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>me</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>might</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mr</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mrs</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Ms</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>my</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>no</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>non</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>nor</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>not</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>of</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>on</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>one</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>only</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>onto</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>or</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>our</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ours</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>s</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>shall</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>she</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>should</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>since</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>so</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>some</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>still</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>such</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>t</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>than</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>that</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>the</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>their</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>them</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>then</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>there</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>therefore</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>these</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>they</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>this</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>those</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>though</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>through</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>thus</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>to</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>too</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>until</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ve</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>very</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>was</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>we</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>were</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>what</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>when</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>where</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whether</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>which</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>while</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>who</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whose</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>why</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>will</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>with</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>would</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yet</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>you</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>your</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yours</Item>
+                        </Token>
+                    </StopTokens>
+                </Stoplist>
+            </Stoplists>
+            <TextSettings TransformType="Token" CategoricalCutOffValue="200">
+                <Token>
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Name="" Type="Basic">
+                            <Settings/>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Token>
+                <Theme Type="Single">
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Type="Basic">
+                            <Settings>
+                                <Attribute Name="index_themes" ValueString="YES" Type="String"/>
+                                <Attribute Name="theme_language" ValueString="ENGLISH" Type="String"/>
+                            </Settings>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Theme>
+            </TextSettings>
+            <TextAttributes/>
+            <HeuristicSummaryResult StatisticTable="ODMR$13_12_20_158000UMCMHJI">
+                <Attribute Name="CUST_CITY">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CUST_EFF_FROM">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CUST_EFF_TO">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CUST_EMAIL">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CUST_FIRST_NAME">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CUST_ID">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CUST_LAST_NAME">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CUST_MAIN_PHONE_NUMBER">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CUST_POSTAL_CODE">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CUST_SRC_ID">
+                    <Reason Type="INPUT_NONE"/>
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="CUST_STREET_ADDRESS">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CUST_TOTAL">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="CUST_TOTAL_ID">
+                    <Reason Type="INPUT_NONE"/>
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+            </HeuristicSummaryResult>
+            <Models>
+                <AnomalyDetectionModel Id="10006" Name="ANOM_SVM_1_19" Status="Complete" CreationDate="2018-05-30T13:12:24" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="No" Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$13_12_20_158000UMCMHJI">
+                            <Attribute Name="CUST_CITY">
+                                <Reason Type="CAT_UNIQUE_COUNT_LIMIT"/>
+                            </Attribute>
+                            <Attribute Name="CUST_EMAIL">
+                                <Reason Type="CAT_UNIQUE_COUNT_LIMIT"/>
+                            </Attribute>
+                            <Attribute Name="CUST_FIRST_NAME">
+                                <Reason Type="CAT_UNIQUE_COUNT_LIMIT"/>
+                            </Attribute>
+                            <Attribute Name="CUST_LAST_NAME">
+                                <Reason Type="CAT_UNIQUE_COUNT_LIMIT"/>
+                            </Attribute>
+                            <Attribute Name="CUST_MAIN_PHONE_NUMBER">
+                                <Reason Type="CAT_UNIQUE_PERCENT_LIMIT"/>
+                                <Reason Type="CAT_UNIQUE_COUNT_LIMIT"/>
+                            </Attribute>
+                            <Attribute Name="CUST_POSTAL_CODE">
+                                <Reason Type="CAT_UNIQUE_COUNT_LIMIT"/>
+                            </Attribute>
+                            <Attribute Name="CUST_SRC_ID">
+                                <Reason Type="NULL_LIMIT"/>
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="CUST_STREET_ADDRESS">
+                                <Reason Type="CAT_UNIQUE_PERCENT_LIMIT"/>
+                                <Reason Type="CAT_UNIQUE_COUNT_LIMIT"/>
+                            </Attribute>
+                            <Attribute Name="CUST_TOTAL">
+                                <Reason Type="CONSTANT_LIMIT"/>
+                            </Attribute>
+                            <Attribute Name="CUST_TOTAL_ID">
+                                <Reason Type="CONSTANT_LIMIT"/>
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <AnomalyDetectionAlgo>
+                        <SVMS_ACTIVE_LEARNING>SVMS_AL_ENABLE</SVMS_ACTIVE_LEARNING>
+                        <SVMS_CONV_TOLERANCE>0.001</SVMS_CONV_TOLERANCE>
+                        <SVMS_OUTLIER_RATE>0.1</SVMS_OUTLIER_RATE>
+                    </AnomalyDetectionAlgo>
+                </AnomalyDetectionModel>
+            </Models>
+        </AnomalyDetectionBuild>
+        <AnomalyDetectionBuild Id="10015" Name="Anomaly Build 1" Status="Complete">
+            <Icon XCOORD="198" YCOORD="150"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <BuildDataSource SourceId="10013"/>
+            <CaseAttributes>
+                <Attribute Name="POLICYNUMBER" DataType="NUMBER" Status="Valid"/>
+            </CaseAttributes>
+            <MiningAttributes AutoSpec="Yes">
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="ACCIDENTAREA" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="ADDRESSCHANGE_CLAIM" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AGE" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="AGENTTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="AGEOFPOLICYHOLDER" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="AGEOFVEHICLE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BASEPOLICY" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DAYOFWEEK" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DAYOFWEEKCLAIMED" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DAYS_POLICY_ACCIDENT" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DAYS_POLICY_CLAIM" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DEDUCTIBLE" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DRIVERRATING" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="FAULT" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="FRAUDFOUND_P" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="MAKE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="MARITALSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="MONTH" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="MONTHCLAIMED" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="NUMBEROFCARS" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="NUMBEROFSUPPLIMENTS" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="PASTNUMBEROFCLAIMS" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="POLICEREPORTFILED" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="POLICYNUMBER" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="POLICYTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="REPNUMBER" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="SEX" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="VEHICLECATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="VEHICLEPRICE" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="WEEKOFMONTH" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="WEEKOFMONTHCLAIMED" DataType="NUMBER" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="WITNESSPRESENT" DataType="VARCHAR2" Status="Valid"/>
+                <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="YEAR" DataType="NUMBER" Status="Valid"/>
+            </MiningAttributes>
+            <Stoplists>
+                <Stoplist Id="1" Name="Default" Type="Basic" Language="ENGLISH" DBName="">
+                    <StopTokens>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>a</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>all</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>almost</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>also</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>although</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>an</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>and</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>any</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>are</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>as</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>at</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>be</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>because</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>been</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>both</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>but</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>by</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>can</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>could</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>d</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>did</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>do</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>does</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>either</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>for</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>from</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>had</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>has</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>have</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>having</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>he</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>her</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>here</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>hers</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>him</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>his</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>how</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>however</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>i</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>if</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>in</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>into</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>is</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>it</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>its</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>just</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ll</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>me</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>might</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mr</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Mrs</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>Ms</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>my</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>no</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>non</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>nor</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>not</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>of</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>on</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>one</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>only</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>onto</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>or</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>our</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ours</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>s</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>shall</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>she</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>should</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>since</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>so</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>some</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>still</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>such</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>t</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>than</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>that</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>the</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>their</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>them</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>then</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>there</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>therefore</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>these</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>they</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>this</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>those</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>though</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>through</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>thus</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>to</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>too</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>until</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>ve</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>very</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>was</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>we</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>were</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>what</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>when</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>where</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whether</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>which</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>while</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>who</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>whose</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>why</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>will</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>with</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>would</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yet</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>you</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>your</Item>
+                        </Token>
+                        <Token Type="Word" Language="ENGLISH">
+                            <Item>yours</Item>
+                        </Token>
+                    </StopTokens>
+                </Stoplist>
+            </Stoplists>
+            <TextSettings TransformType="Token" CategoricalCutOffValue="200">
+                <Token>
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Name="" Type="Basic">
+                            <Settings/>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Token>
+                <Theme Type="Single">
+                    <Token MaxNumberPerDoc="50" MaxNumberAllDocs="3000" Frequency="IDF" StoplistId="1" Policy="">
+                        <Lexer Type="Basic">
+                            <Settings>
+                                <Attribute Name="index_themes" ValueString="YES" Type="String"/>
+                                <Attribute Name="theme_language" ValueString="ENGLISH" Type="String"/>
+                            </Settings>
+                        </Lexer>
+                        <Languages>
+                            <Language Name="ENGLISH" Type="SingleByte"/>
+                        </Languages>
+                    </Token>
+                </Theme>
+            </TextSettings>
+            <TextAttributes/>
+            <HeuristicSummaryResult StatisticTable="ODMR$14_48_08_627000NQQIAJK">
+                <Attribute Name="DEDUCTIBLE">
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="DRIVERRATING">
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="FRAUDFOUND_P">
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="POLICYNUMBER">
+                    <Reason Type="INPUT_NONE"/>
+                </Attribute>
+                <Attribute Name="WEEKOFMONTH">
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="WEEKOFMONTHCLAIMED">
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+                <Attribute Name="YEAR">
+                    <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                </Attribute>
+            </HeuristicSummaryResult>
+            <Models>
+                <AnomalyDetectionModel Id="10014" Name="ANOM_SVM_3_19" Status="Complete" CreationDate="2018-05-30T14:48:12" Annotation="" UseForOutput="true">
+                    <InputMiningData DataUsage="AUTO" MiningUsage="AUTO">
+                        <MiningAttributes>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="MONTH" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="ADDRESSCHANGE_CLAIM" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="SEX" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="MONTHCLAIMED" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="VEHICLECATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="VEHICLEPRICE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="MAKE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="POLICEREPORTFILED" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="YEAR" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="MARITALSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="POLICYTYPE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DEDUCTIBLE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="NUMBEROFSUPPLIMENTS" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="BASEPOLICY" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="AGENTTYPE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="AGE" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="AGEOFVEHICLE" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="WITNESSPRESENT" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="WEEKOFMONTHCLAIMED" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="PASTNUMBEROFCLAIMS" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="AGEOFPOLICYHOLDER" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DAYOFWEEK" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="ACCIDENTAREA" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="No" Name="POLICYNUMBER" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="FRAUDFOUND_P" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="WEEKOFMONTH" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="FAULT" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="NUMBEROFCARS" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DAYOFWEEKCLAIMED" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Numerical" Input="Yes" Name="REPNUMBER" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DRIVERRATING" DataType="NUMBER" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DAYS_POLICY_CLAIM" DataType="VARCHAR2" Status="Valid"/>
+                            <MiningAttribute AutoPrep="Yes" MiningType="Categorical" Input="Yes" Name="DAYS_POLICY_ACCIDENT" DataType="VARCHAR2" Status="Valid"/>
+                        </MiningAttributes>
+                        <HeuristicResult StatisticTable="ODMR$14_48_08_627000NQQIAJK">
+                            <Attribute Name="DEDUCTIBLE">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="DRIVERRATING">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="FRAUDFOUND_P">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="WEEKOFMONTH">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="WEEKOFMONTHCLAIMED">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                            <Attribute Name="YEAR">
+                                <Reason Type="NUM_TO_CAT_MINING_TYPE"/>
+                            </Attribute>
+                        </HeuristicResult>
+                    </InputMiningData>
+                    <AnomalyDetectionAlgo>
+                        <SVMS_ACTIVE_LEARNING>SVMS_AL_ENABLE</SVMS_ACTIVE_LEARNING>
+                        <SVMS_CONV_TOLERANCE>0.001</SVMS_CONV_TOLERANCE>
+                        <SVMS_KERNEL_FUNCTION>SVMS_LINEAR</SVMS_KERNEL_FUNCTION>
+                        <SVMS_OUTLIER_RATE>0.1</SVMS_OUTLIER_RATE>
+                    </AnomalyDetectionAlgo>
+                </AnomalyDetectionModel>
+            </Models>
+        </AnomalyDetectionBuild>
+        <Apply ColumnOutputOrder="OutputColumns" OrderPartitions="Yes" Id="10017" Name="Apply" Status="Complete">
+            <Icon XCOORD="323" YCOORD="156"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10017" as (SELECT 
+PREDICTION("ANOM_SVM_3_19" USING *) "ANOM_SVM_3_19_PRED", 
+PREDICTION_PROBABILITY("ANOM_SVM_3_19" USING *) "ANOM_SVM_3_19_PROB", 
+"POLICYNUMBER", 
+"MONTH", 
+"ADDRESSCHANGE_CLAIM", 
+"SEX", 
+"MONTHCLAIMED", 
+"VEHICLECATEGORY", 
+"VEHICLEPRICE", 
+"MAKE", 
+"POLICEREPORTFILED", 
+"YEAR", 
+"MARITALSTATUS", 
+"POLICYTYPE", 
+"DEDUCTIBLE", 
+"NUMBEROFSUPPLIMENTS", 
+"BASEPOLICY", 
+"AGENTTYPE", 
+"AGE", 
+"AGEOFVEHICLE", 
+"WITNESSPRESENT", 
+"WEEKOFMONTHCLAIMED", 
+"PASTNUMBEROFCLAIMS", 
+"AGEOFPOLICYHOLDER", 
+"DAYOFWEEK", 
+"ACCIDENTAREA", 
+"FRAUDFOUND_P", 
+"WEEKOFMONTH", 
+"FAULT", 
+"NUMBEROFCARS", 
+"DAYOFWEEKCLAIMED", 
+"REPNUMBER", 
+"DRIVERRATING", 
+"DAYS_POLICY_CLAIM", 
+"DAYS_POLICY_ACCIDENT"
+FROM {INPUT_SOURCE} )</SQLExpression>
+            <SupplementalAttributes AutoSpec="No">
+                <Attribute Name="POLICYNUMBER" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="MONTH" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ADDRESSCHANGE_CLAIM" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="SEX" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="MONTHCLAIMED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="VEHICLECATEGORY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="VEHICLEPRICE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="MAKE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="POLICEREPORTFILED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="YEAR" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="MARITALSTATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="POLICYTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DEDUCTIBLE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="NUMBEROFSUPPLIMENTS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="BASEPOLICY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AGENTTYPE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AGE" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="AGEOFVEHICLE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="WITNESSPRESENT" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="WEEKOFMONTHCLAIMED" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="PASTNUMBEROFCLAIMS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="AGEOFPOLICYHOLDER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DAYOFWEEK" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="ACCIDENTAREA" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="FRAUDFOUND_P" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="WEEKOFMONTH" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="FAULT" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="NUMBEROFCARS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DAYOFWEEKCLAIMED" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="REPNUMBER" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="DRIVERRATING" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="DAYS_POLICY_CLAIM" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="DAYS_POLICY_ACCIDENT" DataType="VARCHAR2" Status="Valid"/>
+            </SupplementalAttributes>
+            <OutputColumns AutoSpec="Yes">
+                <OutputColumn>
+                    <Model IsModelBuilt="true" NodeId="10015" Schema="" Name="ANOM_SVM_3_19" MiningFunction="ANOMALY_DETECTION" MiningAlgorithm="SUPPORT_VECTOR_MACHINES" Status="Valid" UseForOutput="true" ModelId="10014"/>
+                    <Prediction>
+                        <CostOption>
+                            <None/>
+                        </CostOption>
+                        <Column Name="ANOM_SVM_3_19_PRED"/>
+                    </Prediction>
+                </OutputColumn>
+                <OutputColumn>
+                    <Model IsModelBuilt="true" NodeId="10015" Schema="" Name="ANOM_SVM_3_19" MiningFunction="ANOMALY_DETECTION" MiningAlgorithm="SUPPORT_VECTOR_MACHINES" Status="Valid" UseForOutput="true" ModelId="10014"/>
+                    <PredictionProbability>
+                        <Column Name="ANOM_SVM_3_19_PROB"/>
+                    </PredictionProbability>
+                </OutputColumn>
+            </OutputColumns>
+            <CaseAttributes>
+                <Attribute Name="POLICYNUMBER" DataType="NUMBER" Status="Valid"/>
+            </CaseAttributes>
+        </Apply>
+        <Apply ColumnOutputOrder="OutputColumns" OrderPartitions="Yes" Id="10025" Name="Apply 1" Status="Complete">
+            <Icon XCOORD="314" YCOORD="23"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"N$10025" as (SELECT 
+PREDICTION("ANOM_SVM_1_19" USING *) "ANOM_SVM_1_19_PRED", 
+PREDICTION_PROBABILITY("ANOM_SVM_1_19" USING *) "ANOM_SVM_1_19_PROB", 
+"CUST_ID", 
+"CUST_STATE_PROVINCE", 
+"CUST_LAST_NAME", 
+"COUNTRY_ID", 
+"CUST_VALID", 
+"CUST_YEAR_OF_BIRTH", 
+"CUST_TOTAL", 
+"CUST_SRC_ID", 
+"CUST_TOTAL_ID", 
+"CUST_STREET_ADDRESS", 
+"CUST_MAIN_PHONE_NUMBER", 
+"CUST_FIRST_NAME", 
+"CUST_EFF_FROM", 
+"CUST_CITY", 
+"CUST_INCOME_LEVEL", 
+"CUST_GENDER", 
+"CUST_CREDIT_LIMIT", 
+"CUST_MARITAL_STATUS", 
+"CUST_STATE_PROVINCE_ID", 
+"CUST_POSTAL_CODE", 
+"CUST_EMAIL", 
+"CUST_EFF_TO", 
+"CUST_CITY_ID"
+FROM {INPUT_SOURCE} )</SQLExpression>
+            <SupplementalAttributes AutoSpec="No">
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+            </SupplementalAttributes>
+            <OutputColumns AutoSpec="Yes">
+                <OutputColumn>
+                    <Model IsModelBuilt="true" NodeId="10007" Schema="" Name="ANOM_SVM_1_19" MiningFunction="ANOMALY_DETECTION" MiningAlgorithm="SUPPORT_VECTOR_MACHINES" Status="Valid" UseForOutput="true" ModelId="10006"/>
+                    <Prediction>
+                        <CostOption>
+                            <None/>
+                        </CostOption>
+                        <Column Name="ANOM_SVM_1_19_PRED"/>
+                    </Prediction>
+                </OutputColumn>
+                <OutputColumn>
+                    <Model IsModelBuilt="true" NodeId="10007" Schema="" Name="ANOM_SVM_1_19" MiningFunction="ANOMALY_DETECTION" MiningAlgorithm="SUPPORT_VECTOR_MACHINES" Status="Valid" UseForOutput="true" ModelId="10006"/>
+                    <PredictionProbability>
+                        <Column Name="ANOM_SVM_1_19_PROB"/>
+                    </PredictionProbability>
+                </OutputColumn>
+            </OutputColumns>
+            <CaseAttributes>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+            </CaseAttributes>
+        </Apply>
+        <SQLQuery HasWithClause="false" GenerateView="false" ViewName="OUTPUT_3_19" Id="10050" Name="ROUNDPROB" Status="Complete">
+            <Icon XCOORD="735" YCOORD="1"></Icon>
+            <Messages/>
+            <Parallelism Enable="false">
+                <SystemDetermined/>
+            </Parallelism>
+            <CacheSettings UseFullData="false" GenerateCache="false">
+                <NumberOfRows>2000</NumberOfRows>
+                <Method>
+                    <TopN/>
+                </Method>
+            </CacheSettings>
+            <SQLExpression>"AnomalyColumnGetRidOf_N$10036" as (SELECT * FROM {INPUT_SOURCE:10036}),
+"N$10050" as (SELECT
+ROUND(CAST("AnomalyColumnGetRidOf_N$10036"."ANOM_SVM_1_19_PROB" AS NUMBER),2) AS ANOMALYPROB,
+"AnomalyColumnGetRidOf_N$10036"."COUNTRY_ID","AnomalyColumnGetRidOf_N$10036"."CUST_CITY","AnomalyColumnGetRidOf_N$10036"."CUST_CITY_ID","AnomalyColumnGetRidOf_N$10036"."CUST_CREDIT_LIMIT","AnomalyColumnGetRidOf_N$10036"."CUST_EFF_FROM","AnomalyColumnGetRidOf_N$10036"."CUST_EFF_TO","AnomalyColumnGetRidOf_N$10036"."CUST_EMAIL","AnomalyColumnGetRidOf_N$10036"."CUST_FIRST_NAME","AnomalyColumnGetRidOf_N$10036"."CUST_GENDER","AnomalyColumnGetRidOf_N$10036"."CUST_ID","AnomalyColumnGetRidOf_N$10036"."CUST_INCOME_LEVEL","AnomalyColumnGetRidOf_N$10036"."CUST_LAST_NAME","AnomalyColumnGetRidOf_N$10036"."CUST_MAIN_PHONE_NUMBER","AnomalyColumnGetRidOf_N$10036"."CUST_MARITAL_STATUS","AnomalyColumnGetRidOf_N$10036"."CUST_POSTAL_CODE","AnomalyColumnGetRidOf_N$10036"."CUST_SRC_ID","AnomalyColumnGetRidOf_N$10036"."CUST_STATE_PROVINCE","AnomalyColumnGetRidOf_N$10036"."CUST_STATE_PROVINCE_ID","AnomalyColumnGetRidOf_N$10036"."CUST_STREET_ADDRESS","AnomalyColumnGetRidOf_N$10036"."CUST_TOTAL","AnomalyColumnGetRidOf_N$10036"."CUST_TOTAL_ID","AnomalyColumnGetRidOf_N$10036"."CUST_VALID","AnomalyColumnGetRidOf_N$10036"."CUST_YEAR_OF_BIRTH"
+FROM"AnomalyColumnGetRidOf_N$10036")
+</SQLExpression>
+            <SQLQueryExpression>SELECT
+ROUND(CAST("AnomalyColumnGetRidOf_N$10036"."ANOM_SVM_1_19_PROB" AS NUMBER),2) AS ANOMALYPROB,
+"AnomalyColumnGetRidOf_N$10036"."COUNTRY_ID","AnomalyColumnGetRidOf_N$10036"."CUST_CITY","AnomalyColumnGetRidOf_N$10036"."CUST_CITY_ID","AnomalyColumnGetRidOf_N$10036"."CUST_CREDIT_LIMIT","AnomalyColumnGetRidOf_N$10036"."CUST_EFF_FROM","AnomalyColumnGetRidOf_N$10036"."CUST_EFF_TO","AnomalyColumnGetRidOf_N$10036"."CUST_EMAIL","AnomalyColumnGetRidOf_N$10036"."CUST_FIRST_NAME","AnomalyColumnGetRidOf_N$10036"."CUST_GENDER","AnomalyColumnGetRidOf_N$10036"."CUST_ID","AnomalyColumnGetRidOf_N$10036"."CUST_INCOME_LEVEL","AnomalyColumnGetRidOf_N$10036"."CUST_LAST_NAME","AnomalyColumnGetRidOf_N$10036"."CUST_MAIN_PHONE_NUMBER","AnomalyColumnGetRidOf_N$10036"."CUST_MARITAL_STATUS","AnomalyColumnGetRidOf_N$10036"."CUST_POSTAL_CODE","AnomalyColumnGetRidOf_N$10036"."CUST_SRC_ID","AnomalyColumnGetRidOf_N$10036"."CUST_STATE_PROVINCE","AnomalyColumnGetRidOf_N$10036"."CUST_STATE_PROVINCE_ID","AnomalyColumnGetRidOf_N$10036"."CUST_STREET_ADDRESS","AnomalyColumnGetRidOf_N$10036"."CUST_TOTAL","AnomalyColumnGetRidOf_N$10036"."CUST_TOTAL_ID","AnomalyColumnGetRidOf_N$10036"."CUST_VALID","AnomalyColumnGetRidOf_N$10036"."CUST_YEAR_OF_BIRTH"
+FROM"AnomalyColumnGetRidOf_N$10036"</SQLQueryExpression>
+            <SQLQueryOutputColumns>
+                <Attribute Name="ANOMALYPROB" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="COUNTRY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_CITY" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_CITY_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_CREDIT_LIMIT" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_EFF_FROM" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_EFF_TO" DataType="DATE" Status="Valid"/>
+                <Attribute Name="CUST_EMAIL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_FIRST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_GENDER" DataType="CHAR" Status="Valid"/>
+                <Attribute Name="CUST_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_INCOME_LEVEL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_LAST_NAME" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_MAIN_PHONE_NUMBER" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_MARITAL_STATUS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_POSTAL_CODE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_SRC_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_STATE_PROVINCE" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_STATE_PROVINCE_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_STREET_ADDRESS" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_TOTAL_ID" DataType="NUMBER" Status="Valid"/>
+                <Attribute Name="CUST_VALID" DataType="VARCHAR2" Status="Valid"/>
+                <Attribute Name="CUST_YEAR_OF_BIRTH" DataType="NUMBER" Status="Valid"/>
+            </SQLQueryOutputColumns>
+        </SQLQuery>
+    </Nodes>
+    <Links>
+        <Link Id="10008" From="10005" To="10007" Name="Link" Label="From &quot;CUSTOMERS&quot; to &quot;Anomaly Build&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10016" From="10013" To="10015" Name="Link" Label="From &quot;CLAIM&quot; to &quot;Anomaly Build 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10018" From="10015" To="10017" Name="Link" Label="From &quot;Anomaly Build 1&quot; to &quot;Apply&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10019" From="10013" To="10017" Name="Link" Label="From &quot;CLAIM&quot; to &quot;Apply&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10021" From="10017" To="10020" Name="Link" Label="From &quot;Apply&quot; to &quot;Explore Data&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10026" From="10005" To="10025" Name="Link" Label="From &quot;CUSTOMERS&quot; to &quot;Apply 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10027" From="10007" To="10025" Name="Link" Label="From &quot;Anomaly Build&quot; to &quot;Apply 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10035" From="10025" To="10034" Name="Link" Label="From &quot;Apply 1&quot; to &quot;Anomaly Only&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10037" From="10034" To="10036" Name="Link" Label="From &quot;Anomaly Only&quot; to &quot;AnomalyColumnGetRidOf&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10047" From="10036" To="10046" Name="Link" Label="From &quot;AnomalyColumnGetRidOf&quot; to &quot;BINARY_CONVERT_TEST&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10051" From="10036" To="10050" Name="Link" Label="From &quot;AnomalyColumnGetRidOf&quot; to &quot;ROUNDPROB&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10053" From="10050" To="10052" Name="Link" Label="From &quot;ROUNDPROB&quot; to &quot;PROB06&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10055" From="10025" To="10054" Name="Link" Label="From &quot;Apply 1&quot; to &quot;Explore Data 1&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10057" From="10052" To="10056" Name="Link" Label="From &quot;PROB06&quot; to &quot;NEEDCOLUMNS&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+        <Link Id="10060" From="10056" To="10059" Name="Link" Label="From &quot;NEEDCOLUMNS&quot; to &quot;ANNOMALYCUSTOMERS&quot;">
+            <ConnectorGraphicsInfo>
+                <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </ConnectorGraphicsInfo>
+        </Link>
+    </Links>
+</WorkflowProcess>

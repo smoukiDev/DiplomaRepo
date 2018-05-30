@@ -1,0 +1,1 @@
+*To Use Datasets in Oracle DataMiner for Example from SH Schema tables have to provide grant options to DMUSER
