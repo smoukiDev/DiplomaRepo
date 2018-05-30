@@ -30,6 +30,8 @@ namespace DiplomaClient {
         
         private CUSTLEAVEDataTable tableCUSTLEAVE;
         
+        private ANOMALYCUSTDataTable tableANOMALYCUST;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -66,6 +68,9 @@ namespace DiplomaClient {
                 }
                 if ((ds.Tables["CUSTLEAVE"] != null)) {
                     base.Tables.Add(new CUSTLEAVEDataTable(ds.Tables["CUSTLEAVE"]));
+                }
+                if ((ds.Tables["ANOMALYCUST"] != null)) {
+                    base.Tables.Add(new ANOMALYCUSTDataTable(ds.Tables["ANOMALYCUST"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -112,6 +117,16 @@ namespace DiplomaClient {
         public CUSTLEAVEDataTable CUSTLEAVE {
             get {
                 return this.tableCUSTLEAVE;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ANOMALYCUSTDataTable ANOMALYCUST {
+            get {
+                return this.tableANOMALYCUST;
             }
         }
         
@@ -191,6 +206,9 @@ namespace DiplomaClient {
                 if ((ds.Tables["CUSTLEAVE"] != null)) {
                     base.Tables.Add(new CUSTLEAVEDataTable(ds.Tables["CUSTLEAVE"]));
                 }
+                if ((ds.Tables["ANOMALYCUST"] != null)) {
+                    base.Tables.Add(new ANOMALYCUSTDataTable(ds.Tables["ANOMALYCUST"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -242,6 +260,12 @@ namespace DiplomaClient {
                     this.tableCUSTLEAVE.InitVars();
                 }
             }
+            this.tableANOMALYCUST = ((ANOMALYCUSTDataTable)(base.Tables["ANOMALYCUST"]));
+            if ((initTable == true)) {
+                if ((this.tableANOMALYCUST != null)) {
+                    this.tableANOMALYCUST.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -258,6 +282,8 @@ namespace DiplomaClient {
             base.Tables.Add(this.tableMBRESULT2);
             this.tableCUSTLEAVE = new CUSTLEAVEDataTable();
             base.Tables.Add(this.tableCUSTLEAVE);
+            this.tableANOMALYCUST = new ANOMALYCUSTDataTable();
+            base.Tables.Add(this.tableANOMALYCUST);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -275,6 +301,12 @@ namespace DiplomaClient {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeCUSTLEAVE() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeANOMALYCUST() {
             return false;
         }
         
@@ -341,6 +373,9 @@ namespace DiplomaClient {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void CUSTLEAVERowChangeEventHandler(object sender, CUSTLEAVERowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void ANOMALYCUSTRowChangeEventHandler(object sender, ANOMALYCUSTRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1333,6 +1368,427 @@ namespace DiplomaClient {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ANOMALYCUSTDataTable : global::System.Data.TypedTableBase<ANOMALYCUSTRow> {
+            
+            private global::System.Data.DataColumn columnANOMALYPROB;
+            
+            private global::System.Data.DataColumn columnCUST_CITY;
+            
+            private global::System.Data.DataColumn columnCUST_EMAIL;
+            
+            private global::System.Data.DataColumn columnCUST_FIRST_NAME;
+            
+            private global::System.Data.DataColumn columnCUST_GENDER;
+            
+            private global::System.Data.DataColumn columnCUST_ID;
+            
+            private global::System.Data.DataColumn columnCUST_LAST_NAME;
+            
+            private global::System.Data.DataColumn columnCUST_MAIN_PHONE_NUMBER;
+            
+            private global::System.Data.DataColumn columnCUST_POSTAL_CODE;
+            
+            private global::System.Data.DataColumn columnCUST_STATE_PROVINCE;
+            
+            private global::System.Data.DataColumn columnCUST_STREET_ADDRESS;
+            
+            private global::System.Data.DataColumn columnCUST_YEAR_OF_BIRTH;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ANOMALYCUSTDataTable() {
+                this.TableName = "ANOMALYCUST";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ANOMALYCUSTDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected ANOMALYCUSTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ANOMALYPROBColumn {
+                get {
+                    return this.columnANOMALYPROB;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_CITYColumn {
+                get {
+                    return this.columnCUST_CITY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_EMAILColumn {
+                get {
+                    return this.columnCUST_EMAIL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_FIRST_NAMEColumn {
+                get {
+                    return this.columnCUST_FIRST_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_GENDERColumn {
+                get {
+                    return this.columnCUST_GENDER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_IDColumn {
+                get {
+                    return this.columnCUST_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_LAST_NAMEColumn {
+                get {
+                    return this.columnCUST_LAST_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_MAIN_PHONE_NUMBERColumn {
+                get {
+                    return this.columnCUST_MAIN_PHONE_NUMBER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_POSTAL_CODEColumn {
+                get {
+                    return this.columnCUST_POSTAL_CODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_STATE_PROVINCEColumn {
+                get {
+                    return this.columnCUST_STATE_PROVINCE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_STREET_ADDRESSColumn {
+                get {
+                    return this.columnCUST_STREET_ADDRESS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CUST_YEAR_OF_BIRTHColumn {
+                get {
+                    return this.columnCUST_YEAR_OF_BIRTH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ANOMALYCUSTRow this[int index] {
+                get {
+                    return ((ANOMALYCUSTRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ANOMALYCUSTRowChangeEventHandler ANOMALYCUSTRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ANOMALYCUSTRowChangeEventHandler ANOMALYCUSTRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ANOMALYCUSTRowChangeEventHandler ANOMALYCUSTRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ANOMALYCUSTRowChangeEventHandler ANOMALYCUSTRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddANOMALYCUSTRow(ANOMALYCUSTRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ANOMALYCUSTRow AddANOMALYCUSTRow(decimal ANOMALYPROB, string CUST_CITY, string CUST_EMAIL, string CUST_FIRST_NAME, string CUST_GENDER, decimal CUST_ID, string CUST_LAST_NAME, string CUST_MAIN_PHONE_NUMBER, string CUST_POSTAL_CODE, string CUST_STATE_PROVINCE, string CUST_STREET_ADDRESS, decimal CUST_YEAR_OF_BIRTH) {
+                ANOMALYCUSTRow rowANOMALYCUSTRow = ((ANOMALYCUSTRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ANOMALYPROB,
+                        CUST_CITY,
+                        CUST_EMAIL,
+                        CUST_FIRST_NAME,
+                        CUST_GENDER,
+                        CUST_ID,
+                        CUST_LAST_NAME,
+                        CUST_MAIN_PHONE_NUMBER,
+                        CUST_POSTAL_CODE,
+                        CUST_STATE_PROVINCE,
+                        CUST_STREET_ADDRESS,
+                        CUST_YEAR_OF_BIRTH};
+                rowANOMALYCUSTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowANOMALYCUSTRow);
+                return rowANOMALYCUSTRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ANOMALYCUSTRow FindByCUST_ID(decimal CUST_ID) {
+                return ((ANOMALYCUSTRow)(this.Rows.Find(new object[] {
+                            CUST_ID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ANOMALYCUSTDataTable cln = ((ANOMALYCUSTDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ANOMALYCUSTDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnANOMALYPROB = base.Columns["ANOMALYPROB"];
+                this.columnCUST_CITY = base.Columns["CUST_CITY"];
+                this.columnCUST_EMAIL = base.Columns["CUST_EMAIL"];
+                this.columnCUST_FIRST_NAME = base.Columns["CUST_FIRST_NAME"];
+                this.columnCUST_GENDER = base.Columns["CUST_GENDER"];
+                this.columnCUST_ID = base.Columns["CUST_ID"];
+                this.columnCUST_LAST_NAME = base.Columns["CUST_LAST_NAME"];
+                this.columnCUST_MAIN_PHONE_NUMBER = base.Columns["CUST_MAIN_PHONE_NUMBER"];
+                this.columnCUST_POSTAL_CODE = base.Columns["CUST_POSTAL_CODE"];
+                this.columnCUST_STATE_PROVINCE = base.Columns["CUST_STATE_PROVINCE"];
+                this.columnCUST_STREET_ADDRESS = base.Columns["CUST_STREET_ADDRESS"];
+                this.columnCUST_YEAR_OF_BIRTH = base.Columns["CUST_YEAR_OF_BIRTH"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnANOMALYPROB = new global::System.Data.DataColumn("ANOMALYPROB", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnANOMALYPROB);
+                this.columnCUST_CITY = new global::System.Data.DataColumn("CUST_CITY", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_CITY);
+                this.columnCUST_EMAIL = new global::System.Data.DataColumn("CUST_EMAIL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_EMAIL);
+                this.columnCUST_FIRST_NAME = new global::System.Data.DataColumn("CUST_FIRST_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_FIRST_NAME);
+                this.columnCUST_GENDER = new global::System.Data.DataColumn("CUST_GENDER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_GENDER);
+                this.columnCUST_ID = new global::System.Data.DataColumn("CUST_ID", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_ID);
+                this.columnCUST_LAST_NAME = new global::System.Data.DataColumn("CUST_LAST_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_LAST_NAME);
+                this.columnCUST_MAIN_PHONE_NUMBER = new global::System.Data.DataColumn("CUST_MAIN_PHONE_NUMBER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_MAIN_PHONE_NUMBER);
+                this.columnCUST_POSTAL_CODE = new global::System.Data.DataColumn("CUST_POSTAL_CODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_POSTAL_CODE);
+                this.columnCUST_STATE_PROVINCE = new global::System.Data.DataColumn("CUST_STATE_PROVINCE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_STATE_PROVINCE);
+                this.columnCUST_STREET_ADDRESS = new global::System.Data.DataColumn("CUST_STREET_ADDRESS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_STREET_ADDRESS);
+                this.columnCUST_YEAR_OF_BIRTH = new global::System.Data.DataColumn("CUST_YEAR_OF_BIRTH", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUST_YEAR_OF_BIRTH);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnCUST_ID}, true));
+                this.columnCUST_CITY.MaxLength = 30;
+                this.columnCUST_EMAIL.MaxLength = 50;
+                this.columnCUST_FIRST_NAME.MaxLength = 20;
+                this.columnCUST_GENDER.MaxLength = 1;
+                this.columnCUST_ID.AllowDBNull = false;
+                this.columnCUST_ID.Unique = true;
+                this.columnCUST_LAST_NAME.MaxLength = 40;
+                this.columnCUST_MAIN_PHONE_NUMBER.MaxLength = 25;
+                this.columnCUST_POSTAL_CODE.MaxLength = 10;
+                this.columnCUST_STATE_PROVINCE.MaxLength = 40;
+                this.columnCUST_STREET_ADDRESS.MaxLength = 40;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ANOMALYCUSTRow NewANOMALYCUSTRow() {
+                return ((ANOMALYCUSTRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ANOMALYCUSTRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ANOMALYCUSTRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ANOMALYCUSTRowChanged != null)) {
+                    this.ANOMALYCUSTRowChanged(this, new ANOMALYCUSTRowChangeEvent(((ANOMALYCUSTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ANOMALYCUSTRowChanging != null)) {
+                    this.ANOMALYCUSTRowChanging(this, new ANOMALYCUSTRowChangeEvent(((ANOMALYCUSTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ANOMALYCUSTRowDeleted != null)) {
+                    this.ANOMALYCUSTRowDeleted(this, new ANOMALYCUSTRowChangeEvent(((ANOMALYCUSTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ANOMALYCUSTRowDeleting != null)) {
+                    this.ANOMALYCUSTRowDeleting(this, new ANOMALYCUSTRowChangeEvent(((ANOMALYCUSTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveANOMALYCUSTRow(ANOMALYCUSTRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsDMUSER ds = new dsDMUSER();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ANOMALYCUSTDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class MBRESULTRow : global::System.Data.DataRow {
@@ -1831,6 +2287,340 @@ namespace DiplomaClient {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ANOMALYCUSTRow : global::System.Data.DataRow {
+            
+            private ANOMALYCUSTDataTable tableANOMALYCUST;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ANOMALYCUSTRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableANOMALYCUST = ((ANOMALYCUSTDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal ANOMALYPROB {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableANOMALYCUST.ANOMALYPROBColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ANOMALYPROB\' in table \'ANOMALYCUST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableANOMALYCUST.ANOMALYPROBColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_CITY {
+                get {
+                    try {
+                        return ((string)(this[this.tableANOMALYCUST.CUST_CITYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_CITY\' in table \'ANOMALYCUST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableANOMALYCUST.CUST_CITYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_EMAIL {
+                get {
+                    try {
+                        return ((string)(this[this.tableANOMALYCUST.CUST_EMAILColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_EMAIL\' in table \'ANOMALYCUST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableANOMALYCUST.CUST_EMAILColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_FIRST_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableANOMALYCUST.CUST_FIRST_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_FIRST_NAME\' in table \'ANOMALYCUST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableANOMALYCUST.CUST_FIRST_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_GENDER {
+                get {
+                    try {
+                        return ((string)(this[this.tableANOMALYCUST.CUST_GENDERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_GENDER\' in table \'ANOMALYCUST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableANOMALYCUST.CUST_GENDERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal CUST_ID {
+                get {
+                    return ((decimal)(this[this.tableANOMALYCUST.CUST_IDColumn]));
+                }
+                set {
+                    this[this.tableANOMALYCUST.CUST_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_LAST_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableANOMALYCUST.CUST_LAST_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_LAST_NAME\' in table \'ANOMALYCUST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableANOMALYCUST.CUST_LAST_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_MAIN_PHONE_NUMBER {
+                get {
+                    try {
+                        return ((string)(this[this.tableANOMALYCUST.CUST_MAIN_PHONE_NUMBERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_MAIN_PHONE_NUMBER\' in table \'ANOMALYCUST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableANOMALYCUST.CUST_MAIN_PHONE_NUMBERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_POSTAL_CODE {
+                get {
+                    try {
+                        return ((string)(this[this.tableANOMALYCUST.CUST_POSTAL_CODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_POSTAL_CODE\' in table \'ANOMALYCUST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableANOMALYCUST.CUST_POSTAL_CODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_STATE_PROVINCE {
+                get {
+                    try {
+                        return ((string)(this[this.tableANOMALYCUST.CUST_STATE_PROVINCEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_STATE_PROVINCE\' in table \'ANOMALYCUST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableANOMALYCUST.CUST_STATE_PROVINCEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CUST_STREET_ADDRESS {
+                get {
+                    try {
+                        return ((string)(this[this.tableANOMALYCUST.CUST_STREET_ADDRESSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_STREET_ADDRESS\' in table \'ANOMALYCUST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableANOMALYCUST.CUST_STREET_ADDRESSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal CUST_YEAR_OF_BIRTH {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableANOMALYCUST.CUST_YEAR_OF_BIRTHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CUST_YEAR_OF_BIRTH\' in table \'ANOMALYCUST\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableANOMALYCUST.CUST_YEAR_OF_BIRTHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsANOMALYPROBNull() {
+                return this.IsNull(this.tableANOMALYCUST.ANOMALYPROBColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetANOMALYPROBNull() {
+                this[this.tableANOMALYCUST.ANOMALYPROBColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_CITYNull() {
+                return this.IsNull(this.tableANOMALYCUST.CUST_CITYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_CITYNull() {
+                this[this.tableANOMALYCUST.CUST_CITYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_EMAILNull() {
+                return this.IsNull(this.tableANOMALYCUST.CUST_EMAILColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_EMAILNull() {
+                this[this.tableANOMALYCUST.CUST_EMAILColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_FIRST_NAMENull() {
+                return this.IsNull(this.tableANOMALYCUST.CUST_FIRST_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_FIRST_NAMENull() {
+                this[this.tableANOMALYCUST.CUST_FIRST_NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_GENDERNull() {
+                return this.IsNull(this.tableANOMALYCUST.CUST_GENDERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_GENDERNull() {
+                this[this.tableANOMALYCUST.CUST_GENDERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_LAST_NAMENull() {
+                return this.IsNull(this.tableANOMALYCUST.CUST_LAST_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_LAST_NAMENull() {
+                this[this.tableANOMALYCUST.CUST_LAST_NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_MAIN_PHONE_NUMBERNull() {
+                return this.IsNull(this.tableANOMALYCUST.CUST_MAIN_PHONE_NUMBERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_MAIN_PHONE_NUMBERNull() {
+                this[this.tableANOMALYCUST.CUST_MAIN_PHONE_NUMBERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_POSTAL_CODENull() {
+                return this.IsNull(this.tableANOMALYCUST.CUST_POSTAL_CODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_POSTAL_CODENull() {
+                this[this.tableANOMALYCUST.CUST_POSTAL_CODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_STATE_PROVINCENull() {
+                return this.IsNull(this.tableANOMALYCUST.CUST_STATE_PROVINCEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_STATE_PROVINCENull() {
+                this[this.tableANOMALYCUST.CUST_STATE_PROVINCEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_STREET_ADDRESSNull() {
+                return this.IsNull(this.tableANOMALYCUST.CUST_STREET_ADDRESSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_STREET_ADDRESSNull() {
+                this[this.tableANOMALYCUST.CUST_STREET_ADDRESSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCUST_YEAR_OF_BIRTHNull() {
+                return this.IsNull(this.tableANOMALYCUST.CUST_YEAR_OF_BIRTHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCUST_YEAR_OF_BIRTHNull() {
+                this[this.tableANOMALYCUST.CUST_YEAR_OF_BIRTHColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1918,6 +2708,40 @@ namespace DiplomaClient {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public CUSTLEAVERow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class ANOMALYCUSTRowChangeEvent : global::System.EventArgs {
+            
+            private ANOMALYCUSTRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ANOMALYCUSTRowChangeEvent(ANOMALYCUSTRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ANOMALYCUSTRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4118,6 +4942,1274 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class ANOMALYCUSTTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public ANOMALYCUSTTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "ANOMALYCUST";
+            tableMapping.ColumnMappings.Add("ANOMALYPROB", "ANOMALYPROB");
+            tableMapping.ColumnMappings.Add("CUST_CITY", "CUST_CITY");
+            tableMapping.ColumnMappings.Add("CUST_EMAIL", "CUST_EMAIL");
+            tableMapping.ColumnMappings.Add("CUST_FIRST_NAME", "CUST_FIRST_NAME");
+            tableMapping.ColumnMappings.Add("CUST_GENDER", "CUST_GENDER");
+            tableMapping.ColumnMappings.Add("CUST_ID", "CUST_ID");
+            tableMapping.ColumnMappings.Add("CUST_LAST_NAME", "CUST_LAST_NAME");
+            tableMapping.ColumnMappings.Add("CUST_MAIN_PHONE_NUMBER", "CUST_MAIN_PHONE_NUMBER");
+            tableMapping.ColumnMappings.Add("CUST_POSTAL_CODE", "CUST_POSTAL_CODE");
+            tableMapping.ColumnMappings.Add("CUST_STATE_PROVINCE", "CUST_STATE_PROVINCE");
+            tableMapping.ColumnMappings.Add("CUST_STREET_ADDRESS", "CUST_STREET_ADDRESS");
+            tableMapping.ColumnMappings.Add("CUST_YEAR_OF_BIRTH", "CUST_YEAR_OF_BIRTH");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""DMUSER"".""ANOMALYCUST"" WHERE (((:IsNull_ANOMALYPROB = 1 AND ""ANOMALYPROB"" IS NULL) OR (""ANOMALYPROB"" = :Original_ANOMALYPROB)) AND ((:IsNull_CUST_CITY = 1 AND ""CUST_CITY"" IS NULL) OR (""CUST_CITY"" = :Original_CUST_CITY)) AND ((:IsNull_CUST_EMAIL = 1 AND ""CUST_EMAIL"" IS NULL) OR (""CUST_EMAIL"" = :Original_CUST_EMAIL)) AND ((:IsNull_CUST_FIRST_NAME = 1 AND ""CUST_FIRST_NAME"" IS NULL) OR (""CUST_FIRST_NAME"" = :Original_CUST_FIRST_NAME)) AND ((:IsNull_CUST_GENDER = 1 AND ""CUST_GENDER"" IS NULL) OR (""CUST_GENDER"" = :Original_CUST_GENDER)) AND (""CUST_ID"" = :Original_CUST_ID) AND ((:IsNull_CUST_LAST_NAME = 1 AND ""CUST_LAST_NAME"" IS NULL) OR (""CUST_LAST_NAME"" = :Original_CUST_LAST_NAME)) AND ((:p3 = 1 AND ""CUST_MAIN_PHONE_NUMBER"" IS NULL) OR (""CUST_MAIN_PHONE_NUMBER"" = :p2)) AND ((:IsNull_CUST_POSTAL_CODE = 1 AND ""CUST_POSTAL_CODE"" IS NULL) OR (""CUST_POSTAL_CODE"" = :Original_CUST_POSTAL_CODE)) AND ((:IsNull_CUST_STATE_PROVINCE = 1 AND ""CUST_STATE_PROVINCE"" IS NULL) OR (""CUST_STATE_PROVINCE"" = :Original_CUST_STATE_PROVINCE)) AND ((:IsNull_CUST_STREET_ADDRESS = 1 AND ""CUST_STREET_ADDRESS"" IS NULL) OR (""CUST_STREET_ADDRESS"" = :Original_CUST_STREET_ADDRESS)) AND ((:IsNull_CUST_YEAR_OF_BIRTH = 1 AND ""CUST_YEAR_OF_BIRTH"" IS NULL) OR (""CUST_YEAR_OF_BIRTH"" = :Original_CUST_YEAR_OF_BIRTH)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_ANOMALYPROB";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "ANOMALYPROB";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_ANOMALYPROB";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "ANOMALYPROB";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_CITY";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 30;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_CITY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_CITY";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 30;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_CITY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_EMAIL";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_EMAIL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_EMAIL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_EMAIL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_FIRST_NAME";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_FIRST_NAME";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_FIRST_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_FIRST_NAME";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_GENDER";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_GENDER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_GENDER";
+            param.DbType = global::System.Data.DbType.StringFixedLength;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Char;
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_GENDER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_LAST_NAME";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_LAST_NAME";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_LAST_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_LAST_NAME";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "p3";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 25;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_MAIN_PHONE_NUMBER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "p2";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 25;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_MAIN_PHONE_NUMBER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_POSTAL_CODE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_POSTAL_CODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_POSTAL_CODE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_POSTAL_CODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_STATE_PROVINCE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_STATE_PROVINCE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_STATE_PROVINCE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_STATE_PROVINCE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_STREET_ADDRESS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_STREET_ADDRESS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_STREET_ADDRESS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_STREET_ADDRESS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_YEAR_OF_BIRTH";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_YEAR_OF_BIRTH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_YEAR_OF_BIRTH";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_YEAR_OF_BIRTH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""DMUSER"".""ANOMALYCUST"" (""ANOMALYPROB"", ""CUST_CITY"", ""CUST_EMAIL"", ""CUST_FIRST_NAME"", ""CUST_GENDER"", ""CUST_ID"", ""CUST_LAST_NAME"", ""CUST_MAIN_PHONE_NUMBER"", ""CUST_POSTAL_CODE"", ""CUST_STATE_PROVINCE"", ""CUST_STREET_ADDRESS"", ""CUST_YEAR_OF_BIRTH"") VALUES (:ANOMALYPROB, :CUST_CITY, :CUST_EMAIL, :CUST_FIRST_NAME, :CUST_GENDER, :CUST_ID, :CUST_LAST_NAME, :p1, :CUST_POSTAL_CODE, :CUST_STATE_PROVINCE, :CUST_STREET_ADDRESS, :CUST_YEAR_OF_BIRTH)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "ANOMALYPROB";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "ANOMALYPROB";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_CITY";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 30;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_CITY";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_EMAIL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_EMAIL";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_FIRST_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_FIRST_NAME";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_GENDER";
+            param.DbType = global::System.Data.DbType.StringFixedLength;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Char;
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_GENDER";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_ID";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_LAST_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_LAST_NAME";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "p1";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 25;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_MAIN_PHONE_NUMBER";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_POSTAL_CODE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_POSTAL_CODE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_STATE_PROVINCE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_STATE_PROVINCE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_STREET_ADDRESS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_STREET_ADDRESS";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_YEAR_OF_BIRTH";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_YEAR_OF_BIRTH";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            this._adapter.UpdateCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE \"DMUSER\".\"ANOMALYCUST\" SET \"ANOMALYPROB\" = :ANOMALYPROB, \"CUST_CITY\" = :CU" +
+                "ST_CITY, \"CUST_EMAIL\" = :CUST_EMAIL, \"CUST_FIRST_NAME\" = :CUST_FIRST_NAME, \"CUST" +
+                "_GENDER\" = :CUST_GENDER, \"CUST_ID\" = :CUST_ID, \"CUST_LAST_NAME\" = :CUST_LAST_NAM" +
+                "E, \"CUST_MAIN_PHONE_NUMBER\" = :p1, \"CUST_POSTAL_CODE\" = :CUST_POSTAL_CODE, \"CUST" +
+                "_STATE_PROVINCE\" = :CUST_STATE_PROVINCE, \"CUST_STREET_ADDRESS\" = :CUST_STREET_AD" +
+                "DRESS, \"CUST_YEAR_OF_BIRTH\" = :CUST_YEAR_OF_BIRTH WHERE (((:IsNull_ANOMALYPROB =" +
+                " 1 AND \"ANOMALYPROB\" IS NULL) OR (\"ANOMALYPROB\" = :Original_ANOMALYPROB)) AND ((" +
+                ":IsNull_CUST_CITY = 1 AND \"CUST_CITY\" IS NULL) OR (\"CUST_CITY\" = :Original_CUST_" +
+                "CITY)) AND ((:IsNull_CUST_EMAIL = 1 AND \"CUST_EMAIL\" IS NULL) OR (\"CUST_EMAIL\" =" +
+                " :Original_CUST_EMAIL)) AND ((:IsNull_CUST_FIRST_NAME = 1 AND \"CUST_FIRST_NAME\" " +
+                "IS NULL) OR (\"CUST_FIRST_NAME\" = :Original_CUST_FIRST_NAME)) AND ((:IsNull_CUST_" +
+                "GENDER = 1 AND \"CUST_GENDER\" IS NULL) OR (\"CUST_GENDER\" = :Original_CUST_GENDER)" +
+                ") AND (\"CUST_ID\" = :Original_CUST_ID) AND ((:IsNull_CUST_LAST_NAME = 1 AND \"CUST" +
+                "_LAST_NAME\" IS NULL) OR (\"CUST_LAST_NAME\" = :Original_CUST_LAST_NAME)) AND ((:p3" +
+                " = 1 AND \"CUST_MAIN_PHONE_NUMBER\" IS NULL) OR (\"CUST_MAIN_PHONE_NUMBER\" = :p2)) " +
+                "AND ((:IsNull_CUST_POSTAL_CODE = 1 AND \"CUST_POSTAL_CODE\" IS NULL) OR (\"CUST_POS" +
+                "TAL_CODE\" = :Original_CUST_POSTAL_CODE)) AND ((:IsNull_CUST_STATE_PROVINCE = 1 A" +
+                "ND \"CUST_STATE_PROVINCE\" IS NULL) OR (\"CUST_STATE_PROVINCE\" = :Original_CUST_STA" +
+                "TE_PROVINCE)) AND ((:IsNull_CUST_STREET_ADDRESS = 1 AND \"CUST_STREET_ADDRESS\" IS" +
+                " NULL) OR (\"CUST_STREET_ADDRESS\" = :Original_CUST_STREET_ADDRESS)) AND ((:IsNull" +
+                "_CUST_YEAR_OF_BIRTH = 1 AND \"CUST_YEAR_OF_BIRTH\" IS NULL) OR (\"CUST_YEAR_OF_BIRT" +
+                "H\" = :Original_CUST_YEAR_OF_BIRTH)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "ANOMALYPROB";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "ANOMALYPROB";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_CITY";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 30;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_CITY";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_EMAIL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_EMAIL";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_FIRST_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_FIRST_NAME";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_GENDER";
+            param.DbType = global::System.Data.DbType.StringFixedLength;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Char;
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_GENDER";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_ID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_LAST_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_LAST_NAME";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "p1";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 25;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_MAIN_PHONE_NUMBER";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_POSTAL_CODE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_POSTAL_CODE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_STATE_PROVINCE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_STATE_PROVINCE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_STREET_ADDRESS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_STREET_ADDRESS";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "CUST_YEAR_OF_BIRTH";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_YEAR_OF_BIRTH";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_ANOMALYPROB";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "ANOMALYPROB";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_ANOMALYPROB";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "ANOMALYPROB";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_CITY";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 30;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_CITY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_CITY";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 30;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_CITY";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_EMAIL";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_EMAIL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_EMAIL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 50;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_EMAIL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_FIRST_NAME";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_FIRST_NAME";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_FIRST_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_FIRST_NAME";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_GENDER";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_GENDER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_GENDER";
+            param.DbType = global::System.Data.DbType.StringFixedLength;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Char;
+            param.Size = 1;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_GENDER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_LAST_NAME";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_LAST_NAME";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_LAST_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_LAST_NAME";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "p3";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 25;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_MAIN_PHONE_NUMBER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "p2";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 25;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_MAIN_PHONE_NUMBER";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_POSTAL_CODE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_POSTAL_CODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_POSTAL_CODE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_POSTAL_CODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_STATE_PROVINCE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_STATE_PROVINCE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_STATE_PROVINCE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_STATE_PROVINCE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_STREET_ADDRESS";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_STREET_ADDRESS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_STREET_ADDRESS";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 40;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_STREET_ADDRESS";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_CUST_YEAR_OF_BIRTH";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_YEAR_OF_BIRTH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_CUST_YEAR_OF_BIRTH";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "CUST_YEAR_OF_BIRTH";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
+            this._connection.ConnectionString = global::DiplomaClient.Properties.Settings.Default.cnDMUSER;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT ANOMALYPROB, CUST_CITY, CUST_EMAIL, CUST_FIRST_NAME, CUST_GENDER, CUST_ID," +
+                " CUST_LAST_NAME, CUST_MAIN_PHONE_NUMBER, CUST_POSTAL_CODE, CUST_STATE_PROVINCE, " +
+                "CUST_STREET_ADDRESS, CUST_YEAR_OF_BIRTH FROM DMUSER.ANOMALYCUST";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsDMUSER.ANOMALYCUSTDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsDMUSER.ANOMALYCUSTDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsDMUSER.ANOMALYCUSTDataTable dataTable = new dsDMUSER.ANOMALYCUSTDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsDMUSER.ANOMALYCUSTDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsDMUSER dataSet) {
+            return this.Adapter.Update(dataSet, "ANOMALYCUST");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(global::System.Nullable<decimal> Original_ANOMALYPROB, string Original_CUST_CITY, string Original_CUST_EMAIL, string Original_CUST_FIRST_NAME, string Original_CUST_GENDER, decimal Original_CUST_ID, string Original_CUST_LAST_NAME, string p2, string Original_CUST_POSTAL_CODE, string Original_CUST_STATE_PROVINCE, string Original_CUST_STREET_ADDRESS, global::System.Nullable<decimal> Original_CUST_YEAR_OF_BIRTH) {
+            if ((Original_ANOMALYPROB.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_ANOMALYPROB.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Original_CUST_CITY == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_CUST_CITY));
+            }
+            if ((Original_CUST_EMAIL == null)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_CUST_EMAIL));
+            }
+            if ((Original_CUST_FIRST_NAME == null)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_CUST_FIRST_NAME));
+            }
+            if ((Original_CUST_GENDER == null)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_CUST_GENDER));
+            }
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(Original_CUST_ID));
+            if ((Original_CUST_LAST_NAME == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_CUST_LAST_NAME));
+            }
+            if ((p2 == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(p2));
+            }
+            if ((Original_CUST_POSTAL_CODE == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_CUST_POSTAL_CODE));
+            }
+            if ((Original_CUST_STATE_PROVINCE == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_CUST_STATE_PROVINCE));
+            }
+            if ((Original_CUST_STREET_ADDRESS == null)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_CUST_STREET_ADDRESS));
+            }
+            if ((Original_CUST_YEAR_OF_BIRTH.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((decimal)(Original_CUST_YEAR_OF_BIRTH.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(global::System.Nullable<decimal> ANOMALYPROB, string CUST_CITY, string CUST_EMAIL, string CUST_FIRST_NAME, string CUST_GENDER, decimal CUST_ID, string CUST_LAST_NAME, string p1, string CUST_POSTAL_CODE, string CUST_STATE_PROVINCE, string CUST_STREET_ADDRESS, global::System.Nullable<decimal> CUST_YEAR_OF_BIRTH) {
+            if ((ANOMALYPROB.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(ANOMALYPROB.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((CUST_CITY == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(CUST_CITY));
+            }
+            if ((CUST_EMAIL == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(CUST_EMAIL));
+            }
+            if ((CUST_FIRST_NAME == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CUST_FIRST_NAME));
+            }
+            if ((CUST_GENDER == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(CUST_GENDER));
+            }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(CUST_ID));
+            if ((CUST_LAST_NAME == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(CUST_LAST_NAME));
+            }
+            if ((p1 == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(p1));
+            }
+            if ((CUST_POSTAL_CODE == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(CUST_POSTAL_CODE));
+            }
+            if ((CUST_STATE_PROVINCE == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(CUST_STATE_PROVINCE));
+            }
+            if ((CUST_STREET_ADDRESS == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(CUST_STREET_ADDRESS));
+            }
+            if ((CUST_YEAR_OF_BIRTH.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((decimal)(CUST_YEAR_OF_BIRTH.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    global::System.Nullable<decimal> ANOMALYPROB, 
+                    string CUST_CITY, 
+                    string CUST_EMAIL, 
+                    string CUST_FIRST_NAME, 
+                    string CUST_GENDER, 
+                    decimal CUST_ID, 
+                    string CUST_LAST_NAME, 
+                    string p1, 
+                    string CUST_POSTAL_CODE, 
+                    string CUST_STATE_PROVINCE, 
+                    string CUST_STREET_ADDRESS, 
+                    global::System.Nullable<decimal> CUST_YEAR_OF_BIRTH, 
+                    global::System.Nullable<decimal> Original_ANOMALYPROB, 
+                    string Original_CUST_CITY, 
+                    string Original_CUST_EMAIL, 
+                    string Original_CUST_FIRST_NAME, 
+                    string Original_CUST_GENDER, 
+                    decimal Original_CUST_ID, 
+                    string Original_CUST_LAST_NAME, 
+                    string p2, 
+                    string Original_CUST_POSTAL_CODE, 
+                    string Original_CUST_STATE_PROVINCE, 
+                    string Original_CUST_STREET_ADDRESS, 
+                    global::System.Nullable<decimal> Original_CUST_YEAR_OF_BIRTH) {
+            if ((ANOMALYPROB.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(ANOMALYPROB.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((CUST_CITY == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(CUST_CITY));
+            }
+            if ((CUST_EMAIL == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(CUST_EMAIL));
+            }
+            if ((CUST_FIRST_NAME == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(CUST_FIRST_NAME));
+            }
+            if ((CUST_GENDER == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(CUST_GENDER));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(CUST_ID));
+            if ((CUST_LAST_NAME == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(CUST_LAST_NAME));
+            }
+            if ((p1 == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(p1));
+            }
+            if ((CUST_POSTAL_CODE == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(CUST_POSTAL_CODE));
+            }
+            if ((CUST_STATE_PROVINCE == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(CUST_STATE_PROVINCE));
+            }
+            if ((CUST_STREET_ADDRESS == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(CUST_STREET_ADDRESS));
+            }
+            if ((CUST_YEAR_OF_BIRTH.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(CUST_YEAR_OF_BIRTH.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ANOMALYPROB.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_ANOMALYPROB.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_CUST_CITY == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_CUST_CITY));
+            }
+            if ((Original_CUST_EMAIL == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_CUST_EMAIL));
+            }
+            if ((Original_CUST_FIRST_NAME == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_CUST_FIRST_NAME));
+            }
+            if ((Original_CUST_GENDER == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_CUST_GENDER));
+            }
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((decimal)(Original_CUST_ID));
+            if ((Original_CUST_LAST_NAME == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_CUST_LAST_NAME));
+            }
+            if ((p2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(p2));
+            }
+            if ((Original_CUST_POSTAL_CODE == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_CUST_POSTAL_CODE));
+            }
+            if ((Original_CUST_STATE_PROVINCE == null)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_CUST_STATE_PROVINCE));
+            }
+            if ((Original_CUST_STREET_ADDRESS == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_CUST_STREET_ADDRESS));
+            }
+            if ((Original_CUST_YEAR_OF_BIRTH.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((decimal)(Original_CUST_YEAR_OF_BIRTH.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    global::System.Nullable<decimal> ANOMALYPROB, 
+                    string CUST_CITY, 
+                    string CUST_EMAIL, 
+                    string CUST_FIRST_NAME, 
+                    string CUST_GENDER, 
+                    string CUST_LAST_NAME, 
+                    string p1, 
+                    string CUST_POSTAL_CODE, 
+                    string CUST_STATE_PROVINCE, 
+                    string CUST_STREET_ADDRESS, 
+                    global::System.Nullable<decimal> CUST_YEAR_OF_BIRTH, 
+                    global::System.Nullable<decimal> Original_ANOMALYPROB, 
+                    string Original_CUST_CITY, 
+                    string Original_CUST_EMAIL, 
+                    string Original_CUST_FIRST_NAME, 
+                    string Original_CUST_GENDER, 
+                    decimal Original_CUST_ID, 
+                    string Original_CUST_LAST_NAME, 
+                    string p2, 
+                    string Original_CUST_POSTAL_CODE, 
+                    string Original_CUST_STATE_PROVINCE, 
+                    string Original_CUST_STREET_ADDRESS, 
+                    global::System.Nullable<decimal> Original_CUST_YEAR_OF_BIRTH) {
+            return this.Update(ANOMALYPROB, CUST_CITY, CUST_EMAIL, CUST_FIRST_NAME, CUST_GENDER, Original_CUST_ID, CUST_LAST_NAME, p1, CUST_POSTAL_CODE, CUST_STATE_PROVINCE, CUST_STREET_ADDRESS, CUST_YEAR_OF_BIRTH, Original_ANOMALYPROB, Original_CUST_CITY, Original_CUST_EMAIL, Original_CUST_FIRST_NAME, Original_CUST_GENDER, Original_CUST_ID, Original_CUST_LAST_NAME, p2, Original_CUST_POSTAL_CODE, Original_CUST_STATE_PROVINCE, Original_CUST_STREET_ADDRESS, Original_CUST_YEAR_OF_BIRTH);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4134,6 +6226,8 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         private MBRESULT2TableAdapter _mBRESULT2TableAdapter;
         
         private CUSTLEAVETableAdapter _cUSTLEAVETableAdapter;
+        
+        private ANOMALYCUSTTableAdapter _aNOMALYCUSTTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -4194,6 +6288,20 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public ANOMALYCUSTTableAdapter ANOMALYCUSTTableAdapter {
+            get {
+                return this._aNOMALYCUSTTableAdapter;
+            }
+            set {
+                this._aNOMALYCUSTTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -4223,6 +6331,10 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                             && (this._cUSTLEAVETableAdapter.Connection != null))) {
                     return this._cUSTLEAVETableAdapter.Connection;
                 }
+                if (((this._aNOMALYCUSTTableAdapter != null) 
+                            && (this._aNOMALYCUSTTableAdapter.Connection != null))) {
+                    return this._aNOMALYCUSTTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -4243,6 +6355,9 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                     count = (count + 1);
                 }
                 if ((this._cUSTLEAVETableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._aNOMALYCUSTTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -4283,6 +6398,15 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._aNOMALYCUSTTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ANOMALYCUST.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._aNOMALYCUSTTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -4317,6 +6441,14 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._aNOMALYCUSTTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ANOMALYCUST.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._aNOMALYCUSTTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -4327,6 +6459,14 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(dsDMUSER dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._aNOMALYCUSTTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ANOMALYCUST.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._aNOMALYCUSTTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._cUSTLEAVETableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CUSTLEAVE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -4405,6 +6545,11 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._aNOMALYCUSTTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._aNOMALYCUSTTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -4462,6 +6607,15 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                     if (this._cUSTLEAVETableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._cUSTLEAVETableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._cUSTLEAVETableAdapter.Adapter);
+                    }
+                }
+                if ((this._aNOMALYCUSTTableAdapter != null)) {
+                    revertConnections.Add(this._aNOMALYCUSTTableAdapter, this._aNOMALYCUSTTableAdapter.Connection);
+                    this._aNOMALYCUSTTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(workConnection));
+                    this._aNOMALYCUSTTableAdapter.Transaction = ((global::Oracle.ManagedDataAccess.Client.OracleTransaction)(workTransaction));
+                    if (this._aNOMALYCUSTTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._aNOMALYCUSTTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._aNOMALYCUSTTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -4533,6 +6687,10 @@ namespace DiplomaClient.dsDMUSERTableAdapters {
                 if ((this._cUSTLEAVETableAdapter != null)) {
                     this._cUSTLEAVETableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._cUSTLEAVETableAdapter]));
                     this._cUSTLEAVETableAdapter.Transaction = null;
+                }
+                if ((this._aNOMALYCUSTTableAdapter != null)) {
+                    this._aNOMALYCUSTTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._aNOMALYCUSTTableAdapter]));
+                    this._aNOMALYCUSTTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

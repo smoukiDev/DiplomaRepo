@@ -748,6 +748,7 @@ namespace DiplomaClient
             buts6.BackColor = ColorPalette.white1;
             buts7.BackColor = ColorPalette.white1;
             buts8.BackColor = ColorPalette.orange1;
+            lblDMAlgoritm.Text = "Anomaly Detect";
         }
         bool isCloseByLogOut = false;
         private void buts9_Click(object sender, EventArgs e)
@@ -1966,44 +1967,96 @@ namespace DiplomaClient
         private System.Windows.Forms.BindingSource MBRESULT2BindingSourceBindingSource2;
         //classifiaction
         private dsDMUSERTableAdapters.CUSTLEAVETableAdapter CUSTLEAVETableAdapter; 
-        private System.Windows.Forms.BindingSource CUSTLEAVEBindingSourceBindingSource; 
-        
+        private System.Windows.Forms.BindingSource CUSTLEAVEBindingSourceBindingSource;
+        //anomaly detect
+        private dsDMUSERTableAdapters.ANOMALYCUSTTableAdapter ANOMALYCUSTTableAdapter2;
+        private System.Windows.Forms.BindingSource ANOMALYCUSTBindingSourceBindingSource;
+
         private void butAnalysis_Click(object sender, EventArgs e)
         {
             
             if(lblDMAlgoritm.Text == "Assosiaton Rules")
             {
-                reportDataSource1  = new Microsoft.Reporting.WinForms.ReportDataSource();
-                MBRESULT2TableAdapter2 = new dsDMUSERTableAdapters.MBRESULT2TableAdapter();
-                this.MBRESULT2TableAdapter2.ClearBeforeFill = true;
-                this.MBRESULT2TableAdapter2.Fill(this.dsDMUSER.MBRESULT2);
+                try
+                {
+                    reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+                    MBRESULT2TableAdapter2 = new dsDMUSERTableAdapters.MBRESULT2TableAdapter();
+                    this.MBRESULT2TableAdapter2.ClearBeforeFill = true;
+                    this.MBRESULT2TableAdapter2.Fill(this.dsDMUSER.MBRESULT2);
 
-                MBRESULT2BindingSourceBindingSource2 = new BindingSource(dsDMUSER, "MBRESULT2");
+                    MBRESULT2BindingSourceBindingSource2 = new BindingSource(dsDMUSER, "MBRESULT2");
 
-                reportDataSource1.Name = "dm2";
-                reportDataSource1.Value = this.MBRESULT2BindingSourceBindingSource2;
-                this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
-                this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.TwoMarketBasketAssociationRules.rdlc";
-                rwTwo.RefreshReport();
+                    reportDataSource1.Name = "dm2";
+                    reportDataSource1.Value = this.MBRESULT2BindingSourceBindingSource2;
+                    this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
+                    this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.TwoMarketBasketAssociationRules.rdlc";
+                    rwTwo.RefreshReport();
+                }
+                catch(Exception ex)
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
+                
             }
             if(lblDMAlgoritm.Text == "Classification")
             {
-                reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+                try
+                {
+                    reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
 
-                CUSTLEAVETableAdapter = new dsDMUSERTableAdapters.CUSTLEAVETableAdapter();
-                this.CUSTLEAVETableAdapter.ClearBeforeFill = true;
-                this.CUSTLEAVETableAdapter.Fill(this.dsDMUSER.CUSTLEAVE);
+                    CUSTLEAVETableAdapter = new dsDMUSERTableAdapters.CUSTLEAVETableAdapter();
+                    this.CUSTLEAVETableAdapter.ClearBeforeFill = true;
+                    this.CUSTLEAVETableAdapter.Fill(this.dsDMUSER.CUSTLEAVE);
 
-                CUSTLEAVEBindingSourceBindingSource = new BindingSource(dsDMUSER,"CUSTLEAVE"); 
-                                                                            
-                reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-                reportDataSource1.Name = "dm3";
-                reportDataSource1.Value = this.CUSTLEAVEBindingSourceBindingSource;
+                    CUSTLEAVEBindingSourceBindingSource = new BindingSource(dsDMUSER, "CUSTLEAVE");
 
-                this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
-                this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.CustomLeaveClassification.rdlc";
+                    reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+                    reportDataSource1.Name = "dm3";
+                    reportDataSource1.Value = this.CUSTLEAVEBindingSourceBindingSource;
 
-                rwTwo.RefreshReport();
+                    this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
+                    this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.CustomLeaveClassification.rdlc";
+
+                    rwTwo.RefreshReport();
+                }
+                catch(Exception ex)
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
+                
+            }
+            if(lblDMAlgoritm.Text == "Anomaly Detect")
+            {
+                try
+                {
+                    reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+
+                    ANOMALYCUSTTableAdapter2 = new dsDMUSERTableAdapters.ANOMALYCUSTTableAdapter();
+                    this.ANOMALYCUSTTableAdapter2.ClearBeforeFill = true;
+                    this.ANOMALYCUSTTableAdapter2.Fill(this.dsDMUSER.ANOMALYCUST);
+
+                    ANOMALYCUSTBindingSourceBindingSource = new BindingSource(dsDMUSER, "ANOMALYCUST");
+
+
+                    reportDataSource1.Name = "dm6";
+                    reportDataSource1.Value = this.ANOMALYCUSTBindingSourceBindingSource;
+
+                    this.rwTwo.LocalReport.DataSources.Add(reportDataSource1);
+                    this.rwTwo.LocalReport.ReportEmbeddedResource = "DiplomaClient.ReportsDM.CustomerIncomeAnomalyDetection.rdlc";
+
+                    rwTwo.RefreshReport();
+                }
+                catch(Exception ex)
+                {
+                    CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
+                    this.Enabled = false;
+                    error.Show();
+                }
+                
             }
         }
 
