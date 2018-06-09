@@ -13,6 +13,7 @@ namespace DiplomaClient
 {
     public partial class CustomMessageBox : Form
     {
+        //Buttons Attached Functionality
         Action but1Action = null;
         Action but2Action = null;
         //unlock parent form method

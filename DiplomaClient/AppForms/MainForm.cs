@@ -2120,7 +2120,7 @@ namespace DiplomaClient
             this.rwTwo.LocalReport.ReportEmbeddedResource = null;
             this.rwTwo.RefreshReport();
         }
-
+        //Export Monitor Activity
         private void rwTwo_ReportExport(object sender, Microsoft.Reporting.WinForms.ReportExportEventArgs e)
         {
             if (lblDMAlgoritm.Text == "Explore")
