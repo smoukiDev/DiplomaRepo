@@ -76,9 +76,8 @@ namespace DiplomaClient
             m.IsBodyHtml = true;
             SmtpClient smtp_server = new SmtpClient(supportSmtpServer, supportPort);
             smtp_server.UseDefaultCredentials = false;
-            //gmail special password for application is used
-            //!!!disable special pass in order of no using app
-            smtp_server.Credentials = new NetworkCredential(supportEmail, "fsodgumrrohkccmp");
+            ///!!!gmail special password for application is required
+            smtp_server.Credentials = new NetworkCredential(supportEmail, "gmailpasswordforapp");
             smtp_server.EnableSsl = true;
             smtp_server.Send(m);
             return  GenerateSHA256Hash(code);
