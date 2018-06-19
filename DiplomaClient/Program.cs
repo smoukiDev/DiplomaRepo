@@ -11,6 +11,7 @@ namespace DiplomaClient
 {
     static class Program
     {
+        //static login form provides access to itself in any part of applocation
         internal static LoginForm loginform;
         /// <summary>
         /// The main entry point for the application.
@@ -21,7 +22,8 @@ namespace DiplomaClient
             
             try
             {
-                //!!! ProcedureRegisterImageBufSize = 1000000000
+               //!!! Add Auto Setting Size of Image, which send to DB
+               //!!! ProcedureRegisterImageBufSize = 1000000000
                 
             }
             catch
@@ -34,15 +36,10 @@ namespace DiplomaClient
             Mutex muobj = new Mutex(true, guid, out isAppRun);
             if (!isAppRun)
                 return;
-            
+            //Application Start Up
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(loginform = new LoginForm());
-
-            //easter eggg
-            //CustomMessageBox cmb = new CustomMessageBox(Properties.Resources.Error, "joke", "joke", null, false, ColorPalette.red2, ColorPalette.white1);
-            //Application.Run(cmb);
-            
+            Application.Run(loginform = new LoginForm());           
             
         }
     }
