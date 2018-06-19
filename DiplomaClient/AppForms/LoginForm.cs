@@ -19,7 +19,7 @@ namespace DiplomaClient
     {
         //actions delay constant
         const int delay1 = 300;
-        
+        //Constructor
         public LoginForm()
         {
 
@@ -31,6 +31,8 @@ namespace DiplomaClient
             butLog.BackColor = ColorPalette.red1;
             butLog.ForeColor = ColorPalette.white1;
             pbLoading.Visible = false;
+            //check DB Connection
+            //!!! Check connection button
             try
             {
                 SecurityModule sm = new SecurityModule();
@@ -94,13 +96,19 @@ namespace DiplomaClient
             else
                 tbPass.PasswordChar = '⦁';
         }
+        //Login Button
         private void butLog_Click(object sender, EventArgs e)
         {
+            //success login flag
             bool isSuccess = false;
+            //is lock buf
+            //!!! security hole
             string isAccountLock = "";
+            //loading starts
             pbLoading.Visible = true;
             try
             {
+                //extract login data from db
                 SecurityModule sm = new SecurityModule();
                 OracleConnection con = new OracleConnection(sm.SalesHistotyConnectionSrtingProp);
                 string loginQuery = "SELECT USERID, LOGIN, PASSHASH, ISBLOCK FROM CLIENTAPPUSERS";
@@ -111,23 +119,30 @@ namespace DiplomaClient
                 con.Dispose();
                 foreach (DataRow row in table.Rows)
                 {
+                    //check login
                     if (tbLogin.Text == row[1].ToString())
                     {
+                        //hash entered pass and check
                         if (sm.GenerateSHA256Hash(tbPass.Text) == row[2].ToString())
                         {
+                            //!!! security hole
                             if (row[3].ToString() == "F")
                                 isAccountLock = "F";
                             if (row[3].ToString()=="T")
                                 isAccountLock = "T";
+                            //Check Account Unlock Status
                             if (row[3].ToString()=="F")
                                 
                             {
-                                
+                                //switch success flag
                                 isSuccess = true;
+                                //convey UserId in main form
                                 MainForm mainform = new MainForm(row[0].ToString());
+                                //Login Activity Monitor
                                 QueriesTableAdapter qta = new QueriesTableAdapter();
                                 qta.LOGINLOG(Convert.ToDecimal(row[0].ToString()));
                                 qta.Dispose();
+                                //Run Main Form
                                 this.Hide();
                                 mainform.Show();
                                 tbLogin.Clear();
@@ -144,6 +159,7 @@ namespace DiplomaClient
             }
             catch(Exception ex)
             {
+                //Unpredictible Exceptions
                 isSuccess = true;
                 CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
                 this.Enabled = false;
@@ -151,6 +167,7 @@ namespace DiplomaClient
             }
             if(isAccountLock == "T")
             {
+                //Account Blocked Error
                 CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, "Access to accound has been locked", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
                 this.Enabled = false;
                 error.Show();
@@ -159,12 +176,15 @@ namespace DiplomaClient
             }
             if (isSuccess == false)
             {
+                //Incorrect Login/Pass Error
                 CustomMessageBox error = new CustomMessageBox(Properties.Resources.Error, "Incorrect Login or Password", "ОК", () => { this.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
                 this.Enabled = false;
                 error.Show();
             }
+            //loading ends
             pbLoading.Visible = false;
         }
+        //Go to Register Form
         private void butReg_Click(object sender, EventArgs e)
         {
             tbLogin.Clear();
@@ -213,7 +233,7 @@ namespace DiplomaClient
 
             base.WndProc(ref m);
         }
-
+        //Go To PassResetForm
         private void lblForget_Click(object sender, EventArgs e)
         {
             tbLogin.Clear();
