@@ -63,6 +63,18 @@ namespace DiplomaClient
             but2.Text = but2Title;
             unlockParentForm = unlockMethod;
         }
+        /// <summary>
+        /// Constructor - Create Dialog Form with Message Picture, Message Text and Three Button
+        /// </summary>
+        /// <param name="icon">Message Picture</param>
+        /// <param name="multiline">Single line or Multiline Message</param>
+        /// <param name="message">Message Text</param>
+        /// <param name="unlockMethod">Parent's Form Unlock Method</param>
+        /// <param name="but1Title">button 1 text</param>
+        /// <param name="but2Title">button 2 text</param>
+        /// <param name="but3Title">button 3 text</param>
+        /// <param name="but1Method">button 1 attach functionality method</param>
+        /// <param name="but2Method">button 2 attach functionality method</param>
         public CustomMessageBox(Image icon, bool multiline, string message, Action unlockMethod, string but1Title, string but2Title, string but3Title, Action but1Method, Action but2Method)
         {
             //Notification Sound
