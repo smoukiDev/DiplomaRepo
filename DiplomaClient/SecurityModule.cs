@@ -15,8 +15,8 @@ namespace DiplomaClient
         /// <summary>
         /// Salt Generation Method
         /// </summary>
-        /// <param name="size">Salt String Lenth</param>
-        /// <returns>Salt String of Input Lenth value generated randomly</returns>
+        /// <param name="size">Lenght of resultant salt string</param>
+        /// <returns>Salt string with specified size</returns>
        public string GenerateSalt(int size)
        {
             var rng = new RNGCryptoServiceProvider();
@@ -25,11 +25,11 @@ namespace DiplomaClient
             return Convert.ToBase64String(buff);
        }
        /// <summary>
-       /// Hash String Method
+       /// Generate Hash String Method
        /// </summary>
        /// <param name="input">string to hash</param>
        /// <param name="salt">salt string</param>
-       /// <returns>Hash String</returns>
+       /// <returns>Hash String joining input and salt</returns>
        public string GenerateSHA256Hash(string input, string salt)
        {
             var bytes = Encoding.UTF8.GetBytes(input + salt);
@@ -37,17 +37,23 @@ namespace DiplomaClient
             var hash = obj.ComputeHash(bytes);
             return Convert.ToBase64String(hash);
        }
-       public string GenerateSHA256Hash(string input)
+        /// <summary>
+        /// Generate Hash String Method
+        /// </summary>
+        /// <param name="input">string to hash</param>
+        /// <returns>Hash String of input</returns>
+        public string GenerateSHA256Hash(string input)
        {
             var bytes = Encoding.UTF8.GetBytes(input);
             SHA256Managed obj = new SHA256Managed();
             var hash = obj.ComputeHash(bytes);
             return Convert.ToBase64String(hash);
        }
-
+        
+       //Service Email Parameters 
        const string supportName = "DM Analytics Service";
        const string supportEmail = "smakdealcase@gmail.com";
-       //Properties.Resources.EmailSupport Link in Google Pictures
+       //Using projroot/Image/EmailSupport.jpg located in web
        const string supportImageLink = @"https://www.techfunnel.com/wp-content/uploads/2018/04/Top-Business-Intelligence-Tools-List-for-Comparison.jpg";
        const string supportImageTitle = "supportImage";
        const string supportSmtpServer = "smtp.gmail.com";
@@ -70,15 +76,21 @@ namespace DiplomaClient
             m.IsBodyHtml = true;
             SmtpClient smtp_server = new SmtpClient(supportSmtpServer, supportPort);
             smtp_server.UseDefaultCredentials = false;
-            //gmail special password for application is required
-            //make security for GMAIL Pass
+            //gmail special password for application is used
+            //!!!disable special pass in order of no using app
             smtp_server.Credentials = new NetworkCredential(supportEmail, "fsodgumrrohkccmp");
             smtp_server.EnableSsl = true;
             smtp_server.Send(m);
             return  GenerateSHA256Hash(code);
        }
-        const int codeLenth = 6;
-       public string GenerateForgotPasswordConfirmCode()
+       
+       //Lenght of confirmation code  
+       const int codeLenth = 6;
+        /// <summary>
+        /// Generate digital confirmation code
+        /// </summary>
+        /// <returns>digital confirmation code</returns>
+        public string GenerateForgotPasswordConfirmCode()
         {
             Random random = new Random();
             string res = null;
