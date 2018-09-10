@@ -22,6 +22,7 @@ namespace DiplomaClient
         internal RegisterForm registerFormBuf;
         //actions delay constant
         const int delay1 = 300;
+        //Constuctor
         public RegisterForm()
         {
 
@@ -107,33 +108,42 @@ namespace DiplomaClient
         private void butRegister_Click(object sender, EventArgs e)
         {
 
-            //Loading is Visible
+            //Loading Starts
             pbLoading.Visible = true;
 
             //Validation Method Connected One with each other
+            //Сompulsory Validation  Main Fields
             bool stage1 = ValidationIsMainFieldsFull();
+            //Optional Validation Pass Secure Level
             ValidationPasswordSecure();
+            //Compalsory Validation Pass & Passconfirm match or not
             bool stage2 = ValidationPasswordConfirm();
+            //register stage in case compulsory validation stages successful
             if(stage1 && stage2)
             {
                 try
                 {
                     QueriesTableAdapter qta = new QueriesTableAdapter();
                     SecurityModule sm1 = new SecurityModule();
-                    //written as hashing without salt
+                    //!!!password hashing without salt
+                    //!!!no register monitoring
                     qta.REGISTERCLIENT(tbLogin.Text, tbPass.Text, sm1.GenerateSHA256Hash(tbPass.Text), null, tbFName.Text, tbLName.Text, tbMName.Text, tbEmail.Text, mtbPhone.Text, rtbAdress.Text, cbGender.SelectedItem.ToString(), ImageToByteArray(pbAvatar.Image), null, null, null);
                     qta.Dispose();
+                    //Message about successful Registration
                     CustomMessageBox successRegister = new CustomMessageBox(Properties.Resources.Success, "Account have been successfully created", "ОК", () => { registerFormBuf.Enabled = true; Thread.Sleep(delay1); this.Close(); Program.loginform.Show(); }, true, ColorPalette.red1, ColorPalette.white1);
+                    //parent form disabled
                     this.Enabled = false;
                     successRegister.Show();
                 }
                 catch(Exception ex)
                 {
+                    //unpredictible exceptions
                     CustomMessageBox errorDuringRegister = new CustomMessageBox(Properties.Resources.Error, ex.Message, "ОК", () => { registerFormBuf.Enabled = true; }, true, ColorPalette.red1, ColorPalette.white1);
                     this.Enabled = false;
                     errorDuringRegister.Show();
                 }
             }
+            //Loading Ends
             pbLoading.Visible = false;
 
 
@@ -206,7 +216,7 @@ namespace DiplomaClient
                 pEmail.Visible = false;
 
             }
-
+            //checks is phone lenght entered correctly
             if (mtbPhone.Text == "+" || mtbPhone.Text.Length < 11)
             {
                 pPhone.Visible = true;

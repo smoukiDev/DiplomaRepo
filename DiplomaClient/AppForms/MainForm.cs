@@ -17,13 +17,15 @@ namespace DiplomaClient
 {
     public partial class MainForm : Form
     {
+        //UserID conveys via constructor to pull user data
         private string userId = "";
-        //constant values in one place
+        //constanst of elements scale
         const int panSliderMIN = 0;
         const int panSliserMAX = 370;
         const int panContentMargin = 13;
         const int FormMaxWidth = 1024;
         const int FormMaxHeight = 768;
+        //constructor for testing form elements
         public MainForm()
         {
             InitializeComponent();
@@ -79,6 +81,7 @@ namespace DiplomaClient
             panSlider.Width = panSliderMIN;
             
         }
+        //constuctor in action
         public MainForm(string userId)
         {
             this.userId = userId;
@@ -753,6 +756,7 @@ namespace DiplomaClient
             buts8.BackColor = ColorPalette.orange1;
             lblDMAlgoritm.Text = "Anomaly Detect";
         }
+        //log out button
         bool isCloseByLogOut = false;
         private void buts9_Click(object sender, EventArgs e)
         {
@@ -775,7 +779,7 @@ namespace DiplomaClient
             this.Close();
             
         }
-        
+        //form loading activity
         private void MainForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dsDMUSER.MBRESULT2' table. You can move, or remove it, as needed.
@@ -785,6 +789,7 @@ namespace DiplomaClient
             //!!!last garbage auto report load in designer.cs
             this.rwTwo.LocalReport.ReportEmbeddedResource = null;
             this.rwTwo.RefreshReport();
+
             //Defaulth value for lblAdminOption
             lblAdminOption.Text = "User Data";
             //Data Grid Material Design
