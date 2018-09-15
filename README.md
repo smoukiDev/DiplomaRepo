@@ -1,2 +1,1 @@
-# DiplomaRepo
-h1 dddd
+# DM Analytics Application
