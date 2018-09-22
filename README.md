@@ -11,10 +11,10 @@ DM Analytics Application - is a Bachelor's Diploma project. It's an client appli
 ### Profile Panel
 * Display Profile Data
 * Edit Profile Data
-* Display Profile Level (Admin or Single user)
+* Display Profile Role (Admin or Single user)
 ### Reports Panel
 * Display report selected by slider menu
-* Pull report from Oracle server
+* Pull recent reports from Oracle server
 * Review, print and save (as PDF, DOCX, XLSX) reports
 ### Reports Available
 * Explore - Customers affinity card possession (using Statistical tools)
@@ -31,13 +31,13 @@ DM Analytics Application - is a Bachelor's Diploma project. It's an client appli
 * Password reset by Email
 ### Registration
 * Form to sign up
-* Validation of the significant fields
-* Verification of password strenght
-* Validation of an Email using Regular Expressions **is comming soon**
+* Significant fields validation
+* Password strenght check
+* Email validation using Regular Expressions **is comming soon**
 ### Login
 * Form to sign in
-* Сhecking for the connection to server and database
-* Verification of login, password, account type, accout status (ban/locked or granted)
+* Сhecking for the database connection
+* Login, password, account type, accout status (ban/locked or granted) verification
 ## Tech Stack
 ## Requirements
 ## Install Instruction
