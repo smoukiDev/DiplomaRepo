@@ -14,7 +14,7 @@ DM Analytics Application - is a Bachelor's Diploma project. It's an client appli
 * Display Profile Role (Admin or Single user)
 ### Reports Panel
 * Display report selected by slider menu
-* Pull recent reports from Oracle server
+* Pull recent report from Oracle server
 * Review, print and save (as PDF, DOCX, XLSX) reports
 ### Reports Available
 * Explore - Customers affinity card possession (using Statistical tools)
