@@ -63,4 +63,28 @@ DM Analytics Application - is a Bachelor's Diploma project. It's an client appli
 * Adobe Photoshop CC 2017
 * Flaticon.com
 ## Preview
+**Login form and Password reset form**
+![Login form and Password reset form slide](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Login%20&%20PassReset.jpg?raw=true)
+**Confirmation code sended on Email**
+![Confirmation code sended on Email slide](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Gmail%20Password%20Reset.png?raw=true)
+**Register form**
+![Register form slide](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/RegisterForm.jpg?raw=true)
+**Profile panel**
+![Profile Panel slide](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/ProfilePanel.jpg?raw=true)
+**Admin panel - Users Data Module**
+![Admin panel - Users Data Module Panel slide](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/AdminPanel%20-%20UserData.jpg?raw=true)
+**Admin panel - Users Activity Module**
+![Admin panel - Users Activity Module slide](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/AdminPanel%20-%20UserActivity.jpg?raw=true)
+**Admin panel - Users Access Module**
+![Admin panel - Users Access Module slide](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/AdminPanel%20-%20UserModels.jpg?raw=true)
+**Explore Report**
+![Explore Report slide 1](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Explore%20Report%20Part1.jpg?raw=true)
+![Explore Report slide 2](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Explore%20Report%20Part2.jpg?raw=true)
+![Explore Report slide 3](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Explore%20Report%20Part3.jpg?raw=true)
+**Assosiation Rules Report**
+![Assosiation Rules Report](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Assosiation%20Rules%20Report.jpg?raw=true)
+**Classification Report**
+![Classification Report](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Classification%20Report.jpg?raw=true)
+**AnomalyDetection Report**
+![AnomalyDetection Report Report](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/AnomalyDetection%20Report.jpg?raw=true)
 ## More Details
