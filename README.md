@@ -78,13 +78,17 @@ DM Analytics Application - is a Bachelor's Diploma project. It's an client appli
 **Admin panel - Users Access Module**
 ![Admin panel - Users Access Module slide](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/AdminPanel%20-%20UserModels.jpg?raw=true)
 **Explore Report**
+![Explore Report slide 0](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/OracleDMModels/AppUse/AffenityCardExplore.png?raw=true)
 ![Explore Report slide 1](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Explore%20Report%20Part1.jpg?raw=true)
 ![Explore Report slide 2](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Explore%20Report%20Part2.jpg?raw=true)
 ![Explore Report slide 3](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Explore%20Report%20Part3.jpg?raw=true)
 **Assosiation Rules Report**
-![Assosiation Rules Report](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Assosiation%20Rules%20Report.jpg?raw=true)
+![Assosiation Rules Report slide 0](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/OracleDMModels/AppUse/MarketBasket2.png?raw=true)
+![Assosiation Rules Report slide 1](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Assosiation%20Rules%20Report.jpg?raw=true)
 **Classification Report**
-![Classification Report](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Classification%20Report.jpg?raw=true)
+![Classification Report Slide 0](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/OracleDMModels/AppUse/CustomerLoyalty.png?raw=true)
+![Classification Report Slide 1](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/Classification%20Report.jpg?raw=true)
 **AnomalyDetection Report**
-![AnomalyDetection Report Report](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/AnomalyDetection%20Report.jpg?raw=true)
+![AnomalyDetection Report Slide 0](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/OracleDMModels/AppUse/AnomalyCustomers.png?raw=true)
+![AnomalyDetection Report Slide 1](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/AnomalyDetection%20Report.jpg?raw=true)
 ## More Details
