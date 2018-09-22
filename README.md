@@ -40,6 +40,11 @@ DM Analytics Application - is a Bachelor's Diploma project. It's an client appli
 * Adaptive design
 ## Technology Stack
 ![Technology stack slide](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/TechStack.jpg?raw=true)
+### Projection
+* All Fusion ERWin Data Modeler v.7.2.0 
+* StarUML v.2.8.0
+* Microsoft Visio 2016
+* UML Language
 ### Server Side
 * Oracle Database 12 Cloud Release 1 Enterorise (including Oracle Advanced Analytics Option and Sample Schema)
 * Oracle SQL Developer 18.1.0 (including Oracle Data Miner Extension)
@@ -54,14 +59,8 @@ DM Analytics Application - is a Bachelor's Diploma project. It's an client appli
 * Git Version Control
 * SmartGit Git Client
 * GitHub.com
-### Projection
-* All Fusion ERWin Data Modeler v.7.2.0 
-* StarUML v.2.8.0
-* Microsoft Visio 2016
-* UML Language
 ### Design
 * Adobe Photoshop CC 2017
 * Flaticon.com
 ## Preview
-
 ## More Details
