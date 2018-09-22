@@ -104,6 +104,6 @@ DM Analytics Application - is a Bachelor's Diploma project. It's an client appli
 #### *Types of dialog windows*
 ![Types of dialog windows Slide](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/DialogsTypes.jpg?raw=true)
 ## More Details
-[Download full presentation of the project](https://drive.google.com/open?id=1utGZGATALaM9p5iMmTth2Mlp4qeuMsGz)
+* [Review full presentation of the project](https://drive.google.com/open?id=1utGZGATALaM9p5iMmTth2Mlp4qeuMsGz)
 <br/>
-[Download short presentation of the project](https://drive.google.com/open?id=1UqyqxHpWB699r8xIA6tCC6sLubnOEwFp)
+* [Review short presentation of the project](https://drive.google.com/open?id=1UqyqxHpWB699r8xIA6tCC6sLubnOEwFp)
