@@ -1,5 +1,5 @@
 # DM Analytics Application
-## Description
+<h2 style = "color:#FF093A;">Description</h2>
 DM Analytics Application - is a Bachelor's Diploma project. It's an client application, which provides users with the results of predictive analysis performed using Oracle Database and Oracle Data Mining Option. Result are represented by reports, which can be reviewed, printed or saved in one of the available formats. Reports display result of models obtained using such technics as Associations Rules, Classification, Clustering, Regression, Anomaly Detection. Also application provides profile system and tools to administer them.
 ## Features
 ### Registration
