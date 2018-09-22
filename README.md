@@ -92,6 +92,5 @@ DM Analytics Application - is a Bachelor's Diploma project. It's an client appli
 ![AnomalyDetection Report Slide 0](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/OracleDMModels/AppUse/AnomalyCustomers.png?raw=true)
 ![AnomalyDetection Report Slide 1](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/AnomalyDetection%20Report.jpg?raw=true)
 **Types of dialog windows**
-![Types of dialog windows Slide]
-(https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/DialogsTypes.jpg?raw=true)
+![Types of dialog windows Slide] (https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/DialogsTypes.jpg?raw=true)
 ## More Details
