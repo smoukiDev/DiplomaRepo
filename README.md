@@ -38,7 +38,8 @@ DM Analytics Application - is a Bachelor's Diploma project. It's an client appli
 ### Design Solutions
 * Flat design
 * Adaptive design
-## Tech Stack
+## Technology Stack
+![Technology stack slide](https://github.com/smoukiDev/DiplomaRepo/blob/develop/DiplomaClient/Preview%20Screenshots/TechStack.jpg?raw=true)
 ## Requirements
 ## Install Instruction
 ## Preview
