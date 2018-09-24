@@ -6,7 +6,6 @@ DM Analytics Application - is a Bachelor's Diploma project. It's an client appli
 * Form to sign up
 * Significant fields validation
 * Password strenght check
-* Email validation using Regular Expressions **is comming soon**
 #### *Login*
 * Form to sign in
 * Сhecking for the database connection
@@ -29,8 +28,6 @@ DM Analytics Application - is a Bachelor's Diploma project. It's an client appli
 * Explore - Customers affinity card possession (using Statistical tools)
 * Assosiation Rules - Market basket analysis (using Assosiation rules technic)
 * Classification - Customers churn specification (using Classification technic)
-* Clustering **is coming soon** (using Clustering technic)
-* Regression **in coming soon** (using Refression technic)
 * Anomaly Detection - Customers with anomaly income and credit limit (using Anomaly detection technic)
 #### *Security Solutions*
 * Password hashing
